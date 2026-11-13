@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camping Ti Piton — Îlet des Orangers, Mafate</title>
+  <meta name="description" content="Camping Ti Piton, à l'Îlet des Orangers, au cœur du cirque de Mafate (La Réunion) : tentes équipées, dîner créole maison, nuits étoilées. Accessible uniquement à pied. Maquette KréaPro." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#050608" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="../images/hero.webp" />
+  <style>
+    :root {
+      --noir: #050608;
+      --indigo: #0E1527;
+      --foret: #10241B;
+      --braise: #E9A15B;
+      --braise-clair: #F6C98A;
+      --creme: #F3EEE4;
+      --brume: #A3ADA9;
+      --texte: #E6E1D6;
+      --ligne: rgba(243, 238, 228, .14);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Inter", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+      --gouttiere: clamp(16px, 5vw, 72px);
+      /* bandes CinemaScope (2,39:1) */
+      --barre: max(58px, calc((100svh - 100vw / 2.39) / 2));
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--noir); color: var(--texte); font: 300 17px/1.7 var(--sans); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    ::selection { background: var(--braise); color: var(--noir); }
+    p { margin: 0 0 16px; }
+
+    /* ---------- pellicule : grain + vignette ---------- */
+    .grain {
+      position: fixed; inset: -50%; z-index: 90; pointer-events: none; opacity: .1;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+      animation: grain 1s steps(6) infinite;
+    }
+    @keyframes grain { 0%, 100% { transform: translate(0, 0); } 20% { transform: translate(-3%, 2%); } 40% { transform: translate(2%, -3%); } 60% { transform: translate(-2%, -1%); } 80% { transform: translate(3%, 3%); } }
+    .vignette { position: fixed; inset: 0; z-index: 60; pointer-events: none; background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, .55) 100%); }
+
+    /* ---------- habillage fixe ---------- */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 70; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px var(--gouttiere); transition: background .5s; }
+    .nav.solide { background: rgba(5, 6, 8, .86); backdrop-filter: blur(12px); }
+    .marque { text-decoration: none; display: flex; flex-direction: column; line-height: 1.05; }
+    .marque b { font: 500 25px/1 var(--serif); color: var(--creme); }
+    .marque small { font: 500 9px/1.4 var(--mono); letter-spacing: .28em; text-transform: uppercase; color: var(--braise-clair); margin-top: 5px; }
+    .nav ul { display: flex; gap: clamp(14px, 2.2vw, 30px); list-style: none; margin: 0; padding: 0; }
+    .nav ul a { text-decoration: none; font: 500 11px/1 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--creme); opacity: .75; transition: opacity .3s, color .3s; }
+    .nav ul a:hover { opacity: 1; color: var(--braise-clair); }
+    @media (max-width: 900px) { .nav ul { display: none; } }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; cursor: pointer; font: 600 12px/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; padding: 16px 26px; border-radius: 999px; border: 1px solid var(--braise); background: var(--braise); color: var(--noir); transition: transform .35s, background .35s; box-shadow: 0 10px 40px -10px rgba(233, 161, 91, .55); }
+    .btn:hover { transform: translateY(-2px); background: var(--braise-clair); }
+    .btn.fantome { background: transparent; color: var(--creme); border-color: rgba(243, 238, 228, .45); box-shadow: none; }
+    .btn.fantome:hover { border-color: var(--creme); background: rgba(243, 238, 228, .06); }
+    .btn.petit { padding: 11px 18px; font-size: 10.5px; }
+
+    .maquette { position: fixed; left: 12px; bottom: 12px; z-index: 80; font: 500 10.5px/1.35 var(--mono); letter-spacing: .04em; color: var(--creme); background: rgba(5, 6, 8, .78); border: 1px solid var(--ligne); backdrop-filter: blur(8px); padding: 7px 12px; border-radius: 999px; max-width: calc(100vw - 24px); }
+    .maquette a { color: var(--braise-clair); text-decoration: none; }
+    .maquette .court { display: none; }
+    .hud { position: fixed; right: 14px; bottom: 12px; z-index: 80; text-align: right; font: 500 10.5px/1.5 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--creme); pointer-events: none; }
+    .hud .tc { color: var(--braise-clair); font-size: 12px; letter-spacing: .1em; }
+    .hud .rec { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #E5484D; margin-right: 8px; vertical-align: 1px; animation: rec 1.6s steps(2) infinite; }
+    @keyframes rec { 50% { opacity: .15; } }
+    .hud .barre-tc { width: 150px; height: 1px; background: var(--ligne); margin: 7px 0 0 auto; }
+    .hud .barre-tc i { display: block; height: 100%; width: calc(var(--avance, 0) * 100%); background: var(--braise); }
+    @media (max-width: 600px) {
+      .maquette .long { display: none; } .maquette .court { display: inline; }
+      .hud { font-size: 9px; } .hud .tc { font-size: 10.5px; } .hud .barre-tc { width: 96px; }
+    }
+
+    /* ---------- le film : scènes fixes pendant le défilement ---------- */
+    .film-scene { position: relative; height: var(--duree, 230vh); --p: .5; --v: 1; --noirceur: 0; }
+    .plan { position: sticky; top: 0; height: 100svh; overflow: hidden; background: #000; }
+    .plan .image { position: absolute; inset: 0; overflow: hidden; }
+    .plan .image img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); transform: scale(calc(1.15 - var(--p) * .15)); will-change: transform; }
+    .plan .image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, .25) 0%, transparent 30%, transparent 52%, rgba(0, 0, 0, .78) 100%); }
+    .plan canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+    .plan .fondu { position: absolute; inset: 0; z-index: 3; background: #000; opacity: var(--noirceur); pointer-events: none; }
+    .plan .bande { position: absolute; left: 0; right: 0; height: var(--barre); background: #000; z-index: 4; }
+    .plan .bande.haut { top: 0; } .plan .bande.bas { bottom: 0; }
+    .habillage { opacity: var(--v); transform: translateY(calc((1 - var(--v)) * 26px)); filter: blur(calc((1 - var(--v)) * 6px)); }
+    .plan .repere { position: absolute; z-index: 5; top: calc(var(--barre) + 22px); left: var(--gouttiere); right: var(--gouttiere); display: flex; justify-content: space-between; gap: 18px; font: 500 11px/1.5 var(--mono); letter-spacing: .22em; text-transform: uppercase; color: var(--creme); text-shadow: 0 1px 12px rgba(0, 0, 0, .7); }
+    .plan .repere b { color: var(--braise-clair); font-weight: 500; }
+    .plan .repere span:last-child { text-align: right; opacity: .85; }
+    .plan .titre { position: absolute; z-index: 5; left: var(--gouttiere); right: var(--gouttiere); bottom: calc(var(--barre) + 30px); max-width: 860px; }
+    .plan h2 { font: 400 clamp(36px, min(6vw, 9vh), 92px)/1 var(--serif); color: var(--creme); margin: 0; letter-spacing: -.01em; text-shadow: 0 2px 30px rgba(0, 0, 0, .5); }
+    .plan h2 em { font-style: italic; color: var(--braise-clair); }
+    .plan .sous-titre { position: absolute; z-index: 5; left: 50%; bottom: 0; width: min(760px, calc(100% - 2 * var(--gouttiere) - 260px)); height: var(--barre); transform: translateX(-50%); display: flex; align-items: center; justify-content: center; text-align: center; margin: 0; font: 400 clamp(15px, 1.25vw, 18px)/1.55 var(--sans); color: var(--creme); }
+    .plan .sous-titre .habillage { display: block; }
+
+    /* téléphone en portrait : cadre large au centre, textes dans les bandes */
+    /* les scènes se chevauchent de leurs bandes noires : coupe franche d'un plan au suivant */
+    .film-scene + .film-scene { margin-top: calc(-2 * var(--barre)); }
+    @media (max-aspect-ratio: 4/5) {
+      :root { --cadre: min(calc(100vw / 1.3), 54svh); --barre: calc((100svh - var(--cadre)) / 2); }
+      .plan .image { inset: auto 0; top: var(--barre); height: var(--cadre); }
+      .plan .repere { top: 78px; flex-direction: column; gap: 2px; font-size: 10px; }
+      .plan .repere span:last-child { text-align: left; }
+      .plan .titre { bottom: calc(var(--barre) + var(--cadre) + 16px); }
+      .plan h2 { font-size: clamp(30px, 8.6vw, 44px); }
+      .plan .sous-titre { left: var(--gouttiere); right: var(--gouttiere); width: auto; transform: none; top: calc(var(--barre) + var(--cadre) + 18px); bottom: auto; height: auto; display: block; text-align: left; font-size: 15.5px; }
+    }
+
+    /* ---------- ouverture ---------- */
+    .ouverture { --duree: 170vh; }
+    .ouverture .image img { object-position: 38% 70%; }
+    .ouverture .image::after { background: linear-gradient(180deg, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .3) 40%, transparent 60%, rgba(0, 0, 0, .55) 100%); }
+    .ouverture .bande { animation: ouverture 2.6s cubic-bezier(.7, 0, .2, 1) .2s both; }
+    @keyframes ouverture { from { height: 50.5svh; } }
+    .ouverture .texte { position: absolute; z-index: 5; left: 0; right: 0; top: calc(var(--barre) + clamp(28px, 6vh, 80px)); text-align: center; padding: 0 var(--gouttiere); }
+    .surtitre { font: 500 11px/1.5 var(--mono); letter-spacing: .34em; text-transform: uppercase; color: var(--braise-clair); margin: 0 0 18px; }
+    .ouverture h1 { font: 400 clamp(44px, min(7.4vw, 11vh), 112px)/.95 var(--serif); color: var(--creme); margin: 0; letter-spacing: -.01em; text-shadow: 0 2px 40px rgba(0, 0, 0, .45); }
+    .ouverture h1 em { display: block; font-style: italic; color: var(--braise-clair); }
+    .chapeau { max-width: 560px; margin: 24px auto 30px; font-size: clamp(15.5px, 1.5vw, 18.5px); color: var(--creme); opacity: .9; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .apparait { animation: apparait 1.6s cubic-bezier(.2, .7, .2, 1) both; }
+    @keyframes apparait { from { opacity: 0; transform: translateY(24px); filter: blur(8px); } }
+    .defiler { position: absolute; z-index: 6; left: 50%; bottom: max(10px, calc(var(--barre) / 2 - 36px)); transform: translateX(-50%); font: 500 10px/1 var(--mono); letter-spacing: .3em; text-transform: uppercase; text-decoration: none; color: var(--creme); opacity: .75; text-align: center; }
+    .defiler::after { content: ""; display: block; width: 1px; height: 46px; margin: 12px auto 0; background: linear-gradient(var(--creme), transparent); animation: goutte 2.2s ease-in-out infinite; }
+    @keyframes goutte { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+    @media (max-aspect-ratio: 4/5) {
+      .ouverture .plan { --barre: 7svh; }
+      .ouverture .image { inset: 0; top: 0; height: auto; }
+      .ouverture .texte { top: calc(7svh + 70px); }
+    }
+
+    /* ---------- prologue (cartons noirs) ---------- */
+    .prologue { position: relative; height: 300vh; background: #000; }
+    .prologue .plan { display: grid; place-items: center; text-align: center; background: radial-gradient(ellipse at 50% 40%, #0B1120, #000 70%); }
+    .prologue .cartons { padding: 0 var(--gouttiere); }
+    .prologue .carton { font: 400 clamp(40px, min(7vw, 11vh), 100px)/1.04 var(--serif); color: var(--creme); margin: 0; opacity: var(--v, 1); transform: translateY(calc((1 - var(--v, 1)) * 30px)); filter: blur(calc((1 - var(--v, 1)) * 8px)); }
+    .prologue .carton.braise { font-style: italic; color: var(--braise-clair); font-size: clamp(28px, min(4.4vw, 7vh), 60px); margin-top: 28px; }
+    .prologue .carton.note { font: 300 clamp(15px, 1.4vw, 18px)/1.7 var(--sans); color: var(--brume); max-width: 620px; margin: 28px auto 0; }
+
+    /* ---------- sections pratiques ---------- */
+    .conteneur { width: min(1200px, 100%); margin: 0 auto; padding: 0 var(--gouttiere); }
+    .chapitre { font: 500 11px/1 var(--mono); letter-spacing: .3em; text-transform: uppercase; color: var(--braise); display: flex; align-items: center; gap: 14px; margin: 0 0 22px; }
+    .chapitre::before { content: ""; width: 38px; height: 1px; background: var(--braise); }
+    .chapitre.centre { justify-content: center; }
+    .chapitre.centre::after { content: ""; width: 38px; height: 1px; background: var(--braise); }
+    .section h2, .h2 { font: 400 clamp(38px, 5.4vw, 72px)/1.02 var(--serif); color: var(--creme); margin: 0 0 22px; }
+    .section h2 em, .h2 em { font-style: italic; color: var(--braise-clair); }
+    h3 { font: 500 clamp(25px, 2.5vw, 32px)/1.1 var(--serif); color: var(--creme); margin: 0 0 10px; }
+    .doux { color: var(--brume); }
+    .petit-texte { font-size: 13.5px; color: var(--brume); }
+    .js .revele { opacity: 0; transform: translateY(34px); filter: blur(6px); transition: opacity 1.2s cubic-bezier(.2, .7, .2, 1), transform 1.2s cubic-bezier(.2, .7, .2, 1), filter 1.2s; }
+    .js .revele.vu { opacity: 1; transform: none; filter: none; }
+
+    .chiffres { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--ligne); border: 1px solid var(--ligne); }
+    .chiffres div { background: var(--noir); padding: 28px 26px; }
+    .chiffres b { display: block; font: 400 clamp(40px, 4.6vw, 58px)/1 var(--serif); color: var(--creme); }
+    .chiffres span { font: 500 10.5px/1.5 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--brume); }
+    @media (max-width: 760px) { .chiffres { grid-template-columns: repeat(2, 1fr); } }
+
+    /* pellicule qui défile */
+    .pellicule { padding: clamp(70px, 10vw, 120px) 0 clamp(60px, 8vw, 100px); overflow: hidden; }
+    .pellicule .chiffres { margin-bottom: clamp(60px, 8vw, 100px); }
+    .bande-film { position: relative; background: #0C0C0C; padding: 26px 0; transform: rotate(-1.2deg); margin: 0 -2vw; box-shadow: 0 30px 80px -30px #000; }
+    .bande-film::before, .bande-film::after { content: ""; position: absolute; left: 0; right: 0; height: 10px; background: repeating-linear-gradient(90deg, transparent 0 12px, rgba(243, 238, 228, .5) 12px 24px); border-radius: 2px; }
+    .bande-film::before { top: 8px; } .bande-film::after { bottom: 8px; }
+    .defile { display: flex; gap: 10px; width: max-content; animation: defile 70s linear infinite; }
+    .defile img { width: clamp(220px, 24vw, 330px); aspect-ratio: 1.85; object-fit: cover; filter: sepia(.15) contrast(1.05); border-radius: 2px; }
+    @keyframes defile { to { transform: translateX(-50%); } }
+
+    /* dormir / tarifs */
+    .dormir { padding: clamp(80px, 11vw, 140px) 0; background: linear-gradient(180deg, var(--noir), var(--foret) 55%, var(--noir)); }
+    .dormir .tete { max-width: 720px; margin-bottom: clamp(36px, 5vw, 60px); }
+    .offres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 900px) { .offres { grid-template-columns: 1fr; } }
+    .offre { position: relative; padding: 34px 30px 30px; border: 1px solid var(--ligne); border-radius: 4px; background: rgba(5, 6, 8, .55); backdrop-filter: blur(6px); transition: transform .5s, border-color .5s; }
+    .offre:hover { transform: translateY(-6px); border-color: rgba(233, 161, 91, .5); }
+    .offre.vedette { border-color: rgba(233, 161, 91, .55); background: linear-gradient(180deg, rgba(233, 161, 91, .12), rgba(5, 6, 8, .6)); }
+    .offre .badge { position: absolute; top: -11px; left: 28px; font: 600 9.5px/1 var(--mono); letter-spacing: .2em; text-transform: uppercase; background: var(--braise); color: var(--noir); padding: 6px 10px; border-radius: 999px; }
+    .offre ul { list-style: none; padding: 0; margin: 14px 0 24px; color: var(--brume); font-size: 15px; }
+    .offre li { padding: 7px 0; border-bottom: 1px solid var(--ligne); }
+    .offre li::before { content: "— "; color: var(--braise); }
+    .prix { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+    .prix b { font: 400 54px/1 var(--serif); color: var(--creme); }
+    .prix span { font-size: 13.5px; color: var(--brume); }
+    .dp { margin: 10px 0 0; font-size: 14px; color: var(--braise-clair); }
+    .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 46px; background: var(--ligne); border: 1px solid var(--ligne); }
+    .services div { background: rgba(5, 6, 8, .78); padding: 22px; font-size: 14.5px; }
+    .services b { display: block; font: 500 21px/1.2 var(--serif); color: var(--creme); margin-bottom: 4px; }
+    @media (max-width: 860px) { .services { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .services { grid-template-columns: 1fr; } }
+
+    /* venir */
+    .venir { padding-bottom: clamp(80px, 11vw, 140px); }
+    .ilet { position: relative; height: clamp(340px, 78vh, 820px); overflow: hidden; margin-bottom: clamp(50px, 8vw, 100px); }
+    .ilet img { position: absolute; left: 0; right: 0; top: -12%; width: 100%; height: 124%; object-fit: cover; will-change: transform; }
+    .ilet::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--noir) 0%, transparent 22%, transparent 55%, var(--noir) 100%); }
+    .ilet .legende { position: absolute; z-index: 2; left: var(--gouttiere); right: var(--gouttiere); bottom: 34px; }
+    .routes { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(28px, 5vw, 70px); align-items: start; }
+    @media (max-width: 900px) { .routes { grid-template-columns: 1fr; } }
+    .route { display: grid; grid-template-columns: 92px 1fr; gap: 18px; padding: 22px 0; border-top: 1px solid var(--ligne); }
+    .route:last-of-type { border-bottom: 1px solid var(--ligne); }
+    .route .duree { font: italic 400 44px/1 var(--serif); color: var(--braise-clair); }
+    .route h3 { font-size: 24px; margin-bottom: 4px; }
+    .route p { margin: 0; color: var(--brume); font-size: 15px; }
+    .carte { width: 100%; aspect-ratio: 4 / 3; border: 0; border-radius: 4px; filter: grayscale(.4) contrast(1.05) brightness(.88); }
+
+    /* avis façon affiche de cinéma */
+    .critique { padding: clamp(90px, 12vw, 150px) 0; text-align: center; background: radial-gradient(ellipse at 50% 100%, var(--indigo), var(--noir) 70%); }
+    .lauriers { display: flex; align-items: center; justify-content: center; gap: clamp(10px, 3vw, 34px); color: var(--braise); }
+    .lauriers svg { width: clamp(44px, 6vw, 70px); height: auto; flex: none; }
+    .lauriers svg.droite { transform: scaleX(-1); }
+    .lauriers .centre { font: 500 11px/1.6 var(--mono); letter-spacing: .26em; text-transform: uppercase; color: var(--creme); }
+    .lauriers .centre b { display: block; font: 400 clamp(54px, 7vw, 92px)/1 var(--serif); letter-spacing: 0; color: var(--braise-clair); margin: 8px 0 18px; }
+    .critique blockquote { font: italic 400 clamp(34px, 5vw, 66px)/1.1 var(--serif); color: var(--creme); margin: 50px auto 14px; max-width: 900px; }
+    .critique cite { font: 500 11px/1 var(--mono); letter-spacing: .24em; text-transform: uppercase; color: var(--brume); font-style: normal; }
+    .themes { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 44px auto 0; max-width: 860px; }
+    .themes span { padding: 10px 17px; border: 1px solid var(--ligne); border-radius: 999px; font-size: 14.5px; color: var(--creme); }
+
+    /* réserver */
+    .reserver { padding: clamp(80px, 11vw, 140px) 0; background: linear-gradient(180deg, var(--noir), #0A1712); }
+    .resa { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(30px, 6vw, 80px); align-items: start; }
+    @media (max-width: 900px) { .resa { grid-template-columns: 1fr; } }
+    form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: clamp(22px, 4vw, 40px); border: 1px solid var(--ligne); border-radius: 4px; background: rgba(5, 6, 8, .6); }
+    form .large { grid-column: 1 / -1; }
+    @media (max-width: 560px) { form { grid-template-columns: 1fr; } }
+    label { display: grid; gap: 7px; font: 500 10.5px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--brume); }
+    input, select, textarea { width: 100%; font: 400 16px/1.4 var(--sans); color: var(--creme); background: rgba(243, 238, 228, .04); border: 1px solid var(--ligne); border-radius: 3px; padding: 13px 14px; outline: none; transition: border-color .3s; color-scheme: dark; }
+    input:focus, select:focus, textarea:focus { border-color: var(--braise); }
+    select option { background: var(--noir); }
+    textarea { min-height: 96px; resize: vertical; }
+    .case { display: flex; align-items: center; gap: 12px; text-transform: none; letter-spacing: 0; font: 400 15px/1.4 var(--sans); color: var(--creme); }
+    .case input { width: 20px; height: 20px; accent-color: var(--braise); }
+    .estimation { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; padding: 18px 0 4px; border-top: 1px solid var(--ligne); }
+    .estimation b { font: 400 44px/1 var(--serif); color: var(--braise-clair); }
+    .estimation span { font-size: 13px; color: var(--brume); }
+    .merci { grid-column: 1 / -1; display: none; padding: 16px; border-radius: 3px; background: rgba(233, 161, 91, .12); border: 1px solid rgba(233, 161, 91, .4); color: var(--creme); font-size: 15px; margin: 0; }
+    .contact-direct { display: grid; gap: 12px; margin-top: 28px; }
+    .contact-direct a { display: flex; justify-content: space-between; align-items: center; gap: 12px; text-decoration: none; padding: 18px 20px; border: 1px solid var(--ligne); border-radius: 4px; transition: border-color .3s, background .3s; }
+    .contact-direct a:hover { border-color: var(--braise); background: rgba(233, 161, 91, .06); }
+    .contact-direct small { display: block; font: 500 10px/1.4 var(--mono); letter-spacing: .2em; text-transform: uppercase; color: var(--brume); }
+    .contact-direct b { font: 500 22px/1.2 var(--serif); color: var(--creme); overflow-wrap: anywhere; }
+
+    /* générique de fin */
+    .generique { padding: clamp(100px, 14vw, 180px) 0 120px; background: #000; text-align: center; }
+    .generique .credits { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; row-gap: 14px; max-width: 760px; margin: 0 auto; }
+    .generique dt { text-align: right; font: 500 10.5px/2.1 var(--mono); letter-spacing: .22em; text-transform: uppercase; color: var(--brume); }
+    .generique dd { text-align: left; margin: 0; font: 400 22px/1.3 var(--serif); color: var(--creme); }
+    .generique .fin { font: italic 400 clamp(64px, 10vw, 140px)/1 var(--serif); color: var(--creme); margin: clamp(80px, 12vw, 140px) 0 26px; }
+    .generique .mentions { max-width: 560px; margin: 0 auto; font-size: 13px; color: var(--brume); }
+    .generique .mentions a { color: var(--braise-clair); }
+    @media (max-width: 560px) { .generique .credits { grid-template-columns: 1fr; row-gap: 0; } .generique dt, .generique dd { text-align: center; } .generique dd { margin-bottom: 16px; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .grain { display: none; }
+    }
+  </style>
+
+<style id="kp-choix-css">
+  #kp-choix{position:fixed;top:0;left:0;right:0;z-index:2147483000;display:flex;align-items:center;gap:8px;
+    padding:8px 10px;background:#3D0B37;color:#F3F9D2;font:600 14px/1.2 Inter,Arial,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  #kp-choix a,#kp-choix button{color:#F3F9D2;text-decoration:none;white-space:nowrap;padding:10px 12px;border-radius:999px;min-height:44px;
+    display:inline-flex;align-items:center;font:600 14px/1 Inter,Arial,sans-serif;border:0;background:rgba(243,249,210,.1);cursor:pointer}
+  #kp-choix .kp-nom{flex:1;text-align:center;font-weight:500;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #kp-choix .kp-aime[aria-pressed="true"]{background:#F4C2D7;color:#3D0B37}
+  #kp-choix .kp-choisir{background:#C0D684;color:#3D0B37}
+  #kp-toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);z-index:2147483001;max-width:min(92vw,460px);
+    background:#1A1A1A;color:#fff;font:500 15px/1.4 Inter,Arial,sans-serif;padding:12px 16px;border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+  #kp-toast.vu{opacity:1;transform:translate(-50%,0)}
+  iframe{pointer-events:none}
+  @media (max-width:640px){#kp-choix .kp-nom{display:none}#kp-choix a,#kp-choix button{font-size:13.5px;padding:10px}#kp-choix .kp-choisir{margin-left:auto}}
+</style>
+</head>
+<body>
+<div id="kp-choix" data-id="41" role="navigation" aria-label="Choix du modèle"><a data-kp href="../index.html#g-ambiance">← Tous</a><span class="kp-nom">41. Le film · Images d&#x27;ambiance (IA) · Mafate · 2 690 €</span><button type="button" class="kp-aime" aria-pressed="false">♡ J'aime</button><a data-kp class="kp-choisir" href="../index.html?choix=41#choix">★ Je choisis</a></div><div id="kp-toast" role="status" aria-live="polite"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <nav class="nav" id="nav">
+    <a class="marque" href="#haut"><b>Ti Piton</b><small>Camping · Mafate</small></a>
+    <ul>
+      <li><a href="#scene-1">Le film</a></li>
+      <li><a href="#dormir">Dormir</a></li>
+      <li><a href="#venir">Venir</a></li>
+      <li><a href="#avis">Avis</a></li>
+    </ul>
+    <a class="btn petit" href="#reserver">Réserver</a>
+  </nav>
+
+  <p class="maquette"><span class="long">Maquette <a href="https://kreapro.re" target="_blank" rel="noopener">KréaPro</a> · images d'illustration générées par IA</span><span class="court">Maquette <a href="https://kreapro.re" target="_blank" rel="noopener">KréaPro</a> · images IA</span></p>
+  <div class="hud" aria-hidden="true">
+    <div><span class="rec"></span><span id="hud-scene">Ouverture</span></div>
+    <div class="tc" id="hud-tc">00:00:00:00</div>
+    <div class="barre-tc"><i></i></div>
+  </div>
+
+  <main>
+    <!-- ============ OUVERTURE ============ -->
+    <section class="film-scene ouverture" id="haut" data-film="ouverture" data-titre="Ouverture">
+      <div class="plan">
+        <div class="image"><img src="../images/hero.webp" alt="Une tente éclairée de l'intérieur à la tombée de la nuit, sous les remparts verts de Mafate (illustration)" /></div>
+        <div class="bande haut"></div><div class="bande bas"></div>
+        <div class="texte habillage">
+          <p class="surtitre apparait" style="animation-delay:1.7s">Îlet des Orangers · Cirque de Mafate · 980 m</p>
+          <h1 class="apparait" style="animation-delay:2.1s">Au bout du sentier,<em>le monde s'efface.</em></h1>
+          <p class="chapeau apparait" style="animation-delay:2.6s">Des tentes face aux remparts, un dîner créole partagé, et plus d'étoiles que vous n'en avez jamais vu. Le Camping Ti Piton ne se rejoint qu'à pied.</p>
+          <div class="actions apparait" style="animation-delay:3s">
+            <a class="btn" href="#reserver">Réserver votre nuit</a>
+            <a class="btn fantome" href="#prologue">Voir le film</a>
+          </div>
+        </div>
+        <a class="defiler habillage" href="#prologue">Défiler</a>
+      </div>
+    </section>
+
+    <!-- ============ PROLOGUE ============ -->
+    <section class="prologue" id="prologue" data-film="prologue" data-titre="Prologue">
+      <div class="plan">
+        <div class="cartons">
+          <p class="carton">Pas de route.</p>
+          <p class="carton">Pas de voiture.</p>
+          <p class="carton">Pas de bruit.</p>
+          <p class="carton braise">Juste vous, la montagne et le ciel.</p>
+          <p class="carton note">Au cœur du cirque de Mafate, classé au patrimoine mondial de l'UNESCO, l'Îlet des Orangers ne se rejoint qu'à pied. Laissez le réseau en bas : ici, on se parle, on regarde, on respire.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCÈNE 1 · LE SENTIER ============ -->
+    <section class="film-scene" id="scene-1" data-film="scene" data-titre="Sc. 01 · Le sentier">
+      <div class="plan">
+        <div class="image"><img src="../images/sentier.webp" style="--pos:35% 50%" alt="Un randonneur sur un sentier à flanc de falaise, le long d'une canalisation, dans la brume de Mafate (illustration)" loading="lazy" /></div>
+        <div class="fondu"></div><div class="bande haut"></div><div class="bande bas"></div>
+        <div class="repere habillage"><span><b>Scène 01</b> — Le sentier</span><span>Depuis le Maïdo · environ 3 h</span></div>
+        <div class="titre habillage"><h2>Le chemin fait déjà <em>partie du voyage.</em></h2></div>
+        <p class="sous-titre"><span class="habillage">Trois sentiers mènent à l'Îlet des Orangers, et aucune route. On arrive à pied, le souffle court, les yeux pleins de remparts.</span></p>
+      </div>
+    </section>
+
+    <!-- ============ SCÈNE 2 · L'ARRIVÉE ============ -->
+    <section class="film-scene" data-film="scene" data-titre="Sc. 02 · L'arrivée">
+      <div class="plan">
+        <div class="image"><img src="../images/punch.webp" style="--pos:45% 50%" alt="Deux verres de rhum arrangé avec vanille et fruit de la passion, face aux montagnes au coucher du soleil (illustration)" loading="lazy" /></div>
+        <div class="fondu"></div><div class="bande haut"></div><div class="bande bas"></div>
+        <div class="repere habillage"><span><b>Scène 02</b> — L'arrivée</span><span>Punch maison offert</span></div>
+        <div class="titre habillage"><h2>Posez le sac. <em>Le temps ralentit.</em></h2></div>
+        <p class="sous-titre"><span class="habillage">Jean-Martel vous accueille avec son punch maison. Votre tente est déjà prête : il ne reste qu'à regarder la lumière descendre sur les remparts.</span></p>
+      </div>
+    </section>
+
+    <!-- ============ SCÈNE 3 · LA TENTE ============ -->
+    <section class="film-scene" data-film="scene" data-titre="Sc. 03 · La tente">
+      <div class="plan">
+        <div class="image"><img src="../images/tente.webp" style="--pos:50% 55%" alt="Intérieur d'une tente équipée, lit blanc et couvertures, ouverte sur le cirque et la mer de nuages (illustration)" loading="lazy" /></div>
+        <div class="fondu"></div><div class="bande haut"></div><div class="bande bas"></div>
+        <div class="repere habillage"><span><b>Scène 03</b> — La tente</span><span>Tente équipée pour 2 · dès 30 €</span></div>
+        <div class="titre habillage"><h2>Une toile, un vrai lit, <em>l'horizon.</em></h2></div>
+        <p class="sous-titre"><span class="habillage">Matelas, oreillers, draps et couvertures : pas besoin de porter votre tente. Il suffit d'ouvrir la porte pour voir le cirque.</span></p>
+      </div>
+    </section>
+
+    <!-- ============ SCÈNE 4 · 18 H 30 ============ -->
+    <section class="film-scene" data-film="scene" data-titre="Sc. 04 · 18 h 30">
+      <div class="plan">
+        <div class="image"><img src="../images/table.webp" style="--pos:50% 50%" alt="Dîner créole entre randonneurs sous un abri en bois, marmites, lanternes et feu de bois (illustration)" loading="lazy" /></div>
+        <div class="fondu"></div><div class="bande haut"></div><div class="bande bas"></div>
+        <div class="repere habillage"><span><b>Scène 04</b> — 18 h 30</span><span>Dîner maison · 14 € / pers.</span></div>
+        <div class="titre habillage"><h2>Tout le monde <em>à table.</em></h2></div>
+        <p class="sous-titre"><span class="habillage">Entrée, plat, dessert : une cuisine créole maison et copieuse. Un carry, un rougail saucisse, et les histoires de Mafate racontées par votre hôte.</span></p>
+      </div>
+    </section>
+
+    <!-- ============ SCÈNE 5 · LE FEU ============ -->
+    <section class="film-scene" data-film="scene" data-titre="Sc. 05 · Le feu">
+      <div class="plan">
+        <div class="image"><img src="../images/feu.webp" style="--pos:50% 55%" alt="Des amis autour d'un feu de camp sous la Voie lactée, une guitare, des tentes éclairées (illustration)" loading="lazy" /></div>
+        <div class="fondu"></div><div class="bande haut"></div><div class="bande bas"></div>
+        <div class="repere habillage"><span><b>Scène 05</b> — Le feu</span><span>Barbecue · bois 3 € le fagot</span></div>
+        <div class="titre habillage"><h2>On éteint les écrans. <em>On rallume le feu.</em></h2></div>
+        <p class="sous-titre"><span class="habillage">Sortez la guitare, rapprochez-vous des flammes. Les soirées à Ti Piton ont le goût des souvenirs qu'on garde longtemps.</span></p>
+      </div>
+    </section>
+
+    <!-- ============ SCÈNE 6 · LA NUIT ============ -->
+    <section class="film-scene" id="nuit" data-film="scene" data-titre="Sc. 06 · La nuit">
+      <div class="plan">
+        <div class="image"><img src="../images/etoiles.webp" style="--pos:66% 50%" alt="Un couple enveloppé dans une couverture devant une tente éclairée, sous la Voie lactée (illustration)" loading="lazy" /><canvas id="ciel"></canvas></div>
+        <div class="fondu"></div><div class="bande haut"></div><div class="bande bas"></div>
+        <div class="repere habillage"><span><b>Scène 06</b> — La nuit</span><span>Loin de toute ville</span></div>
+        <div class="titre habillage"><h2>Ici, la nuit est <em>vraiment noire.</em></h2></div>
+        <p class="sous-titre"><span class="habillage">Le ciel de Mafate s'allume d'étoiles. Une nuit à deux sous la toile, enveloppés dans les couvertures, avec pour seul bruit le vent.</span></p>
+      </div>
+    </section>
+
+    <!-- ============ SCÈNE 7 · 7 H 30 ============ -->
+    <section class="film-scene" data-film="scene" data-titre="Sc. 07 · 7 h 30">
+      <div class="plan">
+        <div class="image"><img src="../images/aube.webp" style="--pos:55% 60%" alt="Un couple enveloppé dans une couverture regarde le lever du soleil sur la mer de nuages, café à la main (illustration)" loading="lazy" /></div>
+        <div class="fondu"></div><div class="bande haut"></div><div class="bande bas"></div>
+        <div class="repere habillage"><span><b>Scène 07</b> — 7 h 30</span><span>Petit-déjeuner · 6 € / pers.</span></div>
+        <div class="titre habillage"><h2>Un café <em>au-dessus des nuages.</em></h2></div>
+        <p class="sous-titre"><span class="habillage">Café, thé, tisane, pain, beurre et confiture : le petit-déjeuner se prend face au cirque, sans se presser.</span></p>
+      </div>
+    </section>
+
+    <!-- ============ PELLICULE + CHIFFRES ============ -->
+    <section class="pellicule" data-titre="Bobine">
+      <div class="conteneur">
+        <div class="chiffres revele">
+          <div><b>980 m</b><span>d'altitude</span></div>
+          <div><b>0</b><span>route pour venir</span></div>
+          <div><b>3 h</b><span>de marche depuis le Maïdo</span></div>
+          <div><b>10</b><span>voyageurs au maximum</span></div>
+        </div>
+      </div>
+      <div class="bande-film" aria-hidden="true">
+        <div class="defile">
+          <img src="../images/hero.webp" alt="" loading="lazy" /><img src="../images/sentier.webp" alt="" loading="lazy" /><img src="../images/punch.webp" alt="" loading="lazy" /><img src="../images/tente.webp" alt="" loading="lazy" /><img src="../images/table.webp" alt="" loading="lazy" /><img src="../images/feu.webp" alt="" loading="lazy" /><img src="../images/etoiles.webp" alt="" loading="lazy" /><img src="../images/aube.webp" alt="" loading="lazy" /><img src="../images/ilet.webp" alt="" loading="lazy" />
+          <img src="../images/hero.webp" alt="" loading="lazy" /><img src="../images/sentier.webp" alt="" loading="lazy" /><img src="../images/punch.webp" alt="" loading="lazy" /><img src="../images/tente.webp" alt="" loading="lazy" /><img src="../images/table.webp" alt="" loading="lazy" /><img src="../images/feu.webp" alt="" loading="lazy" /><img src="../images/etoiles.webp" alt="" loading="lazy" /><img src="../images/aube.webp" alt="" loading="lazy" /><img src="../images/ilet.webp" alt="" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DORMIR ============ -->
+    <section class="section dormir" id="dormir" data-titre="Dormir">
+      <div class="conteneur">
+        <div class="tete revele">
+          <p class="chapitre">Dormir à Ti Piton</p>
+          <h2>Choisissez <em>votre toile.</em></h2>
+          <p>Tentes équipées de vrais matelas, d'oreillers, de draps et de couvertures, ou un emplacement pour votre propre tente. Capacité : 10 voyageurs.</p>
+        </div>
+        <div class="offres">
+          <article class="offre revele">
+            <h3>Tente seule</h3>
+            <ul><li>Pour 1 personne</li><li>Une tente rien que pour vous</li><li>Accès aux sanitaires</li></ul>
+            <div class="prix"><b>20 €</b><span>la nuit</span></div>
+            <p class="dp">40 € en demi-pension</p>
+          </article>
+          <article class="offre vedette revele">
+            <span class="badge">Pour deux</span>
+            <h3>Tente équipée</h3>
+            <ul><li>Pour 2 personnes</li><li>Matelas, oreillers, draps, couvertures</li><li>Accès aux sanitaires</li></ul>
+            <div class="prix"><b>30 €</b><span>la nuit, pour 2</span></div>
+            <p class="dp">70 € pour 2 en demi-pension</p>
+          </article>
+          <article class="offre revele">
+            <h3>Votre tente</h3>
+            <ul><li>Emplacement nu</li><li>Vous apportez votre matériel</li><li>Accès aux sanitaires</li></ul>
+            <div class="prix"><b>7 €</b><span>par personne</span></div>
+            <p class="dp">27 € par personne en demi-pension</p>
+          </article>
+        </div>
+        <p class="petit-texte revele" style="margin-top:24px">Demi-pension = dîner + nuit + petit-déjeuner. Enfant de moins de 10 ans : 12 €. Tarifs indicatifs, hors frais de réservation.</p>
+        <div class="services revele">
+          <div><b>Douches &amp; toilettes</b>Sanitaires propres, eau chaude en journée</div>
+          <div><b>Barbecue</b>À disposition, bois à 3 € le fagot</div>
+          <div><b>Boissons</b>En vente sur place</div>
+          <div><b>Vos compagnons</b>Les animaux sont acceptés</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VENIR ============ -->
+    <section class="section venir" id="venir" data-titre="Venir">
+      <div class="ilet">
+        <img src="../images/ilet.webp" alt="Vue aérienne d'un îlet de Mafate, maisons créoles aux toits colorés, entouré de remparts (illustration)" data-parallaxe="0.14" loading="lazy" />
+        <div class="legende revele">
+          <p class="chapitre">Venir à Ti Piton</p>
+          <h2 style="margin:0">Un îlet <em>au bout du monde.</em></h2>
+        </div>
+      </div>
+      <div class="conteneur">
+        <div class="routes">
+          <div class="revele">
+            <p>L'Îlet des Orangers se rejoint <b>uniquement à pied</b> (ou en hélicoptère). Trois sentiers y mènent : choisissez le vôtre.</p>
+            <div class="route"><span class="duree">3 h</span><div><h3>Depuis le Maïdo</h3><p>Le plus court : une longue descente dans le cirque, avec des vues spectaculaires.</p></div></div>
+            <div class="route"><span class="duree">4 h</span><div><h3>Par la Rivière des Galets</h3><p>En 4x4 jusqu'à Deux-Bras, puis environ 4 h de marche.</p></div></div>
+            <div class="route"><span class="duree">5 h</span><div><h3>Par la Canalisation des Orangers</h3><p>Depuis Sans-Souci (citerne rouge), un sentier taillé à flanc de falaise.</p></div></div>
+            <p class="petit-texte" style="margin-top:18px">Durées indicatives. Prévoyez de bonnes chaussures, de l'eau et une lampe frontale. Les sentiers de Mafate peuvent fermer en cas d'alerte météo.</p>
+          </div>
+          <div class="revele">
+            <iframe class="carte" title="Carte : Camping Ti Piton, Îlet des Orangers" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=55.3300%2C-21.0800%2C55.4600%2C-21.0050&amp;layer=mapnik&amp;marker=-21.04181%2C55.39347"></iframe>
+            <p class="petit-texte" style="margin-top:14px">Camping Ti Piton · Îlet des Orangers · 97460 Mafate, La Réunion. Une étape idéale sur les sentiers vers Roche Plate, Marla ou la Rivière des Galets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AVIS (affiche) ============ -->
+    <section class="critique" id="avis" data-titre="La critique">
+      <div class="conteneur revele">
+        <div class="lauriers">
+          <svg class="gauche" viewBox="0 0 60 120" aria-hidden="true"><path d="M48 116C22 98 10 64 30 6" fill="none" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><ellipse cx="44" cy="108" rx="9" ry="3.6" transform="rotate(-25 44 108)"/><ellipse cx="34" cy="96" rx="10" ry="3.8" transform="rotate(-40 34 96)"/><ellipse cx="26" cy="82" rx="10" ry="3.8" transform="rotate(-55 26 82)"/><ellipse cx="21" cy="66" rx="10" ry="3.8" transform="rotate(-70 21 66)"/><ellipse cx="20" cy="50" rx="10" ry="3.8" transform="rotate(-85 20 50)"/><ellipse cx="23" cy="34" rx="9" ry="3.6" transform="rotate(-100 23 34)"/><ellipse cx="28" cy="19" rx="8" ry="3.4" transform="rotate(-112 28 19)"/><ellipse cx="44" cy="96" rx="8" ry="3.2" transform="rotate(20 44 96)"/><ellipse cx="36" cy="80" rx="8" ry="3.2" transform="rotate(5 36 80)"/><ellipse cx="32" cy="63" rx="8" ry="3.2" transform="rotate(-10 32 63)"/><ellipse cx="31" cy="46" rx="7.5" ry="3" transform="rotate(-25 31 46)"/><ellipse cx="33" cy="30" rx="7" ry="3" transform="rotate(-40 33 30)"/></g></svg>
+          <div class="centre">Note des voyageurs<b>5,0 / 5</b>4 avis · cirquedemafate.re</div>
+          <svg class="droite" viewBox="0 0 60 120" aria-hidden="true"><path d="M48 116C22 98 10 64 30 6" fill="none" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><ellipse cx="44" cy="108" rx="9" ry="3.6" transform="rotate(-25 44 108)"/><ellipse cx="34" cy="96" rx="10" ry="3.8" transform="rotate(-40 34 96)"/><ellipse cx="26" cy="82" rx="10" ry="3.8" transform="rotate(-55 26 82)"/><ellipse cx="21" cy="66" rx="10" ry="3.8" transform="rotate(-70 21 66)"/><ellipse cx="20" cy="50" rx="10" ry="3.8" transform="rotate(-85 20 50)"/><ellipse cx="23" cy="34" rx="9" ry="3.6" transform="rotate(-100 23 34)"/><ellipse cx="28" cy="19" rx="8" ry="3.4" transform="rotate(-112 28 19)"/><ellipse cx="44" cy="96" rx="8" ry="3.2" transform="rotate(20 44 96)"/><ellipse cx="36" cy="80" rx="8" ry="3.2" transform="rotate(5 36 80)"/><ellipse cx="32" cy="63" rx="8" ry="3.2" transform="rotate(-10 32 63)"/><ellipse cx="31" cy="46" rx="7.5" ry="3" transform="rotate(-25 31 46)"/><ellipse cx="33" cy="30" rx="7" ry="3" transform="rotate(-40 33 30)"/></g></svg>
+        </div>
+        <blockquote>« Je recommande totalement ! »</blockquote>
+        <cite>Camille · octobre 2025</cite>
+        <div class="themes"><span>Vue exceptionnelle</span><span>Hôte accueillant</span><span>Repas maison copieux</span><span>Tentes prêtes à l'arrivée</span><span>Bonne ambiance</span><span>Eau chaude en journée</span></div>
+      </div>
+    </section>
+
+    <!-- ============ RÉSERVER ============ -->
+    <section class="section reserver" id="reserver" data-titre="Réserver">
+      <div class="conteneur">
+        <div class="resa">
+          <div class="revele">
+            <p class="chapitre">Réserver</p>
+            <h2>Votre nuit <em>sous les étoiles.</em></h2>
+            <p>Choisissez vos dates et votre formule : l'estimation se calcule toute seule. Jean-Martel vous confirme la disponibilité.</p>
+            <div class="contact-direct">
+              <a href="tel:+262692061817"><span><small>Appeler Jean-Martel</small><b>0692 06 18 17</b></span><span aria-hidden="true">→</span></a>
+              <a href="mailto:jeanmartelatache4@gmail.com?subject=R%C3%A9servation%20Camping%20Ti%20Piton"><span><small>Écrire</small><b>jeanmartelatache4@gmail.com</b></span><span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <form id="formulaire" class="revele" novalidate>
+            <label>Arrivée<input type="date" id="arrivee" required /></label>
+            <label>Départ<input type="date" id="depart" required /></label>
+            <label>Formule
+              <select id="formule">
+                <option value="tente2">Tente équipée (2 pers.)</option>
+                <option value="tente1">Tente seule (1 pers.)</option>
+                <option value="nu">Votre tente (emplacement)</option>
+              </select>
+            </label>
+            <label>Voyageurs<input type="number" id="personnes" min="1" max="10" value="2" /></label>
+            <label class="case large"><input type="checkbox" id="dp" checked /> Demi-pension (dîner + petit-déjeuner)</label>
+            <label class="large">Nom<input type="text" placeholder="Votre nom" /></label>
+            <label class="large">Téléphone ou e-mail<input type="text" placeholder="Pour vous répondre" /></label>
+            <label class="large">Message<textarea placeholder="Votre sentier d'arrivée, un régime alimentaire, une occasion spéciale…"></textarea></label>
+            <div class="estimation"><span>Estimation pour votre séjour</span><b id="total">70 €</b><span id="detail" style="width:100%">1 nuit · 1 tente équipée · demi-pension · hors frais de réservation</span></div>
+            <button class="btn large" type="submit">Envoyer ma demande</button>
+            <p class="merci" id="merci">Maquette : sur le vrai site, votre demande arriverait directement chez Jean-Martel, par e-mail.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ GÉNÉRIQUE DE FIN ============ -->
+  <footer class="generique" data-titre="Générique">
+    <div class="conteneur">
+      <p class="chapitre centre revele">Générique</p>
+      <dl class="credits revele">
+        <dt>Votre hôte</dt><dd>Jean-Martel</dd>
+        <dt>Lieu de tournage</dt><dd>Îlet des Orangers, cirque de Mafate</dd>
+        <dt>Altitude</dt><dd>environ 980 m</dd>
+        <dt>Accès</dt><dd>à pied uniquement</dd>
+        <dt>Punch de bienvenue</dt><dd>offert par la maison</dd>
+        <dt>Dîner</dt><dd>18 h 30</dd>
+        <dt>Petit-déjeuner</dt><dd>7 h 30</dd>
+        <dt>Patrimoine mondial</dt><dd>UNESCO, depuis 2010</dd>
+        <dt>Réservations</dt><dd>0692 06 18 17</dd>
+      </dl>
+      <p class="fin revele">Fin.</p>
+      <p class="mentions revele">Camping Ti Piton · Îlet des Orangers, 97460 Mafate · La Réunion<br />Maquette réalisée par <a href="https://kreapro.re" target="_blank" rel="noopener">KréaPro</a> pour montrer ce que pourrait être le site du camping. Les images sont des illustrations générées par intelligence artificielle, pas des photos du camping. Infos et tarifs relevés sur les fiches publiques du camping (Office de Tourisme de l'Ouest, cirquedemafate.re).</p>
+    </div>
+  </footer>
+
+  <script>
+    const calme = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const borne = (x) => Math.max(0, Math.min(1, x));
+
+    // ---------- moteur du film : progression de chaque scène selon le défilement ----------
+    const scenes = [...document.querySelectorAll('[data-film]')];
+    const cartons = [...document.querySelectorAll('.prologue .carton')];
+    const parallaxe = [...document.querySelectorAll('[data-parallaxe]')];
+    const titres = [...document.querySelectorAll('[data-titre]')];
+    const nav = document.getElementById('nav');
+    const hudScene = document.getElementById('hud-scene'), hudTc = document.getElementById('hud-tc'), hud = document.querySelector('.hud');
+    const DUREE_FILM = 92 * 60; // le « film » dure 1 h 32 du haut au bas de la page
+
+    function majFilm() {
+      const vh = innerHeight;
+      for (const s of scenes) {
+        const r = s.getBoundingClientRect();
+        if (r.bottom < -vh || r.top > vh * 1.5) continue;
+        const p = borne(-r.top / Math.max(1, r.height - vh));
+        s.style.setProperty('--p', p.toFixed(4));
+        const type = s.dataset.film;
+        if (type === 'scene') {
+          const v = Math.min(borne((p - 0.12) / 0.18), borne((0.97 - p) / 0.12));
+          const noir = Math.max(borne(r.top / vh) * 0.92, borne((p - 0.86) / 0.14) * 0.75);
+          s.style.setProperty('--v', v.toFixed(3));
+          s.style.setProperty('--noirceur', noir.toFixed(3));
+        } else if (type === 'ouverture') {
+          s.style.setProperty('--v', borne(1 - (p - 0.12) / 0.4).toFixed(3));
+        } else if (type === 'prologue') {
+          cartons.forEach((c, i) => c.style.setProperty('--v', borne((p - 0.04 - i * 0.16) / 0.12).toFixed(3)));
+        }
+      }
+      for (const el of parallaxe) {
+        const r = el.parentElement.getBoundingClientRect();
+        el.style.transform = `translate3d(0, ${((r.top + r.height / 2 - vh / 2) * -parseFloat(el.dataset.parallaxe)).toFixed(1)}px, 0)`;
+      }
+      // habillage : nav, scène en cours, timecode
+      nav.classList.toggle('solide', document.getElementById('dormir').getBoundingClientRect().top < 80);
+      let courant = titres[0];
+      for (const t of titres) if (t.getBoundingClientRect().top <= vh * 0.5) courant = t;
+      hudScene.textContent = courant.dataset.titre;
+      const avance = borne(scrollY / Math.max(1, document.documentElement.scrollHeight - vh));
+      const sec = avance * DUREE_FILM, img = Math.floor((sec % 1) * 24);
+      const deux = (n) => String(Math.floor(n)).padStart(2, '0');
+      hudTc.textContent = `${deux(sec / 3600)}:${deux((sec % 3600) / 60)}:${deux(sec % 60)}:${deux(img)}`;
+      hud.style.setProperty('--avance', avance.toFixed(4));
+    }
+
+    if (calme) {
+      scenes.forEach((s) => { s.style.setProperty('--v', 1); s.style.setProperty('--noirceur', 0); });
+      cartons.forEach((c) => c.style.setProperty('--v', 1));
+      addEventListener('scroll', () => { const t = titres.filter((x) => x.getBoundingClientRect().top <= innerHeight / 2).pop(); if (t) hudScene.textContent = t.dataset.titre; }, { passive: true });
+    } else {
+      let attente = false;
+      addEventListener('scroll', () => { if (!attente) { attente = true; requestAnimationFrame(() => { majFilm(); attente = false; }); } }, { passive: true });
+      addEventListener('resize', majFilm);
+      majFilm();
+    }
+
+    // ---------- apparitions des sections pratiques ----------
+    const obs = new IntersectionObserver((entrees) => entrees.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); obs.unobserve(e.target); } }), { threshold: 0.15 });
+    document.querySelectorAll('.revele').forEach((el) => obs.observe(el));
+
+    // ---------- étoiles qui scintillent (scène 6) ----------
+    const ciel = document.getElementById('ciel');
+    if (ciel && !calme) {
+      const ctx = ciel.getContext('2d');
+      let etoiles = [], visible = false;
+      const dimension = () => {
+        const dpr = Math.min(devicePixelRatio || 1, 2);
+        ciel.width = ciel.offsetWidth * dpr; ciel.height = ciel.offsetHeight * dpr;
+        etoiles = Array.from({ length: Math.round(ciel.offsetWidth / 6) }, () => ({
+          x: Math.random() * ciel.width, y: Math.random() * ciel.height * 0.5,
+          r: (Math.random() * 1.1 + 0.3) * dpr, p: Math.random() * 6.28, v: 0.6 + Math.random() * 1.6 }));
+      };
+      dimension(); addEventListener('resize', dimension);
+      new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(ciel);
+      const dessiner = (t) => {
+        if (visible) {
+          ctx.clearRect(0, 0, ciel.width, ciel.height);
+          for (const s of etoiles) {
+            ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.283);
+            ctx.fillStyle = `rgba(255, 246, 225, ${0.2 + 0.7 * Math.abs(Math.sin(s.p + t / 1000 * s.v))})`; ctx.fill();
+          }
+        }
+        requestAnimationFrame(dessiner);
+      };
+      requestAnimationFrame(dessiner);
+    }
+
+    // ---------- réservation : estimation en direct (tarifs publics du camping) ----------
+    const $ = (id) => document.getElementById(id);
+    const iso = (d) => d.toISOString().slice(0, 10);
+    $('arrivee').value = iso(new Date(Date.now() + 14 * 864e5));
+    $('depart').value = iso(new Date(Date.now() + 15 * 864e5));
+    const TARIFS = { tente2: { nuit: 30, dp: 70, parTente: true, taille: 2, nom: 'tente équipée' },
+                     tente1: { nuit: 20, dp: 40, parTente: true, taille: 1, nom: 'tente seule' },
+                     nu: { nuit: 7, dp: 27, parTente: false, taille: 1, nom: 'emplacement' } };
+    const estimer = () => {
+      const nuits = Math.max(1, Math.round((new Date($('depart').value) - new Date($('arrivee').value)) / 864e5) || 1);
+      const p = Math.min(10, Math.max(1, parseInt($('personnes').value, 10) || 1));
+      const t = TARIFS[$('formule').value], dp = $('dp').checked;
+      const unites = Math.ceil(p / t.taille);
+      $('total').textContent = `${(unites * (dp ? t.dp : t.nuit) * nuits).toLocaleString('fr-FR')} €`;
+      const n = t.parTente ? unites : p;
+      $('detail').textContent = `${nuits} nuit${nuits > 1 ? 's' : ''} · ${n} ${t.nom}${n > 1 ? 's' : ''} · ${dp ? 'demi-pension' : 'nuit seule'} · hors frais de réservation`;
+    };
+    ['arrivee', 'depart', 'formule', 'personnes', 'dp'].forEach((id) => $(id).addEventListener('input', estimer));
+    estimer();
+    $('formulaire').addEventListener('submit', (e) => { e.preventDefault(); $('merci').style.display = 'block'; });
+  </script>
+
+<script id="kp-choix-js">
+(function(){
+  var barre=document.getElementById('kp-choix'), H=barre.getBoundingClientRect().height, ID=barre.getAttribute('data-id');
+  var ancien=0;
+  document.querySelectorAll('body *').forEach(function(el){
+    if(el===barre||barre.contains(el))return;
+    var s=getComputedStyle(el);
+    if((s.position==='fixed'||s.position==='sticky')&&/Maquette\s*Kr[ée]aPro/.test(el.textContent||'')&&(el.textContent||'').length<400){
+      ancien=Math.max(ancien,el.getBoundingClientRect().height);el.style.display='none';}
+  });
+  if(H>ancien){document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+(H-ancien)+'px';}
+  document.documentElement.style.scrollPaddingTop=(H+8)+'px';
+  // ♡ J'aime (mémorisé sur l'appareil, repris par la page de choix)
+  var b=barre.querySelector('.kp-aime');
+  function liste(){try{return JSON.parse(localStorage.getItem('tipiton-aime')||'[]');}catch(e){return [];}}
+  function maj(){var on=liste().indexOf(ID)>=0;b.setAttribute('aria-pressed',on);b.textContent=on?'♥ J\'aime':'♡ J\'aime';}
+  b.addEventListener('click',function(){var l=liste(),i=l.indexOf(ID);if(i>=0)l.splice(i,1);else l.push(ID);
+    try{localStorage.setItem('tipiton-aime',JSON.stringify(l));}catch(e){}maj();});
+  maj();
+  // tous les autres liens sont neutralisés
+  var toast=document.getElementById('kp-toast'),t;
+  function message(txt){toast.textContent=txt;toast.classList.add('vu');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('vu');},2600);}
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a');if(!a||a.hasAttribute('data-kp'))return;
+    var h=a.getAttribute('href')||'';if(h.charAt(0)==='#')return;
+    ev.preventDefault();
+    var quoi=/^tel:/.test(h)?'appellera le camping':/wa\.me|whatsapp/i.test(h)?'ouvrira WhatsApp':/^mailto:/.test(h)?'ouvrira l\'e-mail':'fonctionnera';
+    message('Maquette : sur votre vrai site, ce bouton '+quoi+'.');
+  },true);
+})();
+</script>
+</body>
+</html>
