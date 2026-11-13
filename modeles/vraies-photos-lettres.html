@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Camping Ti Piton — Îlet des Orangers, Mafate</title>
+<meta name="description" content="Camping Ti Piton, à l'Îlet des Orangers (980 m), cirque de Mafate, La Réunion : tentes équipées, dîner créole, nuit étoilée. Accès à pied uniquement. Tarifs et contact.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Camping Ti Piton — Îlet des Orangers, Mafate">
+<meta property="og:description" content="Dormez à 980 m dans le cirque de Mafate : tentes équipées, dîner créole, punch maison offert à l'arrivée.">
+<meta property="og:image" content="../images/tipiton/terrain.webp">
+<meta property="og:locale" content="fr_FR">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Campground",
+  "name": "Camping Ti Piton",
+  "description": "Petit camping de montagne à l'Îlet des Orangers (980 m), dans le cirque de Mafate : tentes équipées, tentes seules, emplacements, dîner créole, accès à pied uniquement.",
+  "image": "../images/tipiton/terrain.webp",
+  "telephone": "+262692061817",
+  "email": "jeanmartelatache4@gmail.com",
+  "priceRange": "7 € – 70 €",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Îlet des Orangers",
+    "postalCode": "97460",
+    "addressLocality": "Mafate",
+    "addressRegion": "La Réunion",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -21.04181, "longitude": 55.39347 }
+}
+</script>
+<style>
+:root{
+  --fond:#FAFAF7; --encre:#0F2A1D; --vif:#3FB56B; --vif-fonce:#1F7A45; --texte:#34473c; --ligne:#dfe5dc; --pale:#EEF2EA;
+  --wa:#25D366; --banner:30px; --nav:64px;
+  --f-titre:'Big Shoulders Display','Impact','Arial Narrow',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--banner) + var(--nav))}
+body{font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--texte);background:var(--fond);padding-top:var(--banner);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--vif);outline-offset:3px}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* bandeau maquette */
+.banner{position:fixed;top:0;left:0;right:0;height:var(--banner);z-index:70;background:var(--encre);color:#cfe0d4;font-size:.78rem;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 16px;white-space:nowrap;overflow:hidden}
+.banner a{color:#fff;text-underline-offset:2px}
+.banner .retour{color:var(--vif);font-weight:600;text-decoration:none}
+.banner .retour:hover{text-decoration:underline}
+.banner .court{display:none}
+
+/* navigation */
+.nav{position:sticky;top:var(--banner);z-index:60;background:rgba(250,250,247,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--ligne)}
+.nav .wrap{height:var(--nav);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:var(--f-titre);font-weight:900;font-size:1.6rem;letter-spacing:.04em;text-transform:uppercase;color:var(--encre);text-decoration:none}
+.logo i{font-style:normal;color:var(--vif)}
+.nav ul{list-style:none;display:flex;gap:28px}
+.nav ul a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--texte)}
+.nav ul a:hover{color:var(--vif-fonce)}
+
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:0;font-family:var(--f-titre);font-weight:800;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid var(--encre);cursor:pointer;background:transparent;color:var(--encre);transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--encre)}
+.btn-plein{background:var(--encre);color:var(--fond)}
+.btn-wa{background:var(--wa);border-color:var(--encre);color:var(--encre)}
+
+/* titres-fenêtres */
+.fenetre{font-family:var(--f-titre);font-weight:900;text-transform:uppercase;line-height:.84;letter-spacing:-.005em;
+  font-size:clamp(5.2rem,27vw,25rem);white-space:nowrap;color:var(--encre);
+  padding:.14em .02em .02em;display:block;width:fit-content;max-width:100%;
+  background-size:cover;background-position:var(--px,50%) var(--py,50%);background-repeat:no-repeat}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .fenetre{-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+    -webkit-text-stroke:1.5px var(--encre)}
+}
+.f-hero{background-image:url('../images/tipiton/terrain.webp');background-position:50% 62%}
+.f-tente{background-image:url('../images/tipiton/reel-tentes.webp');font-size:clamp(4rem,14vw,12.5rem)}
+.f-sentier{background-image:url('../images/tipiton/reel-falaise.webp');font-size:clamp(4rem,14vw,12.5rem)}
+.f-aube{background-image:url('../images/tipiton/reel-remparts.webp');font-size:clamp(4.4rem,21vw,19rem)}
+
+section{padding:96px 0}
+.surtitre{display:inline-block;font-family:var(--f-titre);font-weight:800;font-size:1.05rem;letter-spacing:.2em;text-transform:uppercase;color:var(--vif-fonce);margin-bottom:6px}
+
+/* accueil */
+.accueil{padding:44px 0 72px;position:relative}
+.accueil .haut{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-bottom:10px;font-family:var(--f-titre);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:1.15rem;color:var(--encre)}
+.accueil .haut span:nth-child(even){color:var(--vif)}
+.accueil .fenetre{margin-left:-.02em}
+.accueil .bas{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:end;margin-top:34px}
+.accueil .promesse{font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.4;color:var(--encre);font-weight:500;max-width:30ch}
+.boutons{display:flex;flex-wrap:wrap;gap:14px}
+.accueil .fleche{position:absolute;right:24px;top:56px;font-family:var(--f-titre);font-weight:800;letter-spacing:.2em;font-size:.95rem;color:var(--vif-fonce);writing-mode:vertical-rl;text-transform:uppercase}
+
+/* en bref */
+.bref{background:var(--encre);color:#d3e3d8}
+.bref .gros{font-family:var(--f-titre);font-weight:900;text-transform:uppercase;line-height:.86;font-size:clamp(4.4rem,21vw,19rem);color:var(--vif);white-space:nowrap}
+.bref .gros small{font-size:.38em;color:#fff;letter-spacing:.04em}
+.bref .grille{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:48px 0 40px;border-top:2px solid rgba(255,255,255,.25)}
+.bref .repere{padding:22px 18px 8px 0;border-right:1px solid rgba(255,255,255,.18);margin-right:18px}
+.bref .repere:last-child{border-right:0}
+.bref .repere b{display:block;font-family:var(--f-titre);font-weight:900;font-size:2.7rem;line-height:1;color:#fff}
+.bref .repere span{font-size:.95rem;color:#b5cbbc}
+.bref p.texte{max-width:62ch;font-size:1.12rem}
+.bref .reel{margin:48px 0 0;max-width:1027px;border:2px solid var(--vif);box-shadow:10px 10px 0 rgba(63,181,107,.35);background:var(--encre)}
+.bref .reel img{width:100%;height:auto}
+.bref .reel figcaption{display:flex;align-items:center;gap:12px;padding:10px 14px;border-top:2px solid var(--vif);font-family:var(--f-titre);font-weight:800;font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;color:var(--vif)}
+.bref .reel figcaption small{font-family:'Inter',sans-serif;font-weight:400;font-size:.85rem;letter-spacing:0;text-transform:none;color:#b5cbbc}
+
+/* tarifs */
+.tarifs .entete{display:grid;grid-template-columns:auto 1fr;gap:12px 48px;align-items:end;margin-bottom:46px}
+.tarifs .entete p{max-width:40ch;font-size:1.1rem}
+.liste{list-style:none;border-top:2px solid var(--encre);max-width:880px}
+.liste li{display:flex;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px solid var(--ligne)}
+.liste .nom{font-family:var(--f-titre);font-weight:800;font-size:1.5rem;letter-spacing:.03em;text-transform:uppercase;color:var(--encre);flex:none}
+.liste .nom small{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:.9rem;letter-spacing:0;text-transform:none;color:var(--texte)}
+.liste .pts{flex:1;border-bottom:2px dotted #b8c6bc;transform:translateY(-6px);min-width:20px}
+.liste .px{font-family:var(--f-titre);font-weight:900;font-size:1.9rem;color:var(--encre);white-space:nowrap;text-align:right}
+.liste .px small{font-family:'Inter',sans-serif;font-weight:500;font-size:.85rem;color:var(--texte)}
+.liste li:hover .px{color:var(--vif-fonce)}
+.note{margin-top:20px;font-size:.95rem;max-width:880px}
+
+/* venir */
+.venir{background:var(--pale)}
+.venir .corps{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;margin-top:44px;align-items:start}
+.sentiers{list-style:none;border-top:2px solid var(--encre)}
+.sentiers li{padding:18px 0;border-bottom:1px solid #c5d2c8;display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:baseline}
+.sentiers .duree{font-family:var(--f-titre);font-weight:900;font-size:2.6rem;line-height:1;color:var(--vif-fonce)}
+.sentiers b{color:var(--encre);display:block;font-weight:600}
+.conseils{margin-top:26px}
+.conseils h3{font-family:var(--f-titre);font-weight:800;font-size:1.4rem;letter-spacing:.06em;text-transform:uppercase;color:var(--encre);margin-bottom:8px}
+.conseils ul{padding-left:20px}
+.conseils li{margin-bottom:4px}
+.adresse{margin-top:22px;font-style:normal;color:var(--encre);font-weight:500}
+.carte{border:2px solid var(--encre);background:#fff;box-shadow:10px 10px 0 var(--vif)}
+.carte iframe{display:block;width:100%;height:430px;border:0}
+
+/* contact */
+.contact .corps{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:44px;align-items:start}
+.contact .gauche p{font-size:1.15rem;margin-bottom:22px;max-width:36ch}
+.contact .gauche .boutons{flex-direction:column;align-items:flex-start}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:.92rem;color:var(--encre)}
+label.large{grid-column:1/-1}
+input,textarea,select{font:inherit;font-weight:400;color:var(--encre);background:#fff;border:2px solid var(--encre);border-radius:0;padding:12px 14px;min-height:50px;width:100%}
+textarea{min-height:120px;resize:vertical}
+input:focus-visible,textarea:focus-visible{outline:3px solid var(--vif);outline-offset:1px}
+form .btn{grid-column:1/-1;justify-self:start}
+#merci{display:none;grid-column:1/-1;background:var(--vif);color:var(--encre);padding:16px 18px;font-weight:600;border:2px solid var(--encre)}
+
+/* pied */
+footer{background:var(--encre);color:#b8cdbf;padding:72px 0 40px}
+footer .grand{font-family:var(--f-titre);font-weight:900;text-transform:uppercase;line-height:.86;font-size:clamp(3rem,13vw,10rem);color:#fff;margin-bottom:32px}
+footer .grand i{font-style:normal;color:var(--vif)}
+footer .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:34px;font-size:.98rem}
+footer a{color:#fff}
+footer .mention{font-size:.95rem;max-width:80ch;margin-bottom:10px;color:#a3bbaa}
+
+/* whatsapp flottant + barre mobile */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:65;width:58px;height:58px;border-radius:50%;background:var(--wa);color:var(--encre);display:flex;align-items:center;justify-content:center;border:2px solid var(--encre);box-shadow:4px 4px 0 var(--encre);transition:transform .2s}
+.wa-float:hover{transform:translate(-2px,-2px)}
+.wa-float svg{width:30px;height:30px}
+.barre{display:none}
+
+/* apparitions douces */
+.js .rev{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.js .rev.vu{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .nav ul{display:none}
+  .accueil .bas,.tarifs .entete,.venir .corps,.contact .corps{grid-template-columns:1fr;gap:28px}
+  .bref .grille{grid-template-columns:1fr 1fr}
+  .bref .repere:nth-child(2){border-right:0}
+  footer .cols{grid-template-columns:1fr}
+  .accueil .fleche{display:none}
+  .carte iframe{height:340px}
+}
+@media (max-width:640px){
+  body{padding-bottom:78px}
+  .fenetre{font-size:31vw}
+  .f-tente,.f-aube{font-size:29vw}
+  .f-sentier{font-size:33vw}
+  .accueil .haut span:nth-child(even){display:none}
+  .accueil .haut{gap:2px 14px}
+  section{padding:64px 0}
+  .wrap{padding:0 16px}
+  .banner .long{display:none}.banner .court{display:inline}
+  .wa-float{display:none}
+  .barre{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:66;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,250,247,.97);border-top:2px solid var(--encre)}
+  .barre .btn{min-height:52px;padding:0 10px}
+  form{grid-template-columns:1fr}
+  .liste li{flex-wrap:wrap;gap:4px 12px}
+  .liste .pts{display:none}
+  .liste .nom{font-size:1.25rem;flex:1 1 0;min-width:0}
+  .liste .px{font-size:1.6rem}
+  .sentiers li{grid-template-columns:78px 1fr}
+  .sentiers .duree{font-size:2.2rem}
+  .carte{box-shadow:6px 6px 0 var(--vif)}
+  .bref .reel{box-shadow:6px 6px 0 rgba(63,181,107,.35)}
+  .bref .reel figcaption{flex-wrap:wrap;gap:2px 10px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rev{opacity:1;transform:none;transition:none}
+  .btn,.wa-float{transition:none}
+  .btn:hover,.wa-float:hover{transform:none}
+}
+/* nom complet du camping dans les lettres-photo */
+.f-hero{font-size:clamp(3.6rem,26vw,25rem)}
+@media (max-width:640px){.f-hero{font-size:29vw}}
+.f-hero span{display:block}
+.f-hero .l-camping{font-size:.44em;line-height:.95;padding-left:.03em}
+
+/* ---- optimisation téléphone ---- */
+@media (max-width:760px){
+  input,textarea,select{font-size:16px}
+  a[href^="tel:"]:not(.btn),a[href^="mailto:"]:not(.btn){display:inline-block;padding:12px 0}
+}
+</style>
+
+<style id="kp-choix-css">
+  #kp-choix{position:fixed;top:0;left:0;right:0;z-index:2147483000;display:flex;align-items:center;gap:10px;
+    padding:8px 12px;background:#3D0B37;color:#F3F9D2;font:600 14px/1.2 Inter,Arial,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  #kp-choix a{color:#F3F9D2;text-decoration:none;white-space:nowrap;padding:10px 12px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
+  #kp-choix .kp-retour{background:rgba(243,249,210,.1)}
+  #kp-choix .kp-nom{flex:1;text-align:center;font-weight:500;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #kp-choix .kp-choisir{background:#C0D684;color:#3D0B37;margin-left:auto}
+  #kp-toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);z-index:2147483001;max-width:min(92vw,460px);
+    background:#1A1A1A;color:#fff;font:500 15px/1.4 Inter,Arial,sans-serif;padding:12px 16px;border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+  #kp-toast.vu{opacity:1;transform:translate(-50%,0)}
+  iframe{pointer-events:none}
+  @media (max-width:640px){#kp-choix .kp-nom{display:none}#kp-choix a{font-size:13.5px;padding:10px}}
+</style>
+</head>
+<body>
+<div id="kp-choix" role="navigation" aria-label="Choix du modèle"><a data-kp class="kp-retour" href="../index.html#modeles">← Tous les modèles</a><span class="kp-nom">2. Lettres-fenêtres · Vraies photos</span><a data-kp class="kp-choisir" href="../index.html?choix=2#choix">★ Je choisis celui-ci</a></div><div id="kp-toast" role="status" aria-live="polite"></div>
+
+<div class="banner">
+  <span><span class="long">Maquette <a href="https://kreapro.re">KréaPro</a> · formule Salazie (1 page) · modèle 04/10 · photos réelles du camping</span><span class="court">Maquette <a href="https://kreapro.re">KréaPro</a> · Salazie 04/10 · photos réelles</span></span>
+  <a class="retour" href="../index.html"><span class="long">← Les 10 modèles impact</span><span class="court">← Modèles</span></a>
+</div>
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="wrap">
+    <a class="logo" href="#accueil">Ti Piton<i>.</i></a>
+    <ul>
+      <li><a href="#bref">Le camping</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#venir">Venir</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-plein" href="tel:+262692061817" style="min-height:42px;font-size:1.05rem;padding:0 18px">Appeler</a>
+  </div>
+</nav>
+
+<main>
+  <header class="accueil" id="accueil">
+    <div class="wrap">
+      <div class="haut"><span>Camping Ti Piton</span><span>·</span><span>Îlet des Orangers</span><span>·</span><span>980 m</span></div>
+      <h1 class="fenetre f-hero" id="mot-hero" role="img" aria-label="Camping Ti Piton : le terrain et les remparts visibles à travers les lettres (photo réelle)"><span class="l-camping">Camping</span><span class="l-nom">Ti Piton</span></h1>
+      <div class="bas">
+        <p class="promesse rev">Ici, la route s'arrête. Il ne reste que le cirque, un feu et une tente prête pour vous.</p>
+        <div class="boutons rev">
+          <a class="btn btn-plein" href="tel:+262692061817">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            Appeler
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.02L4 29l8.14-1.56a12 12 0 0 0 3.9.65h.01C22.68 28.09 28 22.7 28 16.07 28 12.86 26.75 9.84 24.48 7.57A11.9 11.9 0 0 0 16.04 3zm0 22.03h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.83.93.96-4.7-.24-.38a9.9 9.9 0 0 1-1.52-5.23c0-5.5 4.5-9.97 10.02-9.97 2.67 0 5.18 1.04 7.06 2.93a9.9 9.9 0 0 1 2.92 7.05c0 5.5-4.5 9.99-10 9.99zm5.48-7.47c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07a8.2 8.2 0 0 1-2.42-1.5 9.1 9.1 0 0 1-1.68-2.09c-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.48 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bref" id="bref">
+    <div class="wrap">
+      <span class="surtitre">Le camping en bref</span>
+      <p class="gros rev">À pied<small>.</small></p>
+      <div class="grille rev">
+        <div class="repere"><b>980 m</b><span>d'altitude, à l'Îlet des Orangers</span></div>
+        <div class="repere"><b>0 route</b><span>accès à pied uniquement</span></div>
+        <div class="repere"><b>10</b><span>voyageurs, pas un de plus</span></div>
+        <div class="repere"><b>Punch</b><span>maison offert à l'arrivée</span></div>
+      </div>
+      <p class="texte rev">Jean-Martel vous accueille avec un punch maison. Des tentes équipées vous attendent, un dîner créole se partage à 18 h 30, la nuit est étoilée et le petit-déjeuner arrive à 7 h 30. Les animaux sont acceptés.</p>
+      <figure class="reel">
+        <img src="../images/tipiton/terrain.webp" width="1027" height="684" alt="Le terrain du Camping Ti Piton : deux tentes sur la pelouse, une table et des chaises face aux remparts de Mafate (photo réelle)" loading="lazy" decoding="async">
+        <figcaption>Photo réelle du camping <small>le terrain, face aux remparts de Mafate</small></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="tarifs" id="tarifs">
+    <div class="wrap">
+      <span class="surtitre">Tarifs</span>
+      <div class="entete">
+        <h2 class="fenetre f-tente" role="img" aria-label="Dormir, deux tentes visibles à travers les lettres (photo réelle)">DORMIR</h2>
+        <p class="rev">Tentes équipées avec matelas, oreillers, draps et couvertures. Sanitaires avec douches et toilettes.</p>
+      </div>
+      <ul class="liste rev">
+        <li><span class="nom">Tente équipée<small>pour 2 personnes · la nuit</small></span><span class="pts"></span><span class="px">30 €</span></li>
+        <li><span class="nom">Tente équipée, demi-pension<small>pour 2 personnes</small></span><span class="pts"></span><span class="px">70 €</span></li>
+        <li><span class="nom">Tente seule<small>pour 1 personne · la nuit</small></span><span class="pts"></span><span class="px">20 €</span></li>
+        <li><span class="nom">Tente seule, demi-pension<small>pour 1 personne</small></span><span class="pts"></span><span class="px">40 €</span></li>
+        <li><span class="nom">Emplacement nu<small>votre tente · par personne</small></span><span class="pts"></span><span class="px">7 €</span></li>
+        <li><span class="nom">Emplacement nu, demi-pension<small>par personne</small></span><span class="pts"></span><span class="px">27 €</span></li>
+        <li><span class="nom">Enfant de moins de 10 ans</span><span class="pts"></span><span class="px">12 €</span></li>
+        <li><span class="nom">Dîner<small>entrée, plat, dessert · cuisine maison · 18 h 30</small></span><span class="pts"></span><span class="px">14 € <small>/ pers.</small></span></li>
+        <li><span class="nom">Petit-déjeuner<small>café, thé, lait, tisane, pain, beurre, confiture · 7 h 30</small></span><span class="pts"></span><span class="px">6 € <small>/ pers.</small></span></li>
+        <li><span class="nom">Bois pour le barbecue<small>le fagot</small></span><span class="pts"></span><span class="px">3 €</span></li>
+      </ul>
+      <p class="note rev">La demi-pension comprend le dîner, la nuit et le petit-déjeuner. Tarifs indicatifs, hors frais de réservation.</p>
+    </div>
+  </section>
+
+  <section class="venir" id="venir">
+    <div class="wrap">
+      <span class="surtitre">Venir</span>
+      <h2 class="fenetre f-sentier" role="img" aria-label="Venir, la falaise visible à travers les lettres (photo réelle)">VENIR</h2>
+      <div class="corps">
+        <div class="rev">
+          <ul class="sentiers">
+            <li><span class="duree">~3 h</span><span><b>Depuis le Maïdo</b>en descente, le plus court.</span></li>
+            <li><span class="duree">~4 h</span><span><b>Par Deux-Bras</b>en 4x4 jusqu'à Deux-Bras, puis à pied.</span></li>
+            <li><span class="duree">~5 h</span><span><b>Depuis Sans-Souci</b>par la Canalisation des Orangers, sentier à flanc de falaise (citerne rouge).</span></li>
+          </ul>
+          <div class="conseils">
+            <h3>Avant de partir</h3>
+            <ul>
+              <li>De bonnes chaussures de marche et de l'eau.</li>
+              <li>Une lampe frontale : n'oubliez pas la vôtre.</li>
+              <li>Les sentiers peuvent être fermés en cas d'alerte météo.</li>
+            </ul>
+          </div>
+          <address class="adresse">Camping Ti Piton<br>Îlet des Orangers, 97460 Mafate</address>
+        </div>
+        <div class="carte rev">
+          <iframe src="https://maps.google.com/maps?q=-21.04181,55.39347&z=13&output=embed" title="Carte Google Maps : emplacement du Camping Ti Piton, Îlet des Orangers, Mafate" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <span class="surtitre">Contact</span>
+      <h2 class="fenetre f-aube" role="img" aria-label="Écrire, les remparts de Mafate visibles à travers les lettres (photo réelle)">ÉCRIRE</h2>
+      <div class="corps">
+        <div class="gauche rev">
+          <p>Une question, une date en tête ? Écrivez à Jean-Martel ou appelez-le, il vous répondra.</p>
+          <div class="boutons">
+            <a class="btn btn-plein" href="tel:+262692061817">Appeler le 0692 06 18 17</a>
+            <a class="btn btn-wa" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener">
+              <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.02L4 29l8.14-1.56a12 12 0 0 0 3.9.65h.01C22.68 28.09 28 22.7 28 16.07 28 12.86 26.75 9.84 24.48 7.57A11.9 11.9 0 0 0 16.04 3zm0 22.03h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.83.93.96-4.7-.24-.38a9.9 9.9 0 0 1-1.52-5.23c0-5.5 4.5-9.97 10.02-9.97 2.67 0 5.18 1.04 7.06 2.93a9.9 9.9 0 0 1 2.92 7.05c0 5.5-4.5 9.99-10 9.99zm5.48-7.47c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07a8.2 8.2 0 0 1-2.42-1.5 9.1 9.1 0 0 1-1.68-2.09c-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.48 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+              WhatsApp
+            </a>
+            <a class="btn" href="mailto:jeanmartelatache4@gmail.com">E-mail</a>
+          </div>
+        </div>
+        <form id="contact-form" class="rev" novalidate>
+          <label class="large">Nom<input type="text" name="nom" autocomplete="name" required></label>
+          <label class="large">Téléphone ou e-mail<input type="text" name="contact" autocomplete="email" required></label>
+          <label>Arrivée<input type="date" name="arrivee"></label>
+          <label>Départ<input type="date" name="depart"></label>
+          <label class="large">Personnes<input type="number" name="personnes" min="1" max="10" value="2"></label>
+          <label class="large">Message<textarea name="message" placeholder="Votre sentier d'arrivée, un régime alimentaire, une occasion spéciale…"></textarea></label>
+          <button class="btn btn-plein" type="submit">Envoyer</button>
+          <p id="merci" role="status">Maquette : sur le vrai site, votre message arriverait directement chez Jean-Martel, par e-mail.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="grand">Ti Piton<i>.</i></p>
+    <div class="cols">
+      <div>Camping Ti Piton<br>Îlet des Orangers, 97460 Mafate<br>La Réunion</div>
+      <div>Téléphone : <a href="tel:+262692061817">0692 06 18 17</a><br>E-mail : <a href="mailto:jeanmartelatache4@gmail.com">jeanmartelatache4@gmail.com</a></div>
+      <div>Hôte : Jean-Martel<br>Cirque de Mafate, patrimoine mondial de l'UNESCO</div>
+    </div>
+    <p class="mention">Maquette réalisée par KréaPro pour montrer ce que pourrait être le site du camping. Les photos sont de vraies photos du camping ; leur utilisation sur le site final est à confirmer avec le propriétaire. Infos et tarifs relevés sur les fiches publiques du camping (Office de Tourisme de l'Ouest, cirquedemafate.re).</p>
+    <p class="mention">Bouton WhatsApp : à confirmer avec le propriétaire (le numéro doit être enregistré sur WhatsApp).</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.02L4 29l8.14-1.56a12 12 0 0 0 3.9.65h.01C22.68 28.09 28 22.7 28 16.07 28 12.86 26.75 9.84 24.48 7.57A11.9 11.9 0 0 0 16.04 3zm0 22.03h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.83.93.96-4.7-.24-.38a9.9 9.9 0 0 1-1.52-5.23c0-5.5 4.5-9.97 10.02-9.97 2.67 0 5.18 1.04 7.06 2.93a9.9 9.9 0 0 1 2.92 7.05c0 5.5-4.5 9.99-10 9.99zm5.48-7.47c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07a8.2 8.2 0 0 1-2.42-1.5 9.1 9.1 0 0 1-1.68-2.09c-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.48 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+</a>
+
+<div class="barre">
+  <a class="btn btn-plein" href="tel:+262692061817">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+    Appeler
+  </a>
+  <a class="btn btn-wa" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.02L4 29l8.14-1.56a12 12 0 0 0 3.9.65h.01C22.68 28.09 28 22.7 28 16.07 28 12.86 26.75 9.84 24.48 7.57A11.9 11.9 0 0 0 16.04 3zm0 22.03h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.83.93.96-4.7-.24-.38a9.9 9.9 0 0 1-1.52-5.23c0-5.5 4.5-9.97 10.02-9.97 2.67 0 5.18 1.04 7.06 2.93a9.9 9.9 0 0 1 2.92 7.05c0 5.5-4.5 9.99-10 9.99zm5.48-7.47c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07a8.2 8.2 0 0 1-2.42-1.5 9.1 9.1 0 0 1-1.68-2.09c-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.48 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+(function(){
+  /* apparitions douces */
+  var els=document.querySelectorAll('.rev');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('vu');});}
+
+  /* survol : l'image glisse doucement derrière les lettres */
+  var reduit=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduit){
+    document.querySelectorAll('.fenetre').forEach(function(m){
+      var raf=0;
+      m.addEventListener('pointermove',function(e){
+        if(raf)return;
+        raf=requestAnimationFrame(function(){
+          raf=0;var r=m.getBoundingClientRect();
+          m.style.setProperty('--px',(30+40*(e.clientX-r.left)/r.width)+'%');
+          m.style.setProperty('--py',(30+40*(e.clientY-r.top)/r.height)+'%');
+        });
+      },{passive:true});
+    });
+  }
+
+  /* formulaire de démonstration */
+  document.getElementById('contact-form').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('merci').style.display='block';
+  });
+})();
+</script>
+
+<script id="kp-choix-js">
+(function(){
+  var barre=document.getElementById('kp-choix'), H=barre.getBoundingClientRect().height;
+  // le bandeau « Maquette KréaPro » du modèle est remplacé par la barre de choix
+  var ancien=0;
+  document.querySelectorAll('body *').forEach(function(el){
+    if(el===barre||barre.contains(el))return;
+    var s=getComputedStyle(el);
+    if((s.position==='fixed'||s.position==='sticky')&&/Maquette\s*Kr[ée]aPro/.test(el.textContent||'')&&(el.textContent||'').length<400){
+      ancien=Math.max(ancien,el.getBoundingClientRect().height);el.style.display='none';}
+  });
+  if(H>ancien){document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+(H-ancien)+'px';}
+  document.documentElement.style.scrollPaddingTop=(H+8)+'px';
+  // tous les liens qui feraient quitter le parcours sont neutralisés (sauf la barre et les liens internes à la page)
+  var toast=document.getElementById('kp-toast'),t;
+  function message(txt){toast.textContent=txt;toast.classList.add('vu');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('vu');},2600);}
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a');if(!a||a.hasAttribute('data-kp'))return;
+    var h=a.getAttribute('href')||'';if(h.charAt(0)==='#')return;
+    ev.preventDefault();
+    var quoi=/^tel:/.test(h)?'appellera le camping':/wa\.me|whatsapp/i.test(h)?'ouvrira WhatsApp':/^mailto:/.test(h)?'ouvrira l\'e-mail':'fonctionnera';
+    message('Maquette : sur votre vrai site, ce bouton '+quoi+'.');
+  },true);
+})();
+</script>
+</body>
+</html>

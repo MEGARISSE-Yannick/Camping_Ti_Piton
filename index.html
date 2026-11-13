@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camping Ti Piton — choisissez votre site · KréaPro</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--violet:#3D0B37;--mure:#63264A;--willow:#C0D684;--tea:#C9E4A6;--cream:#F3F9D2;--encre:#1A1A1A;--gris:#5F5160;--fond:#FAFBF4;--bord:#E3E6D5;--wa:#25D366}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--fond);color:var(--encre);font:400 16px/1.55 Inter,system-ui,sans-serif}
+  .wrap{width:min(1180px,100%);margin:0 auto;padding:0 18px}
+  header{background:var(--violet);color:var(--cream);padding:34px 0 30px}
+  .kp{font:600 12px/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--willow);margin:0 0 12px}
+  h1{font:700 clamp(28px,6vw,46px)/1.1 Poppins,sans-serif;margin:0 0 10px;color:#fff}
+  h1 em{font-style:normal;color:var(--willow)}
+  header p{margin:0;color:var(--tea);max-width:680px}
+  .etapes{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;counter-reset:e}
+  .etapes li{counter-increment:e;background:rgba(243,249,210,.08);border-radius:12px;padding:12px 14px 12px 46px;position:relative;font-size:15px}
+  .etapes li::before{content:counter(e);position:absolute;left:12px;top:11px;width:24px;height:24px;border-radius:50%;background:var(--willow);color:var(--violet);font-weight:700;display:grid;place-items:center;font-size:13px}
+  @media (max-width:760px){.etapes{grid-template-columns:1fr}}
+  main{padding:10px 0 40px}
+  .partie{padding-top:30px;scroll-margin-top:10px}
+  .partie h2{font:700 clamp(21px,4vw,28px)/1.2 Poppins,sans-serif;color:var(--violet);margin:0 0 4px}
+  .note{margin:0 0 16px;color:var(--gris);font-size:15px}
+  .grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:16px}
+  .carte{background:#fff;border:1px solid var(--bord);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .apercu{position:relative;display:block;aspect-ratio:16/10;background:#E9EBDD;overflow:hidden}
+  .apercu .pc{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+  .apercu .tel{position:absolute;right:10px;bottom:-14%;width:24%;aspect-ratio:300/650;object-fit:cover;object-position:top;border:3px solid #1B1B1E;border-radius:10px;background:#1B1B1E}
+  .corps{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .num{font:700 13px/1 Inter,sans-serif;color:var(--mure)}
+  .corps h3{font:700 20px/1.2 Poppins,sans-serif;margin:0;color:var(--violet)}
+  .type{align-self:flex-start;font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px}
+  .type.reel{background:#E7F3DA;color:#2E5A1C} .type.ia{background:#F3E8F1;color:var(--mure)}
+  .corps p{margin:0;font-size:15px;color:var(--gris)}
+  .boutons{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+  .boutons a,.boutons button{flex:1;min-height:46px;border-radius:999px;font:600 15px/1 Poppins,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+  .b-voir{background:var(--violet);color:#fff;border:2px solid var(--violet)}
+  .b-choisir{background:#fff;color:var(--violet);border:2px solid var(--violet)}
+  #choix{margin-top:40px;background:#fff;border:2px solid var(--violet);border-radius:18px;padding:22px 18px;scroll-margin-top:10px}
+  #choix h2{font:700 clamp(22px,4.5vw,30px)/1.2 Poppins,sans-serif;color:var(--violet);margin:0 0 6px}
+  #choix .note{margin-bottom:14px}
+  .opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:8px;margin:6px 0 16px}
+  .opt{display:flex;align-items:center;gap:12px;border:2px solid var(--bord);border-radius:12px;padding:12px 14px;cursor:pointer;min-height:56px}
+  .opt input{width:22px;height:22px;accent-color:var(--violet);flex:none}
+  .opt span{display:flex;flex-direction:column} .opt small{color:var(--gris);font-size:13.5px}
+  .opt:has(input:checked){border-color:var(--violet);background:#FAF5F8}
+  label.champ{display:block;font-weight:600;margin:12px 0 6px}
+  textarea,input[type=text]{width:100%;font:400 16px/1.45 Inter,sans-serif;padding:12px 14px;border:2px solid var(--bord);border-radius:12px;background:#fff}
+  textarea{min-height:130px;resize:vertical}
+  .envoyer{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+  @media (max-width:520px){.envoyer{grid-template-columns:1fr}}
+  .envoyer button{min-height:54px;border-radius:999px;border:0;font:600 16px/1 Poppins,sans-serif;cursor:pointer}
+  .b-wa{background:var(--wa);color:#06260F} .b-mail{background:var(--violet);color:#fff}
+  #erreur{display:none;margin:12px 0 0;color:#A12A2A;font-weight:600}
+  footer{padding:26px 0 34px;color:var(--gris);font-size:14px;text-align:center}
+  footer a{color:var(--violet);font-weight:600}
+  button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--mure);outline-offset:2px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="kp">KréaPro · pour le Camping Ti Piton</p>
+    <h1>Choisissez <em>votre site</em></h1>
+    <p>4 styles de site, chacun avec vos vraies photos ou avec des images générées d'après vos photos. Tous en formule Salazie (790 €).</p>
+    <ol class="etapes">
+      <li>Touchez « Voir le site » pour regarder chaque modèle en grand.</li>
+      <li>Revenez avec « ← Tous les modèles » en haut de l'écran.</li>
+      <li>En bas de cette page, choisissez votre préféré et dites-moi ce que vous en pensez.</li>
+    </ol>
+  </div>
+</header>
+<main class="wrap" id="modeles">
+    <section class="partie" id="partie-reel"><h2>Avec vos vraies photos</h2><p class="note">Les vraies photos de votre terrain.</p>
+      <div class="grille">
+      <article class="carte">
+        <a class="apercu" href="modeles/vraies-photos-manifeste.html" aria-label="Voir le site Le manifeste · Vraies photos">
+          <img class="pc" src="images/apercus/01-reel-manifeste.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="tel" src="images/apercus/01-reel-manifeste-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <span class="num">1</span>
+          <h3>Le manifeste</h3>
+          <span class="type reel">Vraies photos</span>
+          <p>Le nom du camping en très grand, en noir et orange : simple et percutant.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-manifeste.html">Voir le site</a><button type="button" class="b-choisir" data-choix="1">★ Je choisis</button></div>
+        </div>
+      </article>
+      <article class="carte">
+        <a class="apercu" href="modeles/vraies-photos-lettres.html" aria-label="Voir le site Lettres-fenêtres · Vraies photos">
+          <img class="pc" src="images/apercus/02-reel-lettres.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="tel" src="images/apercus/02-reel-lettres-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <span class="num">2</span>
+          <h3>Lettres-fenêtres</h3>
+          <span class="type reel">Vraies photos</span>
+          <p>« Camping Ti Piton » en lettres géantes, remplies par la photo de votre terrain.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-lettres.html">Voir le site</a><button type="button" class="b-choisir" data-choix="2">★ Je choisis</button></div>
+        </div>
+      </article>
+      <article class="carte">
+        <a class="apercu" href="modeles/vraies-photos-grand-angle.html" aria-label="Voir le site Grand angle · Vraies photos">
+          <img class="pc" src="images/apercus/03-reel-grand-angle.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="tel" src="images/apercus/03-reel-grand-angle-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <span class="num">3</span>
+          <h3>Grand angle</h3>
+          <span class="type reel">Vraies photos</span>
+          <p>Élégant et aéré, comme une belle marque de voyage, avec vos photos bien mises en valeur.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-grand-angle.html">Voir le site</a><button type="button" class="b-choisir" data-choix="3">★ Je choisis</button></div>
+        </div>
+      </article>
+      <article class="carte">
+        <a class="apercu" href="modeles/vraies-photos-carte-postale.html" aria-label="Voir le site Carte postale · Vraies photos">
+          <img class="pc" src="images/apercus/04-reel-carte-postale.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="tel" src="images/apercus/04-reel-carte-postale-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <span class="num">4</span>
+          <h3>Carte postale</h3>
+          <span class="type reel">Vraies photos</span>
+          <p>Chaque partie du site est une carte postale envoyée depuis Mafate, écrite à la main.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-carte-postale.html">Voir le site</a><button type="button" class="b-choisir" data-choix="4">★ Je choisis</button></div>
+        </div>
+      </article>
+      </div>
+    </section>
+    <section class="partie" id="partie-ia"><h2>Avec des images générées d&#x27;après vos photos</h2><p class="note">Des illustrations créées par intelligence artificielle à partir d&#x27;une vraie photo de votre terrain.</p>
+      <div class="grille">
+      <article class="carte">
+        <a class="apercu" href="modeles/images-generees-manifeste.html" aria-label="Voir le site Le manifeste · Images générées">
+          <img class="pc" src="images/apercus/05-ia-manifeste.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="tel" src="images/apercus/05-ia-manifeste-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <span class="num">5</span>
+          <h3>Le manifeste</h3>
+          <span class="type ia">Images générées</span>
+          <p>Le nom du camping en très grand, en noir et orange : simple et percutant.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/images-generees-manifeste.html">Voir le site</a><button type="button" class="b-choisir" data-choix="5">★ Je choisis</button></div>
+        </div>
+      </article>
+      <article class="carte">
+        <a class="apercu" href="modeles/images-generees-lettres.html" aria-label="Voir le site Lettres-fenêtres · Images générées">
+          <img class="pc" src="images/apercus/06-ia-lettres.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="tel" src="images/apercus/06-ia-lettres-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <span class="num">6</span>
+          <h3>Lettres-fenêtres</h3>
+          <span class="type ia">Images générées</span>
+          <p>« Camping Ti Piton » en lettres géantes, remplies par l&#x27;image de votre terrain.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/images-generees-lettres.html">Voir le site</a><button type="button" class="b-choisir" data-choix="6">★ Je choisis</button></div>
+        </div>
+      </article>
+      <article class="carte">
+        <a class="apercu" href="modeles/images-generees-grand-angle.html" aria-label="Voir le site Grand angle · Images générées">
+          <img class="pc" src="images/apercus/07-ia-grand-angle.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="tel" src="images/apercus/07-ia-grand-angle-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <span class="num">7</span>
+          <h3>Grand angle</h3>
+          <span class="type ia">Images générées</span>
+          <p>Élégant et aéré, avec de grandes images de votre emplacement en plein écran.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/images-generees-grand-angle.html">Voir le site</a><button type="button" class="b-choisir" data-choix="7">★ Je choisis</button></div>
+        </div>
+      </article>
+      <article class="carte">
+        <a class="apercu" href="modeles/images-generees-carte-postale.html" aria-label="Voir le site Carte postale · Images générées">
+          <img class="pc" src="images/apercus/08-ia-carte-postale.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="tel" src="images/apercus/08-ia-carte-postale-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <span class="num">8</span>
+          <h3>Carte postale</h3>
+          <span class="type ia">Images générées</span>
+          <p>Chaque partie du site est une carte postale envoyée depuis Mafate, écrite à la main.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/images-generees-carte-postale.html">Voir le site</a><button type="button" class="b-choisir" data-choix="8">★ Je choisis</button></div>
+        </div>
+      </article>
+      </div>
+    </section>
+
+  <form id="choix" onsubmit="return false">
+    <h2>Mon choix</h2>
+    <p class="note">Choisissez le site que vous préférez, et dites-moi ce que vous aimez ou ce que vous voudriez changer. On peut aussi mélanger deux modèles.</p>
+    <fieldset style="border:0;padding:0;margin:0"><legend class="champ" style="padding:0">Mon site préféré</legend>
+      <div class="opts">
+          <label class="opt"><input type="radio" name="choix" value="1"><span><b>1. Le manifeste</b><small>Vraies photos</small></span></label>
+          <label class="opt"><input type="radio" name="choix" value="2"><span><b>2. Lettres-fenêtres</b><small>Vraies photos</small></span></label>
+          <label class="opt"><input type="radio" name="choix" value="3"><span><b>3. Grand angle</b><small>Vraies photos</small></span></label>
+          <label class="opt"><input type="radio" name="choix" value="4"><span><b>4. Carte postale</b><small>Vraies photos</small></span></label>
+          <label class="opt"><input type="radio" name="choix" value="5"><span><b>5. Le manifeste</b><small>Images générées</small></span></label>
+          <label class="opt"><input type="radio" name="choix" value="6"><span><b>6. Lettres-fenêtres</b><small>Images générées</small></span></label>
+          <label class="opt"><input type="radio" name="choix" value="7"><span><b>7. Grand angle</b><small>Images générées</small></span></label>
+          <label class="opt"><input type="radio" name="choix" value="8"><span><b>8. Carte postale</b><small>Images générées</small></span></label>
+      </div>
+    </fieldset>
+    <label class="champ" for="commentaire">Mes commentaires</label>
+    <textarea id="commentaire" placeholder="Ce que j'aime, ce que je voudrais changer, une couleur, une photo…"></textarea>
+    <label class="champ" for="prenom">Votre prénom</label>
+    <input type="text" id="prenom" autocomplete="given-name" placeholder="Jean-Martel">
+    <p id="erreur" role="alert">Choisissez d'abord votre site préféré, juste au-dessus.</p>
+    <div class="envoyer">
+      <button type="button" class="b-wa" id="b-wa">Envoyer sur WhatsApp</button>
+      <button type="button" class="b-mail" id="b-mail">Envoyer par e-mail</button>
+    </div>
+  </form>
+</main>
+<footer>
+  Maquettes réalisées par KréaPro · Yannick Mégarisse · une question ? <a href="tel:+262693860802">0693 86 08 02</a><br>
+  Les sites ne sont pas encore en ligne : dans les modèles, les boutons (appeler, WhatsApp…) ne fonctionnent pas encore.
+</footer>
+<script>
+(function(){
+  var NOMS={"1": "1. Le manifeste (vraies photos)", "2": "2. Lettres-fenêtres (vraies photos)", "3": "3. Grand angle (vraies photos)", "4": "4. Carte postale (vraies photos)", "5": "5. Le manifeste (images générées)", "6": "6. Lettres-fenêtres (images générées)", "7": "7. Grand angle (images générées)", "8": "8. Carte postale (images générées)"};
+  var f=document.getElementById('choix'), com=document.getElementById('commentaire'), pre=document.getElementById('prenom');
+  function cocher(v){var r=f.querySelector('input[value="'+v+'"]');if(r){r.checked=true;}}
+  // brouillon gardé sur cet appareil (facultatif)
+  try{var b=JSON.parse(localStorage.getItem('tipiton-choix')||'{}');if(b.c)cocher(b.c);if(b.m)com.value=b.m;if(b.p)pre.value=b.p;}catch(e){}
+  function garder(){try{var r=f.querySelector('input[name=choix]:checked');localStorage.setItem('tipiton-choix',JSON.stringify({c:r?r.value:'',m:com.value,p:pre.value}));}catch(e){}}
+  f.addEventListener('input',garder);f.addEventListener('change',garder);
+  var q=new URLSearchParams(location.search).get('choix');if(q){cocher(q);garder();}
+  document.querySelectorAll('[data-choix]').forEach(function(b){b.addEventListener('click',function(){cocher(b.getAttribute('data-choix'));garder();
+    document.getElementById('choix').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});});
+  function texte(){
+    var r=f.querySelector('input[name=choix]:checked');
+    if(!r){document.getElementById('erreur').style.display='block';f.querySelector('.opts').scrollIntoView({block:'center'});return null;}
+    document.getElementById('erreur').style.display='none';
+    return 'Bonjour Yannick,\n\nPour le site du Camping Ti Piton, je choisis : '+NOMS[r.value]+'.\n\nMes commentaires : '+(com.value.trim()||'(aucun)')+'\n\n'+(pre.value.trim()||'Jean-Martel')+' — Camping Ti Piton';
+  }
+  document.getElementById('b-wa').addEventListener('click',function(){var t=texte();if(t)location.href='https://wa.me/262693860802?text='+encodeURIComponent(t);});
+  document.getElementById('b-mail').addEventListener('click',function(){var t=texte();if(t)location.href='mailto:contact@kreapro.re?subject='+encodeURIComponent('Camping Ti Piton : mon choix de site')+'&body='+encodeURIComponent(t);});
+})();
+</script>
+</body>
+</html>
