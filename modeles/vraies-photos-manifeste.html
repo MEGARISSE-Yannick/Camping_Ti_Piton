@@ -207,22 +207,23 @@ footer .mention{border-top:3px solid var(--noir);padding-top:18px;display:grid;g
 </style>
 
 <style id="kp-choix-css">
-  #kp-choix{position:fixed;top:0;left:0;right:0;z-index:2147483000;display:flex;align-items:center;gap:10px;
-    padding:8px 12px;background:#3D0B37;color:#F3F9D2;font:600 14px/1.2 Inter,Arial,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.25)}
-  #kp-choix a{color:#F3F9D2;text-decoration:none;white-space:nowrap;padding:10px 12px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
-  #kp-choix .kp-retour{background:rgba(243,249,210,.1)}
+  #kp-choix{position:fixed;top:0;left:0;right:0;z-index:2147483000;display:flex;align-items:center;gap:8px;
+    padding:8px 10px;background:#3D0B37;color:#F3F9D2;font:600 14px/1.2 Inter,Arial,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  #kp-choix a,#kp-choix button{color:#F3F9D2;text-decoration:none;white-space:nowrap;padding:10px 12px;border-radius:999px;min-height:44px;
+    display:inline-flex;align-items:center;font:600 14px/1 Inter,Arial,sans-serif;border:0;background:rgba(243,249,210,.1);cursor:pointer}
   #kp-choix .kp-nom{flex:1;text-align:center;font-weight:500;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  #kp-choix .kp-choisir{background:#C0D684;color:#3D0B37;margin-left:auto}
+  #kp-choix .kp-aime[aria-pressed="true"]{background:#F4C2D7;color:#3D0B37}
+  #kp-choix .kp-choisir{background:#C0D684;color:#3D0B37}
   #kp-toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);z-index:2147483001;max-width:min(92vw,460px);
     background:#1A1A1A;color:#fff;font:500 15px/1.4 Inter,Arial,sans-serif;padding:12px 16px;border-radius:12px;
     box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
   #kp-toast.vu{opacity:1;transform:translate(-50%,0)}
   iframe{pointer-events:none}
-  @media (max-width:640px){#kp-choix .kp-nom{display:none}#kp-choix a{font-size:13.5px;padding:10px}}
+  @media (max-width:640px){#kp-choix .kp-nom{display:none}#kp-choix a,#kp-choix button{font-size:13.5px;padding:10px}#kp-choix .kp-choisir{margin-left:auto}}
 </style>
 </head>
 <body>
-<div id="kp-choix" role="navigation" aria-label="Choix du modèle"><a data-kp class="kp-retour" href="../index.html#modeles">← Tous les modèles</a><span class="kp-nom">1. Le manifeste · Vraies photos</span><a data-kp class="kp-choisir" href="../index.html?choix=1#choix">★ Je choisis celui-ci</a></div><div id="kp-toast" role="status" aria-live="polite"></div>
+<div id="kp-choix" data-id="1" role="navigation" aria-label="Choix du modèle"><a data-kp href="../index.html#g-propositions">← Tous</a><span class="kp-nom">1. Le manifeste · Vraies photos · Salazie · 790 €</span><button type="button" class="kp-aime" aria-pressed="false">♡ J'aime</button><a data-kp class="kp-choisir" href="../index.html?choix=1#choix">★ Je choisis</a></div><div id="kp-toast" role="status" aria-live="polite"></div>
 
 <div class="banner"><span class="long">Maquette <a href="https://kreapro.re" target="_blank" rel="noopener">KréaPro</a> · formule Salazie (1 page) · modèle 01/10 · photos réelles du camping</span><span class="court">Maquette <a href="https://kreapro.re" target="_blank" rel="noopener">KréaPro</a> · Salazie 01/10 · photos réelles</span><a href="../index.html"><span class="long">← Les 10 modèles impact</span><span class="court">← Modèles</span></a></div>
 
@@ -409,8 +410,7 @@ footer .mention{border-top:3px solid var(--noir);padding-top:18px;display:grid;g
 
 <script id="kp-choix-js">
 (function(){
-  var barre=document.getElementById('kp-choix'), H=barre.getBoundingClientRect().height;
-  // le bandeau « Maquette KréaPro » du modèle est remplacé par la barre de choix
+  var barre=document.getElementById('kp-choix'), H=barre.getBoundingClientRect().height, ID=barre.getAttribute('data-id');
   var ancien=0;
   document.querySelectorAll('body *').forEach(function(el){
     if(el===barre||barre.contains(el))return;
@@ -420,7 +420,14 @@ footer .mention{border-top:3px solid var(--noir);padding-top:18px;display:grid;g
   });
   if(H>ancien){document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+(H-ancien)+'px';}
   document.documentElement.style.scrollPaddingTop=(H+8)+'px';
-  // tous les liens qui feraient quitter le parcours sont neutralisés (sauf la barre et les liens internes à la page)
+  // ♡ J'aime (mémorisé sur l'appareil, repris par la page de choix)
+  var b=barre.querySelector('.kp-aime');
+  function liste(){try{return JSON.parse(localStorage.getItem('tipiton-aime')||'[]');}catch(e){return [];}}
+  function maj(){var on=liste().indexOf(ID)>=0;b.setAttribute('aria-pressed',on);b.textContent=on?'♥ J\'aime':'♡ J\'aime';}
+  b.addEventListener('click',function(){var l=liste(),i=l.indexOf(ID);if(i>=0)l.splice(i,1);else l.push(ID);
+    try{localStorage.setItem('tipiton-aime',JSON.stringify(l));}catch(e){}maj();});
+  maj();
+  // tous les autres liens sont neutralisés
   var toast=document.getElementById('kp-toast'),t;
   function message(txt){toast.textContent=txt;toast.classList.add('vu');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('vu');},2600);}
   document.addEventListener('click',function(ev){

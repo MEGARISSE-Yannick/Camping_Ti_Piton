@@ -8,58 +8,73 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{--violet:#3D0B37;--mure:#63264A;--willow:#C0D684;--tea:#C9E4A6;--cream:#F3F9D2;--encre:#1A1A1A;--gris:#5F5160;--fond:#FAFBF4;--bord:#E3E6D5;--wa:#25D366}
+  :root{--violet:#3D0B37;--mure:#63264A;--willow:#C0D684;--tea:#C9E4A6;--cream:#F3F9D2;--encre:#1A1A1A;--gris:#5F5160;--fond:#FAFBF4;--bord:#E3E6D5;--wa:#25D366;--rose:#F4C2D7}
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
   body{margin:0;background:var(--fond);color:var(--encre);font:400 16px/1.55 Inter,system-ui,sans-serif}
-  .wrap{width:min(1180px,100%);margin:0 auto;padding:0 18px}
-  header{background:var(--violet);color:var(--cream);padding:34px 0 30px}
-  .kp{font:600 12px/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--willow);margin:0 0 12px}
+  .wrap{width:min(1240px,100%);margin:0 auto;padding:0 16px}
+  header{background:var(--violet);color:var(--cream);padding:30px 0 26px}
+  .kp{font:600 12px/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--willow);margin:0 0 10px}
   h1{font:700 clamp(28px,6vw,46px)/1.1 Poppins,sans-serif;margin:0 0 10px;color:#fff}
   h1 em{font-style:normal;color:var(--willow)}
-  header p{margin:0;color:var(--tea);max-width:680px}
-  .etapes{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;counter-reset:e}
-  .etapes li{counter-increment:e;background:rgba(243,249,210,.08);border-radius:12px;padding:12px 14px 12px 46px;position:relative;font-size:15px}
-  .etapes li::before{content:counter(e);position:absolute;left:12px;top:11px;width:24px;height:24px;border-radius:50%;background:var(--willow);color:var(--violet);font-weight:700;display:grid;place-items:center;font-size:13px}
+  header p{margin:0;color:var(--tea);max-width:760px}
+  .etapes{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;counter-reset:e}
+  .etapes li{counter-increment:e;background:rgba(243,249,210,.08);border-radius:12px;padding:11px 14px 11px 46px;position:relative;font-size:15px}
+  .etapes li::before{content:counter(e);position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--willow);color:var(--violet);font-weight:700;display:grid;place-items:center;font-size:13px}
   @media (max-width:760px){.etapes{grid-template-columns:1fr}}
-  main{padding:10px 0 40px}
-  .partie{padding-top:30px;scroll-margin-top:10px}
-  .partie h2{font:700 clamp(21px,4vw,28px)/1.2 Poppins,sans-serif;color:var(--violet);margin:0 0 4px}
-  .note{margin:0 0 16px;color:var(--gris);font-size:15px}
-  .grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:16px}
-  .carte{background:#fff;border:1px solid var(--bord);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  nav.menu{position:sticky;top:0;z-index:20;background:rgba(250,251,244,.97);border-bottom:1px solid var(--bord);backdrop-filter:blur(6px)}
+  nav.menu .wrap{display:flex;gap:8px;align-items:center;padding-top:10px;padding-bottom:10px}
+  nav.menu .defile{display:flex;gap:8px;overflow-x:auto;flex:1;min-width:0;scrollbar-width:none}
+  nav.menu .defile::-webkit-scrollbar{display:none}
+  @media (max-width:520px){nav.menu a{font-size:13.5px;padding:11px 11px}}
+  nav.menu a{flex:none;font:600 14px/1 Inter,sans-serif;color:var(--violet);text-decoration:none;padding:11px 14px;border:1.5px solid var(--bord);border-radius:999px;background:#fff}
+  nav.menu a.choix{background:var(--violet);color:#fff;border-color:var(--violet)}
+  nav.menu a .n{display:inline-block;margin-left:6px;background:var(--rose);color:var(--violet);border-radius:99px;padding:2px 7px;font-size:12px}
+  main{padding:6px 0 40px}
+  .groupe{padding-top:26px}
+  .groupe h2{font:700 clamp(21px,4vw,28px)/1.2 Poppins,sans-serif;color:var(--violet);margin:0 0 4px}
+  .compte{font:600 14px/1 Inter,sans-serif;background:var(--cream);color:var(--violet);border-radius:99px;padding:4px 10px;vertical-align:middle}
+  .note{margin:0 0 14px;color:var(--gris);font-size:15px;max-width:820px}
+  h3.sous{font:700 17px/1.2 Poppins,sans-serif;color:var(--mure);margin:16px 0 10px}
+  .grille{display:grid;gap:14px}
+  .grille.grande{grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
+  .grille.petite{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  @media (max-width:520px){.grille.petite{grid-template-columns:1fr 1fr;gap:10px}}
+  .carte{background:#fff;border:1px solid var(--bord);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .carte.aimee{border-color:#E9A6C6;box-shadow:0 0 0 2px #F4C2D7}
   .apercu{position:relative;display:block;aspect-ratio:16/10;background:#E9EBDD;overflow:hidden}
   .apercu .pc{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
-  .apercu .tel{position:absolute;right:10px;bottom:-14%;width:24%;aspect-ratio:300/650;object-fit:cover;object-position:top;border:3px solid #1B1B1E;border-radius:10px;background:#1B1B1E}
-  .corps{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
-  .num{font:700 13px/1 Inter,sans-serif;color:var(--mure)}
-  .corps h3{font:700 20px/1.2 Poppins,sans-serif;margin:0;color:var(--violet)}
-  .type{align-self:flex-start;font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px}
-  .type.reel{background:#E7F3DA;color:#2E5A1C} .type.ia{background:#F3E8F1;color:var(--mure)}
-  .corps p{margin:0;font-size:15px;color:var(--gris)}
-  .boutons{display:flex;gap:8px;margin-top:auto;padding-top:8px}
-  .boutons a,.boutons button{flex:1;min-height:46px;border-radius:999px;font:600 15px/1 Poppins,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
-  .b-voir{background:var(--violet);color:#fff;border:2px solid var(--violet)}
-  .b-choisir{background:#fff;color:var(--violet);border:2px solid var(--violet)}
-  #choix{margin-top:40px;background:#fff;border:2px solid var(--violet);border-radius:18px;padding:22px 18px;scroll-margin-top:10px}
+  .apercu .tel{position:absolute;right:8px;bottom:-14%;width:24%;aspect-ratio:300/650;object-fit:cover;object-position:top;border:3px solid #1B1B1E;border-radius:9px;background:#1B1B1E}
+  .corps{padding:12px 13px 13px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .badges{display:flex;flex-wrap:wrap;gap:5px}
+  .badges span{font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px}
+  .b-reel{background:#E7F3DA;color:#2E5A1C} .b-ia{background:#F3E8F1;color:var(--mure)} .b-ambiance{background:#EDEDED;color:#4A4A4A}
+  .b-salazie{background:var(--cream);color:var(--violet)} .b-mafate{background:#FFE7C7;color:#7A4100}
+  .corps h3{font:700 18px/1.2 Poppins,sans-serif;margin:0;color:var(--violet)}
+  .corps h3 .num{color:var(--mure);font-size:14px}
+  .corps p{margin:0;font-size:14.5px;color:var(--gris)}
+  .petite .corps p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  @media (max-width:520px){.petite .corps p{display:none}.petite .corps h3{font-size:15.5px}.petite .badges span{font-size:11px}}
+  .boutons{display:flex;gap:8px;margin-top:auto;padding-top:6px}
+  .b-voir{flex:1;min-height:44px;border-radius:999px;background:var(--violet);color:#fff;font:600 14.5px/1 Poppins,sans-serif;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+  .b-aime{width:46px;min-height:44px;border-radius:999px;border:2px solid var(--bord);background:#fff;color:#C2185B;font-size:20px;cursor:pointer}
+  .b-aime[aria-pressed="true"]{background:var(--rose);border-color:#E9A6C6}
+  #choix{margin-top:36px;background:#fff;border:2px solid var(--violet);border-radius:18px;padding:22px 18px}
   #choix h2{font:700 clamp(22px,4.5vw,30px)/1.2 Poppins,sans-serif;color:var(--violet);margin:0 0 6px}
-  #choix .note{margin-bottom:14px}
-  .opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:8px;margin:6px 0 16px}
-  .opt{display:flex;align-items:center;gap:12px;border:2px solid var(--bord);border-radius:12px;padding:12px 14px;cursor:pointer;min-height:56px}
-  .opt input{width:22px;height:22px;accent-color:var(--violet);flex:none}
-  .opt span{display:flex;flex-direction:column} .opt small{color:var(--gris);font-size:13.5px}
-  .opt:has(input:checked){border-color:var(--violet);background:#FAF5F8}
-  label.champ{display:block;font-weight:600;margin:12px 0 6px}
-  textarea,input[type=text]{width:100%;font:400 16px/1.45 Inter,sans-serif;padding:12px 14px;border:2px solid var(--bord);border-radius:12px;background:#fff}
+  label.champ{display:block;font-weight:600;margin:14px 0 6px}
+  select,textarea,input[type=text]{width:100%;font:400 16px/1.45 Inter,sans-serif;padding:12px 14px;border:2px solid var(--bord);border-radius:12px;background:#fff;color:var(--encre)}
   textarea{min-height:130px;resize:vertical}
-  .envoyer{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+  #aimes{display:flex;flex-wrap:wrap;gap:6px;min-height:24px}
+  #aimes button{font:500 14px/1.2 Inter,sans-serif;background:var(--rose);color:var(--violet);border:0;border-radius:999px;padding:8px 12px;cursor:pointer}
+  #aimes .vide{color:var(--gris);font-size:14.5px}
+  .envoyer{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
   @media (max-width:520px){.envoyer{grid-template-columns:1fr}}
   .envoyer button{min-height:54px;border-radius:999px;border:0;font:600 16px/1 Poppins,sans-serif;cursor:pointer}
   .b-wa{background:var(--wa);color:#06260F} .b-mail{background:var(--violet);color:#fff}
   #erreur{display:none;margin:12px 0 0;color:#A12A2A;font-weight:600}
-  footer{padding:26px 0 34px;color:var(--gris);font-size:14px;text-align:center}
+  footer{padding:24px 0 34px;color:var(--gris);font-size:14px;text-align:center}
   footer a{color:var(--violet);font-weight:600}
-  button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--mure);outline-offset:2px}
+  button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--mure);outline-offset:2px}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -68,123 +83,515 @@
   <div class="wrap">
     <p class="kp">KréaPro · pour le Camping Ti Piton</p>
     <h1>Choisissez <em>votre site</em></h1>
-    <p>4 styles de site, chacun avec vos vraies photos ou avec des images générées d'après vos photos. Tous en formule Salazie (790 €).</p>
+    <p>Commencez par les 8 propositions de votre devis (formule Salazie, 790 €). Plus bas, 36 autres styles pour vous inspirer : la plupart en Salazie aussi, quelques-uns en formule Mafate (2 690 €), toujours indiqué sur la carte.</p>
     <ol class="etapes">
-      <li>Touchez « Voir le site » pour regarder chaque modèle en grand.</li>
-      <li>Revenez avec « ← Tous les modèles » en haut de l'écran.</li>
-      <li>En bas de cette page, choisissez votre préféré et dites-moi ce que vous en pensez.</li>
+      <li>Touchez « Voir le site » pour regarder un modèle en grand ; « ← Tous » vous ramène ici.</li>
+      <li>Touchez ♡ sur tous ceux qui vous plaisent.</li>
+      <li>Dans « Mon choix », en bas, choisissez votre préféré et écrivez vos commentaires.</li>
     </ol>
   </div>
 </header>
-<main class="wrap" id="modeles">
-    <section class="partie" id="partie-reel"><h2>Avec vos vraies photos</h2><p class="note">Les vraies photos de votre terrain.</p>
-      <div class="grille">
-      <article class="carte">
-        <a class="apercu" href="modeles/vraies-photos-manifeste.html" aria-label="Voir le site Le manifeste · Vraies photos">
-          <img class="pc" src="images/apercus/01-reel-manifeste.webp" alt="" loading="lazy" onerror="this.remove()">
-          <img class="tel" src="images/apercus/01-reel-manifeste-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+<nav class="menu" aria-label="Raccourcis"><div class="wrap">
+  <div class="defile"><a href="#g-propositions">Les 8 propositions</a><a href="#g-reel">Vos vraies photos</a><a href="#g-ambiance">Images d'ambiance</a></div>
+  <a class="choix" href="#choix">Mon choix<span class="n" id="nb-aimes">0 ♥</span></a>
+</div></nav>
+<main class="wrap">
+    <section class="groupe" id="g-propositions"><h2>Les 8 propositions de votre devis <span class="compte">8</span></h2><p class="note">Formule Salazie, 790 € : les 4 mêmes styles, avec vos vraies photos ou avec des images générées d&#x27;après vos photos.</p>
+      <h3 class="sous">Avec vos vraies photos</h3>
+      <div class="grille grande">
+      <article class="carte grande" data-id="1">
+        <a class="apercu" href="modeles/vraies-photos-manifeste.html" aria-label="Voir le site Le manifeste">
+          <img class="pc" src="images/apercus/1.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/1-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
-          <span class="num">1</span>
-          <h3>Le manifeste</h3>
-          <span class="type reel">Vraies photos</span>
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">1.</span> Le manifeste</h3>
           <p>Le nom du camping en très grand, en noir et orange : simple et percutant.</p>
-          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-manifeste.html">Voir le site</a><button type="button" class="b-choisir" data-choix="1">★ Je choisis</button></div>
+          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-manifeste.html">Voir le site</a><button type="button" class="b-aime" data-aime="1" aria-pressed="false" aria-label="J'aime Le manifeste">♡</button></div>
         </div>
       </article>
-      <article class="carte">
-        <a class="apercu" href="modeles/vraies-photos-lettres.html" aria-label="Voir le site Lettres-fenêtres · Vraies photos">
-          <img class="pc" src="images/apercus/02-reel-lettres.webp" alt="" loading="lazy" onerror="this.remove()">
-          <img class="tel" src="images/apercus/02-reel-lettres-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+      <article class="carte grande" data-id="2">
+        <a class="apercu" href="modeles/vraies-photos-lettres.html" aria-label="Voir le site Lettres-fenêtres">
+          <img class="pc" src="images/apercus/2.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/2-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
-          <span class="num">2</span>
-          <h3>Lettres-fenêtres</h3>
-          <span class="type reel">Vraies photos</span>
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">2.</span> Lettres-fenêtres</h3>
           <p>« Camping Ti Piton » en lettres géantes, remplies par la photo de votre terrain.</p>
-          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-lettres.html">Voir le site</a><button type="button" class="b-choisir" data-choix="2">★ Je choisis</button></div>
+          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-lettres.html">Voir le site</a><button type="button" class="b-aime" data-aime="2" aria-pressed="false" aria-label="J'aime Lettres-fenêtres">♡</button></div>
         </div>
       </article>
-      <article class="carte">
-        <a class="apercu" href="modeles/vraies-photos-grand-angle.html" aria-label="Voir le site Grand angle · Vraies photos">
-          <img class="pc" src="images/apercus/03-reel-grand-angle.webp" alt="" loading="lazy" onerror="this.remove()">
-          <img class="tel" src="images/apercus/03-reel-grand-angle-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+      <article class="carte grande" data-id="3">
+        <a class="apercu" href="modeles/vraies-photos-grand-angle.html" aria-label="Voir le site Grand angle">
+          <img class="pc" src="images/apercus/3.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/3-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
-          <span class="num">3</span>
-          <h3>Grand angle</h3>
-          <span class="type reel">Vraies photos</span>
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">3.</span> Grand angle</h3>
           <p>Élégant et aéré, comme une belle marque de voyage, avec vos photos bien mises en valeur.</p>
-          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-grand-angle.html">Voir le site</a><button type="button" class="b-choisir" data-choix="3">★ Je choisis</button></div>
+          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-grand-angle.html">Voir le site</a><button type="button" class="b-aime" data-aime="3" aria-pressed="false" aria-label="J'aime Grand angle">♡</button></div>
         </div>
       </article>
-      <article class="carte">
-        <a class="apercu" href="modeles/vraies-photos-carte-postale.html" aria-label="Voir le site Carte postale · Vraies photos">
-          <img class="pc" src="images/apercus/04-reel-carte-postale.webp" alt="" loading="lazy" onerror="this.remove()">
-          <img class="tel" src="images/apercus/04-reel-carte-postale-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+      <article class="carte grande" data-id="4">
+        <a class="apercu" href="modeles/vraies-photos-carte-postale.html" aria-label="Voir le site Carte postale">
+          <img class="pc" src="images/apercus/4.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/4-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
-          <span class="num">4</span>
-          <h3>Carte postale</h3>
-          <span class="type reel">Vraies photos</span>
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">4.</span> Carte postale</h3>
           <p>Chaque partie du site est une carte postale envoyée depuis Mafate, écrite à la main.</p>
-          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-carte-postale.html">Voir le site</a><button type="button" class="b-choisir" data-choix="4">★ Je choisis</button></div>
+          <div class="boutons"><a class="b-voir" href="modeles/vraies-photos-carte-postale.html">Voir le site</a><button type="button" class="b-aime" data-aime="4" aria-pressed="false" aria-label="J'aime Carte postale">♡</button></div>
+        </div>
+      </article>
+      </div>
+      <h3 class="sous">Avec des images générées d'après vos photos</h3>
+      <div class="grille grande">
+      <article class="carte grande" data-id="5">
+        <a class="apercu" href="modeles/images-generees-manifeste.html" aria-label="Voir le site Le manifeste">
+          <img class="pc" src="images/apercus/5.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/5-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ia">Images générées d&#x27;après vos photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">5.</span> Le manifeste</h3>
+          <p>Le nom du camping en très grand, en noir et orange : simple et percutant.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/images-generees-manifeste.html">Voir le site</a><button type="button" class="b-aime" data-aime="5" aria-pressed="false" aria-label="J'aime Le manifeste">♡</button></div>
+        </div>
+      </article>
+      <article class="carte grande" data-id="6">
+        <a class="apercu" href="modeles/images-generees-lettres.html" aria-label="Voir le site Lettres-fenêtres">
+          <img class="pc" src="images/apercus/6.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/6-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ia">Images générées d&#x27;après vos photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">6.</span> Lettres-fenêtres</h3>
+          <p>« Camping Ti Piton » en lettres géantes, remplies par l&#x27;image de votre terrain.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/images-generees-lettres.html">Voir le site</a><button type="button" class="b-aime" data-aime="6" aria-pressed="false" aria-label="J'aime Lettres-fenêtres">♡</button></div>
+        </div>
+      </article>
+      <article class="carte grande" data-id="7">
+        <a class="apercu" href="modeles/images-generees-grand-angle.html" aria-label="Voir le site Grand angle">
+          <img class="pc" src="images/apercus/7.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/7-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ia">Images générées d&#x27;après vos photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">7.</span> Grand angle</h3>
+          <p>Élégant et aéré, avec de grandes images de votre emplacement en plein écran.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/images-generees-grand-angle.html">Voir le site</a><button type="button" class="b-aime" data-aime="7" aria-pressed="false" aria-label="J'aime Grand angle">♡</button></div>
+        </div>
+      </article>
+      <article class="carte grande" data-id="8">
+        <a class="apercu" href="modeles/images-generees-carte-postale.html" aria-label="Voir le site Carte postale">
+          <img class="pc" src="images/apercus/8.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/8-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ia">Images générées d&#x27;après vos photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">8.</span> Carte postale</h3>
+          <p>Chaque partie du site est une carte postale envoyée depuis Mafate, écrite à la main.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/images-generees-carte-postale.html">Voir le site</a><button type="button" class="b-aime" data-aime="8" aria-pressed="false" aria-label="J'aime Carte postale">♡</button></div>
         </div>
       </article>
       </div>
     </section>
-    <section class="partie" id="partie-ia"><h2>Avec des images générées d&#x27;après vos photos</h2><p class="note">Des illustrations créées par intelligence artificielle à partir d&#x27;une vraie photo de votre terrain.</p>
-      <div class="grille">
-      <article class="carte">
-        <a class="apercu" href="modeles/images-generees-manifeste.html" aria-label="Voir le site Le manifeste · Images générées">
-          <img class="pc" src="images/apercus/05-ia-manifeste.webp" alt="" loading="lazy" onerror="this.remove()">
-          <img class="tel" src="images/apercus/05-ia-manifeste-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+    <section class="groupe" id="g-reel"><h2>Plus de styles, avec vos vraies photos <span class="compte">9</span></h2><p class="note">D&#x27;autres idées construites avec les photos de votre terrain. Ceux marqués « Mafate » ont des effets sur mesure (2 690 €).</p>
+      <div class="grille petite">
+      <article class="carte" data-id="9">
+        <a class="apercu" href="modeles/photos-plein-air.html" aria-label="Voir le site Plein air">
+          <img class="pc" src="images/apercus/9.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/9-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
-          <span class="num">5</span>
-          <h3>Le manifeste</h3>
-          <span class="type ia">Images générées</span>
-          <p>Le nom du camping en très grand, en noir et orange : simple et percutant.</p>
-          <div class="boutons"><a class="b-voir" href="modeles/images-generees-manifeste.html">Voir le site</a><button type="button" class="b-choisir" data-choix="5">★ Je choisis</button></div>
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">9.</span> Plein air</h3>
+          <p>Un site lumineux, construit autour de la vraie photo de votre terrain.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/photos-plein-air.html">Voir le site</a><button type="button" class="b-aime" data-aime="9" aria-pressed="false" aria-label="J'aime Plein air">♡</button></div>
         </div>
       </article>
-      <article class="carte">
-        <a class="apercu" href="modeles/images-generees-lettres.html" aria-label="Voir le site Lettres-fenêtres · Images générées">
-          <img class="pc" src="images/apercus/06-ia-lettres.webp" alt="" loading="lazy" onerror="this.remove()">
-          <img class="tel" src="images/apercus/06-ia-lettres-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+      <article class="carte" data-id="10">
+        <a class="apercu" href="modeles/photos-riso.html" aria-label="Voir le site Risographie">
+          <img class="pc" src="images/apercus/10.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/10-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
-          <span class="num">6</span>
-          <h3>Lettres-fenêtres</h3>
-          <span class="type ia">Images générées</span>
-          <p>« Camping Ti Piton » en lettres géantes, remplies par l&#x27;image de votre terrain.</p>
-          <div class="boutons"><a class="b-voir" href="modeles/images-generees-lettres.html">Voir le site</a><button type="button" class="b-choisir" data-choix="6">★ Je choisis</button></div>
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">10.</span> Risographie</h3>
+          <p>Le site imprimé à deux encres fluo, avec grain et léger décalage des couleurs.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/photos-riso.html">Voir le site</a><button type="button" class="b-aime" data-aime="10" aria-pressed="false" aria-label="J'aime Risographie">♡</button></div>
         </div>
       </article>
-      <article class="carte">
-        <a class="apercu" href="modeles/images-generees-grand-angle.html" aria-label="Voir le site Grand angle · Images générées">
-          <img class="pc" src="images/apercus/07-ia-grand-angle.webp" alt="" loading="lazy" onerror="this.remove()">
-          <img class="tel" src="images/apercus/07-ia-grand-angle-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+      <article class="carte" data-id="11">
+        <a class="apercu" href="modeles/photos-cyanotype.html" aria-label="Voir le site Cyanotype">
+          <img class="pc" src="images/apercus/11.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/11-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
-          <span class="num">7</span>
-          <h3>Grand angle</h3>
-          <span class="type ia">Images générées</span>
-          <p>Élégant et aéré, avec de grandes images de votre emplacement en plein écran.</p>
-          <div class="boutons"><a class="b-voir" href="modeles/images-generees-grand-angle.html">Voir le site</a><button type="button" class="b-choisir" data-choix="7">★ Je choisis</button></div>
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">11.</span> Cyanotype</h3>
+          <p>Tout le site dans un seul bleu de Prusse ; les vraies photos y sont posées comme des tirages.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/photos-cyanotype.html">Voir le site</a><button type="button" class="b-aime" data-aime="11" aria-pressed="false" aria-label="J'aime Cyanotype">♡</button></div>
         </div>
       </article>
-      <article class="carte">
-        <a class="apercu" href="modeles/images-generees-carte-postale.html" aria-label="Voir le site Carte postale · Images générées">
-          <img class="pc" src="images/apercus/08-ia-carte-postale.webp" alt="" loading="lazy" onerror="this.remove()">
-          <img class="tel" src="images/apercus/08-ia-carte-postale-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+      <article class="carte" data-id="12">
+        <a class="apercu" href="modeles/photos-ardoise.html" aria-label="Voir le site L&#x27;ardoise">
+          <img class="pc" src="images/apercus/12.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/12-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
-          <span class="num">8</span>
-          <h3>Carte postale</h3>
-          <span class="type ia">Images générées</span>
-          <p>Chaque partie du site est une carte postale envoyée depuis Mafate, écrite à la main.</p>
-          <div class="boutons"><a class="b-voir" href="modeles/images-generees-carte-postale.html">Voir le site</a><button type="button" class="b-choisir" data-choix="8">★ Je choisis</button></div>
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">12.</span> L&#x27;ardoise</h3>
+          <p>Le site écrit à la craie, comme le menu d&#x27;une table d&#x27;hôte.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/photos-ardoise.html">Voir le site</a><button type="button" class="b-aime" data-aime="12" aria-pressed="false" aria-label="J'aime L&#x27;ardoise">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="13">
+        <a class="apercu" href="modeles/photos-descente.html" aria-label="Voir le site La descente">
+          <img class="pc" src="images/apercus/13.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/13-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
+          <h3><span class="num">13.</span> La descente</h3>
+          <p>En faisant défiler, on descend dans le cirque : les montagnes glissent, le sentier se dessine.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/photos-descente.html">Voir le site</a><button type="button" class="b-aime" data-aime="13" aria-pressed="false" aria-label="J'aime La descente">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="14">
+        <a class="apercu" href="modeles/photos-24h.html" aria-label="Voir le site 24 heures à l&#x27;îlet">
+          <img class="pc" src="images/apercus/14.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/14-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
+          <h3><span class="num">14.</span> 24 heures à l&#x27;îlet</h3>
+          <p>Le ciel de la page passe du jour au coucher du soleil, à la nuit étoilée puis à l&#x27;aube.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/photos-24h.html">Voir le site</a><button type="button" class="b-aime" data-aime="14" aria-pressed="false" aria-label="J'aime 24 heures à l&#x27;îlet">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="15">
+        <a class="apercu" href="modeles/photos-lampe.html" aria-label="Voir le site Lampe frontale">
+          <img class="pc" src="images/apercus/15.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/15-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
+          <h3><span class="num">15.</span> Lampe frontale</h3>
+          <p>La page est dans le noir : on l&#x27;explore avec le faisceau d&#x27;une lampe frontale.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/photos-lampe.html">Voir le site</a><button type="button" class="b-aime" data-aime="15" aria-pressed="false" aria-label="J'aime Lampe frontale">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="16">
+        <a class="apercu" href="modeles/photos-panorama.html" aria-label="Voir le site Panorama">
+          <img class="pc" src="images/apercus/16.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/16-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
+          <h3><span class="num">16.</span> Panorama</h3>
+          <p>Le séjour défile à l&#x27;horizontale, comme un panorama des remparts.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/photos-panorama.html">Voir le site</a><button type="button" class="b-aime" data-aime="16" aria-pressed="false" aria-label="J'aime Panorama">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="17">
+        <a class="apercu" href="modeles/photos-diorama.html" aria-label="Voir le site Diorama">
+          <img class="pc" src="images/apercus/17.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/17-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
+          <h3><span class="num">17.</span> Diorama</h3>
+          <p>Le cirque en papier découpé 3D, qui s&#x27;incline avec la souris ou le téléphone.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/photos-diorama.html">Voir le site</a><button type="button" class="b-aime" data-aime="17" aria-pressed="false" aria-label="J'aime Diorama">♡</button></div>
+        </div>
+      </article>
+      </div>
+    </section>
+    <section class="groupe" id="g-ambiance"><h2>Plus de styles, avec des images d&#x27;ambiance <span class="compte">27</span></h2><p class="note">Pour vous inspirer : ces modèles utilisent des images d&#x27;ambiance générées par IA, qui ne montrent pas votre camping. Sur votre site, on mettrait vos photos.</p>
+      <div class="grille petite">
+      <article class="carte" data-id="18">
+        <a class="apercu" href="modeles/ambiance-salazie-essentiel.html" aria-label="Voir le site Essentiel">
+          <img class="pc" src="images/apercus/18.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/18-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">18.</span> Essentiel</h3>
+          <p>Net et moderne : blanc et vert fanjan, grandes photos arrondies, tout se lit en un coup d&#x27;œil.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-salazie-essentiel.html">Voir le site</a><button type="button" class="b-aime" data-aime="18" aria-pressed="false" aria-label="J'aime Essentiel">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="19">
+        <a class="apercu" href="modeles/ambiance-salazie-nuit.html" aria-label="Voir le site Nuit étoilée">
+          <img class="pc" src="images/apercus/19.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/19-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">19.</span> Nuit étoilée</h3>
+          <p>Une carte de visite chic : bleu nuit, filets dorés, étoiles qui scintillent doucement.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-salazie-nuit.html">Voir le site</a><button type="button" class="b-aime" data-aime="19" aria-pressed="false" aria-label="J'aime Nuit étoilée">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="20">
+        <a class="apercu" href="modeles/ambiance-salazie-case.html" aria-label="Voir le site Case créole">
+          <img class="pc" src="images/apercus/20.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/20-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">20.</span> Case créole</h3>
+          <p>Les couleurs des cases, les lambrequins et la tôle ondulée : chaleureux, joyeux et bien de chez nous.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-salazie-case.html">Voir le site</a><button type="button" class="b-aime" data-aime="20" aria-pressed="false" aria-label="J'aime Case créole">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="21">
+        <a class="apercu" href="modeles/ambiance-magazine.html" aria-label="Voir le site Magazine de voyage">
+          <img class="pc" src="images/apercus/21.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/21-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">21.</span> Magazine de voyage</h3>
+          <p>Un numéro spécial « Mafate » d&#x27;une revue de voyage haut de gamme.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-magazine.html">Voir le site</a><button type="button" class="b-aime" data-aime="21" aria-pressed="false" aria-label="J'aime Magazine de voyage">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="22">
+        <a class="apercu" href="modeles/ambiance-suisse.html" aria-label="Voir le site Typographie suisse">
+          <img class="pc" src="images/apercus/22.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/22-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">22.</span> Typographie suisse</h3>
+          <p>Une grille stricte, des chiffres géants, du noir, du blanc et un rouge vif.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-suisse.html">Voir le site</a><button type="button" class="b-aime" data-aime="22" aria-pressed="false" aria-label="J'aime Typographie suisse">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="23">
+        <a class="apercu" href="modeles/ambiance-topo.html" aria-label="Voir le site Carte topographique">
+          <img class="pc" src="images/apercus/23.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/23-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">23.</span> Carte topographique</h3>
+          <p>Le site vu comme une carte de randonnée.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-topo.html">Voir le site</a><button type="button" class="b-aime" data-aime="23" aria-pressed="false" aria-label="J'aime Carte topographique">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="24">
+        <a class="apercu" href="modeles/ambiance-rhum.html" aria-label="Voir le site Étiquette de rhum arrangé">
+          <img class="pc" src="images/apercus/24.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/24-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">24.</span> Étiquette de rhum arrangé</h3>
+          <p>Un clin d&#x27;œil au punch de bienvenue, façon étiquette ancienne.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-rhum.html">Voir le site</a><button type="button" class="b-aime" data-aime="24" aria-pressed="false" aria-label="J'aime Étiquette de rhum arrangé">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="25">
+        <a class="apercu" href="modeles/ambiance-neobrutal.html" aria-label="Voir le site Néo-brutal">
+          <img class="pc" src="images/apercus/25.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/25-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">25.</span> Néo-brutal</h3>
+          <p>Une page pop et franche : gros contours noirs et couleurs vives.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-neobrutal.html">Voir le site</a><button type="button" class="b-aime" data-aime="25" aria-pressed="false" aria-label="J'aime Néo-brutal">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="26">
+        <a class="apercu" href="modeles/ambiance-bento.html" aria-label="Voir le site Bento">
+          <img class="pc" src="images/apercus/26.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/26-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">26.</span> Bento</h3>
+          <p>Tout le site rangé en tuiles arrondies, façon présentation de produit.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-bento.html">Voir le site</a><button type="button" class="b-aime" data-aime="26" aria-pressed="false" aria-label="J'aime Bento">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="27">
+        <a class="apercu" href="modeles/ambiance-aurore.html" aria-label="Voir le site Aurore">
+          <img class="pc" src="images/apercus/27.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/27-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">27.</span> Aurore</h3>
+          <p>Un lever de soleil en dégradé et des panneaux en verre dépoli.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-aurore.html">Voir le site</a><button type="button" class="b-aime" data-aime="27" aria-pressed="false" aria-label="J'aime Aurore">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="28">
+        <a class="apercu" href="modeles/ambiance-nordique.html" aria-label="Voir le site Cabane nordique">
+          <img class="pc" src="images/apercus/28.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/28-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">28.</span> Cabane nordique</h3>
+          <p>Douceur scandinave : bois clair, sauge, plaid et feu de bois.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-nordique.html">Voir le site</a><button type="button" class="b-aime" data-aime="28" aria-pressed="false" aria-label="J'aime Cabane nordique">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="29">
+        <a class="apercu" href="modeles/ambiance-expedition.html" aria-label="Voir le site Expédition outdoor">
+          <img class="pc" src="images/apercus/29.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/29-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">29.</span> Expédition outdoor</h3>
+          <p>L&#x27;esprit d&#x27;une marque d&#x27;équipement technique de montagne.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-expedition.html">Voir le site</a><button type="button" class="b-aime" data-aime="29" aria-pressed="false" aria-label="J'aime Expédition outdoor">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="30">
+        <a class="apercu" href="modeles/ambiance-pixel.html" aria-label="Voir le site Rétro 8-bit">
+          <img class="pc" src="images/apercus/30.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/30-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">30.</span> Rétro 8-bit</h3>
+          <p>Le séjour raconté comme un petit jeu vidéo rétro.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-pixel.html">Voir le site</a><button type="button" class="b-aime" data-aime="30" aria-pressed="false" aria-label="J'aime Rétro 8-bit">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="31">
+        <a class="apercu" href="modeles/ambiance-billet.html" aria-label="Voir le site Billet de randonnée">
+          <img class="pc" src="images/apercus/31.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/31-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">31.</span> Billet de randonnée</h3>
+          <p>« Aller simple vers l&#x27;Îlet des Orangers » : tout est billet et ticket.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-billet.html">Voir le site</a><button type="button" class="b-aime" data-aime="31" aria-pressed="false" aria-label="J'aime Billet de randonnée">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="32">
+        <a class="apercu" href="modeles/ambiance-artdeco.html" aria-label="Voir le site Art déco">
+          <img class="pc" src="images/apercus/32.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/32-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">32.</span> Art déco</h3>
+          <p>Un grand hôtel des années 20 transposé au bivouac.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-artdeco.html">Voir le site</a><button type="button" class="b-aime" data-aime="32" aria-pressed="false" aria-label="J'aime Art déco">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="33">
+        <a class="apercu" href="modeles/ambiance-herbier.html" aria-label="Voir le site Herbier botanique">
+          <img class="pc" src="images/apercus/33.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/33-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">33.</span> Herbier botanique</h3>
+          <p>Des planches de naturaliste, avec fanjans dessinés au trait.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-herbier.html">Voir le site</a><button type="button" class="b-aime" data-aime="33" aria-pressed="false" aria-label="J'aime Herbier botanique">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="34">
+        <a class="apercu" href="modeles/ambiance-bauhaus.html" aria-label="Voir le site Bauhaus">
+          <img class="pc" src="images/apercus/34.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/34-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">34.</span> Bauhaus</h3>
+          <p>Rouge, jaune, bleu : des formes géométriques structurent la page.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-bauhaus.html">Voir le site</a><button type="button" class="b-aime" data-aime="34" aria-pressed="false" aria-label="J'aime Bauhaus">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="35">
+        <a class="apercu" href="modeles/ambiance-gazette.html" aria-label="Voir le site La Gazette de l&#x27;îlet">
+          <img class="pc" src="images/apercus/35.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/35-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">35.</span> La Gazette de l&#x27;îlet</h3>
+          <p>Un journal ancien, avec sa une, ses colonnes et ses petites annonces.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-gazette.html">Voir le site</a><button type="button" class="b-aime" data-aime="35" aria-pressed="false" aria-label="J'aime La Gazette de l&#x27;îlet">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="36">
+        <a class="apercu" href="modeles/ambiance-ecusson.html" aria-label="Voir le site Écussons de camp">
+          <img class="pc" src="images/apercus/36.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/36-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">36.</span> Écussons de camp</h3>
+          <p>L&#x27;esprit des colonies : badges brodés et fanions.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-ecusson.html">Voir le site</a><button type="button" class="b-aime" data-aime="36" aria-pressed="false" aria-label="J'aime Écussons de camp">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="37">
+        <a class="apercu" href="modeles/ambiance-organique.html" aria-label="Voir le site Organique doux">
+          <img class="pc" src="images/apercus/37.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/37-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">37.</span> Organique doux</h3>
+          <p>Des formes fluides et des tons de terre.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-organique.html">Voir le site</a><button type="button" class="b-aime" data-aime="37" aria-pressed="false" aria-label="J'aime Organique doux">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="38">
+        <a class="apercu" href="modeles/ambiance-duo.html" aria-label="Voir le site Écran partagé 50/50">
+          <img class="pc" src="images/apercus/38.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/38-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">38.</span> Écran partagé 50/50</h3>
+          <p>Chaque section coupée en deux : l&#x27;image d&#x27;un côté, le texte de l&#x27;autre.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-duo.html">Voir le site</a><button type="button" class="b-aime" data-aime="38" aria-pressed="false" aria-label="J'aime Écran partagé 50/50">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="39">
+        <a class="apercu" href="modeles/ambiance-jungle.html" aria-label="Voir le site Jungle de fanjans">
+          <img class="pc" src="images/apercus/39.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/39-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">39.</span> Jungle de fanjans</h3>
+          <p>Le feuillage tropical généreux, en grandes feuilles dessinées.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-jungle.html">Voir le site</a><button type="button" class="b-aime" data-aime="39" aria-pressed="false" aria-label="J'aime Jungle de fanjans">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="40">
+        <a class="apercu" href="modeles/ambiance-zen.html" aria-label="Voir le site Encre zen">
+          <img class="pc" src="images/apercus/40.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/40-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
+          <h3><span class="num">40.</span> Encre zen</h3>
+          <p>Le vide, le pinceau, la lenteur : un site épuré à la japonaise.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-zen.html">Voir le site</a><button type="button" class="b-aime" data-aime="40" aria-pressed="false" aria-label="J'aime Encre zen">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="41">
+        <a class="apercu" href="modeles/ambiance-film.html" aria-label="Voir le site Le film">
+          <img class="pc" src="images/apercus/41.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/41-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-mafate">Mafate · 2 690 €</span></div>
+          <h3><span class="num">41.</span> Le film</h3>
+          <p>Le site se regarde comme un film : scènes plein écran au format cinéma, sous-titres, générique.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-film.html">Voir le site</a><button type="button" class="b-aime" data-aime="41" aria-pressed="false" aria-label="J'aime Le film">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="42">
+        <a class="apercu" href="modeles/ambiance-carnet.html" aria-label="Voir le site Le carnet de randonnée">
+          <img class="pc" src="images/apercus/42.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/42-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-mafate">Mafate · 2 690 €</span></div>
+          <h3><span class="num">42.</span> Le carnet de randonnée</h3>
+          <p>Le journal d&#x27;un randonneur : polaroïds, notes à la main, carte du sentier dessinée.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-carnet.html">Voir le site</a><button type="button" class="b-aime" data-aime="42" aria-pressed="false" aria-label="J'aime Le carnet de randonnée">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="43">
+        <a class="apercu" href="modeles/ambiance-affiche.html" aria-label="Voir le site L&#x27;affiche rétro">
+          <img class="pc" src="images/apercus/43.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/43-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-mafate">Mafate · 2 690 €</span></div>
+          <h3><span class="num">43.</span> L&#x27;affiche rétro</h3>
+          <p>Une affiche de vacances des années 70 : soleil, couleurs franches, tickets.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-affiche.html">Voir le site</a><button type="button" class="b-aime" data-aime="43" aria-pressed="false" aria-label="J'aime L&#x27;affiche rétro">♡</button></div>
+        </div>
+      </article>
+      <article class="carte" data-id="44">
+        <a class="apercu" href="modeles/ambiance-slow.html" aria-label="Voir le site Slow, luxe minimal">
+          <img class="pc" src="images/apercus/44.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/44-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+        </a>
+        <div class="corps">
+          <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-mafate">Mafate · 2 690 €</span></div>
+          <h3><span class="num">44.</span> Slow, luxe minimal</h3>
+          <p>Le calme et l&#x27;espace : grands blancs, écriture fine, images qui se dévoilent lentement.</p>
+          <div class="boutons"><a class="b-voir" href="modeles/ambiance-slow.html">Voir le site</a><button type="button" class="b-aime" data-aime="44" aria-pressed="false" aria-label="J'aime Slow, luxe minimal">♡</button></div>
         </div>
       </article>
       </div>
@@ -192,28 +599,68 @@
 
   <form id="choix" onsubmit="return false">
     <h2>Mon choix</h2>
-    <p class="note">Choisissez le site que vous préférez, et dites-moi ce que vous aimez ou ce que vous voudriez changer. On peut aussi mélanger deux modèles.</p>
-    <fieldset style="border:0;padding:0;margin:0"><legend class="champ" style="padding:0">Mon site préféré</legend>
-      <div class="opts">
-          <label class="opt"><input type="radio" name="choix" value="1"><span><b>1. Le manifeste</b><small>Vraies photos</small></span></label>
-          <label class="opt"><input type="radio" name="choix" value="2"><span><b>2. Lettres-fenêtres</b><small>Vraies photos</small></span></label>
-          <label class="opt"><input type="radio" name="choix" value="3"><span><b>3. Grand angle</b><small>Vraies photos</small></span></label>
-          <label class="opt"><input type="radio" name="choix" value="4"><span><b>4. Carte postale</b><small>Vraies photos</small></span></label>
-          <label class="opt"><input type="radio" name="choix" value="5"><span><b>5. Le manifeste</b><small>Images générées</small></span></label>
-          <label class="opt"><input type="radio" name="choix" value="6"><span><b>6. Lettres-fenêtres</b><small>Images générées</small></span></label>
-          <label class="opt"><input type="radio" name="choix" value="7"><span><b>7. Grand angle</b><small>Images générées</small></span></label>
-          <label class="opt"><input type="radio" name="choix" value="8"><span><b>8. Carte postale</b><small>Images générées</small></span></label>
-      </div>
-    </fieldset>
+    <p class="note">Dites-moi votre site préféré et ce que vous en pensez. On peut aussi mélanger deux modèles : dites-le dans vos commentaires.</p>
+    <label class="champ" for="prefere">Mon site préféré</label>
+    <select id="prefere"><option value="">— Choisissez votre préféré —</option>
+          <optgroup label="Les 8 propositions de votre devis">
+            <option value="1">1. Le manifeste — Vraies photos, Salazie · 790 €</option>
+            <option value="2">2. Lettres-fenêtres — Vraies photos, Salazie · 790 €</option>
+            <option value="3">3. Grand angle — Vraies photos, Salazie · 790 €</option>
+            <option value="4">4. Carte postale — Vraies photos, Salazie · 790 €</option>
+            <option value="5">5. Le manifeste — Images générées d&#x27;après vos photos, Salazie · 790 €</option>
+            <option value="6">6. Lettres-fenêtres — Images générées d&#x27;après vos photos, Salazie · 790 €</option>
+            <option value="7">7. Grand angle — Images générées d&#x27;après vos photos, Salazie · 790 €</option>
+            <option value="8">8. Carte postale — Images générées d&#x27;après vos photos, Salazie · 790 €</option>
+          </optgroup>
+          <optgroup label="Plus de styles, avec vos vraies photos">
+            <option value="9">9. Plein air — Vraies photos, Salazie · 790 €</option>
+            <option value="10">10. Risographie — Vraies photos, Salazie · 790 €</option>
+            <option value="11">11. Cyanotype — Vraies photos, Salazie · 790 €</option>
+            <option value="12">12. L&#x27;ardoise — Vraies photos, Salazie · 790 €</option>
+            <option value="13">13. La descente — Vraies photos, Mafate · 2 690 €</option>
+            <option value="14">14. 24 heures à l&#x27;îlet — Vraies photos, Mafate · 2 690 €</option>
+            <option value="15">15. Lampe frontale — Vraies photos, Mafate · 2 690 €</option>
+            <option value="16">16. Panorama — Vraies photos, Mafate · 2 690 €</option>
+            <option value="17">17. Diorama — Vraies photos, Mafate · 2 690 €</option>
+          </optgroup>
+          <optgroup label="Plus de styles, avec des images d&#x27;ambiance">
+            <option value="18">18. Essentiel — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="19">19. Nuit étoilée — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="20">20. Case créole — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="21">21. Magazine de voyage — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="22">22. Typographie suisse — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="23">23. Carte topographique — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="24">24. Étiquette de rhum arrangé — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="25">25. Néo-brutal — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="26">26. Bento — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="27">27. Aurore — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="28">28. Cabane nordique — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="29">29. Expédition outdoor — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="30">30. Rétro 8-bit — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="31">31. Billet de randonnée — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="32">32. Art déco — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="33">33. Herbier botanique — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="34">34. Bauhaus — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="35">35. La Gazette de l&#x27;îlet — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="36">36. Écussons de camp — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="37">37. Organique doux — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="38">38. Écran partagé 50/50 — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="39">39. Jungle de fanjans — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="40">40. Encre zen — Images d&#x27;ambiance (IA), Salazie · 790 €</option>
+            <option value="41">41. Le film — Images d&#x27;ambiance (IA), Mafate · 2 690 €</option>
+            <option value="42">42. Le carnet de randonnée — Images d&#x27;ambiance (IA), Mafate · 2 690 €</option>
+            <option value="43">43. L&#x27;affiche rétro — Images d&#x27;ambiance (IA), Mafate · 2 690 €</option>
+            <option value="44">44. Slow, luxe minimal — Images d&#x27;ambiance (IA), Mafate · 2 690 €</option>
+          </optgroup>
+    </select>
+    <label class="champ">Les sites que j'aime (♡)</label>
+    <div id="aimes"></div>
     <label class="champ" for="commentaire">Mes commentaires</label>
     <textarea id="commentaire" placeholder="Ce que j'aime, ce que je voudrais changer, une couleur, une photo…"></textarea>
     <label class="champ" for="prenom">Votre prénom</label>
     <input type="text" id="prenom" autocomplete="given-name" placeholder="Jean-Martel">
     <p id="erreur" role="alert">Choisissez d'abord votre site préféré, juste au-dessus.</p>
-    <div class="envoyer">
-      <button type="button" class="b-wa" id="b-wa">Envoyer sur WhatsApp</button>
-      <button type="button" class="b-mail" id="b-mail">Envoyer par e-mail</button>
-    </div>
+    <div class="envoyer"><button type="button" class="b-wa" id="b-wa">Envoyer sur WhatsApp</button><button type="button" class="b-mail" id="b-mail">Envoyer par e-mail</button></div>
   </form>
 </main>
 <footer>
@@ -222,21 +669,35 @@
 </footer>
 <script>
 (function(){
-  var NOMS={"1": "1. Le manifeste (vraies photos)", "2": "2. Lettres-fenêtres (vraies photos)", "3": "3. Grand angle (vraies photos)", "4": "4. Carte postale (vraies photos)", "5": "5. Le manifeste (images générées)", "6": "6. Lettres-fenêtres (images générées)", "7": "7. Grand angle (images générées)", "8": "8. Carte postale (images générées)"};
-  var f=document.getElementById('choix'), com=document.getElementById('commentaire'), pre=document.getElementById('prenom');
-  function cocher(v){var r=f.querySelector('input[value="'+v+'"]');if(r){r.checked=true;}}
-  // brouillon gardé sur cet appareil (facultatif)
-  try{var b=JSON.parse(localStorage.getItem('tipiton-choix')||'{}');if(b.c)cocher(b.c);if(b.m)com.value=b.m;if(b.p)pre.value=b.p;}catch(e){}
-  function garder(){try{var r=f.querySelector('input[name=choix]:checked');localStorage.setItem('tipiton-choix',JSON.stringify({c:r?r.value:'',m:com.value,p:pre.value}));}catch(e){}}
-  f.addEventListener('input',garder);f.addEventListener('change',garder);
-  var q=new URLSearchParams(location.search).get('choix');if(q){cocher(q);garder();}
-  document.querySelectorAll('[data-choix]').forEach(function(b){b.addEventListener('click',function(){cocher(b.getAttribute('data-choix'));garder();
-    document.getElementById('choix').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});});
+  var NOMS={"1": "1. Le manifeste (vraies photos, Salazie · 790 €)", "2": "2. Lettres-fenêtres (vraies photos, Salazie · 790 €)", "3": "3. Grand angle (vraies photos, Salazie · 790 €)", "4": "4. Carte postale (vraies photos, Salazie · 790 €)", "5": "5. Le manifeste (images générées d'après ses photos, Salazie · 790 €)", "6": "6. Lettres-fenêtres (images générées d'après ses photos, Salazie · 790 €)", "7": "7. Grand angle (images générées d'après ses photos, Salazie · 790 €)", "8": "8. Carte postale (images générées d'après ses photos, Salazie · 790 €)", "9": "9. Plein air (vraies photos, Salazie · 790 €)", "10": "10. Risographie (vraies photos, Salazie · 790 €)", "11": "11. Cyanotype (vraies photos, Salazie · 790 €)", "12": "12. L'ardoise (vraies photos, Salazie · 790 €)", "13": "13. La descente (vraies photos, Mafate · 2 690 €)", "14": "14. 24 heures à l'îlet (vraies photos, Mafate · 2 690 €)", "15": "15. Lampe frontale (vraies photos, Mafate · 2 690 €)", "16": "16. Panorama (vraies photos, Mafate · 2 690 €)", "17": "17. Diorama (vraies photos, Mafate · 2 690 €)", "18": "18. Essentiel (images d'ambiance IA, Salazie · 790 €)", "19": "19. Nuit étoilée (images d'ambiance IA, Salazie · 790 €)", "20": "20. Case créole (images d'ambiance IA, Salazie · 790 €)", "21": "21. Magazine de voyage (images d'ambiance IA, Salazie · 790 €)", "22": "22. Typographie suisse (images d'ambiance IA, Salazie · 790 €)", "23": "23. Carte topographique (images d'ambiance IA, Salazie · 790 €)", "24": "24. Étiquette de rhum arrangé (images d'ambiance IA, Salazie · 790 €)", "25": "25. Néo-brutal (images d'ambiance IA, Salazie · 790 €)", "26": "26. Bento (images d'ambiance IA, Salazie · 790 €)", "27": "27. Aurore (images d'ambiance IA, Salazie · 790 €)", "28": "28. Cabane nordique (images d'ambiance IA, Salazie · 790 €)", "29": "29. Expédition outdoor (images d'ambiance IA, Salazie · 790 €)", "30": "30. Rétro 8-bit (images d'ambiance IA, Salazie · 790 €)", "31": "31. Billet de randonnée (images d'ambiance IA, Salazie · 790 €)", "32": "32. Art déco (images d'ambiance IA, Salazie · 790 €)", "33": "33. Herbier botanique (images d'ambiance IA, Salazie · 790 €)", "34": "34. Bauhaus (images d'ambiance IA, Salazie · 790 €)", "35": "35. La Gazette de l'îlet (images d'ambiance IA, Salazie · 790 €)", "36": "36. Écussons de camp (images d'ambiance IA, Salazie · 790 €)", "37": "37. Organique doux (images d'ambiance IA, Salazie · 790 €)", "38": "38. Écran partagé 50/50 (images d'ambiance IA, Salazie · 790 €)", "39": "39. Jungle de fanjans (images d'ambiance IA, Salazie · 790 €)", "40": "40. Encre zen (images d'ambiance IA, Salazie · 790 €)", "41": "41. Le film (images d'ambiance IA, Mafate · 2 690 €)", "42": "42. Le carnet de randonnée (images d'ambiance IA, Mafate · 2 690 €)", "43": "43. L'affiche rétro (images d'ambiance IA, Mafate · 2 690 €)", "44": "44. Slow, luxe minimal (images d'ambiance IA, Mafate · 2 690 €)"};
+  var sel=document.getElementById('prefere'), com=document.getElementById('commentaire'), pre=document.getElementById('prenom');
+  function aimes(){try{return JSON.parse(localStorage.getItem('tipiton-aime')||'[]');}catch(e){return [];}}
+  function ecrire(l){try{localStorage.setItem('tipiton-aime',JSON.stringify(l));}catch(e){}}
+  function majAimes(){
+    var l=aimes();
+    document.querySelectorAll('[data-aime]').forEach(function(b){var on=l.indexOf(b.getAttribute('data-aime'))>=0;b.setAttribute('aria-pressed',on);b.textContent=on?'♥':'♡';
+      var c=b.closest('.carte');if(c)c.classList.toggle('aimee',on);});
+    var z=document.getElementById('aimes');z.innerHTML='';
+    if(!l.length){z.innerHTML='<span class="vide">Touchez ♡ sur les modèles qui vous plaisent : ils s\'afficheront ici.</span>';}
+    l.forEach(function(id){if(!NOMS[id])return;var b=document.createElement('button');b.type='button';b.textContent='♥ '+NOMS[id]+'  ✕';b.title='Retirer';
+      b.addEventListener('click',function(){ecrire(aimes().filter(function(x){return x!==id;}));majAimes();});z.appendChild(b);});
+    document.getElementById('nb-aimes').textContent=l.length+' ♥';
+  }
+  document.querySelectorAll('[data-aime]').forEach(function(b){b.addEventListener('click',function(){var id=b.getAttribute('data-aime'),l=aimes(),i=l.indexOf(id);
+    if(i>=0)l.splice(i,1);else l.push(id);ecrire(l);majAimes();});});
+  // brouillon gardé sur cet appareil
+  try{var br=JSON.parse(localStorage.getItem('tipiton-choix')||'{}');if(br.c)sel.value=br.c;if(br.m)com.value=br.m;if(br.p)pre.value=br.p;}catch(e){}
+  function garder(){try{localStorage.setItem('tipiton-choix',JSON.stringify({c:sel.value,m:com.value,p:pre.value}));}catch(e){}}
+  [sel,com,pre].forEach(function(x){x.addEventListener('input',garder);x.addEventListener('change',garder);});
+  var q=new URLSearchParams(location.search).get('choix');if(q&&NOMS[q]){sel.value=q;garder();}
+  majAimes();
   function texte(){
-    var r=f.querySelector('input[name=choix]:checked');
-    if(!r){document.getElementById('erreur').style.display='block';f.querySelector('.opts').scrollIntoView({block:'center'});return null;}
+    if(!sel.value){document.getElementById('erreur').style.display='block';sel.focus();return null;}
     document.getElementById('erreur').style.display='none';
-    return 'Bonjour Yannick,\n\nPour le site du Camping Ti Piton, je choisis : '+NOMS[r.value]+'.\n\nMes commentaires : '+(com.value.trim()||'(aucun)')+'\n\n'+(pre.value.trim()||'Jean-Martel')+' — Camping Ti Piton';
+    var l=aimes().filter(function(id){return id!==sel.value&&NOMS[id];}).map(function(id){return NOMS[id];});
+    return 'Bonjour Yannick,\n\nPour le site du Camping Ti Piton, mon préféré : '+NOMS[sel.value]+'.'
+      +(l.length?'\nJ\'aime aussi : '+l.join(' ; ')+'.':'')
+      +'\n\nMes commentaires : '+(com.value.trim()||'(aucun)')+'\n\n'+(pre.value.trim()||'Jean-Martel')+' — Camping Ti Piton';
   }
   document.getElementById('b-wa').addEventListener('click',function(){var t=texte();if(t)location.href='https://wa.me/262693860802?text='+encodeURIComponent(t);});
   document.getElementById('b-mail').addEventListener('click',function(){var t=texte();if(t)location.href='mailto:contact@kreapro.re?subject='+encodeURIComponent('Camping Ti Piton : mon choix de site')+'&body='+encodeURIComponent(t);});

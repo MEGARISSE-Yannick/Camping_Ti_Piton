@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Camping Ti Piton — Îlet des Orangers, Mafate</title>
+<meta name="description" content="Camping Ti Piton, à l'Îlet des Orangers (980 m), cirque de Mafate, La Réunion : une journée à l'îlet, du punch d'arrivée au petit-déjeuner de 7 h 30. Tentes équipées, dîner créole, nuit étoilée. Accès à pied.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Camping Ti Piton — Îlet des Orangers, Mafate">
+<meta property="og:description" content="24 heures à l'îlet : punch d'arrivée, dîner créole de 18 h 30, nuit étoilée à 980 m, petit-déjeuner de 7 h 30.">
+<meta property="og:image" content="../images/tipiton/terrain.webp">
+<meta property="og:locale" content="fr_FR">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Campground",
+  "name": "Camping Ti Piton",
+  "description": "Petit camping de montagne à l'Îlet des Orangers (980 m), dans le cirque de Mafate : tentes équipées, tentes seules, emplacements, dîner créole, accès à pied uniquement.",
+  "image": "../images/tipiton/terrain.webp",
+  "telephone": "+262692061817",
+  "email": "jeanmartelatache4@gmail.com",
+  "priceRange": "7 € – 70 €",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Îlet des Orangers",
+    "postalCode": "97460",
+    "addressLocality": "Mafate",
+    "addressRegion": "La Réunion",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -21.04181, "longitude": 55.39347 }
+}
+</script>
+<style>
+:root{--banner:30px;--wa:#25D366;--serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px;background:#0b1530}
+body{font-family:var(--sans);font-size:17px;line-height:1.65;color:#0d2740;background:#4aa3e8;padding-top:var(--banner);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em}
+:focus-visible{outline:3px solid #ffc857;outline-offset:3px}
+
+/* ---------- les ciels : une définition par moment (source unique, lue par le script) ---------- */
+.st-day    {--t:#2f86d8;--m:#7cc0f0;--b:#d9f1ff;--rb:#7fb5b0;--rf:#2f6b55;--k:#0d2740;--pb:rgba(255,255,255,.80);--ac:#e8742a}
+.st-sunset {--t:#3d3d94;--m:#ff6f5e;--b:#ffb84d;--rb:#a8556a;--rf:#34203a;--k:#3a1620;--pb:rgba(255,248,240,.84);--ac:#c2410c}
+.st-twi    {--t:#251f66;--m:#a94a8a;--b:#ff8a6a;--rb:#563a7e;--rf:#1f1840;--k:#f9eefc;--pb:rgba(34,20,70,.74);--ac:#ffb37a}
+.st-dusk   {--t:#141240;--m:#43307e;--b:#c8507c;--rb:#2d2563;--rf:#130f2c;--k:#f6ecff;--pb:rgba(24,15,58,.74);--ac:#ffb37a}
+.st-night  {--t:#030717;--m:#09123a;--b:#18285a;--rb:#111a46;--rf:#070b1f;--k:#eef3ff;--pb:rgba(4,9,30,.72);--ac:#ffd27a}
+.st-deep   {--t:#02040f;--m:#060c2c;--b:#101c48;--rb:#0e1540;--rf:#050819;--k:#eef3ff;--pb:rgba(3,7,26,.74);--ac:#ffd27a}
+.st-dawn   {--t:#5d5aa8;--m:#ff9c9e;--b:#ffd98a;--rb:#8f6fa6;--rf:#2b2543;--k:#3b1c2c;--pb:rgba(255,246,240,.84);--ac:#c2410c}
+.st-morning{--t:#6aa6e6;--m:#ffd9ac;--b:#fff0c8;--rb:#82b5a6;--rf:#2f6b55;--k:#0d2740;--pb:rgba(255,255,255,.82);--ac:#c2540f}
+
+/* sans script ou animations réduites : chaque section porte son ciel fixe */
+.scene{position:relative;padding:90px 0;min-height:100vh;display:flex;align-items:center;background:linear-gradient(180deg,var(--t),var(--m) 55%,var(--b));color:var(--k)}
+.scene.court{min-height:78vh}
+.scene.haute{align-items:flex-start;padding:110px 0}
+.st-night,.st-deep{background:radial-gradient(1.5px 1.5px at 12% 18%,#fff 98%,transparent),radial-gradient(1px 1px at 27% 42%,#fff 98%,transparent),radial-gradient(1.5px 1.5px at 41% 12%,#fff 98%,transparent),radial-gradient(1px 1px at 58% 30%,#fff 98%,transparent),radial-gradient(1.5px 1.5px at 73% 16%,#fff 98%,transparent),radial-gradient(1px 1px at 86% 38%,#fff 98%,transparent),radial-gradient(1px 1px at 93% 10%,#fff 98%,transparent),radial-gradient(1px 1px at 6% 55%,#fff 98%,transparent),linear-gradient(180deg,var(--t),var(--m) 55%,var(--b))}
+/* script actif, animations autorisées : ciel unique fixe, sections transparentes */
+.live .scene{background:none}
+.live{background:#030717}
+
+#ciel{display:none}
+.live #ciel{display:block;position:fixed;inset:0;z-index:0;overflow:hidden;background:linear-gradient(180deg,var(--t,#2f86d8),var(--m,#7cc0f0) 55%,var(--b,#d9f1ff));contain:strict}
+#ciel>*{position:absolute}
+#etoiles{inset:0;width:100%;height:100%;opacity:0}
+.voie{left:50%;top:-30%;width:42vmax;height:170vmax;margin-left:-21vmax;transform:rotate(38deg);background:linear-gradient(90deg,transparent,rgba(170,185,255,.10) 38%,rgba(215,222,255,.2) 50%,rgba(170,185,255,.10) 62%,transparent);filter:blur(22px);opacity:0}
+.astre{left:0;top:0;border-radius:50%;opacity:0;will-change:transform,opacity}
+.soleil{width:132px;height:132px;margin:-66px 0 0 -66px;background:radial-gradient(circle,#fffbe0 0 28%,var(--sc,#ffe58a) 46%,transparent 71%);box-shadow:0 0 90px 40px var(--sg,rgba(255,200,90,.55))}
+.lune{width:96px;height:96px;margin:-48px 0 0 -48px;background:radial-gradient(circle at 34% 34%,#fff 0,#f2f4ff 42%,#c5cdee 100%);box-shadow:0 0 70px 26px rgba(190,205,255,.38),inset -12px -8px 18px rgba(120,130,190,.35)}
+.lune::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 62% 38%,rgba(110,120,170,.28) 0 7%,transparent 8%),radial-gradient(circle at 40% 66%,rgba(110,120,170,.24) 0 10%,transparent 11%),radial-gradient(circle at 70% 70%,rgba(110,120,170,.2) 0 5%,transparent 6%)}
+.nuage{height:70px;border-radius:50%;background:radial-gradient(ellipse at 50% 60%,rgba(255,255,255,.95) 0,rgba(255,255,255,.55) 55%,transparent 72%);filter:blur(5px);opacity:0;will-change:transform}
+.n1{width:340px;left:8%;top:17%;animation:derive 70s linear infinite alternate}
+.n2{width:260px;left:58%;top:30%;animation:derive 90s linear infinite alternate-reverse}
+.n3{width:420px;left:33%;top:9%;animation:derive 110s linear infinite alternate}
+@keyframes derive{from{transform:translate3d(-60px,0,0)}to{transform:translate3d(90px,0,0)}}
+.remparts{left:0;bottom:0;width:100%;height:42vh;display:block}
+.remparts .rb{fill:var(--rb,#7fb5b0)}
+.remparts .rf{fill:var(--rf,#2f6b55)}
+.lumiere{opacity:0}
+
+/* ---------- navigation, horloge ---------- */
+.banner{position:fixed;top:0;left:0;right:0;height:var(--banner);z-index:90;background:#08102a;color:#dfe6ff;font-size:.78rem;display:flex;align-items:center;justify-content:center;gap:22px;padding:0 12px;white-space:nowrap;overflow:hidden}
+.banner a{color:#fff;text-underline-offset:2px}
+.banner .retour{color:#ffc857;font-weight:700;text-decoration:none}
+.banner .court{display:none}
+.verre{background:rgba(8,14,40,.62);color:#f3f6ff;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18)}
+.nav{position:fixed;top:calc(var(--banner) + 12px);left:16px;z-index:80;display:flex;align-items:center;gap:6px;padding:6px 8px 6px 18px;border-radius:999px}
+.logo{font-family:var(--serif);font-size:1.2rem;text-decoration:none;margin-right:10px;white-space:nowrap}
+.nav ul{list-style:none;display:flex;gap:2px}
+.nav ul a{display:block;text-decoration:none;font-weight:500;font-size:.92rem;padding:7px 13px;border-radius:999px;transition:background .2s}
+.nav ul a:hover{background:rgba(255,255,255,.16)}
+.nav .cta{background:#ffc857;color:#2a1a00;font-weight:700}
+.nav .cta:hover{background:#ffd882}
+.horloge{position:fixed;top:calc(var(--banner) + 12px);right:16px;z-index:80;display:flex;align-items:center;gap:12px;padding:6px 20px 6px 8px;border-radius:999px}
+.cadran{width:44px;height:44px;flex:none}
+.cadran circle.f{fill:rgba(255,255,255,.1);stroke:rgba(255,255,255,.5);stroke-width:1.5}
+.cadran .aiguille{stroke:#ffc857;stroke-width:3;stroke-linecap:round;transform-origin:22px 22px}
+.cadran .pt{fill:#ffc857}
+.moment{font-family:var(--serif);font-size:1.3rem;line-height:1;min-width:6.4em;transition:opacity .35s,transform .35s;white-space:nowrap}
+.moment.change{opacity:0;transform:translateY(5px)}
+
+/* ---------- boutons ---------- */
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:1.02rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:var(--sans);transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:22px;height:22px;flex:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:#ffc857;color:#2a1a00;box-shadow:0 10px 30px rgba(255,170,40,.35)}
+.btn-o:hover{background:#ffd882}
+.btn-l{background:rgba(255,255,255,.88);color:#0d2740;border-color:rgba(13,39,64,.25)}
+.btn-wa{background:var(--wa);color:#06260f}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ---------- panneaux de texte (lisibles sur chaque ciel) ---------- */
+.panneau{background:var(--pb);color:var(--k);padding:38px 40px;border-radius:30px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 24px 70px rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.22)}
+.panneau h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin-bottom:16px}
+.panneau p{margin-bottom:14px;max-width:56ch}
+.panneau p:last-child{margin-bottom:0}
+.etiq{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ac);margin-bottom:14px}
+.etiq b{display:inline-grid;place-items:center;min-width:34px;height:34px;padding:0 8px;border-radius:999px;background:var(--ac);color:#fff;font-size:.8rem;letter-spacing:0}
+.st-twi .etiq b,.st-dusk .etiq b,.st-night .etiq b,.st-deep .etiq b{color:#1a1030}
+
+/* photo réelle : le style ne touche que le cadre, jamais les couleurs */
+.reelle{position:relative;margin:22px 0 28px;max-width:520px;border-radius:26px;overflow:hidden;border:5px solid rgba(255,255,255,.85);box-shadow:0 24px 60px rgba(0,0,0,.25);background:#fff}
+.reelle img{width:100%;height:auto}
+.reelle figcaption{position:absolute;left:14px;bottom:14px}
+.reelle figcaption span{display:inline-block;padding:6px 14px;border-radius:999px;background:#fff;color:var(--k);font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+
+/* accueil */
+.hero{min-height:calc(100vh - var(--banner));padding-top:120px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+.hero .lieu{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;margin-bottom:18px;display:block}
+.hero h1{font-size:clamp(3.6rem,9.4vw,8.4rem);margin-bottom:22px;color:#06223f;text-shadow:0 2px 40px rgba(255,255,255,.35)}
+.hero h1 em{font-style:italic;color:#fff;text-shadow:0 4px 40px rgba(20,60,120,.45)}
+.hero .lead{font-size:clamp(1.1rem,1.6vw,1.3rem);max-width:46ch;margin-bottom:28px;color:#06223f;font-weight:500}
+.hero .cadre{position:relative;border-radius:240px 240px 28px 28px;overflow:hidden;aspect-ratio:1/1.05;box-shadow:0 30px 80px rgba(8,30,70,.4);border:6px solid rgba(255,255,255,.7)}
+.hero .cadre img{width:100%;height:100%;object-fit:cover;object-position:42% 50%}
+.defile{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:.85rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-decoration:none;white-space:nowrap;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.defile i{width:2px;height:34px;background:#fff;transform-origin:top;animation:descend 1.8s ease-in-out infinite}
+@keyframes descend{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* étapes */
+.etape{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.etape.inv .panneau{order:2}
+.etape figure{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35);border:5px solid rgba(255,255,255,.55);aspect-ratio:1.45/1}
+.etape figure img{width:100%;height:100%;object-fit:cover}
+.etape figure.reel{aspect-ratio:auto;max-width:500px;justify-self:center;background:#fff}
+.etape figure.reel img{height:auto}
+.etape figure.motif{display:grid;place-items:center;align-content:center;gap:6px;text-align:center;color:#fff;padding:26px 20px;border-color:rgba(255,255,255,.7)}
+.motif svg{width:min(54%,230px);height:auto}
+.motif .grand{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.6rem);line-height:1}
+.motif .petit{font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.85rem}
+.m-punch{background:linear-gradient(160deg,#ff9d4d,#e0467c 70%,#6b2a70)}
+.m-diner{background:linear-gradient(160deg,#7a4fa8,#3a2a78 75%)}
+.m-feu{background:linear-gradient(180deg,#16143a,#3a1d46 70%,#7a2a1c)}
+.m-nuit{background:linear-gradient(180deg,#050a24,#101a4a)}
+.m-aube{background:linear-gradient(180deg,#5b6fc4,#f2a2a0 65%,#ffd9a0)}
+.simple{max-width:860px;margin:0 auto}
+
+/* dormir */
+.cartes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:26px 0 22px}
+.carte{background:rgba(255,255,255,.9);border-radius:22px;padding:22px 22px 18px;border:1px solid rgba(13,39,64,.1);color:#0d2740}
+.carte h3{font-size:1.5rem;margin-bottom:4px}
+.carte p.d{font-size:.95rem;margin-bottom:12px;color:#38526b}
+.pl{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:9px 0;border-top:1px solid rgba(13,39,64,.14);font-size:.95rem}
+.pl b{font-family:var(--serif);font-weight:400;font-size:1.9rem;color:#c2540f;white-space:nowrap;line-height:1}
+.liste{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 36px;margin:6px 0 16px}
+.liste li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(13,39,64,.25)}
+.liste b{font-family:var(--serif);font-weight:400;font-size:1.25rem;white-space:nowrap;color:#c2540f}
+.services{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:16px 0}
+.services li,.theme{padding:6px 14px;border-radius:999px;background:rgba(13,39,64,.08);font-size:.93rem;font-weight:500}
+.fine{font-size:.92rem;color:#38526b}
+
+/* venir */
+.venir{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:start}
+.etapes{list-style:none;display:grid;gap:10px;margin:18px 0}
+.etapes li{display:grid;grid-template-columns:78px 1fr;gap:16px;align-items:center;background:rgba(255,255,255,.88);border-radius:18px;padding:10px 16px 10px 10px;color:#0d2740}
+.duree{font-family:var(--serif);font-size:1.5rem;text-align:center;background:#0d2740;color:#fff;border-radius:12px;padding:12px 4px;line-height:1}
+.etapes strong{display:block;font-size:1.05rem}
+.etapes span.d{font-size:.93rem;color:#38526b}
+.venir .cote{display:grid;gap:18px}
+.venir figure{border-radius:24px;overflow:hidden;border:5px solid rgba(255,255,255,.55);box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.venir figure img{width:100%;height:auto}
+.carte-map{border-radius:24px;overflow:hidden;border:5px solid rgba(255,255,255,.55);box-shadow:0 24px 60px rgba(0,0,0,.25);background:#d9e7f2}
+.carte-map iframe{display:block;width:100%;height:330px;border:0}
+.conseils{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:6px 0 14px}
+.conseils li{padding:7px 15px;border-radius:999px;background:#0d2740;color:#fff;font-size:.93rem;font-weight:500}
+
+/* avis */
+.avis{text-align:center}
+.note5{font-family:var(--serif);font-size:clamp(4.2rem,11vw,8rem);line-height:1;color:#c2540f}
+.note5 small{font-size:.32em;color:var(--k);opacity:.75;margin-left:.15em}
+.etoiles-note{color:#c2540f;font-size:1.6rem;letter-spacing:.2em;margin:4px 0 12px}
+blockquote{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.6rem);line-height:1.15;margin:20px auto 8px;max-width:20ch}
+.cite{font-weight:700;margin-bottom:22px}
+.themes{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;list-style:none}
+
+/* réserver */
+.resa{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:28px;align-items:start}
+form label{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:.92rem}
+.grille{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grille .large{grid-column:1/-1}
+input,select,textarea{font:inherit;font-weight:400;color:#0d2740;background:#fff;border:2px solid rgba(13,39,64,.2);border-radius:14px;padding:12px 14px;width:100%;min-height:50px}
+textarea{min-height:100px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#c2540f;box-shadow:0 0 0 4px rgba(194,84,15,.2)}
+label.case{flex-direction:row;align-items:center;gap:12px;font-weight:500;cursor:pointer}
+label.case input{width:24px;height:24px;min-height:0;accent-color:#c2540f}
+.estimation{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;padding:18px 22px;border-radius:20px;background:#0d2740;color:#fff}
+.estimation b{font-family:var(--serif);font-weight:400;font-size:3rem;line-height:1;color:#ffc857;margin-left:auto}
+.estimation span{font-size:.95rem}
+#merci{display:none;margin-top:16px;padding:14px 18px;border-radius:14px;background:#dff3e4;color:#0f3d1e;font-weight:700}
+.direct{display:grid;gap:12px}
+.direct .btn{justify-content:flex-start}
+.direct h3{font-size:1.8rem;margin-bottom:4px}
+
+footer{position:relative;z-index:2;background:#08102a;color:#b6c2e6;padding:56px 0 120px;font-size:.95rem}
+footer .cols{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px;margin-bottom:30px}
+footer h3{font-size:1.3rem;color:#fff;margin-bottom:8px}
+footer a{color:#fff}
+footer .mention{border-top:1px solid #26335f;padding-top:20px;display:grid;gap:10px;font-size:.88rem;color:#97a6d4}
+
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:85;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:33px;height:33px}
+.barre{display:none}
+
+main{position:relative;z-index:2}
+.js .rev{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.js .rev.vu{opacity:1;transform:none}
+
+@media (max-width:1000px){
+  .hero .wrap,.etape,.venir,.resa{grid-template-columns:1fr;gap:28px}
+  .etape.inv .panneau{order:0}
+  .hero .cadre{aspect-ratio:16/11;border-radius:140px 140px 24px 24px;max-width:560px}
+  .cartes{grid-template-columns:1fr}
+  .nav ul{display:none}
+  .nav{padding-right:18px}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .banner .long{display:none}.banner .court{display:inline}.banner{gap:14px;font-size:.74rem}
+  .scene{padding:72px 0}
+  .scene.haute{padding:90px 0}
+  .hero{padding-top:104px}
+  .panneau{padding:26px 22px;border-radius:24px}
+  .liste{grid-template-columns:1fr}
+  .grille{grid-template-columns:1fr}
+  .nav{padding:6px 16px}
+  .logo{margin:0;font-size:1.05rem}
+  .horloge{padding:5px 14px 5px 6px;gap:8px}
+  .cadran{width:36px;height:36px}
+  .moment{font-size:1.05rem;min-width:5.6em}
+  .carte-map iframe{height:270px}
+  .soleil{width:92px;height:92px;margin:-46px 0 0 -46px;box-shadow:0 0 60px 26px var(--sg,rgba(255,200,90,.5))}
+  .lune{width:72px;height:72px;margin:-36px 0 0 -36px}
+  footer .cols{grid-template-columns:1fr}
+  .wa-float{display:none}
+  .defile{display:none}
+  .barre{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:88;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(8,14,40,.92);border-top:1px solid rgba(255,255,255,.18)}
+  .barre .btn{min-height:50px;padding:0 10px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .js .rev{opacity:1;transform:none}
+}
+</style>
+
+<style id="kp-choix-css">
+  #kp-choix{position:fixed;top:0;left:0;right:0;z-index:2147483000;display:flex;align-items:center;gap:8px;
+    padding:8px 10px;background:#3D0B37;color:#F3F9D2;font:600 14px/1.2 Inter,Arial,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  #kp-choix a,#kp-choix button{color:#F3F9D2;text-decoration:none;white-space:nowrap;padding:10px 12px;border-radius:999px;min-height:44px;
+    display:inline-flex;align-items:center;font:600 14px/1 Inter,Arial,sans-serif;border:0;background:rgba(243,249,210,.1);cursor:pointer}
+  #kp-choix .kp-nom{flex:1;text-align:center;font-weight:500;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #kp-choix .kp-aime[aria-pressed="true"]{background:#F4C2D7;color:#3D0B37}
+  #kp-choix .kp-choisir{background:#C0D684;color:#3D0B37}
+  #kp-toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);z-index:2147483001;max-width:min(92vw,460px);
+    background:#1A1A1A;color:#fff;font:500 15px/1.4 Inter,Arial,sans-serif;padding:12px 16px;border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+  #kp-toast.vu{opacity:1;transform:translate(-50%,0)}
+  iframe{pointer-events:none}
+  @media (max-width:640px){#kp-choix .kp-nom{display:none}#kp-choix a,#kp-choix button{font-size:13.5px;padding:10px}#kp-choix .kp-choisir{margin-left:auto}}
+</style>
+</head>
+<body>
+<div id="kp-choix" data-id="14" role="navigation" aria-label="Choix du modèle"><a data-kp href="../index.html#g-reel">← Tous</a><span class="kp-nom">14. 24 heures à l&#x27;îlet · Vraies photos · Mafate · 2 690 €</span><button type="button" class="kp-aime" aria-pressed="false">♡ J'aime</button><a data-kp class="kp-choisir" href="../index.html?choix=14#choix">★ Je choisis</a></div><div id="kp-toast" role="status" aria-live="polite"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.02L4 29l8.14-1.56a12 12 0 0 0 3.9.65h.01C22.68 28.09 28 22.7 28 16.07 28 12.86 26.75 9.84 24.48 7.57A11.9 11.9 0 0 0 16.04 3zm0 22.03h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.83.93.96-4.7-.24-.38a9.9 9.9 0 0 1-1.52-5.23c0-5.5 4.5-9.97 10.02-9.97 2.67 0 5.18 1.04 7.06 2.93a9.9 9.9 0 0 1 2.92 7.05c0 5.5-4.5 9.99-10 9.99zm5.48-7.47c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07a8.2 8.2 0 0 1-2.42-1.5 9.1 9.1 0 0 1-1.68-2.09c-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.48 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35z"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+</svg>
+
+<div class="banner"><span class="long">Maquette <a href="https://kreapro.re" target="_blank" rel="noopener">KréaPro</a> · effets sur mesure (formule Mafate) · modèle 07/10 · photos réelles du camping</span><span class="court">Maquette KréaPro · Mafate 07/10 · photos réelles</span><a class="retour long" href="../index.html">← Les 10 modèles impact</a><a class="retour court" href="../index.html">← Modèles</a></div>
+
+<!-- le ciel unique, fixe, qui change au fil du défilement -->
+<div id="ciel" aria-hidden="true">
+  <div class="voie"></div>
+  <canvas id="etoiles"></canvas>
+  <div class="astre soleil" id="soleil"></div>
+  <div class="astre lune" id="lune"></div>
+  <div class="nuage n1"></div><div class="nuage n2"></div><div class="nuage n3"></div>
+  <svg class="remparts" viewBox="0 0 1600 420" preserveAspectRatio="xMidYMax slice" focusable="false">
+    <defs><radialGradient id="lueur"><stop offset="0" stop-color="#ffd27a" stop-opacity=".85"/><stop offset=".45" stop-color="#ffb347" stop-opacity=".3"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient></defs>
+    <path class="rb" d="M0 190 L90 150 L170 178 L260 120 L340 170 L430 96 L520 160 L610 130 L700 182 L800 112 L900 168 L990 126 L1080 176 L1180 104 L1270 160 L1360 128 L1450 170 L1530 140 L1600 168 V420 H0Z"/>
+    <path class="rf" d="M0 290 L110 236 L190 270 L300 214 L400 268 L520 226 L640 276 L760 240 L860 282 L960 246 L1060 288 L1180 232 L1290 272 L1400 238 L1500 270 L1600 246 V420 H0Z"/>
+    <path class="rf" d="M0 380 L140 338 L260 366 L420 322 L580 364 L760 332 L940 372 L1120 330 L1300 366 L1460 336 L1600 360 V420 H0Z"/>
+    <g class="lumiere" id="lumiere">
+      <circle cx="900" cy="356" r="60" fill="url(#lueur)"/>
+      <path d="M887 368 L900 338 L913 368Z" fill="#ffe7ae"/>
+      <path d="M900 338 L900 368" stroke="#e0a64a" stroke-width="1.2"/>
+    </g>
+  </svg>
+</div>
+
+<header>
+  <nav class="nav verre" aria-label="Navigation principale">
+    <a class="logo" href="#accueil">Ti Piton</a>
+    <ul>
+      <li><a href="#experience">Le séjour</a></li>
+      <li><a href="#dormir">Dormir</a></li>
+      <li><a href="#venir">Venir</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a class="cta" href="#reserver">Réserver</a></li>
+    </ul>
+  </nav>
+  <div class="horloge verre" role="status" aria-live="off">
+    <svg class="cadran" viewBox="0 0 44 44" aria-hidden="true"><circle class="f" cx="22" cy="22" r="20"/><circle class="pt" cx="22" cy="5" r="1.8"/><circle class="pt" cx="39" cy="22" r="1.4"/><circle class="pt" cx="22" cy="39" r="1.4"/><circle class="pt" cx="5" cy="22" r="1.4"/><line class="aiguille" id="aiguille" x1="22" y1="22" x2="22" y2="9"/></svg>
+    <span class="moment" id="moment">L'arrivée</span>
+  </div>
+</header>
+
+<main>
+  <!-- ===== L'arrivée : plein jour ===== -->
+  <section class="scene st-day hero" id="accueil" data-h="14" data-n="0" data-clock="L'arrivée">
+    <div class="wrap">
+      <div>
+        <span class="lieu">Camping Ti Piton · Îlet des Orangers · Mafate · 980 m</span>
+        <h1>24 heures<br>à <em>l'îlet.</em></h1>
+        <p class="lead">Arrivez à pied, laissez le réseau en bas : ici, c'est le ciel qui rythme la journée. Faites défiler, il va changer.</p>
+        <div class="actions">
+          <a class="btn btn-o" href="#reserver">Réserver</a>
+          <a class="btn btn-l" href="tel:+262692061817"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+          <a class="btn btn-wa" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+        </div>
+      </div>
+      <figure class="cadre"><img src="../images/tipiton/terrain.webp" alt="Le terrain du Camping Ti Piton : deux tentes sur la pelouse, une table et des chaises face aux remparts de Mafate (photo réelle)" width="1027" height="684"></figure>
+    </div>
+    <a class="defile" href="#deconnexion"><span>Le ciel va changer</span><i></i></a>
+  </section>
+
+  <section class="scene st-day court" id="deconnexion" data-h="15.5" data-n="0" data-clock="L'arrivée">
+    <div class="wrap">
+      <div class="panneau simple rev">
+        <span class="etiq">Déconnexion</span>
+        <h2>Ici, il n'y a pas de route.</h2>
+        <p>Le cirque de Mafate ne se rejoint qu'à pied, ou en hélicoptère. Inscrit au patrimoine mondial de l'UNESCO avec Pitons, cirques et remparts (2010), il s'étend au cœur du Parc national.</p>
+        <p>Posez le sac, laissez le réseau en bas, on éteint les écrans. Le seul programme : la lumière du jour, la table, le feu, les étoiles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== L'expérience, de l'arrivée au réveil ===== -->
+  <section class="scene st-sunset" id="experience" data-h="17.4" data-n="0.02" data-clock="L'arrivée">
+    <div class="wrap etape">
+      <div class="panneau rev">
+        <span class="etiq"><b>1</b>L'arrivée et le punch</span>
+        <h2>Le soleil descend, le punch arrive.</h2>
+        <p>Jean-Martel vous accueille à l'Îlet des Orangers avec un punch maison, offert. Le soleil se couche derrière les remparts : vous êtes arrivé.</p>
+      </div>
+      <figure class="motif m-punch rev" role="img" aria-label="Pictogramme d'un verre de punch : le punch maison est offert à l'arrivée"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 30h56l-6 70a6 6 0 0 1-6 5H44a6 6 0 0 1-6-5z"/><path d="M35 55h50" stroke-width="3"/><circle cx="82" cy="30" r="12" fill="#ffc857" stroke="#fff"/><path d="M60 8v32" /></svg><span class="grand">Punch maison</span><span class="petit">Offert à l'arrivée</span></figure>
+    </div>
+  </section>
+
+  <section class="scene st-twi" data-h="18.5" data-n="0.28" data-clock="L'arrivée">
+    <div class="wrap etape inv">
+      <div class="panneau rev">
+        <span class="etiq"><b>2</b>La tente</span>
+        <h2>Votre tente est prête.</h2>
+        <p>Matelas, oreillers, draps, couvertures : tout est installé à votre arrivée. Dehors, les remparts de Mafate.</p>
+      </div>
+      <figure class="reel rev"><img src="../images/tipiton/reel-tentes.webp" alt="Deux tentes dômes bleues sur la pelouse, les remparts derrière (photo réelle)" width="500" height="255" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="scene st-dusk" data-h="19.6" data-n="0.6" data-clock="18 h 30">
+    <div class="wrap etape">
+      <div class="panneau rev">
+        <span class="etiq"><b>3</b>Le dîner de 18 h 30</span>
+        <h2>À table, à 18 h 30.</h2>
+        <p>Entrée, plat, dessert : une cuisine maison, servie à 18 h 30, 14 € par personne. Les voyageurs citent le carry et le rougail saucisse. Régimes particuliers à signaler à la réservation.</p>
+      </div>
+      <figure class="motif m-diner rev" role="img" aria-label="Pictogramme d'une assiette et de couverts : le dîner est servi à 18 h 30"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="62" r="30"/><circle cx="60" cy="62" r="18" stroke-width="3"/><path d="M14 28v26M20 28v26M26 28v26M14 54h12M20 54v44"/><path d="M104 28c-8 6-10 22-6 34h6zM104 62v36"/></svg><span class="grand">18 h 30</span><span class="petit">Le dîner</span></figure>
+    </div>
+  </section>
+
+  <section class="scene st-night" data-h="21.5" data-n="1" data-clock="La nuit">
+    <div class="wrap etape inv">
+      <div class="panneau rev">
+        <span class="etiq"><b>4</b>Le feu</span>
+        <h2>Autour du feu.</h2>
+        <p>Le barbecue est à disposition, le bois est à 3 € le fagot. Sortez la guitare, rapprochez-vous des flammes, et parlez à voix basse : la nuit s'installe.</p>
+      </div>
+      <figure class="motif m-feu rev" role="img" aria-label="Pictogramme d'un feu de bois : le fagot est à 3 euros"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M60 12c6 18 26 30 26 54a26 26 0 0 1-52 0c0-12 6-20 12-26 2 8 6 12 10 12-2-14 0-28 4-40z" fill="#ff9d3a"/><path d="M60 62c4 8 10 12 10 20a10 10 0 0 1-20 0c0-6 6-12 10-20z" fill="#ffd36b" stroke="none"/><path d="M22 106l76-12M22 94l76 12"/></svg><span class="grand">3 €</span><span class="petit">Le fagot de bois</span></figure>
+    </div>
+  </section>
+
+  <section class="scene st-deep" data-h="24.8" data-n="1" data-clock="La nuit">
+    <div class="wrap etape">
+      <div class="panneau rev">
+        <span class="etiq"><b>5</b>La nuit étoilée</span>
+        <h2>Levez la tête.</h2>
+        <p>Enveloppez-vous dans une couverture et regardez le ciel de Mafate : la nuit est étoilée, et de temps en temps, une étoile file. Retournez ensuite dormir à 980 m, sous la lumière de votre tente.</p>
+      </div>
+      <figure class="motif m-nuit rev" role="img" aria-label="Pictogramme d'une lune et d'étoiles : la nuit à 980 mètres d'altitude"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M78 20a38 38 0 1 0 22 62A34 34 0 0 1 78 20z" fill="#ffe9a8" stroke="none"/><path d="M26 22v10M21 27h10M100 94v8M96 98h8M18 74v8M14 78h8" stroke-width="3"/><circle cx="52" cy="14" r="2.5" fill="#fff"/><circle cx="106" cy="46" r="2.5" fill="#fff"/></svg><span class="grand">980 m</span><span class="petit">Sous les étoiles</span></figure>
+    </div>
+  </section>
+
+  <section class="scene st-dawn" data-h="30.6" data-n="0.12" data-clock="7 h 30">
+    <div class="wrap etape inv">
+      <div class="panneau rev">
+        <span class="etiq"><b>6</b>Le réveil de 7 h 30</span>
+        <h2>7 h 30, le café fume.</h2>
+        <p>Café, thé, lait, tisane, pain, beurre, confiture : le petit-déjeuner est servi à 7 h 30, 6 € par personne. Le jour se lève sur le cirque.</p>
+      </div>
+      <figure class="motif m-aube rev" role="img" aria-label="Pictogramme d'un soleil qui se lève : le petit-déjeuner est servi à 7 h 30"><svg viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 80a36 36 0 0 1 72 0z" fill="#ffd36b"/><path d="M8 80h104M60 22v10M26 36l7 7M94 36l-7 7M10 60h10M100 60h10"/><path d="M40 96h40M48 104h24" stroke-width="3"/></svg><span class="grand">7 h 30</span><span class="petit">Le petit-déjeuner</span></figure>
+    </div>
+  </section>
+
+  <!-- ===== Dormir ===== -->
+  <section class="scene st-morning haute" id="dormir" data-h="32.5" data-n="0" data-clock="7 h 30">
+    <div class="wrap">
+      <div class="panneau">
+        <span class="etiq">Dormir</span>
+        <h2>Trois façons de passer la nuit.</h2>
+        <p>Dix voyageurs au maximum. Tarifs indicatifs, hors frais de réservation.</p>
+        <figure class="reelle">
+          <img src="../images/tipiton/reel-table.webp" width="520" height="324" alt="Une table ronde à motifs et deux chaises sur la pelouse (photo réelle)" loading="lazy">
+          <figcaption><span>Sur la pelouse</span></figcaption>
+        </figure>
+        <div class="cartes">
+          <article class="carte">
+            <h3>Tente équipée</h3>
+            <p class="d">Matelas, oreillers, draps, couvertures. Pour 2 personnes.</p>
+            <div class="pl"><span>la nuit, pour 2</span><b>30 €</b></div>
+            <div class="pl"><span>demi-pension, pour 2</span><b>70 €</b></div>
+          </article>
+          <article class="carte">
+            <h3>Tente seule</h3>
+            <p class="d">Tente pour 1 personne.</p>
+            <div class="pl"><span>la nuit</span><b>20 €</b></div>
+            <div class="pl"><span>demi-pension</span><b>40 €</b></div>
+          </article>
+          <article class="carte">
+            <h3>Emplacement nu</h3>
+            <p class="d">Pour votre propre tente, par personne.</p>
+            <div class="pl"><span>la nuit</span><b>7 €</b></div>
+            <div class="pl"><span>demi-pension</span><b>27 €</b></div>
+          </article>
+        </div>
+        <ul class="liste">
+          <li><span>Demi-pension : dîner + nuit + petit-déjeuner</span><b>inclus</b></li>
+          <li><span>Enfant de moins de 10 ans</span><b>12 €</b></li>
+          <li><span>Dîner à 18 h 30, par personne</span><b>14 €</b></li>
+          <li><span>Petit-déjeuner à 7 h 30, par personne</span><b>6 €</b></li>
+        </ul>
+        <ul class="services">
+          <li>Douches et toilettes</li><li>Eau chaude en journée</li><li>Barbecue, bois 3 € le fagot</li><li>Boissons en vente sur place</li><li>Animaux acceptés</li>
+        </ul>
+        <p class="fine">Tarifs indicatifs, hors frais de réservation. Régimes particuliers à signaler à la réservation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Venir ===== -->
+  <section class="scene st-day haute" id="venir" data-h="34.5" data-n="0" data-clock="L'arrivée">
+    <div class="wrap">
+      <div class="panneau rev">
+        <span class="etiq">Venir</span>
+        <h2>Jusqu'à l'îlet, à pied.</h2>
+        <div class="venir">
+          <div>
+            <ul class="etapes">
+              <li><span class="duree">~3 h</span><div><strong>Depuis le Maïdo</strong><span class="d">En descente : le plus court.</span></div></li>
+              <li><span class="duree">~4 h</span><div><strong>Par Deux-Bras</strong><span class="d">4x4 par la Rivière des Galets, puis environ 4 h de marche.</span></div></li>
+              <li><span class="duree">~5 h</span><div><strong>Par Sans-Souci</strong><span class="d">Canalisation des Orangers, depuis la citerne rouge : sentier à flanc de falaise.</span></div></li>
+            </ul>
+            <p class="fine">Durées indicatives. L'îlet est aussi une étape vers Roche Plate, Marla ou la Rivière des Galets.</p>
+            <ul class="conseils">
+              <li>Chaussures de marche</li><li>De l'eau</li><li>Une lampe frontale</li><li>Sentiers fermés en cas d'alerte météo</li>
+            </ul>
+            <p><b>Camping Ti Piton</b><br>Îlet des Orangers, 97460 Mafate, La Réunion</p>
+          </div>
+          <div class="cote">
+            <figure><img src="../images/tipiton/reel-remparts.webp" alt="Ciel bleu et nuages au-dessus des remparts de Mafate, grande falaise verte à droite (photo réelle)" width="1003" height="318" loading="lazy"></figure>
+            <div class="carte-map"><iframe src="https://maps.google.com/maps?q=-21.04181,55.39347&z=13&output=embed" title="Carte Google Maps : Camping Ti Piton, Îlet des Orangers, Mafate" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Avis ===== -->
+  <section class="scene st-day court" id="avis" data-h="35.8" data-n="0" data-clock="L'arrivée">
+    <div class="wrap">
+      <div class="panneau simple avis rev">
+        <span class="etiq">Les voyageurs</span>
+        <div class="note5">5,0<small>/ 5</small></div>
+        <div class="etoiles-note" aria-hidden="true">★★★★★</div>
+        <p style="margin:0 auto 6px"><b>4 avis</b> · source : cirquedemafate.re</p>
+        <blockquote>« Je recommande totalement ! »</blockquote>
+        <p class="cite" style="margin-left:auto;margin-right:auto">— Camille, octobre 2025</p>
+        <ul class="themes">
+          <li class="theme">Vue exceptionnelle</li><li class="theme">Hôte accueillant</li><li class="theme">Repas maison copieux</li><li class="theme">Tentes prêtes à l'arrivée</li><li class="theme">Bonne ambiance</li><li class="theme">Eau chaude en journée</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Réserver : plein jour ===== -->
+  <section class="scene st-day haute" id="reserver" data-h="37" data-n="0" data-clock="L'arrivée">
+    <div class="wrap">
+      <div class="resa">
+        <div class="panneau rev">
+          <span class="etiq">Réserver</span>
+          <h2>Votre prochaine nuit à l'îlet.</h2>
+          <form id="formulaire" novalidate>
+            <div class="grille">
+              <label>Arrivée<input type="date" id="arrivee" name="arrivee"></label>
+              <label>Départ<input type="date" id="depart" name="depart"></label>
+              <label>Formule
+                <select id="formule" name="formule">
+                  <option value="tente2">Tente équipée (2 pers.)</option>
+                  <option value="tente1">Tente seule (pour 1 personne)</option>
+                  <option value="nu">Votre tente (emplacement)</option>
+                </select>
+              </label>
+              <label>Voyageurs<input type="number" id="personnes" name="personnes" min="1" max="10" value="2"></label>
+              <label class="case large"><input type="checkbox" id="dp" name="dp" checked> Demi-pension (dîner + petit-déjeuner)</label>
+              <label>Nom<input type="text" id="nom" name="nom" autocomplete="name" placeholder="Votre nom"></label>
+              <label>Téléphone ou e-mail<input type="text" id="contact" name="contact" placeholder="Pour vous répondre"></label>
+              <label class="large">Message<textarea id="message" name="message" placeholder="Votre sentier d'arrivée, un régime alimentaire, une occasion spéciale…"></textarea></label>
+              <div class="estimation"><span>Estimation pour votre séjour</span><b id="total">70 €</b><span id="detail" style="flex-basis:100%">1 nuit · 1 tente équipée · demi-pension · hors frais de réservation</span></div>
+            </div>
+            <button class="btn btn-o" type="submit" style="margin-top:18px;width:100%">Envoyer ma demande</button>
+            <p id="merci" role="status">Maquette : sur le vrai site, votre demande arriverait directement chez Jean-Martel, par e-mail.</p>
+          </form>
+        </div>
+        <div class="panneau direct rev">
+          <h3>Ou parlons-en</h3>
+          <a class="btn btn-wa" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          <a class="btn btn-o" href="tel:+262692061817"><svg aria-hidden="true"><use href="#i-tel"/></svg>0692 06 18 17</a>
+          <a class="btn btn-l" href="mailto:jeanmartelatache4@gmail.com">jeanmartelatache4@gmail.com</a>
+          <p class="fine">Jean-Martel vous répond pour les sentiers, les repas et les tentes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h3>Camping Ti Piton</h3><p>Îlet des Orangers<br>97460 Mafate, La Réunion</p></div>
+      <div><h3>Téléphone</h3><p><a href="tel:+262692061817">0692 06 18 17</a></p></div>
+      <div><h3>E-mail</h3><p><a href="mailto:jeanmartelatache4@gmail.com">jeanmartelatache4@gmail.com</a></p></div>
+    </div>
+    <div class="mention">
+      <p>Maquette réalisée par KréaPro pour montrer ce que pourrait être le site du camping. Les photos sont de vraies photos du camping ; leur utilisation sur le site final est à confirmer avec le propriétaire. Infos et tarifs relevés sur les fiches publiques du camping (Office de Tourisme de l'Ouest, cirquedemafate.re).</p>
+      <p>Bouton WhatsApp : à confirmer avec le propriétaire (le numéro doit être enregistré sur WhatsApp).</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+<div class="barre">
+  <a class="btn btn-l" href="tel:+262692061817"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+  <a class="btn btn-wa" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var calme = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------- réservation : estimation en direct (tarifs publics du camping) ----------
+  var iso = function (d) { return d.toISOString().slice(0, 10); };
+  $('arrivee').value = iso(new Date(Date.now() + 14 * 864e5));
+  $('depart').value = iso(new Date(Date.now() + 15 * 864e5));
+  var TARIFS = { tente2: { nuit: 30, dp: 70, parTente: true, taille: 2, nom: 'tente équipée' },
+                 tente1: { nuit: 20, dp: 40, parTente: true, taille: 1, nom: 'tente seule' },
+                 nu: { nuit: 7, dp: 27, parTente: false, taille: 1, nom: 'emplacement' } };
+  var estimer = function () {
+    var nuits = Math.max(1, Math.round((new Date($('depart').value) - new Date($('arrivee').value)) / 864e5) || 1);
+    var p = Math.min(10, Math.max(1, parseInt($('personnes').value, 10) || 1));
+    var t = TARIFS[$('formule').value], dp = $('dp').checked;
+    var unites = Math.ceil(p / t.taille);
+    $('total').textContent = (unites * (dp ? t.dp : t.nuit) * nuits).toLocaleString('fr-FR') + ' €';
+    var n = t.parTente ? unites : p;
+    $('detail').textContent = nuits + ' nuit' + (nuits > 1 ? 's' : '') + ' · ' + n + ' ' + t.nom + (n > 1 ? 's' : '') + ' · ' + (dp ? 'demi-pension' : 'nuit seule') + ' · hors frais de réservation';
+  };
+  ['arrivee', 'depart', 'formule', 'personnes', 'dp'].forEach(function (id) { $(id).addEventListener('input', estimer); });
+  estimer();
+  $('formulaire').addEventListener('submit', function (e) { e.preventDefault(); $('merci').style.display = 'block'; });
+
+  // ---------- apparitions ----------
+  var rev = document.querySelectorAll('.rev');
+  if ('IntersectionObserver' in window && !calme) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+    rev.forEach(function (el) { io.observe(el); });
+  } else { rev.forEach(function (el) { el.classList.add('vu'); }); }
+
+  if (calme) return; // ciels en sections fixes, sans étoiles ni étoile filante
+  var racine = document.documentElement;
+  racine.classList.add('live');
+
+  // ---------- le ciel ----------
+  var ciel = $('ciel'), soleil = $('soleil'), lune = $('lune'), voie = ciel.querySelector('.voie');
+  var nuages = ciel.querySelectorAll('.nuage'), lum = $('lumiere'), aiguille = $('aiguille'), moment = $('moment');
+  var scenes = Array.prototype.slice.call(document.querySelectorAll('.scene'));
+  var hex = function (h) { h = h.trim(); if (h.charAt(0) !== '#') return [0, 0, 0]; if (h.length === 4) h = '#' + h[1] + h[1] + h[2] + h[2] + h[3] + h[3]; return [parseInt(h.substr(1, 2), 16), parseInt(h.substr(3, 2), 16), parseInt(h.substr(5, 2), 16)]; };
+  var etats = scenes.map(function (s) {
+    var cs = getComputedStyle(s);
+    return { t: hex(cs.getPropertyValue('--t')), m: hex(cs.getPropertyValue('--m')), b: hex(cs.getPropertyValue('--b')),
+             rb: hex(cs.getPropertyValue('--rb')), rf: hex(cs.getPropertyValue('--rf')),
+             h: parseFloat(s.dataset.h), n: parseFloat(s.dataset.n), clock: s.dataset.clock, c: 0 };
+  });
+  var mix = function (a, b, f) { return Math.round(a[0] + (b[0] - a[0]) * f) + ',' + Math.round(a[1] + (b[1] - a[1]) * f) + ',' + Math.round(a[2] + (b[2] - a[2]) * f); };
+  var lerp = function (a, b, f) { return a + (b - a) * f; };
+  var lisse = function (x) { x = Math.min(1, Math.max(0, x)); return x * x * (3 - 2 * x); };
+  var VW = innerWidth, VH = innerHeight, nuit = 0, jour = 1, dernier = '';
+
+  var mesurer = function () {
+    VW = innerWidth; VH = innerHeight;
+    var y = scrollY;
+    scenes.forEach(function (s, i) { var r = s.getBoundingClientRect(); etats[i].c = r.top + y + r.height / 2; });
+  };
+
+  var maj = function () {
+    var pos = scrollY + VH * 0.5, i = 0;
+    while (i < etats.length - 2 && pos > etats[i + 1].c) i++;
+    var A = etats[i], B = etats[Math.min(i + 1, etats.length - 1)];
+    var f = A === B ? 0 : lisse((pos - A.c) / (B.c - A.c));
+    ciel.style.setProperty('--t', 'rgb(' + mix(A.t, B.t, f) + ')');
+    ciel.style.setProperty('--m', 'rgb(' + mix(A.m, B.m, f) + ')');
+    ciel.style.setProperty('--b', 'rgb(' + mix(A.b, B.b, f) + ')');
+    ciel.style.setProperty('--rb', 'rgb(' + mix(A.rb, B.rb, f) + ')');
+    ciel.style.setProperty('--rf', 'rgb(' + mix(A.rf, B.rf, f) + ')');
+    var h = lerp(A.h, B.h, f), hh = ((h % 24) + 24) % 24;
+    nuit = lerp(A.n, B.n, f);
+    jour = Math.min(1, Math.max(0, 1 - nuit * 1.25));
+    // soleil : arc de 6 h à 18 h ; lune : arc de 18 h à 6 h
+    var ps = (hh - 6) / 12, pl = (((hh - 18) % 24 + 24) % 24) / 12;
+    var as = Math.sin(Math.PI * ps), al = Math.sin(Math.PI * pl);
+    var horizon = VH * 0.74, haut = VH * 0.17;
+    if (ps >= -0.04 && ps <= 1.04) {
+      var k = Math.min(1, Math.max(0, 1 - as * 2.4));
+      soleil.style.opacity = String(Math.min(1, Math.max(0, (as + 0.12) * 5)));
+      soleil.style.transform = 'translate3d(' + (VW * (0.1 + 0.8 * ps)).toFixed(1) + 'px,' + (horizon - (horizon - haut) * Math.max(as, -0.12)).toFixed(1) + 'px,0) scale(' + (1 + k * 0.5).toFixed(3) + ')';
+      soleil.style.setProperty('--sc', 'rgb(' + mix([255, 238, 150], [255, 112, 52], k) + ')');
+      soleil.style.setProperty('--sg', 'rgba(' + mix([255, 215, 110], [255, 95, 60], k) + ',.5)');
+    } else soleil.style.opacity = '0';
+    if (pl >= -0.04 && pl <= 1.04) {
+      lune.style.opacity = String(Math.min(1, Math.max(0, (al + 0.1) * 4)));
+      lune.style.transform = 'translate3d(' + (VW * (0.16 + 0.7 * pl)).toFixed(1) + 'px,' + (horizon - (horizon - haut) * Math.max(al, -0.1)).toFixed(1) + 'px,0)';
+    } else lune.style.opacity = '0';
+    $('etoiles').style.opacity = nuit.toFixed(3);
+    voie.style.opacity = (nuit * 0.9).toFixed(3);
+    lum.style.opacity = Math.min(1, nuit * 1.4).toFixed(3);
+    for (var j = 0; j < nuages.length; j++) nuages[j].style.opacity = (jour * (j === 1 ? 0.8 : 0.9)).toFixed(3);
+    aiguille.style.transform = 'rotate(' + (h * 15).toFixed(1) + 'deg)';
+    var lib = f > 0.5 ? B.clock : A.clock;
+    if (lib !== dernier) {
+      dernier = lib; moment.classList.add('change');
+      setTimeout(function () { moment.textContent = lib; moment.classList.remove('change'); }, 180);
+    }
+  };
+
+  var attente = false;
+  var demander = function () { if (!attente) { attente = true; requestAnimationFrame(function () { attente = false; maj(); }); } };
+  addEventListener('scroll', demander, { passive: true });
+  addEventListener('resize', function () { mesurer(); dimensionner(); demander(); }, { passive: true });
+  addEventListener('load', function () { mesurer(); demander(); });
+  document.addEventListener('DOMContentLoaded', function () { mesurer(); maj(); });
+
+  // ---------- étoiles qui scintillent + étoile filante (canvas) ----------
+  var cv = $('etoiles'), ctx = cv.getContext('2d'), etoiles = [], dpr = 1, filante = null, prochaine = 0;
+  function dimensionner() {
+    dpr = Math.min(window.devicePixelRatio || 1, VW < 760 ? 1 : 1.5);
+    cv.width = Math.round(VW * dpr); cv.height = Math.round(VH * dpr);
+    var n = VW < 760 ? 110 : 260;
+    etoiles = [];
+    for (var i = 0; i < n; i++) {
+      var y = Math.pow(Math.random(), 1.25) * 0.8;
+      etoiles.push({ x: Math.random() * cv.width, y: y * cv.height, r: (Math.random() < 0.1 ? 1.9 : Math.random() * 1.1 + 0.45) * dpr,
+                     p: Math.random() * 6.28, v: 0.8 + Math.random() * 2.6, c: Math.random() < 0.18 ? '255,226,190' : (Math.random() < 0.3 ? '190,210,255' : '255,255,255') });
+    }
+  }
+  mesurer(); dimensionner(); maj();
+  var actif = false;
+  var dessiner = function (ms) {
+    requestAnimationFrame(dessiner);
+    if (document.hidden) return;
+    if (nuit < 0.02) { if (actif) { ctx.clearRect(0, 0, cv.width, cv.height); actif = false; } return; }
+    actif = true;
+    var t = ms / 1000;
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    for (var i = 0; i < etoiles.length; i++) {
+      var s = etoiles[i], a = 0.28 + 0.72 * (0.5 + 0.5 * Math.sin(t * s.v + s.p));
+      ctx.fillStyle = 'rgba(' + s.c + ',' + a.toFixed(2) + ')';
+      if (s.r > 1.8 * dpr) {
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.2832); ctx.fill();
+        ctx.fillStyle = 'rgba(' + s.c + ',' + (a * 0.18).toFixed(2) + ')';
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r * 3.6, 0, 6.2832); ctx.fill();
+      } else ctx.fillRect(s.x, s.y, s.r * 1.6, s.r * 1.6);
+    }
+    // étoile filante
+    if (!filante && nuit > 0.75) {
+      if (!prochaine) prochaine = t + 0.8;
+      if (t > prochaine) {
+        var ang = (0.42 + Math.random() * 0.3), dir = Math.random() < 0.5 ? 1 : -1;
+        filante = { x: cv.width * (dir > 0 ? 0.1 + Math.random() * 0.45 : 0.55 + Math.random() * 0.4), y: cv.height * (0.05 + Math.random() * 0.25),
+                    vx: Math.cos(ang) * dir, vy: Math.sin(ang), t0: t, dur: 1.7 };
+      }
+    }
+    if (filante) {
+      var q = (t - filante.t0) / filante.dur;
+      if (q >= 1) { filante = null; prochaine = t + 2.5 + Math.random() * 3; }
+      else {
+        var d = q * cv.width * 0.5, L = 190 * dpr * (1 - q * 0.4);
+        var hx = filante.x + filante.vx * d, hy = filante.y + filante.vy * d;
+        var tx = hx - filante.vx * L, ty = hy - filante.vy * L;
+        var al = Math.sin(Math.PI * Math.min(1, q * 1.05));
+        var g = ctx.createLinearGradient(tx, ty, hx, hy);
+        g.addColorStop(0, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(255,255,255,' + al.toFixed(2) + ')');
+        ctx.strokeStyle = g; ctx.lineWidth = 3 * dpr; ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(tx, ty); ctx.lineTo(hx, hy); ctx.stroke();
+        ctx.fillStyle = 'rgba(255,255,255,' + al.toFixed(2) + ')';
+        ctx.beginPath(); ctx.arc(hx, hy, 2.8 * dpr, 0, 6.2832); ctx.fill();
+        ctx.fillStyle = 'rgba(200,220,255,' + (al * 0.25).toFixed(2) + ')';
+        ctx.beginPath(); ctx.arc(hx, hy, 9 * dpr, 0, 6.2832); ctx.fill();
+      }
+    }
+  };
+  requestAnimationFrame(dessiner);
+})();
+</script>
+
+<script id="kp-choix-js">
+(function(){
+  var barre=document.getElementById('kp-choix'), H=barre.getBoundingClientRect().height, ID=barre.getAttribute('data-id');
+  var ancien=0;
+  document.querySelectorAll('body *').forEach(function(el){
+    if(el===barre||barre.contains(el))return;
+    var s=getComputedStyle(el);
+    if((s.position==='fixed'||s.position==='sticky')&&/Maquette\s*Kr[ée]aPro/.test(el.textContent||'')&&(el.textContent||'').length<400){
+      ancien=Math.max(ancien,el.getBoundingClientRect().height);el.style.display='none';}
+  });
+  if(H>ancien){document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+(H-ancien)+'px';}
+  document.documentElement.style.scrollPaddingTop=(H+8)+'px';
+  // ♡ J'aime (mémorisé sur l'appareil, repris par la page de choix)
+  var b=barre.querySelector('.kp-aime');
+  function liste(){try{return JSON.parse(localStorage.getItem('tipiton-aime')||'[]');}catch(e){return [];}}
+  function maj(){var on=liste().indexOf(ID)>=0;b.setAttribute('aria-pressed',on);b.textContent=on?'♥ J\'aime':'♡ J\'aime';}
+  b.addEventListener('click',function(){var l=liste(),i=l.indexOf(ID);if(i>=0)l.splice(i,1);else l.push(ID);
+    try{localStorage.setItem('tipiton-aime',JSON.stringify(l));}catch(e){}maj();});
+  maj();
+  // tous les autres liens sont neutralisés
+  var toast=document.getElementById('kp-toast'),t;
+  function message(txt){toast.textContent=txt;toast.classList.add('vu');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('vu');},2600);}
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a');if(!a||a.hasAttribute('data-kp'))return;
+    var h=a.getAttribute('href')||'';if(h.charAt(0)==='#')return;
+    ev.preventDefault();
+    var quoi=/^tel:/.test(h)?'appellera le camping':/wa\.me|whatsapp/i.test(h)?'ouvrira WhatsApp':/^mailto:/.test(h)?'ouvrira l\'e-mail':'fonctionnera';
+    message('Maquette : sur votre vrai site, ce bouton '+quoi+'.');
+  },true);
+})();
+</script>
+</body>
+</html>

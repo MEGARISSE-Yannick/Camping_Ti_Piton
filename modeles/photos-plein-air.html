@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camping Ti Piton — Îlet des Orangers, Mafate</title>
+  <meta name="description" content="Camping Ti Piton à l'Îlet des Orangers, au cœur du cirque de Mafate (La Réunion), à 980 m : tentes équipées, emplacements, dîner créole maison et punch de bienvenue. Accessible uniquement à pied." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="Camping Ti Piton — Îlet des Orangers, Mafate" />
+  <meta property="og:description" content="Tentes équipées et emplacements face aux remparts de Mafate, à 980 m. Dîner créole maison, punch offert à l'arrivée. On y vient à pied." />
+  <meta property="og:image" content="../images/tipiton/terrain.webp" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Campground",
+    "name": "Camping Ti Piton",
+    "description": "Camping à l'Îlet des Orangers, au cœur du cirque de Mafate (La Réunion), à environ 980 m d'altitude. Tentes équipées, tentes seules et emplacements, demi-pension possible. Accessible uniquement à pied.",
+    "image": "../images/tipiton/terrain.webp",
+    "telephone": "+262692061817",
+    "email": "jeanmartelatache4@gmail.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "Îlet des Orangers", "postalCode": "97460", "addressLocality": "Mafate", "addressRegion": "La Réunion", "addressCountry": "FR" },
+    "geo": { "@type": "GeoCoordinates", "latitude": -21.04181, "longitude": 55.39347 },
+    "priceRange": "7 € – 70 €",
+    "petsAllowed": true
+  }
+  </script>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!--
+    Maquette KréaPro « photos réelles » — formule Salazie (1 page). Uniquement des photos réelles du camping
+    (../images/tipiton/), aucune image générée par IA. Contenu : _generation/contenu-commun.md + contenu-salazie.md.
+    Couleurs prises dans la photo du terrain : ciel, herbe, remparts, tentes bleues.
+  -->
+  <style>
+    :root {
+      --ciel: #2C7CC4; --ciel-clair: #E4F0FA; --nuage: #FBFCFA; --herbe: #8E9F45; --herbe-clair: #EEF2DC;
+      --rempart: #22392A; --tente: #1A84A9; --encre: #18221B; --gris: #556157; --bord: #DCE3D6; --wa: #25D366;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--nuage); color: var(--encre); font: 400 17px/1.65 "Inter", system-ui, sans-serif; }
+    img { max-width: 100%; display: block; }
+    a { color: var(--tente); }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--ciel); outline-offset: 3px; }
+    .conteneur { width: min(1160px, 100%); margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+    h1, h2, h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; letter-spacing: -.01em; color: var(--rempart); }
+
+    /* bandeau maquette */
+    .maquette { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--rempart); color: #DDE7D2; font-size: 13px; line-height: 1; }
+    .maquette .conteneur { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 30px; }
+    .maquette a { color: #fff; }
+    .maquette .court { display: none; }
+    @media (max-width: 720px) { .maquette .long { display: none; } .maquette .court { display: inline; } }
+
+    /* en-tête */
+    .entete { position: sticky; top: 30px; z-index: 40; background: rgba(251, 252, 250, .94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--bord); margin-top: 30px; }
+    .entete .conteneur { display: flex; align-items: center; gap: 20px; min-height: 62px; }
+    .logo { font: 400 26px/1 "Instrument Serif", serif; color: var(--rempart); text-decoration: none; margin-right: auto; }
+    .logo span { color: var(--tente); font-style: italic; }
+    .entete nav { display: flex; gap: 22px; }
+    .entete nav a { color: var(--encre); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .entete nav a:hover { color: var(--tente); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; font: 600 16px/1 "Inter", sans-serif; padding: 15px 22px; border-radius: 999px; text-decoration: none; border: 2px solid transparent; cursor: pointer; transition: transform .15s, background .2s; white-space: nowrap; }
+    .btn:active { transform: scale(.97); }
+    .btn svg { width: 19px; height: 19px; flex: none; }
+    .btn-tel { background: var(--rempart); color: #fff; }
+    .btn-tel:hover { background: #2F4D39; }
+    .btn-wa { background: var(--wa); color: #06260F; }
+    .btn-wa:hover { background: #1FBE5A; }
+    .btn-clair { background: transparent; color: var(--rempart); border-color: var(--rempart); }
+    .entete .btn { padding: 11px 18px; font-size: 15px; }
+    @media (max-width: 860px) { .entete nav { display: none; } }
+
+    /* accueil */
+    .accueil { padding: clamp(28px, 5vw, 64px) 0 clamp(30px, 5vw, 56px); }
+    .accueil .conteneur { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(26px, 4vw, 56px); align-items: center; }
+    @media (max-width: 900px) { .accueil .conteneur { grid-template-columns: 1fr; } }
+    .lieu { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; letter-spacing: .04em; color: var(--tente); background: var(--ciel-clair); padding: 7px 13px; border-radius: 999px; margin: 0 0 18px; }
+    .lieu svg { width: 15px; height: 15px; }
+    h1 { font-size: clamp(52px, 7.4vw, 96px); line-height: .95; margin: 0 0 18px; }
+    h1 em { color: var(--tente); }
+    .promesse { font-size: clamp(18px, 1.6vw, 20px); color: var(--gris); margin: 0 0 26px; max-width: 520px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .photo-principale { position: relative; margin: 0; }
+    .photo-principale img { width: 100%; height: auto; max-width: 1027px; aspect-ratio: 1027 / 684; object-fit: cover; border-radius: 22px; box-shadow: 0 30px 60px -30px rgba(34, 57, 42, .55); }
+    .vrai { position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 7px; background: rgba(255, 255, 255, .94); color: var(--rempart); font-size: 13.5px; font-weight: 600; padding: 8px 12px; border-radius: 999px; }
+    .vrai::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--wa); }
+    .photo-principale figcaption { font-size: 14px; color: var(--gris); margin-top: 10px; }
+
+    /* repères */
+    .reperes { background: var(--rempart); color: #fff; }
+    .reperes ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .reperes li { padding: 22px 18px; border-left: 1px solid rgba(255, 255, 255, .14); }
+    .reperes li:first-child { border-left: 0; }
+    .reperes b { display: block; font: 400 34px/1 "Instrument Serif", serif; color: #CFE3A0; margin-bottom: 6px; }
+    .reperes span { font-size: 15px; color: #DDE7D2; }
+    @media (max-width: 760px) { .reperes ul { grid-template-columns: 1fr 1fr; } .reperes li:nth-child(3) { border-left: 0; } .reperes li { border-top: 1px solid rgba(255, 255, 255, .14); } .reperes li:nth-child(-n+2) { border-top: 0; } }
+
+    /* sections */
+    section { padding: clamp(52px, 7vw, 92px) 0; scroll-margin-top: 100px; }
+    .sur-titre { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--herbe); margin: 0 0 10px; }
+    h2 { font-size: clamp(38px, 5vw, 60px); line-height: 1; margin: 0 0 16px; }
+    .chapo { font-size: 18px; color: var(--gris); max-width: 680px; margin: 0 0 34px; }
+
+    /* le camping en bref */
+    .bref .conteneur { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+    @media (max-width: 900px) { .bref .conteneur { grid-template-columns: 1fr; } }
+    .bref p { margin: 0 0 16px; }
+    .inclus { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 12px; }
+    .inclus li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; }
+    .inclus .ico { width: 40px; height: 40px; border-radius: 12px; background: var(--herbe-clair); display: grid; place-items: center; color: var(--rempart); }
+    .inclus .ico svg { width: 21px; height: 21px; }
+    .inclus b { display: block; font-weight: 600; }
+    .inclus span { color: var(--gris); font-size: 16px; }
+    .sur-place { background: #fff; border: 1px solid var(--bord); border-radius: 20px; padding: 22px; }
+    .sur-place h3 { font-size: 30px; margin: 0 0 4px; }
+    .sur-place > p { color: var(--gris); font-size: 15.5px; margin: 0 0 16px; }
+    .vignettes { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+    .vignettes figure { margin: 0; background: #fff; padding: 6px 6px 8px; border: 1px solid var(--bord); border-radius: 10px; box-shadow: 0 10px 20px -14px rgba(0, 0, 0, .4); }
+    .vignettes img { border-radius: 6px; height: auto; }
+    .vignettes figure:nth-child(1) { transform: rotate(-2deg); }
+    .vignettes figure:nth-child(3) { transform: rotate(1.5deg); }
+    .sur-place .note { font-size: 14px; color: var(--gris); margin: 14px 0 0; }
+
+    /* tarifs */
+    .tarifs { background: var(--ciel-clair); }
+    .grille-t { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 900px) { .grille-t { grid-template-columns: 1fr; } }
+    .t { background: #fff; border-radius: 20px; padding: 24px; border: 1px solid #D3E3F1; display: flex; flex-direction: column; gap: 6px; }
+    .t h3 { font-size: 30px; margin: 0; }
+    .t .pour { margin: 0 0 10px; color: var(--gris); font-size: 15.5px; }
+    .ligne-t { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 0; border-top: 1px dashed #C9D9E8; }
+    .ligne-t span { font-size: 16px; }
+    .ligne-t b { font: 400 34px/1 "Instrument Serif", serif; color: var(--tente); white-space: nowrap; }
+    .extras { margin-top: 18px; background: #fff; border-radius: 20px; border: 1px solid #D3E3F1; padding: 8px 24px; display: grid; grid-template-columns: repeat(4, 1fr); }
+    .extras div { padding: 14px 12px 14px 0; }
+    .extras b { display: block; font: 400 30px/1 "Instrument Serif", serif; color: var(--rempart); margin-bottom: 4px; }
+    .extras span { font-size: 15px; color: var(--gris); }
+    @media (max-width: 900px) { .extras { grid-template-columns: 1fr 1fr; } }
+    .mention-t { margin: 16px 0 0; font-size: 15px; color: var(--gris); }
+
+    /* venir */
+    .venir .conteneur { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(26px, 4vw, 52px); align-items: start; }
+    @media (max-width: 900px) { .venir .conteneur { grid-template-columns: 1fr; } }
+    .sentiers { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 12px; }
+    .sentiers li { display: grid; grid-template-columns: 78px 1fr; gap: 14px; align-items: center; background: #fff; border: 1px solid var(--bord); border-radius: 16px; padding: 14px 16px; }
+    .duree { font: 400 32px/1 "Instrument Serif", serif; color: var(--tente); text-align: center; }
+    .duree small { display: block; font: 600 11px/1.2 "Inter", sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--gris); margin-top: 4px; }
+    .sentiers b { display: block; font-weight: 600; }
+    .sentiers span { color: var(--gris); font-size: 15.5px; }
+    .conseils { background: var(--herbe-clair); border-radius: 16px; padding: 18px 20px; }
+    .conseils h3 { font-size: 26px; margin: 0 0 6px; }
+    .conseils ul { margin: 0; padding-left: 20px; }
+    .conseils li { margin: 4px 0; font-size: 16px; }
+    .alerte { margin: 12px 0 0; font-size: 15.5px; font-weight: 600; color: #8A3B12; }
+    .carte { border-radius: 20px; overflow: hidden; border: 1px solid var(--bord); background: #E9EEE6; }
+    .carte iframe { display: block; width: 100%; height: 420px; border: 0; }
+    .adresse { margin: 14px 0 0; font-size: 16px; }
+
+    /* contact */
+    .contact { background: var(--rempart); color: #E9F0E2; }
+    .contact h2 { color: #fff; }
+    .contact .sur-titre { color: #CFE3A0; }
+    .contact .chapo { color: #C9D6C0; }
+    .contact .conteneur { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(26px, 4vw, 52px); align-items: start; }
+    @media (max-width: 900px) { .contact .conteneur { grid-template-columns: 1fr; } }
+    form { background: #fff; color: var(--encre); border-radius: 20px; padding: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    form .plein { grid-column: 1 / -1; }
+    @media (max-width: 560px) { form { grid-template-columns: 1fr; } }
+    label { display: grid; gap: 6px; font-size: 15px; font-weight: 600; }
+    input, textarea { font: 400 16px/1.4 "Inter", sans-serif; padding: 12px 14px; border: 1.5px solid var(--bord); border-radius: 12px; background: var(--nuage); color: var(--encre); width: 100%; }
+    textarea { min-height: 110px; resize: vertical; }
+    #merci { display: none; grid-column: 1 / -1; margin: 0; background: var(--herbe-clair); color: var(--rempart); padding: 14px 16px; border-radius: 12px; font-weight: 600; }
+    .direct { display: grid; gap: 12px; }
+    .direct a.ligne-c { display: flex; align-items: center; gap: 14px; background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .16); border-radius: 16px; padding: 16px 18px; color: #fff; text-decoration: none; }
+    .direct a.ligne-c:hover { background: rgba(255, 255, 255, .12); }
+    .direct .ico { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: #CFE3A0; color: var(--rempart); flex: none; }
+    .direct .ico.wa { background: var(--wa); color: #06260F; }
+    .direct .ico svg { width: 21px; height: 21px; }
+    .direct small { display: block; color: #C9D6C0; font-size: 14px; }
+    .direct b { font-weight: 600; font-size: 17px; word-break: break-word; }
+
+    footer { background: #18291E; color: #B9C7B1; padding: 36px 0 110px; font-size: 15px; }
+    footer .colonnes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 22px; }
+    @media (max-width: 760px) { footer .colonnes { grid-template-columns: 1fr; } }
+    footer b { display: block; color: #fff; font-weight: 600; margin-bottom: 4px; }
+    footer a { color: #DCEBB7; }
+    footer .mention { border-top: 1px solid rgba(255, 255, 255, .12); padding-top: 16px; font-size: 14.5px; }
+    footer .mention p { margin: 0 0 6px; }
+
+    /* WhatsApp flottant (ordinateur) + barre d'action (téléphone) */
+    .wa-flottant { position: fixed; right: 22px; bottom: 22px; z-index: 45; width: 60px; height: 60px; border-radius: 50%; background: var(--wa); color: #06260F; display: grid; place-items: center; box-shadow: 0 12px 28px -10px rgba(0, 0, 0, .45); }
+    .wa-flottant svg { width: 30px; height: 30px; }
+    .barre-mobile { display: none; }
+    @media (max-width: 760px) {
+      .wa-flottant { display: none; }
+      .barre-mobile { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(251, 252, 250, .97); border-top: 1px solid var(--bord); }
+      .barre-mobile .btn { padding: 14px 10px; }
+      .entete .btn { display: none; }
+    }
+
+    /* apparition douce */
+    .js .apparait { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .js .apparait.vu { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .apparait { opacity: 1; transform: none; transition: none; }
+      .btn { transition: none; }
+    }
+  </style>
+
+<style id="kp-choix-css">
+  #kp-choix{position:fixed;top:0;left:0;right:0;z-index:2147483000;display:flex;align-items:center;gap:8px;
+    padding:8px 10px;background:#3D0B37;color:#F3F9D2;font:600 14px/1.2 Inter,Arial,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  #kp-choix a,#kp-choix button{color:#F3F9D2;text-decoration:none;white-space:nowrap;padding:10px 12px;border-radius:999px;min-height:44px;
+    display:inline-flex;align-items:center;font:600 14px/1 Inter,Arial,sans-serif;border:0;background:rgba(243,249,210,.1);cursor:pointer}
+  #kp-choix .kp-nom{flex:1;text-align:center;font-weight:500;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #kp-choix .kp-aime[aria-pressed="true"]{background:#F4C2D7;color:#3D0B37}
+  #kp-choix .kp-choisir{background:#C0D684;color:#3D0B37}
+  #kp-toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);z-index:2147483001;max-width:min(92vw,460px);
+    background:#1A1A1A;color:#fff;font:500 15px/1.4 Inter,Arial,sans-serif;padding:12px 16px;border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+  #kp-toast.vu{opacity:1;transform:translate(-50%,0)}
+  iframe{pointer-events:none}
+  @media (max-width:640px){#kp-choix .kp-nom{display:none}#kp-choix a,#kp-choix button{font-size:13.5px;padding:10px}#kp-choix .kp-choisir{margin-left:auto}}
+</style>
+</head>
+<body>
+<div id="kp-choix" data-id="9" role="navigation" aria-label="Choix du modèle"><a data-kp href="../index.html#g-reel">← Tous</a><span class="kp-nom">9. Plein air · Vraies photos · Salazie · 790 €</span><button type="button" class="kp-aime" aria-pressed="false">♡ J'aime</button><a data-kp class="kp-choisir" href="../index.html?choix=9#choix">★ Je choisis</a></div><div id="kp-toast" role="status" aria-live="polite"></div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.6 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.7-.1 1.3z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="i-tente" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M2 20h20L12 4zM12 4v16M8 20l4-6 4 6"/></symbol>
+    <symbol id="i-assiette" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></g></symbol>
+    <symbol id="i-tasse" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 9h12v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM16 11h2a2 2 0 0 1 0 4h-2M8 3v3M12 3v3"/></symbol>
+    <symbol id="i-douche" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 20V8a4 4 0 0 1 8 0M9 9h6M10 13v1M14 13v1M12 16v1M16 16v1M10 19v1M14 19v1"/></symbol>
+    <symbol id="i-patte" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="7" cy="9" rx="2" ry="2.6"/><ellipse cx="17" cy="9" rx="2" ry="2.6"/><ellipse cx="10.5" cy="5.5" rx="2" ry="2.6"/><ellipse cx="13.5" cy="5.5" rx="2" ry="2.6"/><path d="M12 11c-3 0-5.5 3.6-5.5 6 0 1.7 1.4 2.5 3 2.5 1 0 1.6-.5 2.5-.5s1.5.5 2.5.5c1.6 0 3-.8 3-2.5 0-2.4-2.5-6-5.5-6z"/></g></symbol>
+  </svg>
+
+  <div class="maquette" role="note">
+    <div class="conteneur">
+      <span><span class="long">Maquette <a href="https://kreapro.re">KréaPro</a> · formule Salazie (1 page) · photos réelles du camping</span><span class="court">Maquette KréaPro · Salazie · photos réelles</span></span>
+      <a href="../index.html"><span class="long">← Les 20 modèles</span><span class="court">← Modèles</span></a>
+    </div>
+  </div>
+
+  <header class="entete">
+    <div class="conteneur">
+      <a class="logo" href="#accueil">Camping <span>Ti Piton</span></a>
+      <nav aria-label="Navigation principale">
+        <a href="#camping">Le camping</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#venir">Venir</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-tel" href="tel:+262692061817"><svg aria-hidden="true"><use href="#i-tel"/></svg>0692 06 18 17</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- accueil -->
+    <section class="accueil" id="accueil" style="padding-top:clamp(28px,5vw,64px)">
+      <div class="conteneur">
+        <div>
+          <p class="lieu"><svg aria-hidden="true"><use href="#i-pin"/></svg>Îlet des Orangers · Mafate · 980 m</p>
+          <h1>Camping <em>Ti Piton</em></h1>
+          <p class="promesse">Planter sa tente face aux remparts de Mafate, partager le dîner créole de 18 h 30 et le punch de bienvenue de Jean-Martel. Ici, pas de route : on arrive à pied.</p>
+          <div class="actions">
+            <a class="btn btn-tel" href="tel:+262692061817"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+            <a class="btn btn-wa" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+        <figure class="photo-principale">
+          <img src="../images/tipiton/terrain.webp" width="1027" height="684" alt="Le terrain du Camping Ti Piton à l'Îlet des Orangers : deux tentes sur la pelouse, une table et des chaises face aux remparts de Mafate, sous un ciel bleu (photo réelle)" fetchpriority="high" />
+          <span class="vrai">Photo réelle · le camping</span>
+        </figure>
+      </div>
+    </section>
+
+    <!-- repères -->
+    <div class="reperes">
+      <div class="conteneur">
+        <ul>
+          <li><b>980 m</b><span>d'altitude, au cœur du cirque</span></li>
+          <li><b>À pied</b><span>aucune route jusqu'à l'îlet</span></li>
+          <li><b>10</b><span>voyageurs au maximum</span></li>
+          <li><b>Punch</b><span>maison, offert à l'arrivée</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- le camping en bref -->
+    <section class="bref" id="camping">
+      <div class="conteneur">
+        <div class="apparait">
+          <p class="sur-titre">Le camping en bref</p>
+          <h2>Une pelouse, des tentes, et tout le cirque autour</h2>
+          <p>Le Camping Ti Piton se trouve à l'Îlet des Orangers, au cœur du cirque de Mafate, inscrit au patrimoine mondial de l'UNESCO. Pas de voiture ici : on vient à pied, sac au dos, et on laisse le réseau en bas.</p>
+          <p>À l'arrivée, Jean-Martel vous accueille avec son punch maison. Le soir, on se retrouve pour le dîner, et au matin, le petit-déjeuner vous attend avant de reprendre le sentier.</p>
+          <ul class="inclus">
+            <li><span class="ico"><svg aria-hidden="true"><use href="#i-tente"/></svg></span><div><b>Tentes équipées</b><span>matelas, oreillers, draps et couvertures ; ou tente seule, ou emplacement pour votre propre tente</span></div></li>
+            <li><span class="ico"><svg aria-hidden="true"><use href="#i-assiette"/></svg></span><div><b>Dîner créole à 18 h 30</b><span>entrée, plat, dessert, cuisine maison</span></div></li>
+            <li><span class="ico"><svg aria-hidden="true"><use href="#i-tasse"/></svg></span><div><b>Petit-déjeuner à 7 h 30</b><span>café, thé, lait, tisane, pain, beurre, confiture</span></div></li>
+            <li><span class="ico"><svg aria-hidden="true"><use href="#i-douche"/></svg></span><div><b>Sanitaires</b><span>douches et toilettes ; barbecue à disposition, boissons en vente sur place</span></div></li>
+            <li><span class="ico"><svg aria-hidden="true"><use href="#i-patte"/></svg></span><div><b>Animaux acceptés</b><span>votre compagnon de marche est le bienvenu</span></div></li>
+          </ul>
+        </div>
+        <aside class="sur-place apparait" aria-labelledby="t-sur-place">
+          <h3 id="t-sur-place">Sur place</h3>
+          <p>Quelques vues de l'îlet, prises au camping.</p>
+          <div class="vignettes">
+            <figure><img src="../images/tipiton/vignette-case.webp" width="106" height="189" alt="Une case au toit de tôle au pied des remparts, à l'Îlet des Orangers (photo réelle)" loading="lazy" /></figure>
+            <figure><img src="../images/tipiton/vignette-chaise.webp" width="114" height="196" alt="Une chaise posée sur la pelouse, face aux remparts du cirque (photo réelle)" loading="lazy" /></figure>
+            <figure><img src="../images/tipiton/vignette-tole.webp" width="213" height="268" alt="Un bâtiment en tôle avec une corde à linge, devant les remparts (photo réelle)" loading="lazy" /></figure>
+          </div>
+          <p class="note">Sur le vrai site : de nouvelles photos en haute définition, fournies par le camping.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- tarifs -->
+    <section class="tarifs" id="tarifs">
+      <div class="conteneur">
+        <p class="sur-titre">Tarifs</p>
+        <h2>Dormir à l'Îlet des Orangers</h2>
+        <p class="chapo">Trois façons de dormir. La demi-pension comprend le dîner, la nuit et le petit-déjeuner.</p>
+        <div class="grille-t">
+          <article class="t apparait">
+            <h3>Tente équipée</h3>
+            <p class="pour">Pour 2 personnes · matelas, oreillers, draps, couvertures</p>
+            <div class="ligne-t"><span>La nuit, pour 2</span><b>30 €</b></div>
+            <div class="ligne-t"><span>Demi-pension, pour 2</span><b>70 €</b></div>
+          </article>
+          <article class="t apparait">
+            <h3>Tente seule</h3>
+            <p class="pour">Pour 1 personne</p>
+            <div class="ligne-t"><span>La nuit</span><b>20 €</b></div>
+            <div class="ligne-t"><span>Demi-pension</span><b>40 €</b></div>
+          </article>
+          <article class="t apparait">
+            <h3>Emplacement</h3>
+            <p class="pour">Vous apportez votre tente</p>
+            <div class="ligne-t"><span>La nuit, par personne</span><b>7 €</b></div>
+            <div class="ligne-t"><span>Demi-pension, par personne</span><b>27 €</b></div>
+          </article>
+        </div>
+        <div class="extras apparait">
+          <div><b>12 €</b><span>Enfant de moins de 10 ans</span></div>
+          <div><b>14 €</b><span>Dîner à 18 h 30, par personne</span></div>
+          <div><b>6 €</b><span>Petit-déjeuner à 7 h 30, par personne</span></div>
+          <div><b>3 €</b><span>Le fagot de bois pour le barbecue</span></div>
+        </div>
+        <p class="mention-t">Tarifs indicatifs, hors frais de réservation. Régimes particuliers à signaler à la réservation. Boissons en vente sur place.</p>
+      </div>
+    </section>
+
+    <!-- venir -->
+    <section class="venir" id="venir">
+      <div class="conteneur">
+        <div class="apparait">
+          <p class="sur-titre">Venir</p>
+          <h2>Trois sentiers, un seul îlet</h2>
+          <p class="chapo" style="margin-bottom:24px">Mafate n'a aucune route : on y arrive à pied (ou en hélicoptère). Durées indicatives.</p>
+          <ul class="sentiers">
+            <li><span class="duree">~3 h<small>le plus court</small></span><div><b>Depuis le Maïdo</b><span>En descente jusqu'à l'îlet.</span></div></li>
+            <li><span class="duree">~4 h<small>de marche</small></span><div><b>Par la Rivière des Galets</b><span>En 4x4 jusqu'à Deux-Bras, puis à pied.</span></div></li>
+            <li><span class="duree">~5 h<small>de marche</small></span><div><b>Par la Canalisation des Orangers</b><span>Depuis Sans-Souci (citerne rouge), sentier à flanc de falaise.</span></div></li>
+          </ul>
+          <div class="conseils">
+            <h3>Avant de partir</h3>
+            <ul>
+              <li>De bonnes chaussures de marche</li>
+              <li>De l'eau en quantité</li>
+              <li>Une lampe frontale</li>
+            </ul>
+            <p class="alerte">Les sentiers peuvent être fermés en cas d'alerte météo : renseignez-vous avant de partir.</p>
+          </div>
+        </div>
+        <div class="apparait">
+          <div class="carte">
+            <iframe src="https://maps.google.com/maps?q=-21.04181,55.39347&amp;z=13&amp;output=embed" loading="lazy" title="Carte Google Maps : emplacement du Camping Ti Piton, Îlet des Orangers, Mafate" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <p class="adresse"><b>Adresse :</b> Îlet des Orangers, 97460 Mafate, La Réunion. Étape possible vers Roche Plate, Marla ou la Rivière des Galets.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+      <div class="conteneur">
+        <div>
+          <p class="sur-titre">Contact</p>
+          <h2>Écrivez à Jean-Martel</h2>
+          <p class="chapo">Une question, des dates en tête ? Envoyez un message, ou appelez directement.</p>
+          <form id="contact-form">
+            <label>Nom<input type="text" name="nom" autocomplete="name" required /></label>
+            <label>Téléphone ou e-mail<input type="text" name="contact" autocomplete="email" required /></label>
+            <label>Arrivée<input type="date" name="arrivee" /></label>
+            <label>Départ<input type="date" name="depart" /></label>
+            <label class="plein">Nombre de personnes<input type="number" name="personnes" min="1" max="10" value="2" /></label>
+            <label class="plein">Message<textarea name="message" placeholder="Formule souhaitée, demi-pension, régime particulier…"></textarea></label>
+            <button class="btn btn-tel plein" type="submit">Envoyer le message</button>
+            <p id="merci" role="status">Maquette : sur le vrai site, votre message arriverait directement chez Jean-Martel, par e-mail.</p>
+          </form>
+        </div>
+        <div class="direct">
+          <a class="ligne-c" href="tel:+262692061817"><span class="ico"><svg aria-hidden="true"><use href="#i-tel"/></svg></span><span><small>Téléphone</small><b>0692 06 18 17</b></span></a>
+          <a class="ligne-c" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener"><span class="ico wa"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><b>Écrire sur WhatsApp</b></span></a>
+          <a class="ligne-c" href="mailto:jeanmartelatache4@gmail.com"><span class="ico"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>E-mail</small><b>jeanmartelatache4@gmail.com</b></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="conteneur">
+      <div class="colonnes">
+        <div><b>Camping Ti Piton</b>Îlet des Orangers<br />97460 Mafate, La Réunion</div>
+        <div><b>Téléphone</b><a href="tel:+262692061817">0692 06 18 17</a></div>
+        <div><b>E-mail</b><a href="mailto:jeanmartelatache4@gmail.com">jeanmartelatache4@gmail.com</a></div>
+      </div>
+      <div class="mention">
+        <p>Maquette réalisée par KréaPro (<a href="https://kreapro.re">kreapro.re</a>) pour montrer ce que pourrait être le site du camping. Les photos sont de vraies photos du camping ; leur utilisation sur le site final est à confirmer avec le propriétaire. Infos et tarifs relevés sur les fiches publiques du camping (Office de Tourisme de l'Ouest, cirquedemafate.re).</p>
+        <p>Bouton WhatsApp : à confirmer avec le propriétaire (le numéro doit être enregistré sur WhatsApp).</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-flottant" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+  <div class="barre-mobile">
+    <a class="btn btn-tel" href="tel:+262692061817"><svg aria-hidden="true"><use href="#i-tel"/></svg>Appeler</a>
+    <a class="btn btn-wa" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('merci').style.display = 'block';
+    });
+    const els = document.querySelectorAll('.apparait');
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } }), { threshold: .12 });
+      els.forEach((el) => io.observe(el));
+    } else {
+      els.forEach((el) => el.classList.add('vu'));
+    }
+  </script>
+
+<script id="kp-choix-js">
+(function(){
+  var barre=document.getElementById('kp-choix'), H=barre.getBoundingClientRect().height, ID=barre.getAttribute('data-id');
+  var ancien=0;
+  document.querySelectorAll('body *').forEach(function(el){
+    if(el===barre||barre.contains(el))return;
+    var s=getComputedStyle(el);
+    if((s.position==='fixed'||s.position==='sticky')&&/Maquette\s*Kr[ée]aPro/.test(el.textContent||'')&&(el.textContent||'').length<400){
+      ancien=Math.max(ancien,el.getBoundingClientRect().height);el.style.display='none';}
+  });
+  if(H>ancien){document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+(H-ancien)+'px';}
+  document.documentElement.style.scrollPaddingTop=(H+8)+'px';
+  // ♡ J'aime (mémorisé sur l'appareil, repris par la page de choix)
+  var b=barre.querySelector('.kp-aime');
+  function liste(){try{return JSON.parse(localStorage.getItem('tipiton-aime')||'[]');}catch(e){return [];}}
+  function maj(){var on=liste().indexOf(ID)>=0;b.setAttribute('aria-pressed',on);b.textContent=on?'♥ J\'aime':'♡ J\'aime';}
+  b.addEventListener('click',function(){var l=liste(),i=l.indexOf(ID);if(i>=0)l.splice(i,1);else l.push(ID);
+    try{localStorage.setItem('tipiton-aime',JSON.stringify(l));}catch(e){}maj();});
+  maj();
+  // tous les autres liens sont neutralisés
+  var toast=document.getElementById('kp-toast'),t;
+  function message(txt){toast.textContent=txt;toast.classList.add('vu');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('vu');},2600);}
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a');if(!a||a.hasAttribute('data-kp'))return;
+    var h=a.getAttribute('href')||'';if(h.charAt(0)==='#')return;
+    ev.preventDefault();
+    var quoi=/^tel:/.test(h)?'appellera le camping':/wa\.me|whatsapp/i.test(h)?'ouvrira WhatsApp':/^mailto:/.test(h)?'ouvrira l\'e-mail':'fonctionnera';
+    message('Maquette : sur votre vrai site, ce bouton '+quoi+'.');
+  },true);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Camping Ti Piton — Îlet des Orangers, Mafate</title>
+<meta name="description" content="Camping Ti Piton, à l'Îlet des Orangers (980 m), cirque de Mafate, La Réunion : tentes équipées, dîner créole de 18 h 30, nuit étoilée. Accès à pied uniquement. Réservation et tarifs.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Camping Ti Piton — Îlet des Orangers, Mafate">
+<meta property="og:description" content="Dormez à 980 m dans le cirque de Mafate : tentes équipées, dîner créole, punch maison offert à l'arrivée.">
+<meta property="og:image" content="../images/tipiton/terrain.webp">
+<meta property="og:locale" content="fr_FR">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Campground",
+  "name": "Camping Ti Piton",
+  "description": "Petit camping de montagne à l'Îlet des Orangers (980 m), dans le cirque de Mafate : tentes équipées, tentes seules, emplacements, dîner créole, accès à pied uniquement.",
+  "image": "../images/tipiton/terrain.webp",
+  "telephone": "+262692061817",
+  "email": "jeanmartelatache4@gmail.com",
+  "priceRange": "7 € – 70 €",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Îlet des Orangers",
+    "postalCode": "97460",
+    "addressLocality": "Mafate",
+    "addressRegion": "La Réunion",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -21.04181, "longitude": 55.39347 }
+}
+</script>
+<style>
+:root{
+  --nuit:#0b1636; --nuit2:#1b2c57; --vert:#1f5a49; --vert2:#2f7a5a; --creme:#f6ecd3; --creme2:#ecdfbf; --encre:#17232b; --lanterne:#ffc857;
+  --titre:'Gloock','Georgia',serif; --texte:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --bandeau:34px;
+  --cut1:polygon(0 1.6%,5% .4%,13% 1.4%,24% 0,37% 1.2%,52% .2%,66% 1.4%,81% 0,93% 1.1%,100% 0,99.3% 14%,100% 33%,99.2% 52%,100% 71%,99.4% 88%,100% 100%,91% 98.8%,78% 100%,63% 98.9%,49% 100%,34% 99%,20% 100%,9% 98.9%,0 100%,.7% 85%,0 66%,.8% 47%,0 28%,.6% 12%);
+  --cut2:polygon(0 0,8% 1.2%,19% 0,31% 1.5%,45% .3%,60% 1.3%,74% 0,88% 1.4%,100% .2%,99% 17%,100% 38%,99.4% 61%,100% 80%,99.2% 100%,86% 98.7%,72% 100%,57% 98.8%,41% 100%,26% 98.9%,13% 100%,0 99%,.9% 78%,0 55%,.7% 33%,0 15%);
+  --cut3:polygon(.6% 0,10% 1%,22% 0,35% 1.3%,49% 0,63% 1.1%,78% .1%,91% 1.2%,100% 0,100% 20%,99.2% 42%,100% 66%,99.3% 84%,100% 99%,92% 100%,79% 98.9%,64% 100%,47% 99%,33% 100%,18% 98.8%,7% 100%,0 98%,.8% 76%,0 52%,.8% 27%,0 9%);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--texte);font-size:17px;line-height:1.65;color:var(--creme);background:var(--nuit);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lanterne);outline-offset:3px;border-radius:4px}
+.hidden-svg{position:absolute;width:0;height:0;overflow:hidden}
+
+/* bandeau maquette */
+.banner{position:fixed;top:0;left:0;right:0;z-index:80;height:var(--bandeau);display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 16px;background:#070d24;color:var(--lanterne);font-size:13px;line-height:1.2;border-bottom:3px solid #1b2c57;clip-path:polygon(0 0,100% 0,100% 100%,97% 86%,92% 100%,86% 88%,80% 100%,73% 87%,66% 100%,58% 88%,50% 100%,42% 87%,34% 100%,26% 88%,18% 100%,10% 87%,4% 100%,0 90%)}
+.banner a{color:var(--creme);text-underline-offset:3px}
+.banner .court{display:none}
+.banner span,.banner a{white-space:nowrap}
+
+/* menu en pastille */
+.pastille{position:fixed;z-index:70;top:46px;left:50%;transform:translateX(-50%);display:flex;gap:4px;padding:5px 8px;border-radius:99px;background:rgba(7,13,36,.86);box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.pastille a{padding:7px 14px;border-radius:99px;font-size:15px;font-weight:500;text-decoration:none;color:var(--creme);transition:background .25s}
+.pastille a:hover{background:rgba(255,200,87,.18)}
+.pastille a.on{background:var(--lanterne);color:#2a1c00}
+
+/* ============ DIORAMA ============ */
+.intro{position:relative}
+.stage{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:#070c22;perspective:1200px;perspective-origin:50% 42%}
+.js .stage{position:sticky;top:0}
+.monde{position:absolute;inset:0;transform-style:preserve-3d;transform:translate3d(0,0,0)}
+.calque{position:absolute;inset:-10% -14% 0 -14%;transform:translate3d(0,0,var(--z)) scale(var(--c));will-change:transform}
+.calque svg{display:block;width:100%;height:100%;overflow:visible}
+.calque.ciel{inset:-20% -20% 0 -20%}
+.calque.etoiles{inset:-20% -20% 0 -20%}
+.calque.etoiles svg{opacity:1}
+.etoiles.a{animation:scint 5.2s ease-in-out infinite}
+.etoiles.b{animation:scint 5.2s ease-in-out -2.6s infinite}
+@keyframes scint{0%,100%{opacity:.35}50%{opacity:1}}
+.f{filter:url(#papier)}
+.voile{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,9,28,.8),rgba(5,9,28,.55));opacity:0;pointer-events:none;z-index:5}
+.hero-texte{position:absolute;z-index:10;left:clamp(20px,6.5vw,110px);top:clamp(96px,17vh,190px);max-width:min(640px,88vw)}
+.hero-texte::before{content:"";position:absolute;inset:-40px -60px -30px -60px;z-index:-1;background:radial-gradient(ellipse at 40% 50%,rgba(5,9,28,.62),rgba(5,9,28,.3) 55%,transparent 75%);pointer-events:none}
+.hero-texte .lieu{font-size:15.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--lanterne)}
+.hero-texte .camping{font-family:var(--titre);font-size:clamp(26px,3.4vw,46px);color:var(--lanterne);margin-top:14px;line-height:1;text-shadow:0 2px 0 #8a5a12,0 8px 14px rgba(0,0,0,.5)}
+h1{font-family:var(--titre);font-weight:400;font-size:clamp(78px,11.5vw,176px);line-height:.92;color:var(--creme);letter-spacing:-.01em;text-shadow:0 2px 0 #d9c9a0,0 5px 0 #a99a6e,0 8px 0 #6f6446,0 22px 28px rgba(0,0,0,.55)}
+.hero-texte p.promesse{font-size:clamp(17px,1.5vw,21px);max-width:27em;margin-top:22px;text-shadow:0 2px 10px rgba(0,0,0,.75)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border:0;border-radius:6px;font:600 17px/1 var(--texte);text-decoration:none;color:var(--creme);background:#1b2c57;cursor:pointer;clip-path:polygon(0 8%,3% 0,97% 4%,100% 0,100% 92%,97% 100%,4% 96%,0 100%);box-shadow:inset 0 -3px 0 rgba(0,0,0,.25);transition:transform .2s,background .2s}
+.btn svg{width:22px;height:22px;flex:none}
+.btn:hover{transform:translateY(-3px)}
+.btn-jaune{background:var(--lanterne);color:#2a1c00}
+.btn-vert{background:var(--vert2)}
+.btn-creme{background:var(--creme);color:var(--encre)}
+.btn-wrap{filter:drop-shadow(0 5px 0 rgba(0,0,0,.28)) drop-shadow(0 8px 10px rgba(0,0,0,.35));display:inline-block}
+.incline{position:absolute;z-index:11;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));transform:translateX(-50%);padding:11px 18px;border-radius:99px;border:2px solid var(--lanterne);background:rgba(7,13,36,.85);color:var(--lanterne);font:600 15px var(--texte);cursor:pointer}
+.incline[hidden]{display:none}
+.indice{position:absolute;z-index:9;left:50%;bottom:26px;transform:translateX(-50%);text-align:center;font-size:15px;font-weight:500;letter-spacing:.08em;color:var(--creme);text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.indice i{display:block;width:14px;height:14px;margin:8px auto 0;border:solid var(--lanterne);border-width:0 3px 3px 0;transform:rotate(45deg);animation:rebond 1.6s ease-in-out infinite}
+@keyframes rebond{0%,100%{transform:translateY(0) rotate(45deg)}50%{transform:translateY(7px) rotate(45deg)}}
+
+/* ============ PAPIER DÉCOUPÉ : cartes ============ */
+.carte{position:relative;isolation:isolate;--cut:var(--cut1);--p:var(--creme);--e1:#d9c9a0;--e2:#b9a56f;--ink:var(--encre)}
+.carte,.carte .pw{display:grid}
+.carte .ep{position:absolute;inset:0;z-index:-1;filter:drop-shadow(0 3px 2px rgba(3,8,22,.35))}
+.carte .ep::before{content:"";position:absolute;inset:0;clip-path:var(--cut)}
+.carte .e3{transform:translate(-7px,17px) rotate(-.9deg)}
+.carte .e3::before{background:var(--e2)}
+.carte .e2{transform:translate(9px,9px) rotate(.6deg)}
+.carte .e2::before{background:var(--e1)}
+.carte .pw{filter:drop-shadow(0 16px 16px rgba(3,8,22,.42))}
+.carte .papier{clip-path:var(--cut);color:var(--ink);padding:clamp(26px,3.2vw,44px);
+  background:linear-gradient(158deg,rgba(255,255,255,.28),transparent 42%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 -.2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E"),var(--p)}
+.c-vert{--p:#2f7a5a;--e1:#245f45;--e2:#173e2d;--ink:var(--creme)}
+.c-nuit{--p:#1b2c57;--e1:#13204a;--e2:#0b1535;--ink:var(--creme)}
+.c-jaune{--p:#ffc857;--e1:#e2a93a;--e2:#b98425;--ink:#2a1c00}
+.c-sable{--p:#ecdfbf;--e1:#d4c298;--e2:#b6a06c}
+.k2{--cut:var(--cut2)}.k3{--cut:var(--cut3)}
+.js .rev{opacity:0;transform:translateY(48px) scale(.96);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rev.vu{opacity:1;transform:rotate(var(--r,0deg))}
+.rev{transform:rotate(var(--r,0deg))}
+.js .rev.vu:hover,.rev:hover{transform:translateY(-6px) rotate(0deg)}
+.rev{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+
+/* strates (crêtes découpées) */
+.strate{position:relative;padding:clamp(70px,9vw,130px) 0 clamp(60px,8vw,110px);z-index:2}
+.strate>.crete{position:absolute;left:0;right:0;top:-69px;height:70px;filter:drop-shadow(0 -7px 8px rgba(2,6,20,.4));pointer-events:none}
+.strate>.crete::before{content:"";position:absolute;inset:0;background:inherit;background:var(--bg);clip-path:var(--crete)}
+.s-exp{--bg:#123a4a;background:#123a4a;--crete:polygon(0 100%,0 58%,6% 40%,11% 62%,17% 28%,24% 52%,31% 34%,38% 60%,46% 22%,53% 48%,60% 30%,68% 58%,75% 18%,82% 46%,90% 32%,95% 54%,100% 36%,100% 100%)}
+.s-dor{--bg:#1f5a49;background:#1f5a49;--crete:polygon(0 100%,0 40%,8% 55%,14% 25%,22% 50%,30% 20%,37% 46%,45% 30%,52% 58%,61% 26%,69% 50%,77% 22%,85% 54%,92% 34%,100% 48%,100% 100%)}
+.s-ven{--bg:#3a7d5b;background:#3a7d5b;--crete:polygon(0 100%,0 50%,7% 28%,13% 54%,21% 34%,29% 60%,36% 24%,44% 50%,52% 30%,59% 58%,67% 22%,74% 48%,83% 28%,90% 56%,100% 30%,100% 100%)}
+.s-avi{--bg:#e6d8b2;background:#e6d8b2;color:var(--encre);--crete:polygon(0 100%,0 46%,9% 24%,16% 50%,23% 30%,32% 58%,40% 20%,48% 46%,57% 28%,64% 56%,72% 24%,80% 52%,88% 30%,94% 50%,100% 26%,100% 100%)}
+.s-res{--bg:#f4ead0;background:#f4ead0;color:var(--encre);--crete:polygon(0 100%,0 34%,7% 52%,15% 26%,22% 48%,30% 22%,39% 54%,47% 30%,56% 50%,63% 24%,71% 56%,79% 28%,87% 52%,94% 30%,100% 44%,100% 100%)}
+.s-pied{--bg:#0b1636;background:#0b1636;padding:70px 0 40px;--crete:polygon(0 100%,0 44%,8% 24%,15% 52%,24% 28%,33% 56%,41% 22%,50% 48%,58% 26%,66% 54%,75% 20%,83% 50%,91% 30%,100% 46%,100% 100%)}
+.wrap{width:min(1200px,100% - 40px);margin:0 auto}
+h2{font-family:var(--titre);font-weight:400;font-size:clamp(40px,5.4vw,76px);line-height:1;margin-bottom:14px}
+h3{font-family:var(--titre);font-weight:400;font-size:clamp(25px,2.3vw,32px);line-height:1.1;margin-bottom:10px}
+.chapeau{font-size:19px;max-width:36em;margin-bottom:48px;opacity:.95}
+.etiquette{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--lanterne);margin-bottom:12px}
+.s-avi .etiquette,.s-res .etiquette{color:#8a5a12}
+
+/* promesse (sur le diorama ouvert) */
+.runway{position:relative;z-index:6;padding:clamp(240px,52vh,520px) 0 clamp(140px,22vh,260px);margin-top:0}
+.promesse-carte{max-width:880px;margin:0 auto;--r:-.6deg}
+.promesse-carte .papier{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.promesse-carte h2{font-size:clamp(36px,4.4vw,58px)}
+.promesse-carte img{aspect-ratio:4/3;object-fit:cover;width:100%;max-width:420px;justify-self:center;border-radius:4px;box-shadow:0 8px 0 rgba(0,0,0,.18),0 16px 22px rgba(0,0,0,.35);transform:rotate(1.6deg)}
+
+/* carte postale (accueil) */
+.postale{position:absolute;z-index:9;right:clamp(24px,6vw,110px);top:clamp(120px,22vh,210px);width:min(440px,34vw);margin:0;transform:rotate(3deg);will-change:transform,opacity}
+.postale .pw{background:#f6ecd3;padding:12px 12px 10px;border-radius:3px;box-shadow:0 7px 0 #c9b88a,0 16px 0 #a89564,0 28px 34px rgba(0,0,0,.5)}
+.postale img{display:block;width:100%;height:auto;border-radius:2px}
+.postale figcaption{font-family:var(--titre);font-size:22px;color:#17232b;text-align:center;padding:8px 0 0;line-height:1.1}
+.postale::before,.postale::after{content:"";position:absolute;z-index:2;width:84px;height:26px;top:-12px;background:rgba(255,200,87,.82);box-shadow:0 2px 3px rgba(0,0,0,.3)}
+.postale::before{left:-20px;transform:rotate(-32deg)}
+.postale::after{right:-20px;transform:rotate(28deg);background:rgba(240,138,122,.82)}
+.dessin{display:block;margin-bottom:20px}
+.dessin .cut{filter:drop-shadow(0 4px 0 rgba(0,0,0,.28))}
+.reelle .deux{display:grid;grid-template-columns:auto auto;gap:16px;justify-content:center;align-items:start}
+.reelle .deux img{width:auto;max-width:100%;height:auto}
+@media (max-width:640px){.reelle .deux{grid-template-columns:1fr}.reelle .deux img{width:100%;max-width:520px;margin:0 auto}}
+
+/* photo réelle (dormir) */
+.reelle{margin:0 auto 54px;max-width:940px;transform:rotate(-.5deg)}
+.reelle .papier{padding:clamp(14px,2vw,22px);display:block}
+.reelle figure{margin:0}
+.reelle img{display:block;width:100%;max-width:1027px;height:auto;border-radius:3px;box-shadow:0 6px 0 rgba(0,0,0,.14)}
+.reelle figcaption{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:14px 8px 4px;font-size:17px;line-height:1.4}
+.reelle .tag{display:inline-block;padding:4px 12px;border-radius:3px;background:#1b2c57;color:var(--creme);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* expérience */
+.exp-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:46px 34px}
+.exp-grille .carte:nth-child(3n+2){margin-top:48px}
+.exp-grille .papier{padding:0 0 28px}
+.exp-grille .papier>div{padding:0 26px}
+.exp-grille .photo{aspect-ratio:16/10;width:100%;object-fit:cover;margin-bottom:20px}
+.exp-grille .heure{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin-bottom:4px}
+.exp-grille p{font-size:16.5px;line-height:1.6}
+
+/* dormir */
+.formules{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 32px;margin-bottom:46px}
+.formules .papier{text-align:center}
+.prix{font-family:var(--titre);font-size:clamp(60px,6vw,88px);line-height:1;margin:6px 0 2px}
+.prix small{display:block;font-family:var(--texte);font-size:17px;font-weight:600;margin-top:6px}
+.dp{margin-top:16px;padding-top:14px;border-top:3px dashed rgba(23,35,43,.3);font-size:16.5px}
+.c-vert .dp,.c-nuit .dp{border-color:rgba(246,236,211,.35)}
+.dp b{font-family:var(--titre);font-weight:400;font-size:34px;display:block;line-height:1.1}
+.autres{display:grid;grid-template-columns:.8fr 1.2fr 1fr;gap:34px;align-items:start}
+.autres ul{list-style:none;padding:0}
+.autres li{padding:5px 0 5px 24px;position:relative;font-size:16.5px;line-height:1.5}
+.autres li::before{content:"";position:absolute;left:3px;top:15px;width:9px;height:9px;background:var(--lanterne);transform:rotate(45deg)}
+.autres .c-nuit li::before{background:var(--lanterne)}
+.note-prix{margin-top:30px;font-size:16px;opacity:.9;text-align:center}
+
+/* venir */
+.venir-grille{display:grid;grid-template-columns:.95fr 1.05fr;gap:46px;align-items:start}
+.sentiers{display:grid;gap:34px}
+.sentier .papier{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:center;padding:22px 28px}
+.sentier .temps{font-family:var(--titre);font-size:clamp(44px,4.4vw,60px);line-height:1;grid-row:span 2}
+.sentier h3{margin:0}
+.sentier p{font-size:16.5px;line-height:1.5}
+.carte-map .papier{padding:14px}
+.carte-map iframe{display:block;width:100%;height:clamp(320px,36vw,460px);border:0;border-radius:3px}
+.conseils{margin-top:46px}
+.conseils ul{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 30px}
+.conseils li{padding:5px 0 5px 26px;position:relative;font-size:16.5px;line-height:1.5}
+.conseils li::before{content:"";position:absolute;left:3px;top:15px;width:9px;height:9px;background:var(--lanterne);transform:rotate(45deg)}
+.conseils address{font-style:normal;margin-top:14px;font-size:17px}
+
+/* avis */
+.avis-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center}
+.note{font-family:var(--titre);font-size:clamp(76px,9vw,128px);line-height:1;color:var(--lanterne);text-shadow:0 3px 0 #8a5a12}
+.note small{font-size:.42em;color:var(--creme);text-shadow:none}
+.etoiles-note{display:flex;gap:6px;margin:8px 0 12px}
+.etoiles-note svg{width:30px;height:30px;fill:var(--lanterne)}
+.citation{font-family:var(--titre);font-size:clamp(30px,3.6vw,48px);line-height:1.12}
+.auteur{margin-top:14px;font-weight:600}
+.themes{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.themes span{padding:7px 14px;font-size:15px;font-weight:500;background:var(--lanterne);color:#2a1c00;clip-path:polygon(0 12%,4% 0,96% 6%,100% 0,100% 90%,96% 100%,5% 94%,0 100%)}
+.src{font-size:15px;opacity:.85;margin-top:12px}
+
+/* réservation */
+.res-grille{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+label{display:block;font-size:15px;font-weight:600}
+.large{grid-column:1/-1}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:12px 13px;font:400 17px/1.4 var(--texte);color:var(--encre);background:#fffaf0;border:2px solid #cdbb90;border-radius:4px}
+textarea{min-height:100px;resize:vertical}
+.case{display:flex;align-items:center;gap:12px;font-size:16.5px;font-weight:500}
+.case input{width:22px;height:22px;margin:0;accent-color:#1f5a49}
+.estimation{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;padding:18px 22px;background:var(--nuit2);color:var(--creme);clip-path:polygon(0 6%,2% 0,98% 4%,100% 0,100% 94%,98% 100%,3% 96%,0 100%)}
+.estimation b{font-family:var(--titre);font-weight:400;font-size:52px;line-height:1;color:var(--lanterne)}
+.estimation span{font-size:16px}
+#detail{width:100%;font-size:15.5px}
+form .btn{grid-column:1/-1;justify-self:start}
+.merci{display:none;grid-column:1/-1;font-weight:600;color:#1f5a49;font-size:17px}
+.contacts{display:grid;gap:18px}
+.contacts .btn{width:100%}
+
+/* pied */
+footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;font-size:16px;line-height:1.7}
+footer h2{font-size:clamp(30px,3vw,42px)}
+footer p{margin-bottom:10px;opacity:.92}
+footer .mention{font-size:15.5px;opacity:.82}
+
+/* WhatsApp / barre mobile */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:75;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25d366;color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.45)}
+.wa-float svg{width:32px;height:32px}
+.barre{display:none}
+
+@media (max-width:1000px){
+  .pastille{display:none}
+  .exp-grille{grid-template-columns:1fr 1fr}
+  .exp-grille .carte:nth-child(3n+2){margin-top:0}
+  .exp-grille .carte:nth-child(even){margin-top:40px}
+  .formules{grid-template-columns:1fr}
+  .autres{grid-template-columns:1fr}
+  .venir-grille,.avis-wrap,.res-grille{grid-template-columns:1fr}
+  .promesse-carte .papier{grid-template-columns:1fr}
+}
+@media (max-width:700px){.f{filter:url(#papierLeger)}}
+@media (max-width:640px){
+  .incline{bottom:calc(16px + env(safe-area-inset-bottom));z-index:12}
+  .postale{top:auto;bottom:calc(76px + env(safe-area-inset-bottom));right:auto;left:50%;margin-left:-26vw;width:52vw;transform:rotate(2deg)}
+  .postale .pw{padding:7px 7px 5px;box-shadow:0 4px 0 #c9b88a,0 8px 18px rgba(0,0,0,.5)}
+  .postale figcaption{font-size:15px;padding-top:4px}
+  .postale::before,.postale::after{width:50px;height:16px;top:-8px}
+  body{font-size:17px}
+  .banner{padding:0 10px;font-size:12px}
+  .banner .long{display:none}.banner .court{display:inline}
+  .exp-grille{grid-template-columns:1fr}
+  .exp-grille .carte:nth-child(even){margin-top:0}
+  .conseils ul,footer .cols,form{grid-template-columns:1fr}
+  .sentier .papier{grid-template-columns:1fr}
+  .sentier .temps{grid-row:auto}
+  .hero-texte{top:clamp(76px,12vh,130px)}
+  h1{font-size:clamp(78px,23vw,116px)}
+  .hero-texte p.promesse{font-size:17px}
+  .indice{display:none}
+  .wa-float{display:none}
+  .barre{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:75;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#070d24;border-top:3px solid #1b2c57}
+  .barre .btn{min-height:50px;padding:0 10px}
+  body{padding-bottom:70px}
+  .calque{inset:2% -14% 0 -14%}
+  .calque.ciel{inset:-20% -20% 0 -20%}
+  .calque.etoiles{inset:-20% -20% 0 -20%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+  .js .stage{position:relative}
+  .js .rev{opacity:1;transform:rotate(var(--r,0deg))}
+  .indice i{animation:none}
+  .voile{display:none}
+}
+</style>
+
+<style id="kp-choix-css">
+  #kp-choix{position:fixed;top:0;left:0;right:0;z-index:2147483000;display:flex;align-items:center;gap:8px;
+    padding:8px 10px;background:#3D0B37;color:#F3F9D2;font:600 14px/1.2 Inter,Arial,sans-serif;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+  #kp-choix a,#kp-choix button{color:#F3F9D2;text-decoration:none;white-space:nowrap;padding:10px 12px;border-radius:999px;min-height:44px;
+    display:inline-flex;align-items:center;font:600 14px/1 Inter,Arial,sans-serif;border:0;background:rgba(243,249,210,.1);cursor:pointer}
+  #kp-choix .kp-nom{flex:1;text-align:center;font-weight:500;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #kp-choix .kp-aime[aria-pressed="true"]{background:#F4C2D7;color:#3D0B37}
+  #kp-choix .kp-choisir{background:#C0D684;color:#3D0B37}
+  #kp-toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);z-index:2147483001;max-width:min(92vw,460px);
+    background:#1A1A1A;color:#fff;font:500 15px/1.4 Inter,Arial,sans-serif;padding:12px 16px;border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
+  #kp-toast.vu{opacity:1;transform:translate(-50%,0)}
+  iframe{pointer-events:none}
+  @media (max-width:640px){#kp-choix .kp-nom{display:none}#kp-choix a,#kp-choix button{font-size:13.5px;padding:10px}#kp-choix .kp-choisir{margin-left:auto}}
+</style>
+</head>
+<body>
+<div id="kp-choix" data-id="17" role="navigation" aria-label="Choix du modèle"><a data-kp href="../index.html#g-reel">← Tous</a><span class="kp-nom">17. Diorama · Vraies photos · Mafate · 2 690 €</span><button type="button" class="kp-aime" aria-pressed="false">♡ J'aime</button><a data-kp class="kp-choisir" href="../index.html?choix=17#choix">★ Je choisis</a></div><div id="kp-toast" role="status" aria-live="polite"></div>
+
+<svg class="hidden-svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="papier" x="-4%" y="-6%" width="108%" height="116%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="b"/>
+      <feOffset in="b" dx="0" dy="14" result="o"/>
+      <feColorMatrix in="o" type="matrix" values="0 0 0 0 .02  0 0 0 0 .04  0 0 0 0 .12  0 0 0 .6 0" result="ombre"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="4" result="n"/>
+      <feDiffuseLighting in="n" lighting-color="#fff" surfaceScale="1.3" diffuseConstant="1" result="l"><feDistantLight azimuth="225" elevation="72"/></feDiffuseLighting>
+      <feBlend in="SourceGraphic" in2="l" mode="multiply" result="t"/>
+      <feComposite in="t" in2="SourceAlpha" operator="in" result="tx"/>
+      <feMerge><feMergeNode in="ombre"/><feMergeNode in="tx"/></feMerge>
+    </filter>
+    <filter id="papierLeger" x="-4%" y="-6%" width="108%" height="116%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b"/>
+      <feOffset in="b" dx="0" dy="10" result="o"/>
+      <feColorMatrix in="o" type="matrix" values="0 0 0 0 .02  0 0 0 0 .04  0 0 0 0 .12  0 0 0 .6 0" result="ombre"/>
+      <feMerge><feMergeNode in="ombre"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="lueur" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd777" stop-opacity=".85"/><stop offset=".45" stop-color="#ffc857" stop-opacity=".28"/><stop offset="1" stop-color="#ffc857" stop-opacity="0"/></radialGradient>
+    <radialGradient id="lune" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6d6" stop-opacity=".55"/><stop offset="1" stop-color="#fff6d6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050a22"/><stop offset=".34" stop-color="#13214f"/><stop offset=".62" stop-color="#2f4a8c"/><stop offset=".84" stop-color="#6d7fb8"/><stop offset="1" stop-color="#d7a58f"/></linearGradient>
+    <mask id="croissant"><rect x="800" y="60" width="300" height="300" fill="#fff"/><circle cx="954" cy="288" r="47" fill="#000"/></mask>
+  </defs>
+</svg>
+
+<div class="banner"><span class="long">Maquette <a href="https://kreapro.re" target="_blank" rel="noopener">KréaPro</a> · effets sur mesure (formule Mafate) · modèle 10/10 · photos réelles du camping</span><span class="court">Maquette <a href="https://kreapro.re" target="_blank" rel="noopener">KréaPro</a> · Mafate 10/10 · photos réelles</span><a href="../index.html"><span class="long">← Les 10 modèles impact</span><span class="court">← Modèles</span></a></div>
+
+<nav class="pastille" aria-label="Navigation">
+  <a href="#experience">L'expérience</a><a href="#dormir">Dormir</a><a href="#venir">Venir</a><a href="#avis">Avis</a><a href="#reserver" class="on">Réserver</a>
+</nav>
+
+<!-- ================= DIORAMA ================= -->
+<div class="intro" id="accueil">
+  <div class="stage">
+    <div class="monde" aria-hidden="true">
+      <div class="calque ciel" data-z="-740" style="--z:-740px;--c:1.617">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><rect x="-1200" y="-1200" width="4000" height="2300" fill="url(#ciel)"/><circle cx="936" cy="300" r="150" fill="url(#lune)"/><circle cx="936" cy="300" r="54" fill="#fff2cf" mask="url(#croissant)"/></svg>
+      </div>
+      <div class="calque etoiles a" data-z="-725" style="--z:-725px;--c:1.604">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><circle cx="1248.7" cy="611.7" r="2" fill="#ffe9b0"/><circle cx="1082.9" cy="451.7" r="2" fill="#ffe9b0"/><path d="M406.8 210.8Q406.8 215.8 411.9 215.8Q406.8 215.8 406.8 220.9Q406.8 215.8 401.8 215.8Q406.8 215.8 406.8 210.8Z" fill="#ffc857"/><path d="M913.4 624.8Q913.4 630.8 919.5 630.8Q913.4 630.8 913.4 636.8Q913.4 630.8 907.4 630.8Q913.4 630.8 913.4 624.8Z" fill="#ffc857"/><circle cx="988.9" cy="282.5" r="1.6" fill="#f6ecd3"/><circle cx="987.7" cy="540.2" r="1.5" fill="#ffe9b0"/><path d="M508.5 548Q508.5 557.6 518.2 557.6Q508.5 557.6 508.5 567.2Q508.5 557.6 498.9 557.6Q508.5 557.6 508.5 548Z" fill="#ffc857"/><circle cx="809.4" cy="231.9" r="1.2" fill="#f6ecd3"/><circle cx="344.3" cy="295.5" r="1.9" fill="#f6ecd3"/><circle cx="1333.3" cy="214" r="1.5" fill="#ffe9b0"/><circle cx="266.6" cy="360.2" r="1" fill="#f6ecd3"/><circle cx="1099.7" cy="534.8" r="1.5" fill="#f6ecd3"/><circle cx="1125" cy="482.4" r="1.8" fill="#f6ecd3"/><circle cx="796.7" cy="399.3" r="1.8" fill="#f6ecd3"/><circle cx="943.4" cy="516.8" r="2.3" fill="#f6ecd3"/><circle cx="733.1" cy="395.5" r="2.4" fill="#f6ecd3"/><circle cx="345.6" cy="327.2" r="2.3" fill="#f6ecd3"/><circle cx="1291.6" cy="546.8" r="1.2" fill="#f6ecd3"/><circle cx="372.4" cy="614.7" r="2.2" fill="#f6ecd3"/><circle cx="838.7" cy="374.3" r="2.3" fill="#f6ecd3"/><circle cx="552.2" cy="495" r="1.5" fill="#f6ecd3"/><circle cx="896.2" cy="277.3" r="2.3" fill="#f6ecd3"/><circle cx="997.5" cy="594.4" r="1" fill="#f6ecd3"/><path d="M261.4 227.3Q261.4 235.7 269.9 235.7Q261.4 235.7 261.4 244.2Q261.4 235.7 253 235.7Q261.4 235.7 261.4 227.3Z" fill="#ffc857"/><circle cx="1229.7" cy="252.5" r="1.2" fill="#f6ecd3"/><path d="M449.2 220.7Q449.2 229.8 458.2 229.8Q449.2 229.8 449.2 238.9Q449.2 229.8 440.1 229.8Q449.2 229.8 449.2 220.7Z" fill="#ffc857"/><circle cx="898.9" cy="528.2" r="1" fill="#f6ecd3"/><circle cx="1291.5" cy="425.3" r="1.8" fill="#f6ecd3"/><path d="M1052.4 441.9Q1052.4 450 1060.4 450Q1052.4 450 1052.4 458Q1052.4 450 1044.3 450Q1052.4 450 1052.4 441.9Z" fill="#ffc857"/><circle cx="502.9" cy="441.8" r="1.2" fill="#f6ecd3"/><circle cx="939.8" cy="560.3" r="1.2" fill="#ffe9b0"/><circle cx="1005.9" cy="357" r="2.1" fill="#f6ecd3"/><circle cx="373" cy="616.7" r="1.7" fill="#f6ecd3"/><circle cx="1195.6" cy="548.7" r="2" fill="#f6ecd3"/><path d="M465.5 502.2Q465.5 512 475.2 512Q465.5 512 465.5 521.7Q465.5 512 455.7 512Q465.5 512 465.5 502.2Z" fill="#ffc857"/><circle cx="1291.2" cy="207.2" r="0.9" fill="#f6ecd3"/><path d="M1199.3 631.5Q1199.3 636.6 1204.5 636.6Q1199.3 636.6 1199.3 641.8Q1199.3 636.6 1194.2 636.6Q1199.3 636.6 1199.3 631.5Z" fill="#ffc857"/><circle cx="767.4" cy="431" r="1" fill="#f6ecd3"/><path d="M504.9 198.6Q504.9 206.7 513 206.7Q504.9 206.7 504.9 214.9Q504.9 206.7 496.7 206.7Q504.9 206.7 504.9 198.6Z" fill="#ffc857"/><circle cx="765.4" cy="557.9" r="2" fill="#f6ecd3"/><circle cx="679.1" cy="457.9" r="2.4" fill="#f6ecd3"/><path d="M1028.4 447.6Q1028.4 452.9 1033.8 452.9Q1028.4 452.9 1028.4 458.2Q1028.4 452.9 1023.1 452.9Q1028.4 452.9 1028.4 447.6Z" fill="#ffc857"/><circle cx="1044.7" cy="474.7" r="1.5" fill="#f6ecd3"/><path d="M794 225Q794 231.8 800.8 231.8Q794 231.8 794 238.6Q794 231.8 787.2 231.8Q794 231.8 794 225Z" fill="#ffc857"/><path d="M632.2 258.6Q632.2 263.9 637.5 263.9Q632.2 263.9 632.2 269.2Q632.2 263.9 626.9 263.9Q632.2 263.9 632.2 258.6Z" fill="#ffc857"/><path d="M261.7 563.5Q261.7 572.4 270.6 572.4Q261.7 572.4 261.7 581.2Q261.7 572.4 252.9 572.4Q261.7 572.4 261.7 563.5Z" fill="#ffc857"/><circle cx="603.7" cy="355" r="2.3" fill="#ffe9b0"/><circle cx="1332.8" cy="266.2" r="1.9" fill="#ffe9b0"/><circle cx="446.5" cy="530.4" r="2.1" fill="#f6ecd3"/><circle cx="1138.6" cy="315.8" r="1.6" fill="#f6ecd3"/><circle cx="1212.1" cy="590.5" r="2" fill="#f6ecd3"/><circle cx="1145.3" cy="560.5" r="2.1" fill="#f6ecd3"/><circle cx="568.2" cy="508.1" r="1.4" fill="#f6ecd3"/><circle cx="1173" cy="480.7" r="2.2" fill="#f6ecd3"/><path d="M1155.1 197.3Q1155.1 202.5 1160.2 202.5Q1155.1 202.5 1155.1 207.6Q1155.1 202.5 1150 202.5Q1155.1 202.5 1155.1 197.3Z" fill="#ffc857"/><circle cx="883.7" cy="559.9" r="1.9" fill="#f6ecd3"/><circle cx="1138.5" cy="267" r="1.8" fill="#f6ecd3"/><circle cx="841.3" cy="528.2" r="1.7" fill="#f6ecd3"/><circle cx="524.3" cy="503.6" r="2.1" fill="#f6ecd3"/><circle cx="923.1" cy="427.2" r="2.4" fill="#f6ecd3"/><circle cx="908.3" cy="438" r="1.9" fill="#f6ecd3"/><circle cx="485.4" cy="230.4" r="1.4" fill="#f6ecd3"/><circle cx="955.6" cy="348.8" r="1.4" fill="#ffe9b0"/><circle cx="427.2" cy="206.1" r="1.6" fill="#ffe9b0"/><path d="M945 346.4Q945 355.6 954.2 355.6Q945 355.6 945 364.8Q945 355.6 935.8 355.6Q945 355.6 945 346.4Z" fill="#ffc857"/><path d="M556.1 302Q556.1 309.2 563.3 309.2Q556.1 309.2 556.1 316.4Q556.1 309.2 548.9 309.2Q556.1 309.2 556.1 302Z" fill="#ffc857"/><circle cx="475.6" cy="455" r="1.8" fill="#f6ecd3"/><path d="M791.7 580.7Q791.7 588.8 799.9 588.8Q791.7 588.8 791.7 596.9Q791.7 588.8 783.6 588.8Q791.7 588.8 791.7 580.7Z" fill="#ffc857"/><circle cx="1055.2" cy="601.6" r="1.8" fill="#f6ecd3"/><circle cx="1334.4" cy="200.7" r="1" fill="#f6ecd3"/></svg>
+      </div>
+      <div class="calque etoiles b" data-z="-715" style="--z:-715px;--c:1.596">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><circle cx="1230.4" cy="513.9" r="1.7" fill="#f6ecd3"/><circle cx="837.4" cy="541.4" r="1.1" fill="#f6ecd3"/><circle cx="997.7" cy="442" r="2.4" fill="#f6ecd3"/><circle cx="290.6" cy="519.7" r="1.7" fill="#f6ecd3"/><circle cx="1007.4" cy="492.5" r="0.9" fill="#f6ecd3"/><circle cx="1319.4" cy="577.6" r="2" fill="#f6ecd3"/><circle cx="495.8" cy="466.3" r="1.8" fill="#f6ecd3"/><circle cx="284.4" cy="586.7" r="1.9" fill="#f6ecd3"/><circle cx="592.4" cy="524.7" r="2.4" fill="#f6ecd3"/><circle cx="932.1" cy="263" r="1.2" fill="#f6ecd3"/><circle cx="727" cy="204.1" r="1.8" fill="#f6ecd3"/><circle cx="1167.6" cy="217.6" r="1.3" fill="#f6ecd3"/><circle cx="716.1" cy="315.6" r="1.3" fill="#ffe9b0"/><circle cx="659" cy="369.1" r="1.9" fill="#f6ecd3"/><circle cx="847.1" cy="369" r="1.9" fill="#f6ecd3"/><circle cx="1280.8" cy="383.6" r="2.2" fill="#f6ecd3"/><circle cx="960.4" cy="356" r="1.9" fill="#ffe9b0"/><circle cx="569.4" cy="197.8" r="2.2" fill="#ffe9b0"/><circle cx="518.9" cy="484.7" r="1.2" fill="#f6ecd3"/><circle cx="412.4" cy="532.9" r="1.3" fill="#f6ecd3"/><circle cx="1076.2" cy="193.6" r="2.2" fill="#f6ecd3"/><circle cx="1089.8" cy="635.1" r="0.9" fill="#f6ecd3"/><circle cx="301.8" cy="650.9" r="1.6" fill="#f6ecd3"/><circle cx="825.3" cy="572.2" r="2" fill="#f6ecd3"/><circle cx="270.4" cy="228.9" r="1.8" fill="#f6ecd3"/><circle cx="354.9" cy="302.1" r="1.5" fill="#f6ecd3"/><circle cx="989.8" cy="467" r="1.1" fill="#f6ecd3"/><circle cx="1338" cy="460.4" r="2" fill="#f6ecd3"/><circle cx="1220.4" cy="247" r="1.4" fill="#f6ecd3"/><circle cx="714.8" cy="384.4" r="2.5" fill="#f6ecd3"/><circle cx="855.7" cy="481.9" r="1" fill="#f6ecd3"/><circle cx="459.1" cy="573.5" r="1.4" fill="#f6ecd3"/><circle cx="844.6" cy="234.5" r="1.6" fill="#f6ecd3"/><circle cx="274.2" cy="422.3" r="2.2" fill="#f6ecd3"/><circle cx="488.4" cy="210.9" r="1.9" fill="#f6ecd3"/><circle cx="400.3" cy="570.8" r="0.8" fill="#f6ecd3"/><circle cx="1037.6" cy="601" r="1.9" fill="#f6ecd3"/><circle cx="1168.4" cy="296.6" r="1.9" fill="#f6ecd3"/><circle cx="261.2" cy="231.9" r="1" fill="#ffe9b0"/><circle cx="817.2" cy="230.9" r="1.2" fill="#f6ecd3"/><circle cx="966.8" cy="283" r="1.2" fill="#f6ecd3"/><circle cx="1070.3" cy="492" r="2.3" fill="#f6ecd3"/><circle cx="560" cy="424.7" r="1.5" fill="#f6ecd3"/><circle cx="699.3" cy="426.8" r="2.3" fill="#f6ecd3"/><circle cx="700.6" cy="334.5" r="2.5" fill="#f6ecd3"/><circle cx="1271.5" cy="280.5" r="2.4" fill="#f6ecd3"/><circle cx="1030.5" cy="435.1" r="1.9" fill="#f6ecd3"/><circle cx="456.9" cy="392.6" r="1.6" fill="#f6ecd3"/><circle cx="1068.1" cy="497.7" r="1.8" fill="#ffe9b0"/><circle cx="580.4" cy="532.8" r="1.8" fill="#ffe9b0"/><circle cx="855.7" cy="621" r="0.8" fill="#f6ecd3"/><circle cx="980.4" cy="425.2" r="2.3" fill="#f6ecd3"/><circle cx="1250.7" cy="206.9" r="2.1" fill="#f6ecd3"/><circle cx="1015" cy="219" r="1.5" fill="#ffe9b0"/><circle cx="587.6" cy="339.6" r="1.3" fill="#f6ecd3"/><circle cx="273.3" cy="352.4" r="1.5" fill="#f6ecd3"/><circle cx="1146.1" cy="205.8" r="1.6" fill="#f6ecd3"/><circle cx="945.1" cy="237.2" r="1" fill="#f6ecd3"/><circle cx="308.3" cy="297.3" r="1.9" fill="#f6ecd3"/><circle cx="1306.4" cy="598.8" r="1.8" fill="#f6ecd3"/></svg>
+      </div>
+      <div class="calque" data-z="-540" data-dy="-40" style="--z:-540px;--c:1.45">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><g class="f"><path d="M-200 560L-60 470L90 500L210 380L300 430L420 330L520 410L610 372L720 450L820 390L920 320L1010 410L1110 372L1220 290L1320 390L1420 340L1540 430L1700 380L1700 960L-200 960Z" fill="#2c4482"/><path d="M420 330L520 410L450.4 569.7Z" fill="rgba(160,185,235,.13)"/><path d="M520 410L610 372L545.1 628.7Z" fill="rgba(160,185,235,.13)"/><path d="M610 372L720 450L674.6 648.3Z" fill="rgba(160,185,235,.13)"/><path d="M820 390L920 320L885.3 547.6Z" fill="rgba(160,185,235,.13)"/><path d="M920 320L1010 410L980.8 548.9Z" fill="rgba(160,185,235,.13)"/><path d="M1010 410L1110 372L1040.1 676.1Z" fill="rgba(160,185,235,.13)"/><path d="M1320 390L1420 340L1386 540.1Z" fill="rgba(160,185,235,.13)"/><path d="M1540 430L1700 380L1627.2 592.6Z" fill="rgba(160,185,235,.13)"/><path d="M-200 560L-60 470L90 500L210 380L300 430L420 330L520 410L610 372L720 450L820 390L920 320L1010 410L1110 372L1220 290L1320 390L1420 340L1540 430L1700 380" fill="none" stroke="rgba(190,210,255,.25)" stroke-width="3" stroke-linejoin="round"/></g></svg>
+      </div>
+      <div class="calque" data-z="-380" data-dz="20" data-dy="-10" style="--z:-380px;--c:1.317">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><g class="f"><path d="M-200 300L-40 224L60 252L150 158L250 250L340 300L450 380L560 436L680 482L800 468L930 470L1050 424L1170 372L1260 300L1340 232L1420 150L1520 214L1700 140L1700 960L-200 960Z" fill="#1e5d58"/><path d="M-200 300L-40 224L-131.6 510.3Z" fill="rgba(255,255,255,.07)"/><path d="M-40 224L60 252L20.8 484.1Z" fill="rgba(255,255,255,.07)"/><path d="M150 158L250 250L181.3 387.6Z" fill="rgba(255,255,255,.07)"/><path d="M340 300L450 380L402.5 642.9Z" fill="rgba(255,255,255,.07)"/><path d="M450 380L560 436L520.3 693.8Z" fill="rgba(255,255,255,.07)"/><path d="M930 470L1050 424L979.9 706.4Z" fill="rgba(255,255,255,.07)"/><path d="M1170 372L1260 300L1204.4 556.8Z" fill="rgba(255,255,255,.07)"/><path d="M1340 232L1420 150L1374.1 451.4Z" fill="rgba(255,255,255,.07)"/><path d="M1520 214L1700 140L1619 401.6Z" fill="rgba(255,255,255,.07)"/><path d="M-200 300L-40 224L-127.5 577.7Z" fill="rgba(0,25,20,.18)"/><path d="M340 300L450 380L400.8 521.7Z" fill="rgba(0,25,20,.18)"/><path d="M450 380L560 436L507.3 679.4Z" fill="rgba(0,25,20,.18)"/><path d="M680 482L800 468L727.5 673.5Z" fill="rgba(0,25,20,.18)"/><path d="M800 468L930 470L871.5 673.5Z" fill="rgba(0,25,20,.18)"/><path d="M930 470L1050 424L990.3 711.1Z" fill="rgba(0,25,20,.18)"/><path d="M1050 424L1170 372L1120 548.2Z" fill="rgba(0,25,20,.18)"/><path d="M1170 372L1260 300L1216.7 524.4Z" fill="rgba(0,25,20,.18)"/><path d="M1340 232L1420 150L1369.4 457.5Z" fill="rgba(0,25,20,.18)"/><path d="M1420 150L1520 214L1453 457.7Z" fill="rgba(0,25,20,.18)"/><g fill="none" stroke="rgba(6,30,26,.4)" stroke-width="7" stroke-linecap="round"><path d="M150 170Q175 330 130 520"/><path d="M250 260Q300 400 270 600"/><path d="M1420 160Q1380 330 1430 560"/><path d="M1340 240Q1300 400 1330 620"/><path d="M60 262Q90 420 40 640"/></g><path d="M-200 960L-200 640Q300 560 600 640T1200 650T1900 600L1900 960Z" fill="#164a45"/><path d="M-200 960L-200 740Q400 690 760 750T1300 730T1900 720L1900 960Z" fill="#12403d"/></g></svg>
+      </div>
+      <div class="calque" data-z="-230" data-dz="80" data-dy="50" style="--z:-230px;--c:1.192">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><g transform="translate(0 -50)"><g class="f"><rect x="-300" y="900" width="2200" height="400" fill="#f0e4e1"/><path d="M-300 950L-300 600A50.9 46.1 0 0 1 -204 597.9A50.9 41 0 0 1 -108 594.4A50.9 40.1 0 0 1 -12 595A50.9 32.8 0 0 1 84 592.1A50.9 44.6 0 0 1 180 592.7A50.9 33.2 0 0 1 276 604A50.9 34.3 0 0 1 372 611.5A50.9 46.5 0 0 1 468 589.8A50.9 45.7 0 0 1 564 604.8A50.9 50.7 0 0 1 660 602.1A50.9 37.3 0 0 1 756 588.5A50.9 39.7 0 0 1 852 591.3A50.9 36.5 0 0 1 948 595.5A50.9 35.6 0 0 1 1044 587.8A50.9 51.3 0 0 1 1140 600.3A50.9 42.5 0 0 1 1236 591A50.9 35.1 0 0 1 1332 603.4A50.9 45.6 0 0 1 1428 610.9A50.9 50.7 0 0 1 1524 605.8A50.9 35.5 0 0 1 1620 605A50.9 41.2 0 0 1 1716 597A50.9 35.5 0 0 1 1812 594.2A50.9 47.8 0 0 1 1908 597.5L1900 950Z" fill="#aab6dc"/><path d="M-300 950L-300 648A44.5 40 0 0 1 -216 651.1A44.5 42.9 0 0 1 -132 654.9A44.5 28.6 0 0 1 -48 648.8A44.5 44.7 0 0 1 36 644.6A44.5 40.9 0 0 1 120 651.7A44.5 35.3 0 0 1 204 655.3A44.5 34.6 0 0 1 288 653.9A44.5 28.8 0 0 1 372 648.8A44.5 28.6 0 0 1 456 649.3A44.5 36.8 0 0 1 540 648.3A44.5 31.2 0 0 1 624 645.5A44.5 31.7 0 0 1 708 647.9A44.5 30.3 0 0 1 792 648.7A44.5 41.5 0 0 1 876 637.5A44.5 42.1 0 0 1 960 649.4A44.5 39.8 0 0 1 1044 655.9A44.5 42.6 0 0 1 1128 653.3A44.5 43.8 0 0 1 1212 645.5A44.5 34.8 0 0 1 1296 645.2A44.5 29.9 0 0 1 1380 637.7A44.5 29.1 0 0 1 1464 639.2A44.5 39.9 0 0 1 1548 649.7A44.5 28.7 0 0 1 1632 641.4A44.5 40.2 0 0 1 1716 637.9A44.5 43.5 0 0 1 1800 658.3A44.5 44.4 0 0 1 1884 655A44.5 37.9 0 0 1 1968 653.2L1900 950Z" fill="#d3d2ea"/><path d="M-300 950L-300 700A38.2 25.4 0 0 1 -228 702.4A38.2 31.3 0 0 1 -156 697.2A38.2 31.9 0 0 1 -84 700.5A38.2 33.7 0 0 1 -12 701.9A38.2 34.9 0 0 1 60 700.1A38.2 36.8 0 0 1 132 696.8A38.2 25.1 0 0 1 204 690.3A38.2 38.6 0 0 1 276 703.4A38.2 24.6 0 0 1 348 694.1A38.2 25 0 0 1 420 694.3A38.2 34.2 0 0 1 492 698.9A38.2 30.4 0 0 1 564 702.3A38.2 25 0 0 1 636 707A38.2 37 0 0 1 708 706.7A38.2 29.4 0 0 1 780 698.8A38.2 33.7 0 0 1 852 694.1A38.2 28.7 0 0 1 924 691.8A38.2 25.6 0 0 1 996 703.2A38.2 37.8 0 0 1 1068 701.3A38.2 37.6 0 0 1 1140 690.4A38.2 33.2 0 0 1 1212 694.9A38.2 37.4 0 0 1 1284 690.7A38.2 28.2 0 0 1 1356 702.5A38.2 29.5 0 0 1 1428 702.3A38.2 30.5 0 0 1 1500 700.3A38.2 36.3 0 0 1 1572 709.3A38.2 37.1 0 0 1 1644 709.2A38.2 28.3 0 0 1 1716 691A38.2 32.2 0 0 1 1788 700.1A38.2 32.9 0 0 1 1860 692.5A38.2 30.2 0 0 1 1932 694.8L1900 950Z" fill="#f0e4e1"/><rect x="-300" y="760" width="2200" height="200" fill="#f0e4e1"/></g></g></svg>
+      </div>
+      <div class="calque" data-z="-90" data-dz="140" data-dy="90" style="--z:-90px;--c:1.075">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><g transform="translate(0 -70)"><g class="f"><rect x="-400" y="900" width="2400" height="400" fill="#245f43"/><path d="M200 960C360 800 540 722 700 706C860 692 1020 706 1180 790C1260 830 1340 880 1400 960Z" fill="#2f7a50"/><path d="M300 960C440 830 600 760 760 750C900 744 1040 770 1160 850C1220 890 1280 930 1320 960Z" fill="#3c8e5d"/><path d="M120 960C300 880 520 850 800 846C1080 842 1300 880 1500 960Z" fill="#245f43"/><g transform="translate(700 800) scale(1.35) translate(-700 -800)"><g transform="translate(556 758)">
+<rect x="-28" y="-36" width="56" height="36" fill="#f1e6cf"/>
+<path d="M-34 -36L-20 -54H20L34 -36Z" fill="#c8553d"/>
+<rect x="-22" y="-28" width="11" height="11" fill="#ffc857"/>
+<rect x="11" y="-28" width="11" height="11" fill="#ffc857"/>
+<rect x="-6" y="-24" width="12" height="24" fill="#7a4b2f"/>
+</g><g transform="translate(640 738)">
+<rect x="-28" y="-38" width="56" height="38" fill="#f6ecd3"/>
+<path d="M-34 -38L-20 -56H20L34 -38Z" fill="#3e7cb1"/>
+<rect x="-22" y="-30" width="11" height="11" fill="#6f8aa6"/>
+<rect x="11" y="-30" width="11" height="11" fill="#6f8aa6"/>
+<rect x="-6" y="-26" width="12" height="26" fill="#7a4b2f"/>
+</g><g transform="translate(724 726)">
+<rect x="-30" y="-40" width="60" height="40" fill="#efe0c0"/>
+<path d="M-36 -40L-22 -58H22L36 -40Z" fill="#e0b23a"/>
+<rect x="-24" y="-32" width="11" height="11" fill="#ffc857"/>
+<rect x="13" y="-32" width="11" height="11" fill="#ffc857"/>
+<rect x="-6" y="-28" width="12" height="28" fill="#7a4b2f"/>
+</g><g transform="translate(808 728)">
+<rect x="-28" y="-36" width="56" height="36" fill="#f4e9d2"/>
+<path d="M-34 -36L-20 -54H20L34 -36Z" fill="#5aa36b"/>
+<rect x="-22" y="-28" width="11" height="11" fill="#6f8aa6"/>
+<rect x="11" y="-28" width="11" height="11" fill="#6f8aa6"/>
+<rect x="-6" y="-24" width="12" height="24" fill="#7a4b2f"/>
+</g><g transform="translate(884 742)">
+<rect x="-27" y="-36" width="54" height="36" fill="#f1e6cf"/>
+<path d="M-33 -36L-19 -54H19L33 -36Z" fill="#c8553d"/>
+<rect x="-21" y="-28" width="11" height="11" fill="#ffc857"/>
+<rect x="10" y="-28" width="11" height="11" fill="#ffc857"/>
+<rect x="-6" y="-24" width="12" height="24" fill="#7a4b2f"/>
+</g><g transform="translate(600 804)">
+<rect x="-25" y="-32" width="50" height="32" fill="#f1e6cf"/>
+<path d="M-31 -32L-17 -50H17L31 -32Z" fill="#3e7cb1"/>
+<rect x="-19" y="-24" width="11" height="11" fill="#ffc857"/>
+<rect x="8" y="-24" width="11" height="11" fill="#ffc857"/>
+<rect x="-6" y="-20" width="12" height="20" fill="#7a4b2f"/>
+</g><g transform="translate(704 790)">
+<rect x="-26" y="-34" width="52" height="34" fill="#f6ecd3"/>
+<path d="M-32 -34L-18 -52H18L32 -34Z" fill="#a8452f"/>
+<rect x="-20" y="-26" width="11" height="11" fill="#6f8aa6"/>
+<rect x="9" y="-26" width="11" height="11" fill="#6f8aa6"/>
+<rect x="-6" y="-22" width="12" height="22" fill="#7a4b2f"/>
+</g><g transform="translate(790 796)">
+<rect x="-27" y="-34" width="54" height="34" fill="#efe0c0"/>
+<path d="M-33 -34L-19 -52H19L33 -34Z" fill="#e0b23a"/>
+<rect x="-21" y="-26" width="11" height="11" fill="#ffc857"/>
+<rect x="10" y="-26" width="11" height="11" fill="#ffc857"/>
+<rect x="-6" y="-22" width="12" height="22" fill="#7a4b2f"/>
+</g><path d="M520 770V725.8" stroke="#3b2a1c" stroke-width="3.9000000000000004"/><path transform="translate(520 725.8) rotate(-150) scale(1.3)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path transform="translate(520 725.8) rotate(-115) scale(1.3)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path transform="translate(520 725.8) rotate(-75) scale(1.3)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path transform="translate(520 725.8) rotate(-35) scale(1.3)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path d="M930 760V722.6" stroke="#3b2a1c" stroke-width="3.3000000000000003"/><path transform="translate(930 722.6) rotate(-150) scale(1.1)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path transform="translate(930 722.6) rotate(-115) scale(1.1)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path transform="translate(930 722.6) rotate(-75) scale(1.1)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path transform="translate(930 722.6) rotate(-35) scale(1.1)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path d="M672 820V786" stroke="#3b2a1c" stroke-width="3"/><path transform="translate(672 786) rotate(-150) scale(1)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path transform="translate(672 786) rotate(-115) scale(1)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path transform="translate(672 786) rotate(-75) scale(1)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><path transform="translate(672 786) rotate(-35) scale(1)" d="M0 0Q26 -22 56 -4Q28 -12 0 0Z" fill="#4da06a"/><g fill="#ffb4c0"><circle cx="572" cy="812" r="3.4"/><circle cx="660" cy="838" r="3.4"/><circle cx="748" cy="820" r="3.4"/><circle cx="840" cy="826" r="3.4"/></g><g fill="#ff9a5c"><circle cx="612" cy="842" r="3"/><circle cx="700" cy="842" r="3"/><circle cx="800" cy="840" r="3"/></g></g></g></g></svg>
+      </div>
+      <div class="calque" data-z="70" data-dz="200" data-dy="150" data-fade=".55" style="--z:70px;--c:.942">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+          <g transform="translate(0 -78)"><g transform="translate(890 818) scale(1.3) translate(-900 -818)"><circle cx="900" cy="770" r="300" fill="url(#lueur)"/>
+          <rect x="400" y="940" width="1000" height="300" fill="#2c6a47"/>
+          <g class="f">
+            <path d="M600 960C700 820 800 800 900 796C1000 800 1100 830 1200 960Z" fill="#2c6a47"/>
+            <path d="M640 960C740 850 820 836 900 832C990 834 1080 860 1160 960Z" fill="#36805a"/>
+            <g stroke="#e8dcc0" stroke-width="2.4" stroke-linecap="round"><path d="M900 655L770 826"/><path d="M900 655L1040 828"/></g>
+            <path d="M900 652L792 818H1008Z" fill="#f6efdc"/>
+            <path d="M900 652L1008 818H928Z" fill="#e3d8bd"/>
+            <path d="M900 652L846 818H900Z" fill="#fff8e6"/>
+            <path d="M900 718L872 818H928Z" fill="#ffc857"/>
+            <path d="M900 736L886 818H914Z" fill="#ffe9a6"/>
+            <path d="M900 640V656" stroke="#d9c9a0" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="800" cy="812" r="5" fill="#d9c9a0"/><circle cx="1000" cy="812" r="5" fill="#d9c9a0"/>
+            <rect x="1066" y="798" width="22" height="26" rx="3" fill="#7a4b2f"/><rect x="1070" y="786" width="14" height="12" rx="2" fill="#ffc857"/>
+          </g>
+          <circle cx="1077" cy="792" r="46" fill="url(#lueur)"/>
+        </g></g></svg>
+      </div>
+      <div class="calque" data-z="190" data-dz="260" data-dy="260" data-fade=".6" style="--z:190px;--c:.842">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><g transform="translate(0 -40)"><g class="f"><rect x="-400" y="862" width="2400" height="400" fill="#0c2a22"/><path d="M250 940Q258 720 290 540" fill="none" stroke="#2a1d14" stroke-width="24" stroke-linecap="round"/><path d="M247 940Q255 720 287 540" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="2"/><g transform="translate(290 540) scale(1 1) rotate(-88)"><path d="M0 0Q91.8 -82.6 183.6 25.7Q101 -36.7 0 0Z" fill="#0f2e27"/><path d="M0 0Q95.5 -60.6 176.3 18.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(1 1) rotate(-70)"><path d="M0 0Q129.4 -116.4 258.7 36.2Q142.3 -51.7 0 0Z" fill="#14392f"/><path d="M0 0Q134.5 -85.4 248.4 25.9" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(1 1) rotate(-54)"><path d="M0 0Q121.9 -109.7 243.8 34.1Q134.1 -48.8 0 0Z" fill="#0b241f"/><path d="M0 0Q126.8 -80.4 234 24.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(1 1) rotate(-38)"><path d="M0 0Q118.1 -106.3 236.2 33.1Q129.9 -47.2 0 0Z" fill="#1a4a3a"/><path d="M0 0Q122.8 -78 226.8 23.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(1 1) rotate(-22)"><path d="M0 0Q143 -128.7 286 40Q157.3 -57.2 0 0Z" fill="#0f2e27"/><path d="M0 0Q148.7 -94.4 274.6 28.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(1 1) rotate(-8)"><path d="M0 0Q133.6 -120.2 267.1 37.4Q146.9 -53.4 0 0Z" fill="#14392f"/><path d="M0 0Q138.9 -88.2 256.5 26.7" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(1 1) rotate(8)"><path d="M0 0Q123.8 -111.4 247.6 34.7Q136.2 -49.5 0 0Z" fill="#0b241f"/><path d="M0 0Q128.8 -81.7 237.7 24.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(1 1) rotate(24)"><path d="M0 0Q144.1 -129.7 288.2 40.3Q158.5 -57.6 0 0Z" fill="#1a4a3a"/><path d="M0 0Q149.9 -95.1 276.7 28.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(-1 1) rotate(-88)"><path d="M0 0Q122.6 -110.3 245.2 34.3Q134.9 -49 0 0Z" fill="#14392f"/><path d="M0 0Q127.5 -80.9 235.4 24.5" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(-1 1) rotate(-70)"><path d="M0 0Q113.9 -102.6 227.9 31.9Q125.3 -45.6 0 0Z" fill="#0b241f"/><path d="M0 0Q118.5 -75.2 218.8 22.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(-1 1) rotate(-54)"><path d="M0 0Q140.9 -126.8 281.7 39.4Q154.9 -56.3 0 0Z" fill="#1a4a3a"/><path d="M0 0Q146.5 -93 270.4 28.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(-1 1) rotate(-38)"><path d="M0 0Q138.5 -124.7 277 38.8Q152.4 -55.4 0 0Z" fill="#0f2e27"/><path d="M0 0Q144.1 -91.4 266 27.7" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(-1 1) rotate(-22)"><path d="M0 0Q147.2 -132.5 294.4 41.2Q161.9 -58.9 0 0Z" fill="#14392f"/><path d="M0 0Q153.1 -97.2 282.6 29.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(-1 1) rotate(-8)"><path d="M0 0Q119.6 -107.7 239.2 33.5Q131.6 -47.8 0 0Z" fill="#0b241f"/><path d="M0 0Q124.4 -78.9 229.7 23.9" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(-1 1) rotate(8)"><path d="M0 0Q126 -113.4 251.9 35.3Q138.6 -50.4 0 0Z" fill="#1a4a3a"/><path d="M0 0Q131 -83.1 241.8 25.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(290 540) scale(-1 1) rotate(24)"><path d="M0 0Q142 -127.8 284 39.8Q156.2 -56.8 0 0Z" fill="#0f2e27"/><path d="M0 0Q147.7 -93.7 272.6 28.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><path d="M430 940Q436 819 460 720" fill="none" stroke="#2a1d14" stroke-width="18.6" stroke-linecap="round"/><path d="M427 940Q433 819 457 720" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="2"/><g transform="translate(460 720) scale(1 1) rotate(-88)"><path d="M0 0Q84.2 -75.8 168.4 23.6Q92.6 -33.7 0 0Z" fill="#14392f"/><path d="M0 0Q87.6 -55.6 161.7 16.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(1 1) rotate(-70)"><path d="M0 0Q65.8 -59.2 131.6 18.4Q72.4 -26.3 0 0Z" fill="#1a4a3a"/><path d="M0 0Q68.4 -43.4 126.3 13.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(1 1) rotate(-54)"><path d="M0 0Q98.6 -88.7 197.2 27.6Q108.4 -39.4 0 0Z" fill="#0f2e27"/><path d="M0 0Q102.5 -65.1 189.3 19.7" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(1 1) rotate(-38)"><path d="M0 0Q91.3 -82.2 182.6 25.6Q100.5 -36.5 0 0Z" fill="#14392f"/><path d="M0 0Q95 -60.3 175.3 18.3" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(1 1) rotate(-22)"><path d="M0 0Q106.6 -95.9 213.2 29.8Q117.3 -42.6 0 0Z" fill="#1a4a3a"/><path d="M0 0Q110.9 -70.4 204.7 21.3" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(1 1) rotate(-8)"><path d="M0 0Q102.7 -92.5 205.5 28.8Q113 -41.1 0 0Z" fill="#0f2e27"/><path d="M0 0Q106.8 -67.8 197.2 20.5" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(1 1) rotate(8)"><path d="M0 0Q79.7 -71.8 159.5 22.3Q87.7 -31.9 0 0Z" fill="#14392f"/><path d="M0 0Q82.9 -52.6 153.1 15.9" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(1 1) rotate(24)"><path d="M0 0Q92.8 -83.6 185.7 26Q102.1 -37.1 0 0Z" fill="#1a4a3a"/><path d="M0 0Q96.6 -61.3 178.3 18.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(-1 1) rotate(-88)"><path d="M0 0Q90.6 -81.6 181.3 25.4Q99.7 -36.3 0 0Z" fill="#1a4a3a"/><path d="M0 0Q94.3 -59.8 174 18.1" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(-1 1) rotate(-70)"><path d="M0 0Q83.9 -75.5 167.8 23.5Q92.3 -33.6 0 0Z" fill="#0f2e27"/><path d="M0 0Q87.3 -55.4 161.1 16.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(-1 1) rotate(-54)"><path d="M0 0Q97.2 -87.5 194.5 27.2Q107 -38.9 0 0Z" fill="#14392f"/><path d="M0 0Q101.1 -64.2 186.7 19.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(-1 1) rotate(-38)"><path d="M0 0Q95 -85.5 190 26.6Q104.5 -38 0 0Z" fill="#1a4a3a"/><path d="M0 0Q98.8 -62.7 182.4 19" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(-1 1) rotate(-22)"><path d="M0 0Q106.2 -95.6 212.5 29.7Q116.9 -42.5 0 0Z" fill="#0f2e27"/><path d="M0 0Q110.5 -70.1 204 21.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(-1 1) rotate(-8)"><path d="M0 0Q106.1 -95.5 212.2 29.7Q116.7 -42.4 0 0Z" fill="#14392f"/><path d="M0 0Q110.4 -70 203.8 21.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(-1 1) rotate(8)"><path d="M0 0Q88.1 -79.3 176.2 24.7Q96.9 -35.2 0 0Z" fill="#1a4a3a"/><path d="M0 0Q91.6 -58.2 169.2 17.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(460 720) scale(-1 1) rotate(24)"><path d="M0 0Q86.9 -78.2 173.7 24.3Q95.6 -34.7 0 0Z" fill="#0f2e27"/><path d="M0 0Q90.3 -57.3 166.8 17.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><path d="M1360 940Q1350 703.5 1310 510" fill="none" stroke="#2a1d14" stroke-width="24.6" stroke-linecap="round"/><path d="M1357 940Q1347 703.5 1307 510" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="2"/><g transform="translate(1310 510) scale(1 1) rotate(-88)"><path d="M0 0Q130.2 -117.1 260.3 36.4Q143.2 -52.1 0 0Z" fill="#0f2e27"/><path d="M0 0Q135.4 -85.9 249.9 26" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(1 1) rotate(-70)"><path d="M0 0Q108.9 -98 217.7 30.5Q119.8 -43.5 0 0Z" fill="#14392f"/><path d="M0 0Q113.2 -71.9 209 21.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(1 1) rotate(-54)"><path d="M0 0Q119.2 -107.3 238.3 33.4Q131.1 -47.7 0 0Z" fill="#0b241f"/><path d="M0 0Q123.9 -78.7 228.8 23.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(1 1) rotate(-38)"><path d="M0 0Q126.4 -113.7 252.7 35.4Q139 -50.5 0 0Z" fill="#1a4a3a"/><path d="M0 0Q131.4 -83.4 242.6 25.3" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(1 1) rotate(-22)"><path d="M0 0Q132.9 -119.6 265.7 37.2Q146.1 -53.1 0 0Z" fill="#0f2e27"/><path d="M0 0Q138.2 -87.7 255.1 26.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(1 1) rotate(-8)"><path d="M0 0Q126.2 -113.6 252.5 35.3Q138.8 -50.5 0 0Z" fill="#14392f"/><path d="M0 0Q131.3 -83.3 242.4 25.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(1 1) rotate(8)"><path d="M0 0Q158.1 -142.3 316.2 44.3Q173.9 -63.2 0 0Z" fill="#0b241f"/><path d="M0 0Q164.4 -104.3 303.5 31.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(1 1) rotate(24)"><path d="M0 0Q139.2 -125.3 278.5 39Q153.2 -55.7 0 0Z" fill="#1a4a3a"/><path d="M0 0Q144.8 -91.9 267.4 27.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(-1 1) rotate(-88)"><path d="M0 0Q125.6 -113 251.2 35.2Q138.2 -50.2 0 0Z" fill="#14392f"/><path d="M0 0Q130.6 -82.9 241.2 25.1" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(-1 1) rotate(-70)"><path d="M0 0Q131.9 -118.7 263.7 36.9Q145.1 -52.7 0 0Z" fill="#0b241f"/><path d="M0 0Q137.1 -87 253.2 26.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(-1 1) rotate(-54)"><path d="M0 0Q114.5 -103.1 229 32.1Q126 -45.8 0 0Z" fill="#1a4a3a"/><path d="M0 0Q119.1 -75.6 219.9 22.9" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(-1 1) rotate(-38)"><path d="M0 0Q125.2 -112.6 250.3 35Q137.7 -50.1 0 0Z" fill="#0f2e27"/><path d="M0 0Q130.2 -82.6 240.3 25" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(-1 1) rotate(-22)"><path d="M0 0Q139.4 -125.5 278.8 39Q153.3 -55.8 0 0Z" fill="#14392f"/><path d="M0 0Q145 -92 267.7 27.9" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(-1 1) rotate(-8)"><path d="M0 0Q136.8 -123.2 273.7 38.3Q150.5 -54.7 0 0Z" fill="#0b241f"/><path d="M0 0Q142.3 -90.3 262.7 27.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(-1 1) rotate(8)"><path d="M0 0Q132.5 -119.3 265 37.1Q145.8 -53 0 0Z" fill="#1a4a3a"/><path d="M0 0Q137.8 -87.5 254.4 26.5" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1310 510) scale(-1 1) rotate(24)"><path d="M0 0Q121.2 -109.1 242.3 33.9Q133.3 -48.5 0 0Z" fill="#0f2e27"/><path d="M0 0Q126 -80 232.6 24.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><path d="M1190 940Q1185.2 813.5 1166 710" fill="none" stroke="#2a1d14" stroke-width="19.2" stroke-linecap="round"/><path d="M1187 940Q1182.2 813.5 1163 710" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="2"/><g transform="translate(1166 710) scale(1 1) rotate(-88)"><path d="M0 0Q94.5 -85.1 189 26.5Q104 -37.8 0 0Z" fill="#14392f"/><path d="M0 0Q98.3 -62.4 181.5 18.9" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(1 1) rotate(-70)"><path d="M0 0Q69 -62.1 137.9 19.3Q75.9 -27.6 0 0Z" fill="#1a4a3a"/><path d="M0 0Q71.7 -45.5 132.4 13.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(1 1) rotate(-54)"><path d="M0 0Q92.1 -82.9 184.1 25.8Q101.3 -36.8 0 0Z" fill="#0f2e27"/><path d="M0 0Q95.7 -60.8 176.8 18.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(1 1) rotate(-38)"><path d="M0 0Q91.3 -82.2 182.6 25.6Q100.4 -36.5 0 0Z" fill="#14392f"/><path d="M0 0Q95 -60.3 175.3 18.3" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(1 1) rotate(-22)"><path d="M0 0Q102.6 -92.3 205.2 28.7Q112.8 -41 0 0Z" fill="#1a4a3a"/><path d="M0 0Q106.7 -67.7 197 20.5" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(1 1) rotate(-8)"><path d="M0 0Q111.7 -100.6 223.5 31.3Q122.9 -44.7 0 0Z" fill="#0f2e27"/><path d="M0 0Q116.2 -73.7 214.5 22.3" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(1 1) rotate(8)"><path d="M0 0Q97.3 -87.6 194.6 27.3Q107.1 -38.9 0 0Z" fill="#14392f"/><path d="M0 0Q101.2 -64.2 186.9 19.5" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(1 1) rotate(24)"><path d="M0 0Q85 -76.5 170.1 23.8Q93.5 -34 0 0Z" fill="#1a4a3a"/><path d="M0 0Q88.4 -56.1 163.3 17" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(-1 1) rotate(-88)"><path d="M0 0Q79.5 -71.5 158.9 22.2Q87.4 -31.8 0 0Z" fill="#1a4a3a"/><path d="M0 0Q82.6 -52.4 152.6 15.9" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(-1 1) rotate(-70)"><path d="M0 0Q75.8 -68.2 151.6 21.2Q83.4 -30.3 0 0Z" fill="#0f2e27"/><path d="M0 0Q78.8 -50 145.5 15.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(-1 1) rotate(-54)"><path d="M0 0Q92 -82.8 184.1 25.8Q101.2 -36.8 0 0Z" fill="#14392f"/><path d="M0 0Q95.7 -60.7 176.7 18.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(-1 1) rotate(-38)"><path d="M0 0Q94.1 -84.7 188.2 26.4Q103.5 -37.6 0 0Z" fill="#1a4a3a"/><path d="M0 0Q97.9 -62.1 180.7 18.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(-1 1) rotate(-22)"><path d="M0 0Q90.9 -81.8 181.8 25.5Q100 -36.4 0 0Z" fill="#0f2e27"/><path d="M0 0Q94.5 -60 174.5 18.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(-1 1) rotate(-8)"><path d="M0 0Q97.9 -88.1 195.8 27.4Q107.7 -39.2 0 0Z" fill="#14392f"/><path d="M0 0Q101.8 -64.6 188 19.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(-1 1) rotate(8)"><path d="M0 0Q100.8 -90.7 201.6 28.2Q110.9 -40.3 0 0Z" fill="#1a4a3a"/><path d="M0 0Q104.8 -66.5 193.6 20.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1166 710) scale(-1 1) rotate(24)"><path d="M0 0Q87.4 -78.7 174.8 24.5Q96.2 -35 0 0Z" fill="#0f2e27"/><path d="M0 0Q90.9 -57.7 167.8 17.5" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><path d="M600 950Q602 884 610 830" fill="none" stroke="#2a1d14" stroke-width="13.2" stroke-linecap="round"/><path d="M597 950Q599 884 607 830" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="2"/><g transform="translate(610 830) scale(1 1) rotate(-88)"><path d="M0 0Q51.5 -46.4 103 14.4Q56.7 -20.6 0 0Z" fill="#0b241f"/><path d="M0 0Q53.6 -34 98.9 10.3" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(1 1) rotate(-70)"><path d="M0 0Q44.2 -39.8 88.4 12.4Q48.6 -17.7 0 0Z" fill="#10302a"/><path d="M0 0Q46 -29.2 84.8 8.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(1 1) rotate(-54)"><path d="M0 0Q59.8 -53.8 119.5 16.7Q65.7 -23.9 0 0Z" fill="#14392f"/><path d="M0 0Q62.2 -39.4 114.8 12" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(1 1) rotate(-38)"><path d="M0 0Q55.4 -49.9 110.8 15.5Q60.9 -22.2 0 0Z" fill="#0b241f"/><path d="M0 0Q57.6 -36.6 106.4 11.1" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(1 1) rotate(-22)"><path d="M0 0Q55.4 -49.8 110.8 15.5Q60.9 -22.2 0 0Z" fill="#10302a"/><path d="M0 0Q57.6 -36.6 106.3 11.1" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(1 1) rotate(-8)"><path d="M0 0Q53.1 -47.8 106.2 14.9Q58.4 -21.2 0 0Z" fill="#14392f"/><path d="M0 0Q55.2 -35.1 102 10.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(1 1) rotate(8)"><path d="M0 0Q52.9 -47.6 105.8 14.8Q58.2 -21.2 0 0Z" fill="#0b241f"/><path d="M0 0Q55 -34.9 101.6 10.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(1 1) rotate(24)"><path d="M0 0Q56.4 -50.8 112.9 15.8Q62.1 -22.6 0 0Z" fill="#10302a"/><path d="M0 0Q58.7 -37.2 108.3 11.3" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(-1 1) rotate(-88)"><path d="M0 0Q52.1 -46.8 104.1 14.6Q57.3 -20.8 0 0Z" fill="#10302a"/><path d="M0 0Q54.1 -34.4 99.9 10.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(-1 1) rotate(-70)"><path d="M0 0Q43.2 -38.9 86.4 12.1Q47.5 -17.3 0 0Z" fill="#14392f"/><path d="M0 0Q44.9 -28.5 82.9 8.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(-1 1) rotate(-54)"><path d="M0 0Q56.8 -51.1 113.6 15.9Q62.5 -22.7 0 0Z" fill="#0b241f"/><path d="M0 0Q59.1 -37.5 109.1 11.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(-1 1) rotate(-38)"><path d="M0 0Q48 -43.2 96 13.4Q52.8 -19.2 0 0Z" fill="#10302a"/><path d="M0 0Q49.9 -31.7 92.2 9.6" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(-1 1) rotate(-22)"><path d="M0 0Q54.5 -49 108.9 15.3Q59.9 -21.8 0 0Z" fill="#14392f"/><path d="M0 0Q56.6 -35.9 104.6 10.9" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(-1 1) rotate(-8)"><path d="M0 0Q49.9 -44.9 99.9 14Q54.9 -20 0 0Z" fill="#0b241f"/><path d="M0 0Q51.9 -33 95.9 10" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(-1 1) rotate(8)"><path d="M0 0Q49.5 -44.6 99.1 13.9Q54.5 -19.8 0 0Z" fill="#10302a"/><path d="M0 0Q51.5 -32.7 95.1 9.9" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(610 830) scale(-1 1) rotate(24)"><path d="M0 0Q50.7 -45.6 101.4 14.2Q55.8 -20.3 0 0Z" fill="#14392f"/><path d="M0 0Q52.7 -33.5 97.4 10.1" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><path d="M1090 950Q1088 889.5 1080 840" fill="none" stroke="#2a1d14" stroke-width="12.6" stroke-linecap="round"/><path d="M1087 950Q1085 889.5 1077 840" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="2"/><g transform="translate(1080 840) scale(1 1) rotate(-88)"><path d="M0 0Q45.5 -41 91.1 12.8Q50.1 -18.2 0 0Z" fill="#0f2e27"/><path d="M0 0Q47.4 -30.1 87.5 9.1" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(1 1) rotate(-70)"><path d="M0 0Q46.8 -42.1 93.6 13.1Q51.5 -18.7 0 0Z" fill="#14392f"/><path d="M0 0Q48.7 -30.9 89.8 9.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(1 1) rotate(-54)"><path d="M0 0Q41.6 -37.4 83.1 11.6Q45.7 -16.6 0 0Z" fill="#0f2e27"/><path d="M0 0Q43.2 -27.4 79.8 8.3" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(1 1) rotate(-38)"><path d="M0 0Q54 -48.6 108 15.1Q59.4 -21.6 0 0Z" fill="#14392f"/><path d="M0 0Q56.2 -35.7 103.7 10.8" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(1 1) rotate(-22)"><path d="M0 0Q41 -36.9 81.9 11.5Q45.1 -16.4 0 0Z" fill="#0f2e27"/><path d="M0 0Q42.6 -27 78.7 8.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(1 1) rotate(-8)"><path d="M0 0Q46.8 -42.1 93.5 13.1Q51.4 -18.7 0 0Z" fill="#14392f"/><path d="M0 0Q48.6 -30.9 89.8 9.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(1 1) rotate(8)"><path d="M0 0Q42.3 -38.1 84.6 11.8Q46.5 -16.9 0 0Z" fill="#0f2e27"/><path d="M0 0Q44 -27.9 81.2 8.5" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(1 1) rotate(24)"><path d="M0 0Q41 -36.9 81.9 11.5Q45.1 -16.4 0 0Z" fill="#14392f"/><path d="M0 0Q42.6 -27 78.7 8.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(-1 1) rotate(-88)"><path d="M0 0Q48.6 -43.7 97.1 13.6Q53.4 -19.4 0 0Z" fill="#14392f"/><path d="M0 0Q50.5 -32.1 93.2 9.7" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(-1 1) rotate(-70)"><path d="M0 0Q37 -33.3 73.9 10.3Q40.6 -14.8 0 0Z" fill="#0f2e27"/><path d="M0 0Q38.4 -24.4 70.9 7.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(-1 1) rotate(-54)"><path d="M0 0Q50.7 -45.7 101.5 14.2Q55.8 -20.3 0 0Z" fill="#14392f"/><path d="M0 0Q52.8 -33.5 97.4 10.1" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(-1 1) rotate(-38)"><path d="M0 0Q42.1 -37.9 84.3 11.8Q46.4 -16.9 0 0Z" fill="#0f2e27"/><path d="M0 0Q43.8 -27.8 80.9 8.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(-1 1) rotate(-22)"><path d="M0 0Q47.6 -42.9 95.3 13.3Q52.4 -19.1 0 0Z" fill="#14392f"/><path d="M0 0Q49.6 -31.4 91.5 9.5" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(-1 1) rotate(-8)"><path d="M0 0Q50 -45 100.1 14Q55 -20 0 0Z" fill="#0f2e27"/><path d="M0 0Q52 -33 96.1 10" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(-1 1) rotate(8)"><path d="M0 0Q42 -37.8 84.1 11.8Q46.2 -16.8 0 0Z" fill="#14392f"/><path d="M0 0Q43.7 -27.7 80.7 8.4" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><g transform="translate(1080 840) scale(-1 1) rotate(24)"><path d="M0 0Q55.8 -50.2 111.6 15.6Q61.4 -22.3 0 0Z" fill="#0f2e27"/><path d="M0 0Q58.1 -36.8 107.2 11.2" fill="none" stroke="rgba(255,255,255,.13)" stroke-width="2.4" stroke-linecap="round"/></g><path d="M-100 905Q-94.2 869.6 -103.8 846Q-86 875.5 -85.275966742333 905Z" fill="#1a4a3a"/><path d="M-78 905Q-77.7 883.8 -89.7 869.7Q-70.4 887.4 -68.09458002270625 905Z" fill="#0c2a22"/><path d="M-56 905Q-45.9 865.7 -47.3 839.5Q-41 872.2 -42.7427459310207 905Z" fill="#1a4a3a"/><path d="M-34 905Q-30.3 869.6 -43.6 846.1Q-20.9 875.5 -19.00618437026272 905Z" fill="#0c2a22"/><path d="M-12 905Q-3.2 877.6 -7.8 859.4Q3 882.2 2.1924967003916365 905Z" fill="#0c2a22"/><path d="M10 905Q18.3 888.2 19.3 876.9Q20.9 891 19.065679569789843 905Z" fill="#0c2a22"/><path d="M32 905Q36.5 869.3 32 845.6Q40.9 875.3 40.90509962747348 905Z" fill="#0c2a22"/><path d="M54 905Q58.1 865.3 47.9 838.8Q66 871.9 67.19224799162917 905Z" fill="#1a4a3a"/><path d="M76 905Q86.2 886.3 87.4 873.8Q89.7 889.4 87.4061696523858 905Z" fill="#0c2a22"/><path d="M98 905Q109.3 862.8 107.2 834.7Q115.1 869.8 113.29641441190282 905Z" fill="#0c2a22"/><path d="M120 905Q129.4 878.7 126.5 861.2Q134.8 883.1 133.4661756134277 905Z" fill="#0c2a22"/><path d="M142 905Q150.7 872.9 147.3 851.5Q156.2 878.3 155.12200992286392 905Z" fill="#0c2a22"/><path d="M164 905Q173.9 883.7 169.9 869.4Q180.2 887.2 179.05788246081946 905Z" fill="#1a4a3a"/><path d="M186 905Q194.2 877.3 195.2 858.8Q197 881.9 195.12565096572567 905Z" fill="#1a4a3a"/><path d="M208 905Q217.6 877.6 213.2 859.4Q224 882.2 222.96600299232267 905Z" fill="#0c2a22"/><path d="M230 905Q239.9 886.2 238 873.7Q245 889.3 243.37148057052073 905Z" fill="#1a4a3a"/><path d="M252 905Q254.3 865.7 243.7 839.4Q261.6 872.2 263.21017758102175 905Z" fill="#1a4a3a"/><path d="M274 905Q284.9 882.1 286.6 866.8Q288.2 885.9 285.67798444598725 905Z" fill="#0c2a22"/><path d="M296 905Q299.3 869 293.9 845Q303.9 875 304.2800831611083 905Z" fill="#1a4a3a"/><path d="M318 905Q319.6 858.4 311.1 827.4Q325.4 866.2 326.78692684395884 905Z" fill="#0c2a22"/><path d="M340 905Q344.2 880.3 331.1 863.8Q353.8 884.4 355.5754907425265 905Z" fill="#1a4a3a"/><path d="M362 905Q372.7 862.3 374.6 833.8Q375.8 869.4 373.28386285461846 905Z" fill="#1a4a3a"/><path d="M384 905Q390.5 888.1 382 876.8Q398.2 890.9 398.56127666175485 905Z" fill="#0c2a22"/><path d="M406 905Q414.7 860 411.5 830Q420.1 867.5 419.0387148680526 905Z" fill="#0c2a22"/><path d="M428 905Q438 878.4 434 860.7Q444.3 882.9 443.1169060758472 905Z" fill="#1a4a3a"/><path d="M450 905Q454 872.5 449.4 850.8Q458.3 877.9 458.3924447264452 905Z" fill="#0c2a22"/><path d="M472 905Q472.9 866.1 459.4 840.1Q481.4 872.5 483.9169459379436 905Z" fill="#0c2a22"/><path d="M494 905Q501.2 860.1 494.3 830.2Q508.2 867.6 508.17909822070885 905Z" fill="#0c2a22"/><path d="M516 905Q526.2 872.1 524.5 850.1Q531.2 877.5 529.4814440547316 905Z" fill="#1a4a3a"/><path d="M538 905Q547.9 867.3 543.4 842.2Q554.6 873.6 553.5448120194905 905Z" fill="#0c2a22"/><path d="M560 905Q570.6 862.9 569.5 834.8Q575.5 869.9 573.6080747820512 905Z" fill="#1a4a3a"/><path d="M582 905Q592.2 872 593.5 850Q595.6 877.5 593.2681339264551 905Z" fill="#1a4a3a"/><path d="M604 905Q609.5 865.5 604.7 839.1Q614.7 872 614.5268170484592 905Z" fill="#0c2a22"/><path d="M626 905Q628.2 888.3 614.7 877.1Q637.1 891.1 639.316388068084 905Z" fill="#0c2a22"/><path d="M648 905Q648.9 886.2 639.8 873.6Q654.7 889.3 656.3570815775144 905Z" fill="#0c2a22"/><path d="M670 905Q674.3 866.7 662.3 841.2Q683.1 873.1 684.666843848924 905Z" fill="#1a4a3a"/><path d="M692 905Q700.4 876.7 702.3 857.8Q702.6 881.4 700.4854631838253 905Z" fill="#0c2a22"/><path d="M714 905Q726.7 871.8 726.4 849.6Q732 877.3 729.5477958168349 905Z" fill="#0c2a22"/><path d="M736 905Q743.1 883.3 736.3 868.8Q749.9 886.9 749.8777948635424 905Z" fill="#0c2a22"/><path d="M758 905Q761.8 881.3 749 865.4Q771 885.2 772.8443635132577 905Z" fill="#0c2a22"/><path d="M780 905Q781.2 876 768 856.7Q789.6 880.9 791.9597965105994 905Z" fill="#1a4a3a"/><path d="M802 905Q812.8 873 811.5 851.7Q817.8 878.4 815.9384132827989 905Z" fill="#0c2a22"/><path d="M824 905Q831.2 871.6 823.9 849.3Q838.4 877.2 838.4213708140155 905Z" fill="#0c2a22"/><path d="M846 905Q851.8 867.9 846 843.1Q857.7 874.1 857.6549055461352 905Z" fill="#1a4a3a"/><path d="M868 905Q872.1 879.2 867.9 861.9Q876.2 883.5 876.247751213841 905Z" fill="#0c2a22"/><path d="M890 905Q897.6 876.9 891 858.2Q904.6 881.6 904.3899746447709 905Z" fill="#0c2a22"/><path d="M912 905Q920.1 885.3 919.8 872.1Q923.5 888.6 921.8862624856515 905Z" fill="#1a4a3a"/><path d="M934 905Q941.5 870.5 938.6 847.6Q946.3 876.3 945.3698705950471 905Z" fill="#0c2a22"/><path d="M956 905Q959.5 879.1 953.4 861.8Q964.5 883.4 964.995966237966 905Z" fill="#0c2a22"/><path d="M978 905Q985.8 865 986.3 838.3Q988.5 871.6 986.879072219952 905Z" fill="#1a4a3a"/><path d="M1000 905Q1006.6 860 1002.5 830Q1011.7 867.5 1011.2317936487792 905Z" fill="#0c2a22"/><path d="M1022 905Q1023.1 874.4 1009.1 853.9Q1031.9 879.5 1034.5166910146518 905Z" fill="#0c2a22"/><path d="M1044 905Q1052.1 859.9 1049.8 829.9Q1056.8 867.4 1055.624547492363 905Z" fill="#0c2a22"/><path d="M1066 905Q1071.3 887.9 1064.5 876.4Q1077.4 890.7 1077.7296098505421 905Z" fill="#0c2a22"/><path d="M1088 905Q1090.5 875.3 1080.5 855.6Q1097.6 880.3 1099.064538373672 905Z" fill="#1a4a3a"/><path d="M1110 905Q1114.8 875.3 1104.4 855.5Q1123 880.3 1124.109494568882 905Z" fill="#0c2a22"/><path d="M1132 905Q1141 882.8 1141.9 868.1Q1144.1 886.5 1142.0728893671865 905Z" fill="#0c2a22"/><path d="M1154 905Q1165.3 859.2 1163.9 828.6Q1170.7 866.8 1168.6643099735159 905Z" fill="#0c2a22"/><path d="M1176 905Q1179 881.2 1168.5 865.3Q1186.5 885.2 1187.973207540785 905Z" fill="#0c2a22"/><path d="M1198 905Q1206.5 868.6 1205.5 844.3Q1210.6 874.6 1209.0610043993788 905Z" fill="#0c2a22"/><path d="M1220 905Q1227.8 857.7 1228.9 826.1Q1230.3 865.5 1228.5435074572856 905Z" fill="#0c2a22"/><path d="M1242 905Q1246.5 869.7 1240 846.1Q1252.1 875.5 1252.5491387309032 905Z" fill="#0c2a22"/><path d="M1264 905Q1271.4 857.4 1266.4 825.6Q1277.3 865.3 1276.8653977111592 905Z" fill="#0c2a22"/><path d="M1286 905Q1291.1 883.1 1282.8 868.5Q1298 886.8 1298.6915576054637 905Z" fill="#0c2a22"/><path d="M1308 905Q1312.7 867.2 1300.8 841.9Q1321.7 873.5 1323.1604559376467 905Z" fill="#0c2a22"/><path d="M1330 905Q1336.3 862.8 1335.1 834.7Q1339.6 869.8 1338.5586708156006 905Z" fill="#0c2a22"/><path d="M1352 905Q1352.2 867.8 1342.3 843Q1358.2 874 1360.148570452024 905Z" fill="#0c2a22"/><path d="M1374 905Q1374.2 870.1 1364.5 846.9Q1380.2 876 1382.0881226585136 905Z" fill="#0c2a22"/><path d="M1396 905Q1401.6 872.2 1398.5 850.3Q1405.7 877.7 1405.2578542206975 905Z" fill="#0c2a22"/><path d="M1418 905Q1421.8 888.9 1411.9 878.1Q1429.2 891.6 1430.4568412084661 905Z" fill="#1a4a3a"/><path d="M1440 905Q1446.4 877.5 1440.3 859.1Q1452.7 882.1 1452.6168909264886 905Z" fill="#0c2a22"/><path d="M1462 905Q1469.2 883.5 1460.8 869.2Q1477 887.1 1477.2743281938829 905Z" fill="#0c2a22"/><path d="M1484 905Q1494.1 859.5 1493 829.2Q1498.9 867.1 1497.1082738536486 905Z" fill="#1a4a3a"/><path d="M1506 905Q1513.5 858.2 1513.8 826.9Q1516.4 866 1514.8048066616102 905Z" fill="#0c2a22"/><path d="M1528 905Q1534.7 882.7 1529 867.9Q1540.8 886.4 1540.569304764801 905Z" fill="#0c2a22"/><path d="M1550 905Q1556.4 886.3 1547.2 873.9Q1564.6 889.4 1565.1334044217442 905Z" fill="#0c2a22"/><path d="M1572 905Q1579.7 863.7 1574.2 836.2Q1586 870.6 1585.5436830385995 905Z" fill="#0c2a22"/><path d="M1594 905Q1603.7 884.8 1603.3 871.4Q1607.8 888.2 1605.957330863883 905Z" fill="#0c2a22"/><path d="M1616 905Q1624.7 880.4 1624.1 864Q1628.5 884.5 1626.843487060483 905Z" fill="#0c2a22"/><path d="M1638 905Q1645.9 880.6 1641.2 864.4Q1651.8 884.7 1651.1928949441694 905Z" fill="#0c2a22"/><path d="M1660 905Q1672.4 879.8 1671.9 863.1Q1677.6 884 1675.2074535407196 905Z" fill="#1a4a3a"/><path d="M1682 905Q1693.6 862.7 1691.5 834.5Q1699.5 869.8 1697.624853904941 905Z" fill="#1a4a3a"/><path d="M1704 905Q1706.9 882.3 1700.1 867.2Q1712.2 886.1 1713.020217061993 905Z" fill="#0c2a22"/><path d="M1726 905Q1733.8 859.5 1735.4 829.1Q1736.1 867 1734.1946143286252 905Z" fill="#0c2a22"/><path d="M1748 905Q1751.4 887.6 1746.2 876Q1756 890.5 1756.315311745103 905Z" fill="#0c2a22"/></g></g></svg>
+      </div>
+    </div>
+    <div class="voile"></div>
+
+    <div class="hero-texte">
+      <p class="lieu">Îlet des Orangers · Mafate · 980 m</p>
+      <p class="camping">Camping</p>
+      <h1>Ti Piton</h1>
+      <p class="promesse">Un petit monde posé au cœur du cirque : on y vient à pied, on y dort sous une tente éclairée, on y repart le cœur léger.</p>
+      <div class="actions">
+        <span class="btn-wrap"><a class="btn btn-jaune" href="#reserver">Réserver</a></span>
+        <span class="btn-wrap"><a class="btn btn-creme" href="tel:+262692061817"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a></span>
+        <span class="btn-wrap"><a class="btn btn-vert" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.02L4 29l8.14-1.56a12 12 0 0 0 3.9.65h.01C22.68 28.09 28 22.7 28 16.07 28 12.86 26.75 9.84 24.48 7.57A11.9 11.9 0 0 0 16.04 3zm0 22.03h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.83.93.96-4.7-.24-.38a9.9 9.9 0 0 1-1.52-5.23c0-5.5 4.5-9.97 10.02-9.97 2.67 0 5.18 1.04 7.06 2.93a9.9 9.9 0 0 1 2.92 7.05c0 5.5-4.5 9.99-10 9.99zm5.48-7.47c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07a8.2 8.2 0 0 1-2.42-1.5 9.1 9.1 0 0 1-1.68-2.09c-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.48 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35z"/></svg>WhatsApp</a></span>
+      </div>
+    </div>
+    <figure class="postale"><div class="pw"><img src="../images/tipiton/terrain.webp" width="1027" height="684" alt="Le terrain du Camping Ti Piton : deux tentes dômes bleues sur la pelouse, une table ronde et des chaises face aux remparts de Mafate (photo réelle)"><figcaption>Le terrain, face aux remparts de Mafate</figcaption></div></figure>
+    <button class="incline" type="button" hidden>Activer l'inclinaison</button>
+    <p class="indice">Faites défiler : le diorama s'ouvre<i></i></p>
+  </div>
+
+  <div class="runway">
+    <div class="wrap">
+      <article class="carte c-nuit promesse-carte rev">
+        <i class="ep e3"></i><i class="ep e2"></i>
+        <div class="pw"><div class="papier">
+          <div>
+            <span class="etiquette">Ici, la route s'arrête</span>
+            <h2>On y vient à pied. Rien d'autre.</h2>
+            <p>Dans le cirque de Mafate, aucune route : on arrive à pied (ou en hélicoptère). Le cirque est inscrit au patrimoine mondial de l'UNESCO, au cœur du Parc national. Laissez le réseau en bas, éteignez les écrans : à l'Îlet des Orangers, on regarde les remparts.</p>
+          </div>
+          <img src="../images/tipiton/reel-remparts.webp" width="1003" height="318" alt="Ciel bleu et nuages au-dessus des remparts de Mafate, grande falaise verte à droite (photo réelle)" loading="lazy">
+        </div></div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<main>
+<!-- ================= L'EXPÉRIENCE ================= -->
+<section class="strate s-exp" id="experience">
+  <div class="crete"></div>
+  <div class="wrap">
+    <span class="etiquette">Une journée à l'îlet</span>
+    <h2>Six temps, un seul décor</h2>
+    <p class="chapeau">De l'arrivée au réveil, chaque moment du séjour est un petit tableau posé devant les remparts.</p>
+    <div class="exp-grille">
+      <article class="carte rev" style="--r:-.7deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <svg class="photo dessin" viewBox="0 0 320 200" role="img" aria-label="Dessin en papier découpé : deux verres de punch et une rondelle de citron devant des collines vertes"><rect width="320" height="200" fill="#f3b57b"/><circle cx="240" cy="62" r="34" fill="#ffd777"/><g class="cut"><path d="M0 150 70 110 140 148 215 100 320 150V200H0z" fill="#2f7a5a"/><path d="M0 175 90 140 190 172 270 138 320 160V200H0z" fill="#245f45"/></g><g class="cut"><path d="M82 70h58l-6 66q-1 10-23 10t-23-10z" fill="#fff6d6"/><path d="M85 92h52l-3 38q-1 8-23 8t-23-8z" fill="#ff9f43"/><path d="M178 80h52l-5 58q-1 9-21 9t-21-9z" fill="#fff6d6"/><path d="M181 102h46l-3 34q-1 7-20 7t-20-7z" fill="#e4577a"/></g><g class="cut"><circle cx="238" cy="78" r="16" fill="#ffc857"/><circle cx="238" cy="78" r="11" fill="#fff0a8"/><path d="M238 67v22M227 78h22" stroke="#ffc857" stroke-width="2"/><rect x="108" y="146" width="6" height="26" fill="#fff6d6"/><rect x="204" y="147" width="6" height="25" fill="#fff6d6"/></g></svg>
+        <div><p class="heure">01 · L'arrivée</p><h3>L'arrivée et le punch</h3><p>Jean-Martel vous accueille avec un punch maison, offert. On pose le sac, on respire, le cirque est déjà là.</p></div>
+      </div></div></article>
+      <article class="carte c-vert k2 rev" style="--r:.6deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <img class="photo" src="../images/tipiton/reel-tentes.webp" width="500" height="255" alt="Deux tentes dômes bleues sur la pelouse, les remparts de Mafate derrière (photo réelle)" loading="lazy">
+        <div><p class="heure">02 · La tente</p><h3>La tente</h3><p>Matelas, oreillers, draps et couvertures : la tente équipée est prête à votre arrivée, face aux remparts de Mafate.</p></div>
+      </div></div></article>
+      <article class="carte k3 rev" style="--r:-.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <svg class="photo dessin" viewBox="0 0 320 200" role="img" aria-label="Dessin en papier découpé : une marmite fumante entourée d'assiettes sur une table"><rect width="320" height="200" fill="#e9a25a"/><g class="cut"><path d="M0 150h320v50H0z" fill="#8a5a2b"/><path d="M0 150h320v8H0z" fill="#a8743c"/></g><g class="cut"><path d="M105 80h110v46q0 28-55 28t-55-28z" fill="#3a2a22"/><rect x="95" y="74" width="130" height="12" rx="5" fill="#5b4338"/><path d="M105 95q-26 0-26 14t26 14M215 95q26 0 26 14t-26 14" fill="none" stroke="#3a2a22" stroke-width="8"/></g><g class="cut"><ellipse cx="52" cy="152" rx="34" ry="9" fill="#fff6d6"/><ellipse cx="52" cy="150" rx="22" ry="5" fill="#d9c9a0"/><ellipse cx="268" cy="152" rx="34" ry="9" fill="#fff6d6"/><ellipse cx="268" cy="150" rx="22" ry="5" fill="#d9c9a0"/></g><g class="cut" fill="none" stroke="#fff6d6" stroke-width="7" stroke-linecap="round"><path d="M130 62q-14-14 0-26t0-24"/><path d="M160 62q-14-14 0-26t0-24"/><path d="M190 62q-14-14 0-26t0-24"/></g></svg>
+        <div><p class="heure">03 · 18 h 30</p><h3>Le dîner de 18 h 30</h3><p>Entrée, plat, dessert : une cuisine maison, partagée entre randonneurs. Les voyageurs parlent du carry et du rougail saucisse.</p></div>
+      </div></div></article>
+      <article class="carte c-nuit rev" style="--r:.7deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <svg class="photo dessin" viewBox="0 0 320 200" role="img" aria-label="Dessin en papier découpé : un feu de camp aux flammes orange et jaunes, entouré de deux tentes"><rect width="320" height="200" fill="#13204a"/><path d="M40 23 l2.0 5.0 l5.0 2.0 l-5.0 2.0 l-2.0 5.0 z" fill="#fff6d6"/><path d="M110 13 l1.4 3.6 l3.6 1.4 l-3.6 1.4 l-1.4 3.6 z" fill="#fff6d6"/><path d="M200 28 l1.7 4.3 l4.3 1.7 l-4.3 1.7 l-1.7 4.3 z" fill="#fff6d6"/><path d="M280 15 l2.0 5.0 l5.0 2.0 l-5.0 2.0 l-2.0 5.0 z" fill="#fff6d6"/><path d="M250 66 l1.1 2.9 l2.9 1.1 l-2.9 1.1 l-1.1 2.9 z" fill="#fff6d6"/><g class="cut"><path d="M0 160 60 120 120 160 200 118 260 160 320 130V200H0z" fill="#0b1535"/></g><g class="cut"><path d="M160 156C120 150 128 112 150 92c-2 18 12 22 16 6 6-14 22-30 20-46 26 30 40 68 6 104z" fill="#e4572e"/><path d="M162 156c-26-4-22-30-8-46 2 12 10 12 14 2 8 8 22 22 8 44z" fill="#ff9f43"/><path d="M162 156c-12-2-10-16-2-26 4 6 10 6 12 12 2 6 0 12-10 14z" fill="#ffd777"/></g><g class="cut"><rect x="112" y="156" width="104" height="13" rx="6" fill="#5b3a22" transform="rotate(-8 164 162)"/><rect x="112" y="156" width="104" height="13" rx="6" fill="#7a4e2c" transform="rotate(8 164 162)"/></g><g class="cut"><path d="M34 170 66 128 98 170z" fill="#2f7a5a"/><path d="M236 172 266 132 296 172z" fill="#2f7a5a"/></g></svg>
+        <div><p class="heure">04 · Le feu</p><h3>Le feu</h3><p>Barbecue à disposition, bois à 3 € le fagot. Sortez la guitare, on s'installe autour des flammes.</p></div>
+      </div></div></article>
+      <article class="carte c-jaune k2 rev" style="--r:-.6deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <svg class="photo dessin" viewBox="0 0 320 200" role="img" aria-label="Dessin en papier découpé : une tente éclairée sous un ciel de croissant de lune et d'étoiles"><rect width="320" height="200" fill="#0b1535"/><path d="M30 21 l2.5 6.5 l6.5 2.5 l-6.5 2.5 l-2.5 6.5 z" fill="#fff6d6"/><path d="M90 54 l1.7 4.3 l4.3 1.7 l-4.3 1.7 l-1.7 4.3 z" fill="#fff6d6"/><path d="M140 16 l2.2 5.8 l5.8 2.2 l-5.8 2.2 l-2.2 5.8 z" fill="#fff6d6"/><path d="M200 65 l1.4 3.6 l3.6 1.4 l-3.6 1.4 l-1.4 3.6 z" fill="#fff6d6"/><path d="M260 31 l2.5 6.5 l6.5 2.5 l-6.5 2.5 l-2.5 6.5 z" fill="#fff6d6"/><path d="M300 85 l1.4 3.6 l3.6 1.4 l-3.6 1.4 l-1.4 3.6 z" fill="#fff6d6"/><path d="M60 95 l1.4 3.6 l3.6 1.4 l-3.6 1.4 l-1.4 3.6 z" fill="#fff6d6"/><g class="cut"><circle cx="250" cy="44" r="24" fill="#fff6d6"/><circle cx="260" cy="38" r="21" fill="#0b1535"/></g><g class="cut"><path d="M0 150 70 112 150 150 230 108 320 148V200H0z" fill="#1b2c57"/></g><g class="cut"><path d="M105 172 160 108 215 172z" fill="#ffc857"/><path d="M148 172 160 134 172 172z" fill="#fff0a8"/><path d="M0 178h320v22H0z" fill="#0f2e27"/></g></svg>
+        <div><p class="heure">05 · La nuit</p><h3>La nuit étoilée</h3><p>On éteint les écrans. Au-dessus de la tente éclairée, la Voie lactée prend toute la place.</p></div>
+      </div></div></article>
+      <article class="carte c-sable rev" style="--r:.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <svg class="photo dessin" viewBox="0 0 320 200" role="img" aria-label="Dessin en papier découpé : un soleil qui se lève derrière des collines et une mer de nuages"><rect width="320" height="200" fill="#f7c58f"/><circle cx="160" cy="120" r="62" fill="#ffe08a"/><circle cx="160" cy="120" r="42" fill="#fff3b8"/><g class="cut"><path d="M0 130 60 98 120 126 190 92 260 126 320 104V200H0z" fill="#3a7d5b"/></g><g class="cut"><path d="M0 150q30-22 60-8t60-10 60 8 60-10 80 10V200H0z" fill="#fffaf0"/><path d="M0 176q40-18 80-6t90-8 80 6 70-6V200H0z" fill="#e8dcc3"/></g></svg>
+        <div><p class="heure">06 · 7 h 30</p><h3>Le réveil de 7 h 30</h3><p>Café, thé, lait, tisane, pain, beurre, confiture : le petit-déjeuner se prend face au soleil levant.</p></div>
+      </div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DORMIR ================= -->
+<section class="strate s-dor" id="dormir">
+  <div class="crete"></div>
+  <div class="wrap">
+    <span class="etiquette">Dormir</span>
+    <h2>Trois façons de poser son sac</h2>
+    <p class="chapeau">Tentes équipées, tentes seules ou emplacement pour votre propre tente. La demi-pension comprend le dîner, la nuit et le petit-déjeuner.</p>
+    <article class="carte c-sable reelle" style="--r:-.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+      <figure>
+        <div class="deux">
+          <img src="../images/tipiton/reel-table.webp" width="520" height="324" alt="Une table ronde à motifs et deux chaises sur la pelouse du camping (photo réelle)" loading="lazy">
+          <img src="../images/tipiton/reel-falaise.webp" width="427" height="440" alt="La grande falaise verte et le ciel bleu au-dessus du camping (photo réelle)" loading="lazy">
+        </div>
+        <figcaption><span class="tag">Photos réelles du camping</span>La table et les chaises, la falaise voisine</figcaption>
+      </figure>
+    </div></div></article>
+    <div class="formules">
+      <article class="carte rev" style="--r:-.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <h3>Tente équipée</h3><p>Matelas, oreillers, draps, couvertures</p>
+        <p class="prix">30 €<small>la nuit pour 2</small></p>
+        <p class="dp"><b>70 €</b>pour 2 en demi-pension</p>
+      </div></div></article>
+      <article class="carte c-vert k2 rev" style="--r:.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <h3>Tente seule</h3><p>pour 1 personne</p>
+        <p class="prix">20 €<small>la nuit</small></p>
+        <p class="dp"><b>40 €</b>en demi-pension</p>
+      </div></div></article>
+      <article class="carte c-jaune k3 rev" style="--r:-.4deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <h3>Emplacement nu</h3><p>Pour votre propre tente</p>
+        <p class="prix">7 €<small>par personne</small></p>
+        <p class="dp"><b>27 €</b>par personne en demi-pension</p>
+      </div></div></article>
+    </div>
+    <div class="autres">
+      <article class="carte c-nuit rev" style="--r:.4deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <h3>Enfant</h3><p class="prix" style="font-size:56px">12 €<small>moins de 10 ans</small></p>
+      </div></div></article>
+      <article class="carte c-sable k2 rev" style="--r:-.4deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <h3>Sur place</h3>
+        <ul>
+          <li>Sanitaires : douches et toilettes, eau chaude en journée</li>
+          <li>Dîner de 18 h 30 : 14 € par personne (régimes particuliers à signaler à la réservation)</li>
+          <li>Petit-déjeuner de 7 h 30 : 6 € par personne</li>
+          <li>Barbecue à disposition, bois 3 € le fagot, boissons en vente</li>
+          <li>Animaux acceptés</li>
+        </ul>
+      </div></div></article>
+      <article class="carte k3 rev" style="--r:.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <h3>Bienvenue</h3><p>Le punch maison est offert à chaque arrivée. Capacité : 10 voyageurs, pour rester un petit camping.</p>
+      </div></div></article>
+    </div>
+    <p class="note-prix">Tarifs indicatifs, hors frais de réservation.</p>
+  </div>
+</section>
+
+<!-- ================= VENIR ================= -->
+<section class="strate s-ven" id="venir">
+  <div class="crete"></div>
+  <div class="wrap">
+    <span class="etiquette">Venir</span>
+    <h2>Trois sentiers jusqu'à l'îlet</h2>
+    <p class="chapeau">Aucune route : l'accès se fait à pied, avec des durées indicatives. L'îlet est aussi une étape vers Roche Plate, Marla ou la Rivière des Galets.</p>
+    <div class="venir-grille">
+      <div class="sentiers">
+        <article class="carte c-jaune rev" style="--r:-.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+          <p class="temps">~3 h</p><h3>Depuis le Maïdo</h3><p>Le plus court : environ 3 h, en descente.</p>
+        </div></div></article>
+        <article class="carte k2 rev" style="--r:.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+          <p class="temps">~4 h</p><h3>Depuis Deux-Bras</h3><p>Par la Rivière des Galets : 4x4 jusqu'à Deux-Bras, puis environ 4 h de marche.</p>
+        </div></div></article>
+        <article class="carte c-nuit k3 rev" style="--r:-.4deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+          <p class="temps">~5 h</p><h3>Depuis Sans-Souci</h3><p>Par la Canalisation des Orangers (citerne rouge), environ 5 h, sentier à flanc de falaise.</p>
+        </div></div></article>
+      </div>
+      <div>
+        <div class="carte carte-map c-sable rev" style="--r:.4deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+          <iframe src="https://maps.google.com/maps?q=-21.04181,55.39347&z=13&output=embed" title="Carte Google Maps : emplacement du Camping Ti Piton, Îlet des Orangers, Mafate" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div></div></div>
+      </div>
+    </div>
+    <article class="carte conseils c-nuit k2 rev" style="--r:-.3deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+      <h3>Avant de partir</h3>
+      <ul>
+        <li>De bonnes chaussures de marche</li>
+        <li>De l'eau pour toute la journée</li>
+        <li>Une lampe frontale : n'oubliez pas la vôtre</li>
+        <li>Les sentiers peuvent être fermés en cas d'alerte météo</li>
+      </ul>
+      <address>Camping Ti Piton · Îlet des Orangers · 97460 Mafate, La Réunion</address>
+    </div></div></article>
+  </div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section class="strate s-avi" id="avis">
+  <div class="crete"></div>
+  <div class="wrap">
+    <span class="etiquette">Avis des voyageurs</span>
+    <div class="avis-wrap">
+      <article class="carte c-nuit rev" style="--r:-.6deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <p class="note">5,0<small> / 5</small></p>
+        <div class="etoiles-note" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.8 5.7 21.500l1.700-7.200L2 9.600 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.8 5.7 21.500l1.700-7.200L2 9.600 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.8 5.7 21.500l1.700-7.200L2 9.600 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.8 5.7 21.500l1.700-7.200L2 9.600 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.4 4.7 1.7 7.2L12 17.8 5.7 21.500l1.700-7.200L2 9.600 9 9z"/></svg>
+        </div>
+        <p>4 avis</p>
+        <p class="src">Source : cirquedemafate.re</p>
+      </div></div></article>
+      <article class="carte k2 rev" style="--r:.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <p class="citation">« Je recommande totalement ! »</p>
+        <p class="auteur">Camille, octobre 2025</p>
+        <div class="themes"><span>Vue exceptionnelle</span><span>Hôte accueillant</span><span>Repas maison copieux</span><span>Tentes prêtes à l'arrivée</span><span>Bonne ambiance</span><span>Eau chaude en journée</span></div>
+      </div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RÉSERVER ================= -->
+<section class="strate s-res" id="reserver">
+  <div class="crete"></div>
+  <div class="wrap">
+    <span class="etiquette">Réserver</span>
+    <h2>Votre séjour, en un coup d'œil</h2>
+    <p class="chapeau">Choisissez vos dates et votre formule : l'estimation se calcule en direct (tarifs indicatifs).</p>
+    <div class="res-grille">
+      <article class="carte c-sable rev" style="--r:-.3deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+        <form id="formulaire" novalidate>
+          <label>Arrivée<input type="date" id="arrivee" required></label>
+          <label>Départ<input type="date" id="depart" required></label>
+          <label>Formule
+            <select id="formule">
+              <option value="tente2">Tente équipée (2 pers.)</option>
+              <option value="tente1">Tente seule (1 pers.)</option>
+              <option value="nu">Votre tente (emplacement)</option>
+            </select>
+          </label>
+          <label>Voyageurs<input type="number" id="personnes" min="1" max="10" value="2"></label>
+          <label class="case large"><input type="checkbox" id="dp" checked> Demi-pension (dîner + petit-déjeuner)</label>
+          <label class="large">Nom<input type="text" placeholder="Votre nom"></label>
+          <label class="large">Téléphone ou e-mail<input type="text" placeholder="Pour vous répondre"></label>
+          <label class="large">Message<textarea placeholder="Votre sentier d'arrivée, un régime alimentaire, une occasion spéciale…"></textarea></label>
+          <div class="estimation"><span>Estimation pour votre séjour</span><b id="total">70 €</b><span id="detail">1 nuit · 1 tente équipée · demi-pension · hors frais de réservation</span></div>
+          <span class="btn-wrap large"><button class="btn btn-jaune" type="submit">Envoyer ma demande</button></span>
+          <p class="merci" id="merci">Maquette : sur le vrai site, votre demande arriverait directement chez Jean-Martel, par e-mail.</p>
+        </form>
+      </div></div></article>
+      <div class="contacts">
+        <article class="carte c-nuit k2 rev" style="--r:.5deg"><i class="ep e3"></i><i class="ep e2"></i><div class="pw"><div class="papier">
+          <h3>Un mot à Jean-Martel</h3>
+          <p style="margin-bottom:18px">Pour aller plus vite : un appel, un message, ou un e-mail.</p>
+          <div class="contacts">
+            <span class="btn-wrap"><a class="btn btn-jaune" href="tel:+262692061817">Appeler le 0692 06 18 17</a></span>
+            <span class="btn-wrap"><a class="btn btn-vert" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener">WhatsApp</a></span>
+            <span class="btn-wrap"><a class="btn btn-creme" href="mailto:jeanmartelatache4@gmail.com">E-mail</a></span>
+          </div>
+        </div></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="strate s-pied">
+  <div class="crete"></div>
+  <div class="wrap">
+    <h2>Camping Ti Piton</h2>
+    <div class="cols">
+      <div>
+        <p>Îlet des Orangers, 97460 Mafate · La Réunion</p>
+        <p>Téléphone : <a href="tel:+262692061817">0692 06 18 17</a><br>E-mail : <a href="mailto:jeanmartelatache4@gmail.com">jeanmartelatache4@gmail.com</a></p>
+        <p>Bouton WhatsApp : à confirmer avec le propriétaire (le numéro doit être enregistré sur WhatsApp).</p>
+      </div>
+      <p class="mention">Maquette réalisée par KréaPro pour montrer ce que pourrait être le site du camping. Les photos sont de vraies photos du camping ; leur utilisation sur le site final est à confirmer avec le propriétaire. Infos et tarifs relevés sur les fiches publiques du camping (Office de Tourisme de l'Ouest, cirquedemafate.re). <a href="https://kreapro.re" target="_blank" rel="noopener">kreapro.re</a></p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.02L4 29l8.14-1.56a12 12 0 0 0 3.9.65h.01C22.68 28.09 28 22.7 28 16.07 28 12.86 26.75 9.84 24.48 7.57A11.9 11.9 0 0 0 16.04 3zm0 22.03h-.01a10 10 0 0 1-5.1-1.4l-.37-.22-4.83.93.96-4.7-.24-.38a9.9 9.9 0 0 1-1.52-5.23c0-5.5 4.5-9.97 10.02-9.97 2.67 0 5.18 1.04 7.06 2.93a9.9 9.9 0 0 1 2.92 7.05c0 5.5-4.5 9.99-10 9.99zm5.48-7.47c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07a8.2 8.2 0 0 1-2.42-1.5 9.1 9.1 0 0 1-1.68-2.09c-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.48 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.13-.27-.2-.57-.35z"/></svg></a>
+<div class="barre">
+  <span class="btn-wrap"><a class="btn btn-jaune" href="tel:+262692061817" style="width:100%">Appeler</a></span>
+  <span class="btn-wrap"><a class="btn btn-vert" href="https://wa.me/262692061817?text=Bonjour%20Jean-Martel%2C%20je%20souhaite%20r%C3%A9server%20au%20Camping%20Ti%20Piton." target="_blank" rel="noopener" style="width:100%">WhatsApp</a></span>
+</div>
+
+<script>
+(function(){
+  var calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $=function(id){return document.getElementById(id)};
+  var cl=function(v,a,b){return Math.max(a,Math.min(b,v))};
+
+  /* ---------- apparitions : les cartes montent des profondeurs ---------- */
+  var revs=[].slice.call(document.querySelectorAll('.rev'));
+  if('IntersectionObserver' in window && !calme){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+    revs.forEach(function(el){io.observe(el);});
+  }else{revs.forEach(function(el){el.classList.add('vu');});}
+
+  /* ---------- menu : section active ---------- */
+  var liens=[].slice.call(document.querySelectorAll('.pastille a'));
+  if('IntersectionObserver' in window){
+    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){liens.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-40% 0px -50% 0px'});
+    liens.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io2.observe(s);});
+  }
+
+  /* ---------- diorama : inclinaison + ouverture au défilement ---------- */
+  if(!calme){
+    var stage=document.querySelector('.stage'),monde=document.querySelector('.monde'),voile=document.querySelector('.voile'),texte=document.querySelector('.hero-texte'),postale=document.querySelector('.postale'),indice=document.querySelector('.indice');
+    var calques=[].slice.call(document.querySelectorAll('.calque')).map(function(el){
+      var z=+el.dataset.z;return{el:el,z:z,dz:+(el.dataset.dz||0),dy:+(el.dataset.dy||0),fade:el.dataset.fade?+el.dataset.fade:-1,comp:(1200-z)/1200};
+    });
+    var PUSH=150,p=0,pt=0,rx=0,ry=0,tx=0,ty=0,dernier=-1e9,visible=true,enCours=false;
+    var lirePos=function(){pt=cl(scrollY/(innerHeight*.9),0,1);};
+    var image=function(t){
+      enCours=false;
+      var inactif=t-dernier>3000;
+      if(inactif){tx=Math.sin(t/2300)*4.6;ty=Math.cos(t/3100)*2.6;}
+      p+=(pt-p)*.14;rx+=(ty-rx)*.07;ry+=(tx-ry)*.07;
+      var att=1-.7*p;
+      monde.style.transform='translate3d(0,0,'+(PUSH*p).toFixed(1)+'px) rotateX('+(rx*att).toFixed(3)+'deg) rotateY('+(ry*att).toFixed(3)+'deg)';
+      for(var i=0;i<calques.length;i++){
+        var c=calques[i];
+        c.el.style.transform='translate3d(0,'+(c.dy*p).toFixed(1)+'px,'+(c.z+c.dz*p).toFixed(1)+'px) scale('+c.comp.toFixed(4)+')';
+        if(c.fade>=0)c.el.style.opacity=(1-cl((p-c.fade)/(1-c.fade),0,1)).toFixed(3);
+      }
+      voile.style.opacity=(p*.7).toFixed(3);
+      var o=cl(1-p*2.2,0,1);
+      texte.style.opacity=o.toFixed(3);
+      texte.style.transform='translate3d('+(-ry*2.4).toFixed(1)+'px,'+(-p*80-rx*1.8).toFixed(1)+'px,0)';
+      texte.style.pointerEvents=o<.3?'none':'';
+      postale.style.opacity=o.toFixed(3);
+      postale.style.transform='translate3d(0,'+(-p*60).toFixed(1)+'px,0) rotate(3deg)';
+      indice.style.opacity=cl(1-p*5,0,1).toFixed(3);
+      if(visible)demarrer();
+    };
+    var demarrer=function(){if(!enCours&&visible){enCours=true;requestAnimationFrame(image);}};
+    addEventListener('scroll',function(){lirePos();demarrer();},{passive:true});
+    addEventListener('pointermove',function(e){
+      if(e.pointerType==='touch')return;
+      tx=(e.clientX/innerWidth-.5)*16;ty=-(e.clientY/innerHeight-.5)*16;dernier=performance.now();demarrer();
+    },{passive:true});
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){visible=es[0].isIntersecting;if(visible)demarrer();}).observe(stage);
+    }
+    /* téléphone : inclinaison par le gyroscope */
+    var base=null;
+    var orient=function(e){
+      if(e.gamma==null||e.beta==null)return;
+      if(!base)base={g:e.gamma,b:e.beta};
+      tx=cl((e.gamma-base.g)/18,-1,1)*8;ty=cl(-(e.beta-base.b)/18,-1,1)*8;dernier=performance.now();demarrer();
+    };
+    var bouton=document.querySelector('.incline');
+    if(matchMedia('(pointer:coarse)').matches&&window.DeviceOrientationEvent){
+      var D=window.DeviceOrientationEvent;
+      if(typeof D.requestPermission==='function'){
+        bouton.hidden=false;
+        bouton.addEventListener('click',function(){
+          D.requestPermission().then(function(r){if(r==='granted')addEventListener('deviceorientation',orient,true);bouton.hidden=true;}).catch(function(){bouton.hidden=true;});
+        });
+      }else{addEventListener('deviceorientation',orient,true);}
+    }
+    lirePos();p=pt;demarrer();
+  }
+
+  /* ---------- réservation : estimation en direct (tarifs publics du camping) ---------- */
+  var iso=function(d){return d.toISOString().slice(0,10)};
+  $('arrivee').value=iso(new Date(Date.now()+14*864e5));
+  $('depart').value=iso(new Date(Date.now()+15*864e5));
+  var TARIFS={tente2:{nuit:30,dp:70,parTente:true,taille:2,nom:'tente équipée'},
+              tente1:{nuit:20,dp:40,parTente:true,taille:1,nom:'tente seule'},
+              nu:{nuit:7,dp:27,parTente:false,taille:1,nom:'emplacement'}};
+  var estimer=function(){
+    var nuits=Math.max(1,Math.round((new Date($('depart').value)-new Date($('arrivee').value))/864e5)||1);
+    var p=Math.min(10,Math.max(1,parseInt($('personnes').value,10)||1));
+    var t=TARIFS[$('formule').value],dp=$('dp').checked;
+    var unites=Math.ceil(p/t.taille);
+    $('total').textContent=(unites*(dp?t.dp:t.nuit)*nuits).toLocaleString('fr-FR')+' €';
+    var n=t.parTente?unites:p;
+    $('detail').textContent=nuits+' nuit'+(nuits>1?'s':'')+' · '+n+' '+t.nom+(n>1?'s':'')+' · '+(dp?'demi-pension':'nuit seule')+' · hors frais de réservation';
+  };
+  ['arrivee','depart','formule','personnes','dp'].forEach(function(id){$(id).addEventListener('input',estimer);});
+  estimer();
+  $('formulaire').addEventListener('submit',function(e){e.preventDefault();$('merci').style.display='block';});
+})();
+</script>
+
+<script id="kp-choix-js">
+(function(){
+  var barre=document.getElementById('kp-choix'), H=barre.getBoundingClientRect().height, ID=barre.getAttribute('data-id');
+  var ancien=0;
+  document.querySelectorAll('body *').forEach(function(el){
+    if(el===barre||barre.contains(el))return;
+    var s=getComputedStyle(el);
+    if((s.position==='fixed'||s.position==='sticky')&&/Maquette\s*Kr[ée]aPro/.test(el.textContent||'')&&(el.textContent||'').length<400){
+      ancien=Math.max(ancien,el.getBoundingClientRect().height);el.style.display='none';}
+  });
+  if(H>ancien){document.body.style.paddingTop=(parseFloat(getComputedStyle(document.body).paddingTop)||0)+(H-ancien)+'px';}
+  document.documentElement.style.scrollPaddingTop=(H+8)+'px';
+  // ♡ J'aime (mémorisé sur l'appareil, repris par la page de choix)
+  var b=barre.querySelector('.kp-aime');
+  function liste(){try{return JSON.parse(localStorage.getItem('tipiton-aime')||'[]');}catch(e){return [];}}
+  function maj(){var on=liste().indexOf(ID)>=0;b.setAttribute('aria-pressed',on);b.textContent=on?'♥ J\'aime':'♡ J\'aime';}
+  b.addEventListener('click',function(){var l=liste(),i=l.indexOf(ID);if(i>=0)l.splice(i,1);else l.push(ID);
+    try{localStorage.setItem('tipiton-aime',JSON.stringify(l));}catch(e){}maj();});
+  maj();
+  // tous les autres liens sont neutralisés
+  var toast=document.getElementById('kp-toast'),t;
+  function message(txt){toast.textContent=txt;toast.classList.add('vu');clearTimeout(t);t=setTimeout(function(){toast.classList.remove('vu');},2600);}
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a');if(!a||a.hasAttribute('data-kp'))return;
+    var h=a.getAttribute('href')||'';if(h.charAt(0)==='#')return;
+    ev.preventDefault();
+    var quoi=/^tel:/.test(h)?'appellera le camping':/wa\.me|whatsapp/i.test(h)?'ouvrira WhatsApp':/^mailto:/.test(h)?'ouvrira l\'e-mail':'fonctionnera';
+    message('Maquette : sur votre vrai site, ce bouton '+quoi+'.');
+  },true);
+})();
+</script>
+</body>
+</html>
