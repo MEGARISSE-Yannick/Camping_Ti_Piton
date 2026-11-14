@@ -11,8 +11,13 @@ modèles, met un ♡ sur ceux qui lui plaisent, choisit son préféré et envoie
   - Chaque carte indique le type d'images et la formule.
   - Formulaire « Mon choix » : le préféré, les ♡ et les commentaires partent par **WhatsApp** (0693 86 08 02) ou par
     **e-mail** (contact@kreapro.re), sans serveur.
-- `modeles/` — les 44 maquettes. En haut, une barre « ← Tous · ♡ J'aime · ★ Je choisis ». Les autres liens (appeler,
+- `modeles/` — les 44 maquettes. En haut, une barre « ← Tous · ♡ J'aime · 📷 Vraies photos · ★ Je choisis ». Les autres liens (appeler,
   WhatsApp, e-mail…) sont neutralisés pour que le client reste dans le parcours.
+- **Bouton 📷 « Vraies photos »** (barre des modèles et page de choix) : un seul réglage, mémorisé sur l'appareil, qui
+  affiche les vraies photos du camping (`images/vraies/`) à la place des images de tous les modèles, avec des aperçus
+  de cartes refaits avec ces photos (`images/apercus/<n°>-p.webp`). Le cadre des images ne change pas, les textes
+  alternatifs, légendes et mentions « générées par IA » sont adaptés, aucun filtre n'est appliqué aux photos.
+  `?photos=1` ou `?photos=0` dans l'adresse force le réglage (pratique pour une présentation).
 - `images/` — uniquement les images utilisées, plus les aperçus des cartes (`images/apercus/<n°>.webp`).
 - `vercel.json` + `robots.txt` + balises `noindex` : le site n'est pas indexé par les moteurs de recherche.
 

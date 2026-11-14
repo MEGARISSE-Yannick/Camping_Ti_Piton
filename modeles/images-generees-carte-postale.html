@@ -262,16 +262,20 @@ footer .mention{border-top:1px solid #4a4650;padding-top:20px;display:grid;gap:1
   #kp-choix .kp-nom{flex:1;text-align:center;font-weight:500;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   #kp-choix .kp-aime[aria-pressed="true"]{background:#F4C2D7;color:#3D0B37}
   #kp-choix .kp-choisir{background:#C0D684;color:#3D0B37}
+  #kp-choix .kp-photos[aria-pressed="true"]{background:#F3F9D2;color:#3D0B37;box-shadow:inset 0 0 0 2px #C0D684}
   #kp-toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);z-index:2147483001;max-width:min(92vw,460px);
     background:#1A1A1A;color:#fff;font:500 15px/1.4 Inter,Arial,sans-serif;padding:12px 16px;border-radius:12px;
     box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
   #kp-toast.vu{opacity:1;transform:translate(-50%,0)}
   iframe{pointer-events:none}
-  @media (max-width:640px){#kp-choix .kp-nom{display:none}#kp-choix a,#kp-choix button{font-size:13.5px;padding:10px}#kp-choix .kp-choisir{margin-left:auto}}
+  @media (max-width:640px){#kp-choix .kp-nom,#kp-choix .kp-txt{display:none}#kp-choix{gap:6px}
+    #kp-choix a,#kp-choix button{font-size:13.5px;padding:10px;justify-content:center}#kp-choix .kp-retour,#kp-choix .kp-aime{min-width:44px}
+    #kp-choix .kp-photos{margin-left:auto}}
+  @media (max-width:380px){#kp-choix .kp-mot{display:none}}
 </style>
 </head>
 <body>
-<div id="kp-choix" data-id="8" role="navigation" aria-label="Choix du modèle"><a data-kp href="../index.html#g-propositions">← Tous</a><span class="kp-nom">8. Carte postale · Images générées d&#x27;après vos photos · Salazie · 790 €</span><button type="button" class="kp-aime" aria-pressed="false">♡ J'aime</button><a data-kp class="kp-choisir" href="../index.html?choix=8#choix">★ Je choisis</a></div><div id="kp-toast" role="status" aria-live="polite"></div>
+<div id="kp-choix" data-id="8" role="navigation" aria-label="Choix du modèle"><a data-kp class="kp-retour" href="../index.html#g-propositions" aria-label="Tous les modèles">←<span class="kp-txt">&nbsp;Tous</span></a><span class="kp-nom">8. Carte postale · Images générées d&#x27;après vos photos · Salazie · 790 €</span><button type="button" class="kp-aime" aria-pressed="false" aria-label="J'aime ce modèle">♡<span class="kp-txt">&nbsp;J'aime</span></button><button type="button" class="kp-photos" aria-pressed="false" title="Afficher les vraies photos du camping dans tous les modèles">📷&nbsp;<span class="kp-mot">Vraies&nbsp;</span>photos</button><a data-kp class="kp-choisir" href="../index.html?choix=8#choix">★ Je choisis</a></div><div id="kp-toast" role="status" aria-live="polite"></div>
 
 <!-- Dessins réutilisés : timbre, tampon, oblitération -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -585,7 +589,7 @@ footer .mention{border-top:1px solid #4a4650;padding-top:20px;display:grid;gap:1
   // ♡ J'aime (mémorisé sur l'appareil, repris par la page de choix)
   var b=barre.querySelector('.kp-aime');
   function liste(){try{return JSON.parse(localStorage.getItem('tipiton-aime')||'[]');}catch(e){return [];}}
-  function maj(){var on=liste().indexOf(ID)>=0;b.setAttribute('aria-pressed',on);b.textContent=on?'♥ J\'aime':'♡ J\'aime';}
+  function maj(){var on=liste().indexOf(ID)>=0;b.setAttribute('aria-pressed',on);b.innerHTML=(on?'♥':'♡')+'<span class="kp-txt">&nbsp;J\'aime</span>';}
   b.addEventListener('click',function(){var l=liste(),i=l.indexOf(ID);if(i>=0)l.splice(i,1);else l.push(ID);
     try{localStorage.setItem('tipiton-aime',JSON.stringify(l));}catch(e){}maj();});
   maj();
@@ -599,6 +603,116 @@ footer .mention{border-top:1px solid #4a4650;padding-top:20px;display:grid;gap:1
     var quoi=/^tel:/.test(h)?'appellera le camping':/wa\.me|whatsapp/i.test(h)?'ouvrira WhatsApp':/^mailto:/.test(h)?'ouvrira l\'e-mail':'fonctionnera';
     message('Maquette : sur votre vrai site, ce bouton '+quoi+'.');
   },true);
+})();
+</script>
+<script id="kp-photos-js">
+(function(){
+  var D={"p": {"p1": "Deux tentes dômes bleues sur la pelouse, face aux remparts de Mafate", "p4": "Le coin repas : tables et bancs en bois à l'ombre des arbres, une tente bleue sur la pelouse", "p5": "Vue d'ensemble : la pelouse, les cases et deux tentes au pied des remparts", "p6": "Une cabane en bois au pied des remparts", "p7": "Un bananier devant un bâtiment en tôle et un mur de pierre", "p8": "La table ronde bleue et les chaises sur la pelouse, deux tentes au loin, face aux remparts", "p9": "Une tente verte sur la pelouse, face aux remparts", "p10": "Deux tentes dômes bleues sur la pelouse, sous la falaise verte"}, "c": {"hero": "p1", "tente": "p9", "table": "p4", "punch": "p8", "ilet": "p5", "sentier": "p10", "aube": "p6", "feu": "p7", "etoiles": "p10", "terrain": "p1", "reel-tentes": "p10", "reel-remparts": "p5", "reel-table": "p8", "reel-falaise": "p9", "vignette-case": "p6", "vignette-chaise": "p4", "vignette-tole": "p7", "terrain-dore": "p1", "tente-bleue": "p10", "table-coucher": "p8", "sentier-falaise": "p5"}, "d": {"hero": [1920, 1080], "tente": [1920, 1048], "table": [1920, 1048], "punch": [1920, 1048], "ilet": [1920, 1072], "sentier": [1920, 1072], "aube": [1920, 1080], "feu": [1920, 1048], "etoiles": [1920, 1048], "terrain": [1027, 684], "reel-tentes": [500, 255], "reel-remparts": [1003, 318], "reel-table": [520, 324], "reel-falaise": [427, 440], "vignette-case": [106, 189], "vignette-chaise": [114, 196], "vignette-tole": [213, 268], "terrain-dore": [1920, 1072], "tente-bleue": [1920, 1072], "table-coucher": [1920, 1072], "sentier-falaise": [1920, 1072]}, "r": ["p1", "p10", "p5", "p9", "p8", "p4", "p6", "p7"], "dossier": "../images/vraies/"}, CLE='tipiton-vraies-photos';
+  var barre=document.getElementById('kp-choix'), bouton=barre&&barre.querySelector('.kp-photos'), toast=document.getElementById('kp-toast'), tt;
+  var RE=/images\/(?:[\w-]+\/)*([\w-]+)\.(?:webp|jpe?g|png)/;
+  var REG=/url\((['"]?)([^'")]*?images\/(?:[\w-]+\/)*([\w-]+)\.(?:webp|jpe?g|png))\1\)/g;
+  var RIA=/Les images sont des illustrations générées par (?:IA|intelligence artificielle)(?:, pas des photos du camping| d'après une photo réelle du camping)?|(?:images d'illustration|illustrations?|images?) (?:générées? par (?:IA|intelligence artificielle)(?: d'après une photo réelle du camping)?|IA\b)|Illustration (?:générée par )?IA\b/gi;
+  function cle(u){var m=RE.exec(u||'');return m&&D.c.hasOwnProperty(m[1])?m[1]:null;}
+  function hors(el){return !!barre&&(el===barre||barre.contains(el))||el.id==='kp-toast';}
+  // --- quelle photo pour quelle image : préférée si libre, sinon la première libre ; ordre du document => stable
+  var affect={}, prises={}, ordonne=false;
+  function prendre(k,p){affect[k]=p;prises[p]=1;return p;}
+  function photo(k){
+    if(affect[k])return affect[k];
+    if(!prises[D.c[k]])return prendre(k,D.c[k]);
+    for(var i=0;i<D.r.length;i++){if(!prises[D.r[i]])return prendre(k,D.r[i]);}
+    return prendre(k,D.c[k]);
+  }
+  function clesDe(el){var ks=[];
+    if(el.tagName==='IMG'){var k=cle(el.getAttribute('src'))||cle(el.getAttribute('srcset'));if(k)ks.push(k);}
+    var bg=getComputedStyle(el).backgroundImage;
+    if(bg&&bg!=='none'&&bg.indexOf('images/')>=0){bg.replace(REG,function(t,q,u,n){if(D.c.hasOwnProperty(n))ks.push(n);return t;});}
+    return ks;}
+  function ordonner(els){
+    var vues=[],i,j;
+    for(i=0;i<els.length;i++){if(hors(els[i]))continue;var ks=clesDe(els[i]);for(j=0;j<ks.length;j++)if(vues.indexOf(ks[j])<0)vues.push(ks[j]);}
+    for(i=0;i<vues.length;i++)if(!prises[D.c[vues[i]]])prendre(vues[i],D.c[vues[i]]);   // 1er passage : les préférées
+    for(i=0;i<vues.length;i++)photo(vues[i]);                                            // 2e : les autres
+    ordonne=true;}
+  // --- images <img>
+  function img(el,on){
+    if(on){
+      if(el.hasAttribute('data-kp-p'))return;
+      var k=cle(el.getAttribute('src'))||cle(el.getAttribute('srcset'));if(!k)return;
+      var p=photo(k), d=D.d[k];
+      el.setAttribute('data-kp-o',JSON.stringify([el.getAttribute('src'),el.getAttribute('srcset'),el.getAttribute('sizes'),el.getAttribute('alt'),el.getAttribute('style')]));
+      el.setAttribute('data-kp-p',p);
+      if(d)el.style.aspectRatio=d[0]+' / '+d[1];             // le cadre garde les proportions de l'image d'origine
+      var cs=getComputedStyle(el);if(cs.objectFit!=='cover'&&cs.objectFit!=='contain')el.style.objectFit='cover';
+      if(cs.filter&&cs.filter!=='none')el.style.filter='none';            // vraie photo : couleurs naturelles, jamais de filtre
+      if(cs.mixBlendMode&&cs.mixBlendMode!=='normal')el.style.mixBlendMode='normal';
+      el.removeAttribute('srcset');el.removeAttribute('sizes');
+      el.setAttribute('src',D.dossier+p+'.jpg');el.setAttribute('alt',D.p[p]+' (photo réelle)');
+    }else{
+      if(!el.hasAttribute('data-kp-p'))return;
+      var o=JSON.parse(el.getAttribute('data-kp-o'));el.removeAttribute('data-kp-p');el.removeAttribute('data-kp-o');
+      ['src','srcset','sizes','alt','style'].forEach(function(a,i){if(o[i]===null)el.removeAttribute(a);else el.setAttribute(a,o[i]);});
+    }
+  }
+  // --- images de fond CSS (le style en ligne gagne sur toutes les règles, @media comprises)
+  function fond(el,on){
+    if(on){
+      if(el.hasAttribute('data-kp-f'))return;
+      var bg=getComputedStyle(el).backgroundImage;if(!bg||bg==='none'||bg.indexOf('images/')<0)return;
+      var ch=false,nv=bg.replace(REG,function(t,q,u,n){if(!D.c.hasOwnProperty(n))return t;ch=true;return 'url("'+D.dossier+photo(n)+'.jpg")';});
+      if(!ch)return;
+      el.setAttribute('data-kp-f',el.style.backgroundImage||'');el.style.backgroundImage=nv;
+    }else{
+      if(!el.hasAttribute('data-kp-f'))return;
+      el.style.backgroundImage=el.getAttribute('data-kp-f');el.removeAttribute('data-kp-f');
+    }
+  }
+  // --- légendes <figcaption> d'une figure à une seule image
+  function legende(fig,on){
+    var c=fig.querySelector('figcaption');if(!c)return;
+    if(on){
+      if(c.hasAttribute('data-kp-l'))return;
+      var ims=fig.querySelectorAll('img');if(ims.length!==1||!ims[0].hasAttribute('data-kp-p'))return;
+      if((c.textContent||'').trim().length>160)return;
+      c.setAttribute('data-kp-l',c.innerHTML);c.textContent=D.p[ims[0].getAttribute('data-kp-p')]+'.';
+    }else if(c.hasAttribute('data-kp-l')){c.innerHTML=c.getAttribute('data-kp-l');c.removeAttribute('data-kp-l');}
+  }
+  // --- mentions « générées par IA » => « vraies photos du camping »
+  var textes=[];
+  function mentions(on){
+    if(!on){textes.forEach(function(t){t[0].nodeValue=t[1];});textes=[];return;}
+    var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n;
+    while((n=w.nextNode())){
+      if(!n.parentNode||hors(n.parentNode)||/^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName))continue;
+      var v=n.nodeValue;RIA.lastIndex=0;if(!RIA.test(v))continue;
+      var nv=v.replace(RIA,function(t){var r=/^Les images/i.test(t)?'Les photos sont de vraies photos du Camping Ti Piton':/^illustration\b/i.test(t)?'photo réelle':'vraies photos du camping';
+        return t.charAt(0)===t.charAt(0).toUpperCase()?r.charAt(0).toUpperCase()+r.slice(1):r;});
+      textes.push([n,v]);n.nodeValue=nv;}
+  }
+  var actif=false,prevu=null,mo=null;
+  function tout(on){
+    var els=document.body.getElementsByTagName('*'),i;
+    if(on&&!ordonne)ordonner(els);
+    for(i=0;i<els.length;i++){var el=els[i];if(hors(el))continue;if(el.tagName==='IMG')img(el,on);fond(el,on);}
+    var figs=document.getElementsByTagName('figure');for(i=0;i<figs.length;i++)legende(figs[i],on);
+    if(on&&!textes.length)mentions(true);else if(!on)mentions(false);
+  }
+  function appliquer(on,annonce){
+    actif=on;if(prevu){clearTimeout(prevu);prevu=null;}tout(on);if(mo)mo.takeRecords();
+    if(bouton)bouton.setAttribute('aria-pressed',on?'true':'false');
+    document.documentElement.classList.toggle('kp-vraies-photos',on);
+    if(annonce&&toast){toast.textContent=on?'Vraies photos du camping : affichées dans tous les modèles.':'Images d\'origine du modèle.';
+      toast.classList.add('vu');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('vu');},2400);}
+  }
+  // éléments ajoutés ou modifiés plus tard par le modèle : on repasse (au plus une fois toutes les 400 ms)
+  mo=new MutationObserver(function(){if(!actif||prevu)return;prevu=setTimeout(function(){prevu=null;if(actif){tout(true);mo.takeRecords();}},400);});
+  mo.observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['src','srcset','style','class']});
+  if(bouton)bouton.addEventListener('click',function(){var on=!actif;try{localStorage.setItem(CLE,on?'1':'0');}catch(e){}appliquer(on,true);});
+  var q=new URLSearchParams(location.search).get('photos'),depart=false;
+  if(q==='1'||q==='0'){depart=q==='1';try{localStorage.setItem(CLE,q);}catch(e){}}
+  else{try{depart=localStorage.getItem(CLE)==='1';}catch(e){}}
+  if(depart)appliquer(true,false);
+  window.kpVraiesPhotos=function(on){appliquer(!!on,false);};   // pour les tests
 })();
 </script>
 </body>

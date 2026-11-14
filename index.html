@@ -29,6 +29,12 @@
   @media (max-width:520px){nav.menu a{font-size:13.5px;padding:11px 11px}}
   nav.menu a{flex:none;font:600 14px/1 Inter,sans-serif;color:var(--violet);text-decoration:none;padding:11px 14px;border:1.5px solid var(--bord);border-radius:999px;background:#fff}
   nav.menu a.choix{background:var(--violet);color:#fff;border-color:var(--violet)}
+  .b-photos{margin-top:16px;min-height:48px;padding:12px 18px;border-radius:999px;border:2px solid var(--willow);background:transparent;color:var(--cream);font:600 15.5px/1.2 Poppins,sans-serif;cursor:pointer}
+  .b-photos[aria-pressed="true"]{background:var(--willow);color:var(--violet)}
+  .photos-mini{flex:none;width:46px;min-height:44px;border-radius:999px;border:1.5px solid var(--bord);background:#fff;font-size:19px;cursor:pointer}
+  .photos-mini[aria-pressed="true"]{background:var(--willow);border-color:var(--willow)}
+  .note-photos{display:none;margin:14px 0 0;background:#E7F3DA;color:#2E5A1C;border-radius:12px;padding:10px 14px;font-weight:600;font-size:15px}
+  body.photos .note-photos{display:block}
   nav.menu a .n{display:inline-block;margin-left:6px;background:var(--rose);color:var(--violet);border-radius:99px;padding:2px 7px;font-size:12px}
   main{padding:6px 0 40px}
   .groupe{padding-top:26px}
@@ -89,19 +95,22 @@
       <li>Touchez ♡ sur tous ceux qui vous plaisent.</li>
       <li>Dans « Mon choix », en bas, choisissez votre préféré et écrivez vos commentaires.</li>
     </ol>
+    <button type="button" class="b-photos" data-photos aria-pressed="false">📷 Voir tous les modèles avec mes vraies photos</button>
   </div>
 </header>
 <nav class="menu" aria-label="Raccourcis"><div class="wrap">
   <div class="defile"><a href="#g-propositions">Les 8 propositions</a><a href="#g-reel">Vos vraies photos</a><a href="#g-ambiance">Images d'ambiance</a></div>
+  <button type="button" class="photos-mini" data-photos aria-pressed="false" aria-label="Afficher les vraies photos du camping" title="Vraies photos">📷</button>
   <a class="choix" href="#choix">Mon choix<span class="n" id="nb-aimes">0 ♥</span></a>
 </div></nav>
 <main class="wrap">
+  <p class="note-photos" role="status">📷 Vraies photos du camping affichées : dans les aperçus et dans tous les modèles. Touchez 📷 pour revenir aux images d'origine.</p>
     <section class="groupe" id="g-propositions"><h2>Les 8 propositions de votre devis <span class="compte">8</span></h2><p class="note">Formule Salazie, 790 € : les 4 mêmes styles, avec vos vraies photos ou avec des images générées d&#x27;après vos photos.</p>
       <h3 class="sous">Avec vos vraies photos</h3>
       <div class="grille grande">
       <article class="carte grande" data-id="1">
         <a class="apercu" href="modeles/vraies-photos-manifeste.html" aria-label="Voir le site Le manifeste">
-          <img class="pc" src="images/apercus/1.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/1-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/1.webp" data-p="images/apercus/1-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/1-mobile.webp" data-p="images/apercus/1-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -112,7 +121,7 @@
       </article>
       <article class="carte grande" data-id="2">
         <a class="apercu" href="modeles/vraies-photos-lettres.html" aria-label="Voir le site Lettres-fenêtres">
-          <img class="pc" src="images/apercus/2.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/2-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/2.webp" data-p="images/apercus/2-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/2-mobile.webp" data-p="images/apercus/2-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -123,7 +132,7 @@
       </article>
       <article class="carte grande" data-id="3">
         <a class="apercu" href="modeles/vraies-photos-grand-angle.html" aria-label="Voir le site Grand angle">
-          <img class="pc" src="images/apercus/3.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/3-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/3.webp" data-p="images/apercus/3-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/3-mobile.webp" data-p="images/apercus/3-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -134,7 +143,7 @@
       </article>
       <article class="carte grande" data-id="4">
         <a class="apercu" href="modeles/vraies-photos-carte-postale.html" aria-label="Voir le site Carte postale">
-          <img class="pc" src="images/apercus/4.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/4-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/4.webp" data-p="images/apercus/4-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/4-mobile.webp" data-p="images/apercus/4-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -148,7 +157,7 @@
       <div class="grille grande">
       <article class="carte grande" data-id="5">
         <a class="apercu" href="modeles/images-generees-manifeste.html" aria-label="Voir le site Le manifeste">
-          <img class="pc" src="images/apercus/5.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/5-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/5.webp" data-p="images/apercus/5-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/5-mobile.webp" data-p="images/apercus/5-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ia">Images générées d&#x27;après vos photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -159,7 +168,7 @@
       </article>
       <article class="carte grande" data-id="6">
         <a class="apercu" href="modeles/images-generees-lettres.html" aria-label="Voir le site Lettres-fenêtres">
-          <img class="pc" src="images/apercus/6.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/6-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/6.webp" data-p="images/apercus/6-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/6-mobile.webp" data-p="images/apercus/6-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ia">Images générées d&#x27;après vos photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -170,7 +179,7 @@
       </article>
       <article class="carte grande" data-id="7">
         <a class="apercu" href="modeles/images-generees-grand-angle.html" aria-label="Voir le site Grand angle">
-          <img class="pc" src="images/apercus/7.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/7-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/7.webp" data-p="images/apercus/7-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/7-mobile.webp" data-p="images/apercus/7-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ia">Images générées d&#x27;après vos photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -181,7 +190,7 @@
       </article>
       <article class="carte grande" data-id="8">
         <a class="apercu" href="modeles/images-generees-carte-postale.html" aria-label="Voir le site Carte postale">
-          <img class="pc" src="images/apercus/8.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/8-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/8.webp" data-p="images/apercus/8-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/8-mobile.webp" data-p="images/apercus/8-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ia">Images générées d&#x27;après vos photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -196,7 +205,7 @@
       <div class="grille petite">
       <article class="carte" data-id="9">
         <a class="apercu" href="modeles/photos-plein-air.html" aria-label="Voir le site Plein air">
-          <img class="pc" src="images/apercus/9.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/9-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/9.webp" data-p="images/apercus/9-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/9-mobile.webp" data-p="images/apercus/9-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -207,7 +216,7 @@
       </article>
       <article class="carte" data-id="10">
         <a class="apercu" href="modeles/photos-riso.html" aria-label="Voir le site Risographie">
-          <img class="pc" src="images/apercus/10.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/10-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/10.webp" data-p="images/apercus/10-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/10-mobile.webp" data-p="images/apercus/10-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -218,7 +227,7 @@
       </article>
       <article class="carte" data-id="11">
         <a class="apercu" href="modeles/photos-cyanotype.html" aria-label="Voir le site Cyanotype">
-          <img class="pc" src="images/apercus/11.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/11-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/11.webp" data-p="images/apercus/11-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/11-mobile.webp" data-p="images/apercus/11-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -229,7 +238,7 @@
       </article>
       <article class="carte" data-id="12">
         <a class="apercu" href="modeles/photos-ardoise.html" aria-label="Voir le site L&#x27;ardoise">
-          <img class="pc" src="images/apercus/12.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/12-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/12.webp" data-p="images/apercus/12-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/12-mobile.webp" data-p="images/apercus/12-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -240,7 +249,7 @@
       </article>
       <article class="carte" data-id="13">
         <a class="apercu" href="modeles/photos-descente.html" aria-label="Voir le site La descente">
-          <img class="pc" src="images/apercus/13.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/13-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/13.webp" data-p="images/apercus/13-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/13-mobile.webp" data-p="images/apercus/13-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
@@ -251,7 +260,7 @@
       </article>
       <article class="carte" data-id="14">
         <a class="apercu" href="modeles/photos-24h.html" aria-label="Voir le site 24 heures à l&#x27;îlet">
-          <img class="pc" src="images/apercus/14.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/14-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/14.webp" data-p="images/apercus/14-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/14-mobile.webp" data-p="images/apercus/14-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
@@ -262,7 +271,7 @@
       </article>
       <article class="carte" data-id="15">
         <a class="apercu" href="modeles/photos-lampe.html" aria-label="Voir le site Lampe frontale">
-          <img class="pc" src="images/apercus/15.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/15-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/15.webp" data-p="images/apercus/15-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/15-mobile.webp" data-p="images/apercus/15-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
@@ -273,7 +282,7 @@
       </article>
       <article class="carte" data-id="16">
         <a class="apercu" href="modeles/photos-panorama.html" aria-label="Voir le site Panorama">
-          <img class="pc" src="images/apercus/16.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/16-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/16.webp" data-p="images/apercus/16-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/16-mobile.webp" data-p="images/apercus/16-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
@@ -284,7 +293,7 @@
       </article>
       <article class="carte" data-id="17">
         <a class="apercu" href="modeles/photos-diorama.html" aria-label="Voir le site Diorama">
-          <img class="pc" src="images/apercus/17.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/17-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/17.webp" data-p="images/apercus/17-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/17-mobile.webp" data-p="images/apercus/17-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-reel">Vraies photos</span><span class="b-mafate">Mafate · 2 690 €</span></div>
@@ -299,7 +308,7 @@
       <div class="grille petite">
       <article class="carte" data-id="18">
         <a class="apercu" href="modeles/ambiance-salazie-essentiel.html" aria-label="Voir le site Essentiel">
-          <img class="pc" src="images/apercus/18.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/18-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/18.webp" data-p="images/apercus/18-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/18-mobile.webp" data-p="images/apercus/18-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -310,7 +319,7 @@
       </article>
       <article class="carte" data-id="19">
         <a class="apercu" href="modeles/ambiance-salazie-nuit.html" aria-label="Voir le site Nuit étoilée">
-          <img class="pc" src="images/apercus/19.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/19-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/19.webp" data-p="images/apercus/19-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/19-mobile.webp" data-p="images/apercus/19-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -321,7 +330,7 @@
       </article>
       <article class="carte" data-id="20">
         <a class="apercu" href="modeles/ambiance-salazie-case.html" aria-label="Voir le site Case créole">
-          <img class="pc" src="images/apercus/20.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/20-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/20.webp" data-p="images/apercus/20-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/20-mobile.webp" data-p="images/apercus/20-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -332,7 +341,7 @@
       </article>
       <article class="carte" data-id="21">
         <a class="apercu" href="modeles/ambiance-magazine.html" aria-label="Voir le site Magazine de voyage">
-          <img class="pc" src="images/apercus/21.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/21-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/21.webp" data-p="images/apercus/21-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/21-mobile.webp" data-p="images/apercus/21-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -343,7 +352,7 @@
       </article>
       <article class="carte" data-id="22">
         <a class="apercu" href="modeles/ambiance-suisse.html" aria-label="Voir le site Typographie suisse">
-          <img class="pc" src="images/apercus/22.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/22-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/22.webp" data-p="images/apercus/22-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/22-mobile.webp" data-p="images/apercus/22-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -354,7 +363,7 @@
       </article>
       <article class="carte" data-id="23">
         <a class="apercu" href="modeles/ambiance-topo.html" aria-label="Voir le site Carte topographique">
-          <img class="pc" src="images/apercus/23.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/23-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/23.webp" data-p="images/apercus/23-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/23-mobile.webp" data-p="images/apercus/23-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -365,7 +374,7 @@
       </article>
       <article class="carte" data-id="24">
         <a class="apercu" href="modeles/ambiance-rhum.html" aria-label="Voir le site Étiquette de rhum arrangé">
-          <img class="pc" src="images/apercus/24.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/24-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/24.webp" data-p="images/apercus/24-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/24-mobile.webp" data-p="images/apercus/24-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -376,7 +385,7 @@
       </article>
       <article class="carte" data-id="25">
         <a class="apercu" href="modeles/ambiance-neobrutal.html" aria-label="Voir le site Néo-brutal">
-          <img class="pc" src="images/apercus/25.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/25-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/25.webp" data-p="images/apercus/25-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/25-mobile.webp" data-p="images/apercus/25-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -387,7 +396,7 @@
       </article>
       <article class="carte" data-id="26">
         <a class="apercu" href="modeles/ambiance-bento.html" aria-label="Voir le site Bento">
-          <img class="pc" src="images/apercus/26.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/26-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/26.webp" data-p="images/apercus/26-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/26-mobile.webp" data-p="images/apercus/26-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -398,7 +407,7 @@
       </article>
       <article class="carte" data-id="27">
         <a class="apercu" href="modeles/ambiance-aurore.html" aria-label="Voir le site Aurore">
-          <img class="pc" src="images/apercus/27.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/27-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/27.webp" data-p="images/apercus/27-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/27-mobile.webp" data-p="images/apercus/27-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -409,7 +418,7 @@
       </article>
       <article class="carte" data-id="28">
         <a class="apercu" href="modeles/ambiance-nordique.html" aria-label="Voir le site Cabane nordique">
-          <img class="pc" src="images/apercus/28.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/28-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/28.webp" data-p="images/apercus/28-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/28-mobile.webp" data-p="images/apercus/28-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -420,7 +429,7 @@
       </article>
       <article class="carte" data-id="29">
         <a class="apercu" href="modeles/ambiance-expedition.html" aria-label="Voir le site Expédition outdoor">
-          <img class="pc" src="images/apercus/29.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/29-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/29.webp" data-p="images/apercus/29-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/29-mobile.webp" data-p="images/apercus/29-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -431,7 +440,7 @@
       </article>
       <article class="carte" data-id="30">
         <a class="apercu" href="modeles/ambiance-pixel.html" aria-label="Voir le site Rétro 8-bit">
-          <img class="pc" src="images/apercus/30.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/30-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/30.webp" data-p="images/apercus/30-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/30-mobile.webp" data-p="images/apercus/30-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -442,7 +451,7 @@
       </article>
       <article class="carte" data-id="31">
         <a class="apercu" href="modeles/ambiance-billet.html" aria-label="Voir le site Billet de randonnée">
-          <img class="pc" src="images/apercus/31.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/31-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/31.webp" data-p="images/apercus/31-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/31-mobile.webp" data-p="images/apercus/31-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -453,7 +462,7 @@
       </article>
       <article class="carte" data-id="32">
         <a class="apercu" href="modeles/ambiance-artdeco.html" aria-label="Voir le site Art déco">
-          <img class="pc" src="images/apercus/32.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/32-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/32.webp" data-p="images/apercus/32-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/32-mobile.webp" data-p="images/apercus/32-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -464,7 +473,7 @@
       </article>
       <article class="carte" data-id="33">
         <a class="apercu" href="modeles/ambiance-herbier.html" aria-label="Voir le site Herbier botanique">
-          <img class="pc" src="images/apercus/33.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/33-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/33.webp" data-p="images/apercus/33-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/33-mobile.webp" data-p="images/apercus/33-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -475,7 +484,7 @@
       </article>
       <article class="carte" data-id="34">
         <a class="apercu" href="modeles/ambiance-bauhaus.html" aria-label="Voir le site Bauhaus">
-          <img class="pc" src="images/apercus/34.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/34-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/34.webp" data-p="images/apercus/34-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/34-mobile.webp" data-p="images/apercus/34-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -486,7 +495,7 @@
       </article>
       <article class="carte" data-id="35">
         <a class="apercu" href="modeles/ambiance-gazette.html" aria-label="Voir le site La Gazette de l&#x27;îlet">
-          <img class="pc" src="images/apercus/35.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/35-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/35.webp" data-p="images/apercus/35-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/35-mobile.webp" data-p="images/apercus/35-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -497,7 +506,7 @@
       </article>
       <article class="carte" data-id="36">
         <a class="apercu" href="modeles/ambiance-ecusson.html" aria-label="Voir le site Écussons de camp">
-          <img class="pc" src="images/apercus/36.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/36-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/36.webp" data-p="images/apercus/36-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/36-mobile.webp" data-p="images/apercus/36-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -508,7 +517,7 @@
       </article>
       <article class="carte" data-id="37">
         <a class="apercu" href="modeles/ambiance-organique.html" aria-label="Voir le site Organique doux">
-          <img class="pc" src="images/apercus/37.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/37-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/37.webp" data-p="images/apercus/37-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/37-mobile.webp" data-p="images/apercus/37-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -519,7 +528,7 @@
       </article>
       <article class="carte" data-id="38">
         <a class="apercu" href="modeles/ambiance-duo.html" aria-label="Voir le site Écran partagé 50/50">
-          <img class="pc" src="images/apercus/38.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/38-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/38.webp" data-p="images/apercus/38-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/38-mobile.webp" data-p="images/apercus/38-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -530,7 +539,7 @@
       </article>
       <article class="carte" data-id="39">
         <a class="apercu" href="modeles/ambiance-jungle.html" aria-label="Voir le site Jungle de fanjans">
-          <img class="pc" src="images/apercus/39.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/39-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/39.webp" data-p="images/apercus/39-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/39-mobile.webp" data-p="images/apercus/39-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -541,7 +550,7 @@
       </article>
       <article class="carte" data-id="40">
         <a class="apercu" href="modeles/ambiance-zen.html" aria-label="Voir le site Encre zen">
-          <img class="pc" src="images/apercus/40.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/40-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/40.webp" data-p="images/apercus/40-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/40-mobile.webp" data-p="images/apercus/40-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-salazie">Salazie · 790 €</span></div>
@@ -552,7 +561,7 @@
       </article>
       <article class="carte" data-id="41">
         <a class="apercu" href="modeles/ambiance-film.html" aria-label="Voir le site Le film">
-          <img class="pc" src="images/apercus/41.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/41-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/41.webp" data-p="images/apercus/41-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/41-mobile.webp" data-p="images/apercus/41-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-mafate">Mafate · 2 690 €</span></div>
@@ -563,7 +572,7 @@
       </article>
       <article class="carte" data-id="42">
         <a class="apercu" href="modeles/ambiance-carnet.html" aria-label="Voir le site Le carnet de randonnée">
-          <img class="pc" src="images/apercus/42.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/42-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/42.webp" data-p="images/apercus/42-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/42-mobile.webp" data-p="images/apercus/42-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-mafate">Mafate · 2 690 €</span></div>
@@ -574,7 +583,7 @@
       </article>
       <article class="carte" data-id="43">
         <a class="apercu" href="modeles/ambiance-affiche.html" aria-label="Voir le site L&#x27;affiche rétro">
-          <img class="pc" src="images/apercus/43.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/43-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/43.webp" data-p="images/apercus/43-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/43-mobile.webp" data-p="images/apercus/43-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-mafate">Mafate · 2 690 €</span></div>
@@ -585,7 +594,7 @@
       </article>
       <article class="carte" data-id="44">
         <a class="apercu" href="modeles/ambiance-slow.html" aria-label="Voir le site Slow, luxe minimal">
-          <img class="pc" src="images/apercus/44.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/44-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
+          <img class="pc" src="images/apercus/44.webp" data-p="images/apercus/44-p.webp" alt="" loading="lazy" onerror="this.remove()"><img class="tel" src="images/apercus/44-mobile.webp" data-p="images/apercus/44-p-mobile.webp" alt="" loading="lazy" onerror="this.remove()">
         </a>
         <div class="corps">
           <div class="badges"><span class="b-ambiance">Images d&#x27;ambiance (IA)</span><span class="b-mafate">Mafate · 2 690 €</span></div>
@@ -691,6 +700,22 @@
   [sel,com,pre].forEach(function(x){x.addEventListener('input',garder);x.addEventListener('change',garder);});
   var q=new URLSearchParams(location.search).get('choix');if(q&&NOMS[q]){sel.value=q;garder();}
   majAimes();
+  // 📷 vraies photos : un seul réglage pour la page et pour tous les modèles
+  var CLEP='tipiton-vraies-photos';
+  function photosOn(){var q=new URLSearchParams(location.search).get('photos');
+    if(q==='1'||q==='0'){try{localStorage.setItem(CLEP,q);}catch(e){}return q==='1';}
+    try{return localStorage.getItem(CLEP)==='1';}catch(e){return false;}}
+  function majPhotos(on){
+    document.querySelectorAll('img[data-p]').forEach(function(i){if(!i.hasAttribute('data-o'))i.setAttribute('data-o',i.getAttribute('src'));
+      var v=on?i.getAttribute('data-p'):i.getAttribute('data-o');if(i.getAttribute('src')!==v)i.setAttribute('src',v);});
+    document.querySelectorAll('[data-photos]').forEach(function(b){b.setAttribute('aria-pressed',on?'true':'false');});
+    var g=document.querySelector('.b-photos');if(g)g.textContent=on?"📷 Vraies photos affichées : revenir aux images d’origine":"📷 Voir tous les modèles avec mes vraies photos";
+    document.body.classList.toggle('photos',on);
+  }
+  document.querySelectorAll('[data-photos]').forEach(function(b){b.addEventListener('click',function(){
+    var on=b.getAttribute('aria-pressed')!=='true';try{localStorage.setItem(CLEP,on?'1':'0');}catch(e){}majPhotos(on);});});
+  majPhotos(photosOn());
+  window.addEventListener('pageshow',function(){majPhotos(photosOn());majAimes();});
   function texte(){
     if(!sel.value){document.getElementById('erreur').style.display='block';sel.focus();return null;}
     document.getElementById('erreur').style.display='none';
