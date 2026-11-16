@@ -5,6 +5,8 @@ avec les vraies photos du camping. Réalisé par **KréaPro**.
 
 - `index.html` — le site d'une page : accueil, le camping en bref, l'arrivée, le camping en photos, les tarifs,
   les sentiers pour venir, la carte, le contact (appel, WhatsApp, e-mail, formulaire).
+- Le formulaire envoie le message directement dans la boîte e-mail du camping, via FormSubmit (formsubmit.co) :
+  au tout premier envoi, le camping reçoit un e-mail « Activate Form » sur lequel il faut cliquer une fois.
 - `img/` — les 12 vraies photos du camping (WebP).
 - `robots.txt`, `vercel.json` et la balise `noindex` : le site n'est pas indexé par Google tant qu'il n'est pas
   officiellement en ligne. **À retirer le jour de la mise en ligne.**

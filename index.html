@@ -253,6 +253,9 @@ footer .mention{border-top:1px solid #4a4650;padding-top:20px;display:grid;gap:1
 .album figcaption{font-family:'Kalam',cursive;font-size:1.02rem;line-height:1.3;color:var(--encre-douce);text-align:center;margin-top:8px}
 @media (max-width:760px){.album{columns:2;column-gap:14px}.album figure{padding:6px 6px 9px;margin-bottom:16px}.album figcaption{font-size:.9rem}
   .photo img.portrait{max-height:430px}}
+.pot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.rgpd{font-size:.86rem;color:var(--encre-douce);margin-top:10px}
+button[disabled]{opacity:.7;cursor:wait}
 </style>
 </head>
 <body>
@@ -522,8 +525,10 @@ footer .mention{border-top:1px solid #4a4650;padding-top:20px;display:grid;gap:1
         <div class="champ"><label for="pers">Nombre de personnes (1 à 10)</label><input id="pers" name="pers" type="number" min="1" max="10" inputmode="numeric"></div>
         <div class="champ plein"><label for="msg">Votre message</label><textarea id="msg" name="msg"></textarea></div>
       </div>
-      <button class="btn btn-stylo" type="submit">Préparer mon e-mail</button>
+      <p class="pot" aria-hidden="true"><label for="kp-pot">Ne pas remplir</label><input id="kp-pot" name="site_web" type="text" tabindex="-1" autocomplete="off"></p>
+      <button class="btn btn-stylo" type="submit">Envoyer ma carte</button>
       <p class="merci" id="merci" role="status" hidden></p>
+      <p class="rgpd">Vos informations servent seulement à répondre à votre demande.</p>
     </form>
     <div class="adresse-zone">
       <div class="coin" aria-hidden="true">
@@ -576,19 +581,31 @@ footer .mention{border-top:1px solid #4a4650;padding-top:20px;display:grid;gap:1
     },{threshold:.08,rootMargin:'0px 0px -30px 0px'});
     els.forEach(function(el){io.observe(el);});
   }else{els.forEach(function(el){el.classList.add('vu');});}
-  var f=document.getElementById('contact-form'),m=document.getElementById('merci');
+  var f=document.getElementById('contact-form'),m=document.getElementById('merci'),b=f.querySelector('button[type="submit"]');
+  var EMAIL='jeanmartelatache4@gmail.com',CLE='';
+  function v(id){var el=document.getElementById(id);return el&&el.value?el.value.trim():'';}
+  function jour(x){return x?x.split('-').reverse().join('/'):'à préciser';}
+  function dire(html){m.hidden=false;m.innerHTML=html;}
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var v=function(id){var el=document.getElementById(id);return el&&el.value?el.value.trim():'';};
-    var jour=function(x){return x?x.split('-').reverse().join('/'):'à préciser';};
-    if(!v('nom')||!v('coord')){m.hidden=false;m.textContent='Indiquez votre nom et un téléphone ou un e-mail, pour qu\u2019Atache puisse vous répondre.';return;}
-    var corps='Bonjour Atache,\n\n'+(v('msg')||'Je souhaite réserver au Camping Ti Piton.')
-      +'\n\nArrivée : '+jour(v('arrivee-date'))+'\nDépart : '+jour(v('depart-date'))
-      +'\nNombre de personnes : '+(v('pers')||'à préciser')+'\n\n'+v('nom')+' · '+v('coord');
-    var lien='mailto:jeanmartelatache4@gmail.com?subject='+encodeURIComponent('Réservation Camping Ti Piton · '+v('nom'))+'&body='+encodeURIComponent(corps);
-    f.setAttribute('data-lien',lien);
-    m.hidden=false;m.textContent='Votre messagerie s\u2019ouvre avec votre message prêt : il ne reste qu\u2019à l\u2019envoyer. Pas de messagerie ? Appelez le 0692 06 18 17.';
-    location.href=lien;
+    if(v('kp-pot'))return;  // case piège remplie : c'est un robot, on n'envoie rien
+    if(!v('nom')||!v('coord')){dire('Indiquez votre nom et un téléphone ou un e-mail, pour qu’Atache puisse vous répondre.');return;}
+    var sujet='Réservation Camping Ti Piton · '+v('nom');
+    var champs={'Nom':v('nom'),'Téléphone ou e-mail':v('coord'),'Arrivée':jour(v('arrivee-date')),'Départ':jour(v('depart-date')),
+      'Nombre de personnes':v('pers')||'à préciser','Message':v('msg')||'(pas de message)'};
+    var mail=/@/.test(v('coord'))?v('coord'):'',url,donnees;
+    if(CLE){url='https://api.web3forms.com/submit';donnees={access_key:CLE,subject:sujet,from_name:'Site du Camping Ti Piton'};if(mail)donnees.replyto=mail;}
+    else{url='https://formsubmit.co/ajax/'+EMAIL;donnees={_subject:sujet,_template:'table',_captcha:'false'};if(mail)donnees._replyto=mail;}
+    for(var k in champs)donnees[k]=champs[k];
+    var texte=b.textContent;b.disabled=true;b.textContent='Envoi en cours…';
+    fetch(url,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(donnees)})
+      .then(function(r){return r.json();})
+      .then(function(j){if(String(j.success)!=='true')throw new Error(j.message||'refus');
+        f.reset();dire('Merci ! Votre message est bien parti chez Atache : il vous répond très vite.');})
+      .catch(function(){
+        var corps='Bonjour Atache,\n\n';for(var k in champs)corps+=k+' : '+champs[k]+'\n';
+        dire('Le message n’a pas pu partir. Écrivez directement à <a href="mailto:'+EMAIL+'?subject='+encodeURIComponent(sujet)+'&amp;body='+encodeURIComponent(corps)+'">'+EMAIL+'</a> ou appelez le <a href="tel:+262692061817">0692 06 18 17</a>.');})
+      .then(function(){b.disabled=false;b.textContent=texte;});
   });
 })();
 </script>
